@@ -3,6 +3,19 @@
 	"main": ".open-next/worker.js",
 	"name": "kortex",
 	"compatibility_date": "2026-05-24",
+	// Custom domains. Declared here (not added via UI) so they're version-
+	// controlled and reproducible. wrangler is idempotent — re-deploys
+	// reconcile state without disrupting existing mappings.
+	"routes": [
+		{
+			"pattern": "kortexconsulting.com",
+			"custom_domain": true
+		},
+		{
+			"pattern": "staging.kortexconsulting.com",
+			"custom_domain": true
+		}
+	],
 	"compatibility_flags": [
 		"nodejs_compat",
 		"global_fetch_strictly_public"
