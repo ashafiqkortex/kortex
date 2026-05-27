@@ -30,27 +30,22 @@ export function FinalCTA() {
               <span className="pulse-dot absolute inline-flex h-full w-full rounded-full bg-[var(--accent)]" />
               <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[var(--accent)]" />
             </span>
-            Accepting new engagements
+            Limited Implementation Capacity
           </div>
 
           <h2 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[1.02] tracking-[-0.02em] text-foreground">
-            30 minutes from
+            See what your business looks like
             <br />
-            <span className="italic text-[var(--accent)]">&ldquo;where do I start?&rdquo;</span>
-            <br />
-            to a clear first move.
+            <span className="italic text-[var(--accent)]">with systems running it.</span>
           </h2>
 
           <p className="mt-7 max-w-xl mx-auto text-[16.5px] leading-relaxed text-[var(--foreground-dim)]">
-            Tell us what you&apos;re trying to do with AI in your business. We&apos;ll show you what&apos;s real, what isn&apos;t, and the smallest first step worth taking. No pitch deck, no commitment.
+            We&apos;ll map how your business currently operates, show you where connected systems would remove the most operational overhead, and what implementation would actually involve.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
             <Button href="/contact" size="lg" arrow>
-              Book a 30-minute consultation
-            </Button>
-            <Button href="#diagnostic" size="lg" variant="secondary">
-              Try the AI diagnostic first
+              See Operational Leverage
             </Button>
           </div>
         </motion.div>

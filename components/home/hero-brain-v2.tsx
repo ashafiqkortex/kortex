@@ -154,7 +154,7 @@ export function HeroBrainV2() {
               <span className="pulse-dot absolute inline-flex h-full w-full rounded-full bg-[var(--accent)]" />
               <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[var(--accent)]" />
             </span>
-            AI &amp; Automation Engineering
+            Operational AI Systems
           </motion.div>
 
           <motion.h1
@@ -164,10 +164,9 @@ export function HeroBrainV2() {
             className="mt-7 font-display text-5xl md:text-6xl lg:text-[68px] leading-[1.0] tracking-[-0.02em] text-foreground"
             style={{ textShadow: "0 2px 30px rgba(0,0,0,0.8)" }}
           >
-            AI that knows{" "}
-            <span className="italic text-[var(--accent)]">your business</span>.
+            Scale without the headcount.
             <br />
-            Built into your environment.
+            <span className="italic text-[var(--accent)]">With AI that runs your operations automatically.</span>
           </motion.h1>
 
           <motion.p
@@ -177,7 +176,7 @@ export function HeroBrainV2() {
             className="mt-7 max-w-[520px] text-[17px] md:text-[18px] leading-relaxed text-[var(--foreground-dim)]"
             style={{ textShadow: "0 1px 16px rgba(0,0,0,0.7)" }}
           >
-            Custom AI &amp; Automation Solutions — engineered into your own systems and data. For companies that want AI <em>inside</em> the business, not bolted on.
+            Kortex builds AI operational systems — from customer call to paid invoice — so businesses scale with far greater leverage.
           </motion.p>
 
           <motion.div
@@ -187,10 +186,7 @@ export function HeroBrainV2() {
             className="mt-9 flex flex-col sm:flex-row gap-3"
           >
             <Button href="/contact" size="lg" arrow>
-              Book a 30-minute consultation
-            </Button>
-            <Button href="#how-we-work" size="lg" variant="secondary">
-              See how we work
+              See What Your Business Could Look Like
             </Button>
           </motion.div>
 
@@ -201,9 +197,9 @@ export function HeroBrainV2() {
             className="mt-14 grid grid-cols-3 gap-6 max-w-md"
           >
             {[
-              { n: "SMB → Enterprise", l: "Engagement range" },
-              { n: "Your environment", l: "Your data, your cloud" },
-              { n: "30 min", l: "From unsure to a plan" },
+              { n: "48%", l: "productivity gains" },
+              { n: "4–8 weeks", l: "to go live" },
+              { n: "Fully owned", l: "by your business" },
             ].map((m) => (
               <div key={m.l}>
                 <div className="font-display text-xl md:text-2xl text-foreground leading-tight">{m.n}</div>

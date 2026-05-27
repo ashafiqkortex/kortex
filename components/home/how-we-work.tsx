@@ -7,28 +7,28 @@ import { SectionHeader } from "@/components/section-header";
 const PILLARS = [
   {
     n: "01",
-    title: "We ship working systems.",
-    body: "A working prototype in week one. No 60-slide decks, no \"strategy phases\" that drag on for months. If we can't show you something running fast, we shouldn't be the ones building it.",
+    title: "Live operational systems in 4–8 weeks.",
+    body: "Production-ready systems your team can actually use.",
   },
   {
     n: "02",
-    title: "You own everything we build.",
-    body: "Custom code, not no-code duct tape. The systems live in your environment, on your cloud, with your data. You're never renting your business logic from a vendor — and you can take any of it elsewhere any time.",
+    title: "Built around how you operate.",
+    body: "Your workflows. Your operational structure. Your business logic.",
   },
   {
     n: "03",
-    title: "Grounded in your real business.",
-    body: "Every system we build uses your actual data, your actual customers, your actual workflows. No generic AI. No \"trust the model.\" If a result can't be traced back to your reality, we don't ship it.",
+    title: "Fully owned infrastructure.",
+    body: "Deployed in your environment with no vendor lock-in.",
   },
   {
     n: "04",
-    title: "We stay after we ship.",
-    body: "Monitoring, evolution, and improvement are part of the engagement — not an upsell. Going live is the start of the relationship, not the end. Your systems will need to keep learning; we'll be there.",
+    title: "Systems evolve with your operations.",
+    body: "Monitoring, refinement, and operational optimization as the business grows.",
   },
   {
     n: "05",
-    title: "We tell you when AI isn't the answer.",
-    body: "We'll tell you which parts of your problem don't need AI — usually most of them. A consultancy that sells AI for everything is a consultancy that hasn't built much. We'd rather solve the right problem the right way.",
+    title: "Clear scope. Defined delivery.",
+    body: "Structured implementation with transparent operational scope from day one.",
   },
 ];
 
@@ -40,10 +40,10 @@ export function HowWeWork() {
           eyebrow="How We Work"
           title={
             <>
-              We build, <span className="italic">we don&apos;t just advise.</span>
+              Same team. <span className="italic">More output.</span>
             </>
           }
-          description="Five principles that shape every engagement. No surprises, no scope creep, no slide decks pretending to be deliverables."
+          description="Systems designed for day-to-day operations — not isolated demos."
         />
 
         <div className="mt-16 grid gap-0 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-[var(--border)]">

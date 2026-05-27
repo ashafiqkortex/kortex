@@ -8,10 +8,10 @@ import { Button } from "@/components/ui/button";
 import { Sparkles, ArrowRight, RotateCcw } from "lucide-react";
 
 const EXAMPLES = [
-  "I run a 40-person consulting firm. We spend hours every week answering the same client questions. Could AI handle most of this?",
-  "I'm the CEO of a hotel group. I want to use AI to upsell guests and reduce front-desk workload, but I don't know where to start.",
-  "We're a mid-sized manufacturer. Our customer support team is buried under email — I'd like an AI agent that drafts replies, on our own data.",
-  "We tried ChatGPT for our sales team. It didn't really know our products. What would 'AI on our actual data' look like?",
+  "My office manager spends half her day copying the same info into three different systems. There has to be a better way.",
+  "We miss 20% of calls after hours. Those are jobs going to competitors.",
+  "Quote follow-up is inconsistent. Some customers hear back in an hour, some never hear back at all.",
+  "My techs spend 2 hours a day on paperwork instead of billable work. That's $20K per tech per year.",
 ];
 
 type Phase = "idle" | "streaming" | "done" | "error";
@@ -117,15 +117,15 @@ export function Diagnostic() {
       <Container size="default" className="relative">
         <SectionHeader
           align="center"
-          eyebrow="AI Diagnostic · Live"
+          eyebrow="Operational Diagnostic"
           title={
             <>
-              Not sure where to start?
+              Tell us where the business feels heavy.
               <br />
-              <span className="italic text-[var(--accent)]">Describe it in plain English.</span>
+              <span className="italic text-[var(--accent)]">We&apos;ll map the operational bottlenecks behind it.</span>
             </>
           }
-          description="Tell us what you'd like AI to do for your business — even loosely. Our AI reads it back, frames the real opportunity, and sketches a first step. This is the warmup for the 30-minute call."
+          description="We analyze where coordination, communication, and operational workflows are slowing the business down — then identify the systems layer that removes it."
         />
 
         <motion.div
@@ -154,14 +154,14 @@ export function Diagnostic() {
 
           <form onSubmit={submit} className="p-6 md:p-8">
             <label className="block text-[11px] font-mono uppercase tracking-widest text-[var(--muted)] mb-3">
-              What would you like AI to do for your business?
+              What&apos;s eating your team&apos;s time?
             </label>
             <textarea
               value={value}
               onChange={(e) => setValue(e.target.value)}
               disabled={phase === "streaming"}
               rows={3}
-              placeholder="e.g. We're a hotel group and I'd like to use AI to upsell guests and reduce front-desk workload, but I'm not sure where to start..."
+              placeholder="e.g. My sales team spends 10 hours a week building quotes. The data exists in our CRM and ERP, but pulling it together is manual and error-prone..."
               className="w-full resize-none bg-[var(--background)] border border-[var(--border)] rounded-lg p-4 text-[15px] text-foreground placeholder:text-[var(--muted-2)] focus:outline-none focus:border-[var(--accent)]/60 transition-colors"
             />
 
@@ -193,7 +193,7 @@ export function Diagnostic() {
                   </>
                 ) : (
                   <>
-                    Run diagnostic
+                    Analyze Operational Bottlenecks
                     <ArrowRight size={15} strokeWidth={2} />
                   </>
                 )}
@@ -234,7 +234,7 @@ export function Diagnostic() {
                     Ready for the full diagnostic and a scoped proposal?
                   </div>
                   <Button href="/contact" size="sm" arrow>
-                    Book a 20-min call
+                    Book a 20-minute call
                   </Button>
                 </div>
               )}

@@ -14,13 +14,13 @@ export function CaseStudiesTeaser() {
       <Container size="wide">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
           <SectionHeader
-            eyebrow="Selected Work"
+            eyebrow="Results"
             title={
               <>
-                Real systems, <span className="italic">running today.</span>
+                Same team. <span className="italic">More output.</span>
               </>
             }
-            description="A few engagements where we built AI and automation into the business — not on top of it."
+            description="Production systems running inside real businesses."
           />
           <Button href="/case-studies" variant="secondary" size="md" arrow>
             All case studies
