@@ -237,7 +237,7 @@ export function Problem() {
                       <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--muted-2)]">
                         Pitch
                       </span>
-                      <span className="text-[14px] text-[var(--muted)] line-through decoration-[var(--muted)]">
+                      <span className="text-[14px] text-[var(--foreground-dim)] line-through decoration-red-500/70 decoration-2">
                         {m.says}
                       </span>
                     </div>
