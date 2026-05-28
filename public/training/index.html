@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Training: How Contractors Are Using AI Systems | Kortex</title>
+<meta name="description" content="Free 17-minute training for HVAC, plumbing, and electrical contractors. See how AI systems help you handle more work without more headcount.">
+<meta name="robots" content="noindex, nofollow">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%235EEAD4'/><text x='16' y='22' text-anchor='middle' font-size='18' font-weight='bold' fill='%2307090c'>K</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #5EEAD4;
+  --primary-light: #5EEAD4;
+  --primary-dark: #2DD4BF;
+  --night: #0A0A0A;
+  --card: #111111;
+  --card-border: #1a1a1a;
+  --snow: #FAFAFA;
+  --text-secondary: #a0a0a0;
+  --success: #22C55E;
+  --gold: #FBBF24;
+  --font-display: 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--night);
+  color: var(--snow);
+  font-family: var(--font-body);
+  line-height: 1.7;
+  min-height: 100vh;
+  font-size: 18px;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  padding: 48px 0 60px;
+  text-align: center;
+  background: radial-gradient(ellipse at 50% 0%, rgba(94, 234, 212, 0.12) 0%, transparent 70%);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5.5vw, 56px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -2px;
+  margin-bottom: 16px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.audience-tag {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary-light);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 16px;
+}
+
+.highlight-primary {
+  color: var(--primary-light);
+}
+
+.highlight-gold {
+  color: var(--gold);
+  position: relative;
+}
+
+.subheadline {
+  font-size: 20px;
+  color: var(--snow);
+  max-width: 720px;
+  margin: 0 auto 16px;
+  line-height: 1.7;
+}
+
+.objection-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+  margin-bottom: 28px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  border-radius: 24px;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  background: rgba(94, 234, 212, 0.1);
+  border: 1px solid rgba(94, 234, 212, 0.25);
+  color: var(--primary-light);
+}
+
+.pill::before {
+  content: "✓";
+  font-weight: 700;
+}
+
+.social-proof-line {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+.training-bullets {
+  max-width: 640px;
+  margin: 32px auto 0;
+  text-align: left;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 28px 32px;
+}
+
+.bullets-header {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--snow);
+  margin-bottom: 20px;
+}
+
+.training-bullets ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.training-bullets li {
+  font-size: 16px;
+  color: rgba(250, 250, 250, 0.85);
+  line-height: 1.65;
+  margin-bottom: 14px;
+  padding-left: 28px;
+  position: relative;
+}
+
+.training-bullets li:last-child {
+  margin-bottom: 0;
+}
+
+.training-bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 10px;
+  height: 10px;
+  background: var(--primary);
+  border-radius: 50%;
+}
+
+.watch-cta {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.watch-cta::after {
+  content: "↓";
+  font-size: 20px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(6px); }
+  60% { transform: translateY(3px); }
+}
+
+.presenter-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--card);
+  border: 1px solid rgba(94, 234, 212, 0.15);
+  border-radius: 10px;
+  padding: 10px 16px;
+  margin-bottom: 12px;
+}
+
+.presenter-photo {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--primary);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  color: #0A0A0A;
+  flex-shrink: 0;
+  border: 2px solid var(--primary);
+}
+
+.presenter-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.presenter-info {
+  text-align: left;
+}
+
+.presenter-transformation {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 2px;
+}
+
+.presenter-meta {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.video-container {
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto 20px;
+}
+
+.video-thumbnail {
+  position: relative;
+  background: var(--card);
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  cursor: pointer;
+  border: 2px solid rgba(94, 234, 212, 0.4);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumbnail-content-v2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 32px;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at 50% 30%, rgba(94, 234, 212, 0.06) 0%, transparent 60%);
+}
+
+.thumbnail-micro {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--primary-light);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.thumbnail-headline {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -1px;
+  margin: 0 0 28px 0;
+  color: var(--snow);
+}
+
+.thumb-line {
+  display: block;
+}
+
+.play-button-center {
+  width: 64px;
+  height: 64px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 24px rgba(94, 234, 212, 0.4);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.play-button-center svg {
+  width: 26px;
+  height: 26px;
+  color: #0A0A0A;
+  margin-left: 3px;
+}
+
+.video-thumbnail:hover .play-button-center {
+  transform: scale(1.08);
+  box-shadow: 0 8px 32px rgba(94, 234, 212, 0.5);
+}
+
+.video-thumbnail:hover {
+  border-color: rgba(94, 234, 212, 0.25);
+}
+
+.cta-wrapper {
+  margin-bottom: 10px;
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--gold);
+  color: #1a1a1a;
+  padding: 20px 48px;
+  border-radius: 10px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(251, 191, 36, 0.25);
+}
+
+.cta-button:hover {
+  background: #f5b800;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(251, 191, 36, 0.4);
+}
+
+.urgency-text {
+  font-size: 17px;
+  color: var(--snow);
+  font-weight: 500;
+  margin-top: 28px;
+  margin-bottom: 28px;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.footer {
+  margin-top: auto;
+  padding: 40px 5%;
+  border-top: 1px solid var(--card-border);
+  width: 100%;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  font-size: 13px;
+  color: #666;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+  color: var(--primary-light);
+}
+
+.disclaimer {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 11px;
+  color: #555;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* Modal Popup */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  background: var(--card);
+  border: 1px solid rgba(94, 234, 212, 0.2);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 480px;
+  width: 100%;
+  position: relative;
+  transform: scale(0.9);
+  transition: transform 0.3s;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(94, 234, 212, 0.1);
+}
+
+.modal-overlay.active .modal {
+  transform: scale(1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
+  background: var(--night);
+  border: 1px solid var(--card-border);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.modal-close:hover {
+  border-color: var(--primary);
+  background: rgba(94, 234, 212, 0.1);
+}
+
+.modal-close svg {
+  width: 18px;
+  height: 18px;
+  color: var(--text-secondary);
+}
+
+.modal-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.modal-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--primary);
+  overflow: hidden;
+  margin: 0 auto 16px;
+  border: 3px solid var(--primary);
+  box-shadow: 0 4px 20px rgba(94, 234, 212, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  color: #0A0A0A;
+}
+
+.modal-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  color: var(--success);
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.modal-title {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+  color: var(--snow);
+  line-height: 1.2;
+}
+
+.modal-subtitle {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.modal-credibility {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--card-border);
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 16px 18px;
+  border-radius: 10px;
+  background: var(--night);
+  border: 1.5px solid var(--card-border);
+  color: var(--snow);
+  font-family: var(--font-body);
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  -webkit-appearance: none;
+}
+
+.form-group select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23888888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 44px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(94, 234, 212, 0.15);
+}
+
+.form-group input::placeholder {
+  color: #666;
+}
+
+.btn-submit {
+  width: 100%;
+  background: var(--primary);
+  color: #0A0A0A;
+  padding: 18px 24px;
+  border-radius: 10px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  box-shadow: 0 4px 24px rgba(94, 234, 212, 0.35);
+}
+
+.btn-submit:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 36px rgba(94, 234, 212, 0.45);
+}
+
+.btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .hero {
+    padding: 28px 0 40px;
+  }
+
+  .audience-tag {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+  }
+
+  h1 {
+    font-size: 26px;
+    letter-spacing: -0.5px;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .subheadline {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .watch-cta {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .video-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .video-thumbnail {
+    border-radius: 10px;
+  }
+
+  .thumbnail-content-v2 {
+    padding: 28px 20px;
+  }
+
+  .thumbnail-micro {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    margin-bottom: 16px;
+  }
+
+  .thumbnail-headline {
+    font-size: 22px;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+  }
+
+  .play-button-center {
+    width: 56px;
+    height: 56px;
+  }
+
+  .play-button-center svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .cta-button {
+    padding: 16px 28px;
+    font-size: 14px;
+    width: 100%;
+    max-width: none;
+    border-radius: 8px;
+  }
+
+  .training-bullets {
+    margin: 28px 0 0;
+    padding: 20px 16px;
+    border-radius: 10px;
+  }
+
+  .bullets-header {
+    font-size: 15px;
+    margin-bottom: 14px;
+  }
+
+  .training-bullets li {
+    font-size: 14px;
+    line-height: 1.55;
+    margin-bottom: 10px;
+    padding-left: 20px;
+  }
+
+  .training-bullets li::before {
+    width: 7px;
+    height: 7px;
+    top: 7px;
+  }
+
+  .footer {
+    padding: 32px 16px;
+  }
+
+  .footer-links {
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .footer-links a {
+    font-size: 12px;
+  }
+
+  .disclaimer {
+    font-size: 10px;
+  }
+
+  .modal {
+    padding: 28px 20px;
+    border-radius: 14px;
+    margin: 16px;
+  }
+
+  .modal-avatar {
+    width: 56px;
+    height: 56px;
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .modal-badge {
+    font-size: 10px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+  }
+
+  .modal-title {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+
+  .modal-subtitle {
+    font-size: 13px;
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 14px 16px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+
+  .btn-submit {
+    padding: 16px 20px;
+    font-size: 15px;
+    border-radius: 8px;
+    margin-top: 8px;
+  }
+
+  .modal-credibility {
+    font-size: 11px;
+    margin-top: 14px;
+    padding-top: 12px;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="page-wrapper">
+  <section class="hero">
+    <div class="container">
+      <p class="audience-tag">Free Training For Contractors Doing $500K-$10M</p>
+      <h1>How Contractors Are Using <span class="highlight-gold">AI Automation</span> To Run Like A Company 10x Their Size — Without The Headcount</h1>
+
+      <p class="subheadline">
+        Your office manager is re-entering the same information across multiple systems. Your techs are stuck handling paperwork instead of billable work. And too much of your business still depends on manual coordination.
+      </p>
+
+      <p class="watch-cta">Watch The Free Training</p>
+
+      <div class="video-container">
+        <div class="video-thumbnail" id="video-trigger">
+          <div class="thumbnail-content-v2">
+            <span class="thumbnail-micro">Free 17-Min Training</span>
+            <h3 class="thumbnail-headline">
+              <span class="thumb-line">How Contractors Are Getting</span>
+              <span class="thumb-line"><span class="highlight-gold">48% Productivity Gains</span></span>
+            </h3>
+            <div class="play-button-center">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrapper">
+        <button class="cta-button" id="cta-trigger">WATCH THE FREE TRAINING</button>
+      </div>
+
+      <div class="training-bullets">
+        <p class="bullets-header">In this free 17-minute training, you'll see:</p>
+        <ul>
+          <li>Why most contractor businesses become operationally heavier as they grow</li>
+          <li>The hidden admin work quietly killing capacity and margins</li>
+          <li>How contractors are using AI systems to reduce office overhead and handle more jobs with the same team</li>
+          <li>What these systems actually look like inside real service businesses</li>
+          <li>And how to identify the first operational bottlenecks worth automating in your business</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+    <p class="disclaimer">
+      Results depend on your current systems, team, and implementation. This training is educational and intended to help you identify operational improvements specific to your business.
+    </p>
+  </footer>
+</div>
+
+<!-- Registration Popup Modal -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <button class="modal-close" id="modal-close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+
+    <div class="modal-header">
+      <span class="modal-badge">Free Instant Access</span>
+      <h2 class="modal-title">Watch The Free Training</h2>
+      <p class="modal-subtitle">See how AI-powered systems eliminate admin bottlenecks and let your team handle more work.</p>
+    </div>
+
+    <form id="register-form">
+      <div class="form-group">
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+      </div>
+
+      <div class="form-group">
+        <input type="email" id="email" name="email" placeholder="Email Address" required>
+      </div>
+
+      <div class="form-group">
+        <input type="tel" id="phone" name="phone" placeholder="Phone Number (e.g. 555-123-4567)" required>
+      </div>
+
+      <div class="form-group">
+        <select id="category" name="category" required>
+          <option value="" disabled selected>Select Your Trade</option>
+          <option value="hvac">HVAC</option>
+          <option value="plumbing">Plumbing</option>
+          <option value="electrical">Electrical</option>
+          <option value="roofing">Roofing</option>
+          <option value="general">General Contractor</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn-submit" id="submit-btn">GET INSTANT ACCESS NOW</button>
+
+      <p class="modal-credibility">We'll send you a link to watch immediately.</p>
+    </form>
+  </div>
+</div>
+
+<script>
+// Modal functionality
+const modal = document.getElementById('modal');
+const modalClose = document.getElementById('modal-close');
+const ctaTrigger = document.getElementById('cta-trigger');
+const videoTrigger = document.getElementById('video-trigger');
+let exitIntentShown = false;
+
+function openModal() {
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  modal.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+// CTA and video click triggers
+ctaTrigger.addEventListener('click', function() { openModal(); });
+videoTrigger.addEventListener('click', function() { openModal(); });
+
+// Close modal
+modalClose.addEventListener('click', closeModal);
+modal.addEventListener('click', function(e) {
+  if (e.target === modal) closeModal();
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeModal();
+});
+
+// Exit Intent Detection (Desktop)
+document.addEventListener('mouseout', function(e) {
+  if (e.clientY < 10 && !exitIntentShown && !modal.classList.contains('active')) {
+    exitIntentShown = true;
+    openModal();
+  }
+});
+
+// Mobile Exit Intent (scroll up after scrolling down)
+let lastScrollY = 0;
+let scrolledDown = false;
+window.addEventListener('scroll', function() {
+  const currentScrollY = window.scrollY;
+  if (currentScrollY > 200) scrolledDown = true;
+  if (scrolledDown && currentScrollY < lastScrollY - 50 && !exitIntentShown && !modal.classList.contains('active')) {
+    exitIntentShown = true;
+    openModal();
+  }
+  lastScrollY = currentScrollY;
+});
+
+// Form submission
+document.getElementById('register-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const btn = document.getElementById('submit-btn');
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+
+  btn.disabled = true;
+  btn.textContent = 'Unlocking...';
+
+  const phone = document.getElementById('phone').value.trim();
+
+  // Store lead data
+  sessionStorage.setItem('kortex_lead_name', name);
+  sessionStorage.setItem('kortex_lead_email', email);
+  sessionStorage.setItem('kortex_lead_phone', phone);
+
+  setTimeout(function() {
+    window.location.href = 'watch.html';
+  }, 500);
+});
+</script>
+
+</body>
+</html>
