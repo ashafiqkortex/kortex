@@ -54,10 +54,10 @@ export const metadata: Metadata = {
       "AI that knows your business. Built into your environment. We build generative AI, AI agents, and custom AI solutions for SMBs through enterprises.",
     type: "website",
     siteName: "Kortex Consulting",
-    url: "https://staging.kortexconsulting.com",
+    url: "https://kortexconsulting.com",
     images: [
       {
-        url: "https://staging.kortexconsulting.com/opengraph-image",
+        url: "https://kortexconsulting.com/opengraph-image",
         width: 1200,
         height: 630,
         alt: "Kortex Consulting — AI that knows your business. Built into your environment.",
@@ -70,13 +70,9 @@ export const metadata: Metadata = {
       "Kortex Consulting — Custom AI & Automation for Your Business",
     description:
       "AI that knows your business. Built into your environment. Generative AI, AI agents, custom solutions — from SMB to enterprise.",
-    images: ["https://staging.kortexconsulting.com/opengraph-image"],
+    images: ["https://kortexconsulting.com/opengraph-image"],
   },
-  // While staging is the live Next.js host and apex serves the coming-soon page,
-  // metadataBase must point to staging so auto-generated URLs (notably the
-  // file-convention og image at /opengraph-image) resolve to the correct origin.
-  // Revert to https://kortexconsulting.com once the Next.js app moves to the apex.
-  metadataBase: new URL("https://staging.kortexconsulting.com"),
+  metadataBase: new URL("https://kortexconsulting.com"),
 };
 
 export default function RootLayout({
