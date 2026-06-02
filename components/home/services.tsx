@@ -224,34 +224,15 @@ export function Services() {
 
               {/* Connection lines between nodes */}
               {FLOW_NODES.slice(0, -1).map((node, i) => (
-                <g key={`line-${i}`}>
-                  {/* Base connection line */}
-                  <line
-                    x1={node.x + 8}
-                    y1="32"
-                    x2={FLOW_NODES[i + 1].x - 8}
-                    y2="32"
-                    stroke="rgba(193, 95, 60, 0.55)"
-                    strokeWidth="1.75"
-                  />
-                  {/* Animated pulse on line */}
-                  <circle r="2.5" fill="#F97316" filter="url(#node-glow)">
-                    <animateMotion
-                      dur={`${1.5 + i * 0.2}s`}
-                      repeatCount="indefinite"
-                      begin={`${i * 0.3}s`}
-                      path={`M ${node.x + 8} 32 L ${FLOW_NODES[i + 1].x - 8} 32`}
-                    />
-                    <animate
-                      attributeName="opacity"
-                      values="0;1;1;0"
-                      keyTimes="0;0.2;0.8;1"
-                      dur={`${1.5 + i * 0.2}s`}
-                      begin={`${i * 0.3}s`}
-                      repeatCount="indefinite"
-                    />
-                  </circle>
-                </g>
+                <line
+                  key={`line-${i}`}
+                  x1={node.x + 8}
+                  y1="32"
+                  x2={FLOW_NODES[i + 1].x - 8}
+                  y2="32"
+                  stroke="rgba(193, 95, 60, 0.55)"
+                  strokeWidth="1.75"
+                />
               ))}
 
               {/* Flow nodes — sequential activation on scroll */}
