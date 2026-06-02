@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Training: Run Your Operation Like a Company 10x Your Size | Kortex</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="See how contractors are getting 48% productivity gains with automation. Watch this 18-minute training from Kortex.">
+
+<!-- Google tag (gtag.js) - Replace with actual ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23C15F3C'/><text x='16' y='22' text-anchor='middle' font-size='18' font-weight='bold' fill='%23F0EEE6'>K</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #C15F3C;
+  --primary-light: #C15F3C;
+  --primary-dark: #A8492A;
+  --night: #F0EEE6;
+  --card: #FFFFFF;
+  --card-border: #E4E0D3;
+  --snow: #191815;
+  --text-secondary: #54524B;
+  --success: #15803D;
+  --gold: #B45309;
+  --font-main: 'Inter', system-ui, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--night);
+  color: var(--snow);
+  font-family: var(--font-main);
+  line-height: 1.6;
+}
+
+.header {
+  padding: 20px 24px;
+  text-align: center;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: -1px;
+}
+
+.video-section {
+  padding: 40px 24px 48px;
+  background: radial-gradient(ellipse at 50% 0%, rgba(193, 95, 60, 0.08) 0%, transparent 50%);
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.video-intro {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 24px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: var(--success);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: clamp(26px, 5vw, 38px);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.highlight { color: var(--primary); }
+
+.video-note {
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  margin-bottom: 32px;
+}
+
+.video-wrapper iframe,
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--card) 0%, #E4E0D3 100%);
+  color: var(--text-secondary);
+}
+
+.play-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 24px rgba(193, 95, 60, 0.4);
+}
+
+.play-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 32px rgba(193, 95, 60, 0.5);
+}
+
+.play-icon svg {
+  width: 32px;
+  height: 32px;
+  color: white;
+  margin-left: 4px;
+}
+
+.timer-block {
+  text-align: center;
+  padding: 24px;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  margin-bottom: 0;
+  transition: opacity 0.4s ease;
+}
+
+.timer-block.hidden {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  visibility: hidden;
+}
+
+.timer-label {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.timer-display {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.timer-note {
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.cta-section {
+  text-align: center;
+  display: none;
+  opacity: 0;
+  transform: translateY(30px);
+  pointer-events: none;
+}
+
+.cta-section.revealed {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  animation: fadeSlideIn 0.6s ease forwards;
+}
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.cta-box {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.cta-box h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.cta-box .subtitle {
+  color: var(--text-secondary);
+  font-size: 15px;
+  margin-bottom: 24px;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  padding: 16px 36px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s;
+  box-shadow: 0 4px 20px rgba(193, 95, 60, 0.3);
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(193, 95, 60, 0.4);
+}
+
+.btn-primary svg {
+  display: inline;
+  vertical-align: middle;
+  margin-left: 8px;
+  width: 18px;
+  height: 18px;
+}
+
+.cta-description {
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.cta-fallback {
+  margin-top: 16px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.cta-fallback a {
+  color: var(--primary-light);
+  text-decoration: none;
+}
+
+.cta-fallback a:hover {
+  text-decoration: underline;
+}
+
+/* Sticky CTA */
+.cta-sticky {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--card);
+  border-top: 1px solid var(--primary);
+  padding: 16px 24px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+  box-shadow: 0 -4px 24px rgba(193, 95, 60, 0.2);
+}
+
+.cta-sticky.visible {
+  transform: translateY(0);
+}
+
+.cta-sticky p {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.cta-sticky .btn-primary {
+  padding: 12px 24px;
+  font-size: 14px;
+}
+
+/* Presenter Section */
+.presenter-section {
+  padding: 40px 24px;
+  border-top: 1px solid var(--card-border);
+}
+
+.presenter-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.presenter-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--card);
+  overflow: hidden;
+  border: 3px solid var(--primary);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.presenter-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.presenter-role {
+  color: var(--primary-light);
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.presenter-credentials {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.presenter-tagline {
+  color: var(--snow);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 14px;
+  background: rgba(193, 95, 60, 0.1);
+  border-radius: 20px;
+  margin-top: 8px;
+}
+
+/* Stats Strip */
+.stats-strip {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 24px;
+  background: var(--card);
+  border-top: 1px solid var(--card-border);
+  border-bottom: 1px solid var(--card-border);
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.stat-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 640px) {
+  .video-section {
+    padding: 24px 16px 40px;
+  }
+
+  .cta-box {
+    padding: 24px;
+  }
+
+  .stats-strip {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .stat-item {
+    flex: 0 0 45%;
+  }
+
+  .cta-sticky {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .cta-sticky p {
+    text-align: center;
+  }
+}
+</style>
+</head>
+<body>
+
+</div>
+
+<section class="video-section">
+  <div class="container">
+    <div class="video-intro">
+      <span class="badge">Free Training</span>
+      <h1>How Contractors Are Getting <span class="highlight">48% Productivity Gains</span> Without Hiring</h1>
+      <p class="video-note">Watch this 18-minute training from Kortex to see the exact system.</p>
+    </div>
+
+    <div class="video-wrapper">
+      <!-- Replace with actual video embed -->
+      <!-- Wistia: -->
+      <!-- <script src="https://fast.wistia.com/embed/medias/VIDEO_ID.jsonp" async></script>
+      <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+      <div class="wistia_embed wistia_async_VIDEO_ID" style="height:100%;position:absolute;width:100%"></div> -->
+
+      <!-- YouTube: -->
+      <!-- <iframe src="https://www.youtube.com/embed/VIDEO_ID?rel=0" allowfullscreen></iframe> -->
+
+      <!-- Vimeo: -->
+      <!-- <iframe src="https://player.vimeo.com/video/VIDEO_ID" allowfullscreen></iframe> -->
+
+      <div class="video-placeholder" id="video-placeholder">
+        <div class="play-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+        </div>
+        <p>Video will be embedded here</p>
+        <p style="font-size: 12px; margin-top: 8px;">Duration: ~18 minutes</p>
+      </div>
+    </div>
+
+    <div class="timer-block" id="timer-block">
+      <p class="timer-label">Your Free Consultation Access Unlocks In</p>
+      <div class="timer-display" id="timer-display">07:00</div>
+      <p class="timer-note">Keep watching. The training will explain who this consultation is for.</p>
+    </div>
+
+    <div class="cta-section" id="cta-section">
+      <div class="cta-box">
+        <h2>Ready to See What Automation Can Do For You?</h2>
+        <p class="subtitle">Get a free consultation to map your operation and identify automation opportunities.</p>
+        <a href="/training/book.html" class="btn-primary" id="book-btn">
+          Book Your Free Consultation
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <p class="cta-description">30 minutes. No obligation. You'll leave with a clear roadmap.</p>
+        <p class="cta-fallback">Prefer to chat first? <a href="mailto:hello@kortex.ai">Email us directly</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats-strip">
+  <div class="stat-item">
+    <div class="stat-number">48%</div>
+    <div class="stat-label">Productivity Gains</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">15</div>
+    <div class="stat-label">Days Faster Payments</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">50%</div>
+    <div class="stat-label">Less Back-Office Time</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">15+</div>
+    <div class="stat-label">Years Experience</div>
+  </div>
+</div>
+
+
+<!-- Sticky CTA -->
+<div class="cta-sticky" id="cta-sticky">
+  <p>Ready for your automation roadmap?</p>
+  <a href="/training/book.html" class="btn-primary" id="sticky-book-btn">
+    Book Free Consultation
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;vertical-align:middle;margin-left:6px;">
+      <line x1="5" y1="12" x2="19" y2="12"></line>
+      <polyline points="12 5 19 12 12 19"></polyline>
+    </svg>
+  </a>
+</div>
+
+<script>
+// Elements
+const timerBlock = document.getElementById('timer-block');
+const timerDisplay = document.getElementById('timer-display');
+const ctaSection = document.getElementById('cta-section');
+const ctaSticky = document.getElementById('cta-sticky');
+
+// State
+let ctaRevealed = false;
+let stickyRevealed = false;
+
+// Timer: 7 minutes = 420 seconds (~40% of 18 min video)
+const TIMER_DURATION = 420;
+let timeRemaining = TIMER_DURATION;
+
+// Video progress thresholds
+const REVEAL_THRESHOLD = 0.40;
+const STICKY_THRESHOLD = 0.80;
+
+// Countdown timer
+const timerInterval = setInterval(function() {
+  timeRemaining--;
+
+  if (timeRemaining <= 0) {
+    clearInterval(timerInterval);
+    revealCTA();
+  } else {
+    const mins = Math.floor(timeRemaining / 60);
+    const secs = timeRemaining % 60;
+    timerDisplay.textContent = mins.toString().padStart(2, '0') + ':' + secs.toString().padStart(2, '0');
+  }
+}, 1000);
+
+function revealCTA() {
+  if (ctaRevealed) return;
+
+  timerBlock.classList.add('hidden');
+  ctaSection.classList.add('revealed');
+  ctaRevealed = true;
+
+  // Track event
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'cta_revealed', { event_category: 'VSL' });
+  }
+}
+
+function revealSticky() {
+  if (stickyRevealed) return;
+
+  ctaSticky.classList.add('visible');
+  stickyRevealed = true;
+
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'sticky_revealed', { event_category: 'VSL' });
+  }
+}
+
+// Video progress handler
+function handleVideoProgress(percent) {
+  if (!ctaRevealed && percent >= REVEAL_THRESHOLD) {
+    clearInterval(timerInterval);
+    revealCTA();
+  }
+  if (!stickyRevealed && percent >= STICKY_THRESHOLD) {
+    revealSticky();
+  }
+}
+
+// Wistia integration (uncomment when video added)
+/*
+window._wq = window._wq || [];
+_wq.push({ id: 'VIDEO_ID', onReady: function(video) {
+  video.bind('percentwatchedchanged', function(percent) {
+    handleVideoProgress(percent);
+  });
+}});
+*/
+
+// Track CTA clicks
+document.getElementById('book-btn').addEventListener('click', function() {
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'begin_checkout', {
+      event_category: 'VSL',
+      event_label: 'Main CTA'
+    });
+  }
+});
+
+document.getElementById('sticky-book-btn').addEventListener('click', function() {
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'begin_checkout', {
+      event_category: 'VSL',
+      event_label: 'Sticky CTA'
+    });
+  }
+});
+</script>
+
+</body>
+</html>
