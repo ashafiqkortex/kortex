@@ -62,7 +62,7 @@ export default function ContactPage() {
                         <div className="text-[15px] text-foreground font-medium">
                           {h.label}
                         </div>
-                        <div className="mt-1 text-[13.5px] text-[var(--foreground-dim)] leading-relaxed">
+                        <div className="mt-1 text-[14px] text-[var(--foreground-dim)] leading-relaxed">
                           {h.body}
                         </div>
                       </div>

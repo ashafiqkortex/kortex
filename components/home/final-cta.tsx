@@ -8,7 +8,7 @@ export function FinalCTA() {
   return (
     <section className="relative py-20 md:py-28 overflow-hidden">
       {/* Backgrounds */}
-      <div className="absolute inset-0 bg-grid opacity-50 pointer-events-none" />
+      <div className="absolute inset-0 bg-blueprint bg-blueprint-fade opacity-70 pointer-events-none" />
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -39,7 +39,7 @@ export function FinalCTA() {
             <span className="italic text-[var(--accent)]">with systems running it.</span>
           </h2>
 
-          <p className="mt-7 max-w-xl mx-auto text-[16.5px] leading-relaxed text-[var(--foreground-dim)]">
+          <p className="mt-7 max-w-xl mx-auto text-[16px] leading-relaxed text-[var(--foreground-dim)]">
             We&apos;ll map how your business currently operates, show you where connected systems would remove the most operational overhead, and what implementation would actually involve.
           </p>
 

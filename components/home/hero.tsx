@@ -204,7 +204,7 @@ function HeroTerminal() {
         </div>
 
         {/* Terminal body */}
-        <div className="p-5 font-mono text-[14px] leading-[1.8] min-h-[320px]">
+        <div className="p-5 font-mono text-[14px] leading-[1.7] min-h-[320px]">
           {typed.map((line, i) => {
             const tone = LINES[i]?.tone ?? "out";
             return (

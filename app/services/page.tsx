@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/container";
 import { PageHeader } from "@/components/page-header";
+import { CustomSolutions } from "@/components/home/custom-solutions";
 import { SERVICES } from "@/lib/services";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
@@ -58,7 +59,7 @@ export default function ServicesPage() {
                   </div>
 
                   <div>
-                    <p className="text-[16.5px] leading-relaxed text-[var(--foreground-dim)]">
+                    <p className="text-[16px] leading-relaxed text-[var(--foreground-dim)]">
                       {service.deep}
                     </p>
                     <div className="mt-10 rounded-xl border border-[var(--border)] bg-[var(--surface)]/40 overflow-hidden">
@@ -69,7 +70,7 @@ export default function ServicesPage() {
                         {service.deliverables.map((d) => (
                           <li
                             key={d}
-                            className="flex items-start gap-3 px-5 py-3.5 text-[14.5px] text-[var(--foreground-dim)]"
+                            className="flex items-start gap-3 px-5 py-3.5 text-[15px] text-[var(--foreground-dim)]"
                           >
                             <Check
                               size={14}
@@ -86,6 +87,9 @@ export default function ServicesPage() {
               );
             })}
           </div>
+
+          {/* Custom Solutions — capstone after the five disciplines */}
+          <CustomSolutions id="custom" asSection={false} />
 
           <div className="mt-16 md:mt-24 rounded-2xl border border-[var(--border-bright)] bg-[var(--surface)]/60 p-10 md:p-14 text-center relative overflow-hidden">
             <div className="absolute inset-0 bg-grid opacity-30 pointer-events-none" />

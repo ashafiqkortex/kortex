@@ -147,7 +147,7 @@ export function CaseStudyChat({ slug, client, tag, starterQuestions }: Props) {
               <div className="text-[14px] font-medium text-foreground leading-tight">
                 {client}
               </div>
-              <div className="text-[10.5px] font-mono uppercase tracking-widest text-[var(--muted)] leading-tight mt-0.5">
+              <div className="text-[11px] font-mono uppercase tracking-widest text-[var(--muted)] leading-tight mt-0.5">
                 {tag} · haiku 4.5
               </div>
             </div>
@@ -242,7 +242,7 @@ export function CaseStudyChat({ slug, client, tag, starterQuestions }: Props) {
                     : "Ask how this case study would apply to your situation..."
               }
               rows={1}
-              className="flex-1 resize-none bg-transparent border-0 outline-none text-[14.5px] text-foreground placeholder:text-[var(--muted-2)] min-h-[36px] max-h-[160px] py-2"
+              className="flex-1 resize-none bg-transparent border-0 outline-none text-[15px] text-foreground placeholder:text-[var(--muted-2)] min-h-[36px] max-h-[160px] py-2"
               style={{
                 // auto-grow effect managed by rows, simple enough
               }}
@@ -304,7 +304,7 @@ function MessageBubble({
       </div>
       <div
         className={cn(
-          "max-w-[85%] rounded-xl px-4 py-2.5 text-[14.5px] leading-[1.65]",
+          "max-w-[85%] rounded-xl px-4 py-2.5 text-[15px] leading-[1.65]",
           isUser
             ? "bg-[var(--surface-2)] text-foreground"
             : "bg-transparent text-[var(--foreground-dim)]",

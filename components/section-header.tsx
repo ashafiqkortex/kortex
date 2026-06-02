@@ -36,7 +36,7 @@ export function SectionHeader({
         {title}
       </h2>
       {description && (
-        <p className="mt-6 text-[16.5px] md:text-[19px] leading-relaxed text-[var(--foreground-dim)]">
+        <p className="mt-6 text-[16px] md:text-[19px] leading-relaxed text-[var(--foreground-dim)]">
           {description}
         </p>
       )}

@@ -174,7 +174,7 @@ export function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.25 }}
-          className="mt-10 max-w-lg text-[16px] md:text-[17px] leading-[1.8] text-[var(--muted)] font-light"
+          className="mt-10 max-w-lg text-[16px] md:text-[17px] leading-[1.7] text-[var(--muted)] font-light"
         >
           Kortex builds connected operational systems that coordinate
           communication, workflows, data, and execution automatically —
@@ -349,107 +349,90 @@ export function Services() {
           </p>
         </motion.div>
 
-        {/* Services list — with hover life */}
-        <div className="mt-16 md:mt-20 space-y-4 md:space-y-5">
-          {SERVICES.map((service, i) => (
-            <motion.div
-              key={service.slug}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.6, delay: i * 0.06 }}
-              className="group relative"
-            >
-              {/* Card */}
-              <div
-                className="relative rounded-xl p-7 md:p-9 lg:p-10 border border-[var(--border)] transition-all duration-300 group-hover:border-[var(--accent)]/40 group-hover:shadow-[0_10px_30px_rgba(193,95,60,0.10)] group-hover:-translate-y-1"
-                style={{
-                  background:
-                    "linear-gradient(135deg, var(--surface-2) 0%, var(--surface) 100%)",
-                }}
+        {/* Services — BENTO grid (Workflows featured 2x2, Connected wide) */}
+        <div className="mt-16 md:mt-20 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 md:auto-rows-[minmax(190px,1fr)]">
+          {SERVICES.map((service, i) => {
+            const featured = i === 0;
+            const wide = i === 4;
+            const span = featured
+              ? "md:col-span-2 md:row-span-2"
+              : wide
+                ? "md:col-span-2"
+                : "";
+            return (
+              <motion.div
+                key={service.slug}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.5, delay: i * 0.06 }}
+                className={`group relative ${span}`}
               >
-                {/* Hover topology texture */}
                 <div
-                  className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none overflow-hidden"
-                >
-                  <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                      <pattern id={`card-grid-${i}`} x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(193, 95, 60, 0.03)" strokeWidth="1" />
-                      </pattern>
-                    </defs>
-                    <rect width="100%" height="100%" fill={`url(#card-grid-${i})`} />
-                  </svg>
-                </div>
-
-                {/* Hover glow from top-left */}
-                <div
-                  className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
+                  className={`relative h-full overflow-hidden rounded-xl border border-[var(--border)] transition-all duration-300 group-hover:border-[var(--accent)]/40 group-hover:shadow-[0_10px_30px_rgba(193,95,60,0.10)] group-hover:-translate-y-1 ${featured ? "p-8 md:p-10" : "p-7 md:p-8"}`}
                   style={{
                     background:
-                      "radial-gradient(ellipse 50% 50% at 15% 0%, rgba(193, 95, 60, 0.04), transparent 60%)",
+                      "linear-gradient(135deg, var(--surface-2) 0%, var(--surface) 100%)",
                   }}
-                />
+                >
+                  {/* Hover glow */}
+                  <div
+                    className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
+                    style={{
+                      background:
+                        "radial-gradient(ellipse 50% 50% at 15% 0%, rgba(193, 95, 60, 0.05), transparent 60%)",
+                    }}
+                  />
 
-                {/* Subtle border on hover */}
-                <div
-                  className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-                  style={{
-                    boxShadow: "inset 0 0 0 1px rgba(193, 95, 60, 0.06)",
-                  }}
-                />
-
-                {/* Hover connection line animation */}
-                <div className="absolute top-4 right-4 w-16 h-8 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                  <svg viewBox="0 0 64 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="8" cy="16" r="2" fill="rgba(193, 95, 60, 0.3)" />
-                    <circle cx="32" cy="16" r="2" fill="rgba(193, 95, 60, 0.3)" />
-                    <circle cx="56" cy="16" r="2" fill="rgba(193, 95, 60, 0.3)" />
-                    <line x1="10" y1="16" x2="30" y2="16" stroke="rgba(193, 95, 60, 0.15)" strokeWidth="1" />
-                    <line x1="34" y1="16" x2="54" y2="16" stroke="rgba(193, 95, 60, 0.15)" strokeWidth="1" />
-                    <circle r="1.5" fill="rgba(193, 95, 60, 0.6)">
-                      <animateMotion dur="1.5s" repeatCount="indefinite" path="M 8 16 L 56 16" />
-                    </circle>
-                  </svg>
-                </div>
-
-                <div className="relative flex flex-col lg:flex-row lg:items-start lg:gap-10">
-                  {/* Number + Glyph + Title */}
-                  <div className="lg:w-64 shrink-0 flex items-start gap-4">
-                    {/* Glyph */}
-                    <div className="w-11 h-11 shrink-0 rounded-lg flex items-center justify-center bg-[var(--accent)]/10 border border-[var(--accent)]/25 text-[var(--accent)] group-hover:bg-[var(--accent)]/[0.16] group-hover:border-[var(--accent)]/40 transition-colors duration-500 [&_svg]:w-[22px] [&_svg]:h-[22px]">
+                  {/* Featured: large faint glyph watermark fills the big cell */}
+                  {featured && (
+                    <div className="absolute -bottom-8 -right-8 w-56 h-56 text-[var(--accent)] opacity-[0.07] group-hover:opacity-[0.10] transition-opacity duration-700 pointer-events-none [&_svg]:w-full [&_svg]:h-full">
                       {GLYPHS[service.slug]}
                     </div>
+                  )}
 
-                    <div>
-                      <div className="text-[10px] font-mono tracking-[0.2em] text-[var(--muted-2)] mb-1.5">
+                  <div className="relative flex h-full flex-col">
+                    {/* Glyph + number */}
+                    <div className="flex items-center justify-between">
+                      <div
+                        className={`shrink-0 rounded-lg flex items-center justify-center bg-[var(--accent)]/10 border border-[var(--accent)]/25 text-[var(--accent)] group-hover:bg-[var(--accent)]/[0.16] group-hover:border-[var(--accent)]/40 transition-colors duration-500 ${featured ? "w-14 h-14 [&_svg]:w-7 [&_svg]:h-7" : "w-11 h-11 [&_svg]:w-[22px] [&_svg]:h-[22px]"}`}
+                      >
+                        {GLYPHS[service.slug]}
+                      </div>
+                      <div className="text-[11px] font-mono tracking-[0.2em] text-[var(--muted-2)]">
                         0{i + 1}
                       </div>
-                      <h3 className="font-display text-xl md:text-[22px] lg:text-2xl tracking-[-0.02em] text-foreground leading-tight">
+                    </div>
+
+                    {/* Name + tagline */}
+                    <div className={featured ? "mt-8" : "mt-6"}>
+                      <h3
+                        className={`font-display tracking-[-0.02em] text-foreground leading-tight ${featured ? "text-[28px] md:text-[34px]" : "text-xl md:text-[22px]"}`}
+                      >
                         {service.name}
                       </h3>
-                    </div>
-                  </div>
-
-                  {/* Description — tighter, more muted */}
-                  <div className="mt-5 lg:mt-0 flex-1 max-w-sm">
-                    {service.short.map((paragraph, j) => (
                       <p
-                        key={j}
-                        className={`leading-[1.7] ${
-                          j === 0
-                            ? "text-[15px] md:text-[16px] font-medium text-foreground"
-                            : "mt-2.5 text-[14px] md:text-[15px] text-[var(--muted)]"
-                        }`}
+                        className={`mt-2 italic text-[var(--accent)] ${featured ? "text-[18px] md:text-[20px]" : "text-[14px] md:text-[15px]"}`}
                       >
-                        {paragraph}
+                        {service.tagline}
                       </p>
-                    ))}
+                    </div>
+
+                    {/* Featured + wide cards carry a description line */}
+                    {(featured || wide) && (
+                      <p
+                        className={`mt-4 leading-[1.7] text-[var(--foreground-dim)] ${featured ? "text-[15px] md:text-[16px] max-w-md" : "text-[14px] md:text-[15px] max-w-md"}`}
+                      >
+                        {service.short[0]}
+                      </p>
+                    )}
+
+                    <div className="mt-auto" />
                   </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
 
         {/* Future moment — stronger, isolated */}

@@ -220,7 +220,7 @@ export function Diagnostic() {
               </div>
               <div
                 ref={outputRef}
-                className="p-6 md:p-8 font-mono text-[13.5px] leading-[1.8] text-[var(--foreground-dim)] whitespace-pre-wrap max-h-[480px] overflow-y-auto"
+                className="p-6 md:p-8 font-mono text-[14px] leading-[1.7] text-[var(--foreground-dim)] whitespace-pre-wrap max-h-[480px] overflow-y-auto"
               >
                 {response}
                 {phase === "streaming" && <span className="cursor-blink" />}

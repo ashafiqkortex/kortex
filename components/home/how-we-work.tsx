@@ -35,7 +35,8 @@ const PILLARS = [
 export function HowWeWork() {
   return (
     <section className="relative py-20 md:py-28 border-b border-[var(--border)]">
-      <Container size="wide">
+      <div className="bg-blueprint bg-blueprint-fade absolute inset-0 pointer-events-none opacity-70" />
+      <Container size="wide" className="relative">
         <SectionHeader
           eyebrow="How We Work"
           title={
@@ -62,7 +63,7 @@ export function HowWeWork() {
               <h3 className="font-display text-[28px] leading-tight tracking-[-0.01em] text-foreground">
                 {p.title}
               </h3>
-              <p className="mt-4 text-[14.5px] leading-relaxed text-[var(--foreground-dim)]">
+              <p className="mt-4 text-[15px] leading-relaxed text-[var(--foreground-dim)]">
                 {p.body}
               </p>
             </motion.div>

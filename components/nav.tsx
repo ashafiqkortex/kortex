@@ -52,7 +52,7 @@ export function Nav() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "px-4 py-1.5 rounded-full text-[14.5px] font-medium transition-colors",
+                  "px-4 py-1.5 rounded-full text-[15px] font-medium transition-colors",
                   isActive(item.href)
                     ? "text-[var(--accent)] bg-[var(--accent)]/10 shadow-[inset_0_0_0_1px_color-mix(in_srgb,var(--accent)_30%,transparent)]"
                     : "text-[var(--foreground-dim)] hover:text-[var(--accent)] hover:bg-[var(--accent)]/10",

@@ -115,7 +115,7 @@ export default async function CaseStudyPage({
                 <h2 className="font-display text-3xl md:text-4xl leading-tight tracking-[-0.02em] text-foreground">
                   The state of things.
                 </h2>
-                <p className="mt-6 text-[16.5px] leading-relaxed text-[var(--foreground-dim)]">
+                <p className="mt-6 text-[16px] leading-relaxed text-[var(--foreground-dim)]">
                   {cs.problem}
                 </p>
               </section>
@@ -131,7 +131,7 @@ export default async function CaseStudyPage({
                   {cs.built.map((b, i) => (
                     <li
                       key={b}
-                      className="flex items-start gap-4 py-4 text-[15.5px] text-[var(--foreground-dim)]"
+                      className="flex items-start gap-4 py-4 text-[16px] text-[var(--foreground-dim)]"
                     >
                       <span className="shrink-0 font-mono text-[12px] text-[var(--muted-2)] w-8 pt-0.5">
                         {String(i + 1).padStart(2, "0")}
@@ -154,7 +154,7 @@ export default async function CaseStudyPage({
                 <h2 className="font-display text-3xl md:text-4xl leading-tight tracking-[-0.02em] text-foreground">
                   What changed.
                 </h2>
-                <p className="mt-6 text-[16.5px] leading-relaxed text-[var(--foreground-dim)]">
+                <p className="mt-6 text-[16px] leading-relaxed text-[var(--foreground-dim)]">
                   {cs.outcome}
                 </p>
               </section>

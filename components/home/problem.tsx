@@ -132,7 +132,7 @@ export function Problem() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-14 max-w-md text-[17px] leading-[1.9] text-[var(--muted)] font-light"
+          className="mt-14 max-w-md text-[17px] leading-[1.7] text-[var(--muted)] font-light"
         >
           <p>
             More hires. More software. More coordination.
@@ -288,7 +288,7 @@ export function Problem() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="mt-10 max-w-md text-[15px] leading-[1.85] text-[var(--muted)] font-light"
+            className="mt-10 max-w-md text-[15px] leading-[1.7] text-[var(--muted)] font-light"
           >
             Kortex builds operational AI systems that replace fragmented
             coordination with connected infrastructure — allowing businesses to
