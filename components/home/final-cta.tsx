@@ -25,7 +25,7 @@ export function FinalCTA() {
           transition={{ duration: 0.7 }}
           className="text-center"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[var(--border-bright)] bg-[var(--surface)]/60 backdrop-blur text-[12px] font-mono uppercase tracking-widest text-[var(--foreground-dim)] mb-8">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--foreground)] text-[var(--background)] backdrop-blur text-[12px] font-mono uppercase tracking-widest mb-8">
             <span className="relative flex h-1.5 w-1.5">
               <span className="pulse-dot absolute inline-flex h-full w-full rounded-full bg-[var(--accent)]" />
               <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[var(--accent)]" />

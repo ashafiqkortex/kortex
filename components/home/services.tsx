@@ -362,7 +362,7 @@ export function Services() {
             >
               {/* Card */}
               <div
-                className="relative rounded-xl p-7 md:p-9 lg:p-10 border border-[var(--border)] transition-all duration-500 group-hover:border-[var(--border-bright)]"
+                className="relative rounded-xl p-7 md:p-9 lg:p-10 border border-[var(--border)] transition-all duration-300 group-hover:border-[var(--accent)]/40 group-hover:shadow-[0_10px_30px_rgba(193,95,60,0.10)] group-hover:-translate-y-1"
                 style={{
                   background:
                     "linear-gradient(135deg, var(--surface-2) 0%, var(--surface) 100%)",
