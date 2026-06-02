@@ -1,22 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --background: #07090C;
-  --background-elev: #0F1117;
-  --surface: #12141C;
-  --surface-2: #171923;
-  --border: #1E2130;
-  --border-bright: #2A2E42;
-  --foreground: #E8E9F0;
-  --foreground-dim: #B6BAC5;
-  --muted: #8A8F9A;
-  --muted-2: #545967;
-  --accent: #5EEAD4;
-  --accent-dim: #14B8A6;
-  --accent-glow: rgba(94, 234, 212, 0.15);
-  --danger: #F87171;
-  --warning: #FBBF24;
-  --success: #4ADE80;
+  /* Anthropic Warm — cream + clay (verified hex from anthropic.com) */
+  --background: #F0EEE6;
+  --background-elev: #F5F3EB;
+  --surface: #FAF9F4;
+  --surface-2: #FFFFFF;
+  --border: #E4E0D3;
+  --border-bright: #D8D3C2;
+  --foreground: #191815;
+  --foreground-dim: #54524B;
+  --muted: #87867F;
+  --muted-2: #A8A69D;
+  --accent: #C15F3C;
+  --accent-dim: #A8492A;
+  --accent-glow: rgba(193, 95, 60, 0.18);
+  --danger: #DC2626;
+  --warning: #B45309;
+  --success: #15803D;
 }
 
 @theme inline {
@@ -38,7 +39,7 @@
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-display: var(--font-instrument-serif);
+  --font-display: var(--font-fraunces);
 }
 
 html {
@@ -57,21 +58,21 @@ body {
 
 ::selection {
   background: var(--accent);
-  color: var(--background);
+  color: #ffffff;
 }
 
-/* Background textures */
+/* Background textures (warm dark lines for the cream theme) */
 .bg-grid {
   background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    linear-gradient(to right, rgba(25, 24, 21, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(25, 24, 21, 0.04) 1px, transparent 1px);
   background-size: 64px 64px;
 }
 
 .bg-grid-fine {
   background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    linear-gradient(to right, rgba(25, 24, 21, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(25, 24, 21, 0.05) 1px, transparent 1px);
   background-size: 32px 32px;
 }
 
@@ -136,10 +137,9 @@ body {
 
 /* Display type */
 .font-display {
-  font-family: var(--font-instrument-serif), Georgia, serif;
-  font-weight: 400;
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-weight: 500;
   letter-spacing: -0.02em;
-  font-feature-settings: "ss01";
 }
 
 .font-mono {

@@ -25,7 +25,7 @@ export function Hero() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 80% 50% at 50% 0%, rgba(94,234,212,0.08), transparent 70%)",
+            "radial-gradient(ellipse 80% 50% at 50% 0%, rgba(193, 95, 60,0.08), transparent 70%)",
         }}
       />
 
@@ -183,7 +183,7 @@ function HeroTerminal() {
         />
       </div>
 
-      <div className="relative rounded-xl border border-[var(--border-bright)] bg-[var(--surface)]/80 backdrop-blur-sm overflow-hidden shadow-[0_20px_80px_-20px_rgba(94,234,212,0.15)]">
+      <div className="relative rounded-xl border border-[var(--border-bright)] bg-[var(--surface)]/80 backdrop-blur-sm overflow-hidden shadow-[0_20px_80px_-20px_rgba(193, 95, 60,0.15)]">
         {/* Terminal chrome */}
         <div className="flex items-center gap-2 px-4 py-2.5 border-b border-[var(--border)] bg-[var(--surface-2)]/50">
           <div className="flex gap-1.5">

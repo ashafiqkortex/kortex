@@ -115,7 +115,7 @@ export function HeroBrainV2() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 45% 60% at 78% 50%, rgba(94,234,212,0.12), transparent 65%)",
+            "radial-gradient(ellipse 45% 60% at 78% 50%, rgba(193, 95, 60,0.12), transparent 65%)",
         }}
       />
 
@@ -138,7 +138,7 @@ export function HeroBrainV2() {
         className="absolute inset-y-0 left-0 w-full md:w-[55%] pointer-events-none"
         style={{
           background:
-            "linear-gradient(to right, rgba(7,9,12,0.95) 0%, rgba(7,9,12,0.85) 50%, rgba(7,9,12,0.45) 85%, rgba(7,9,12,0) 100%)",
+            "linear-gradient(to right, rgba(240,238,230,0.96) 0%, rgba(240,238,230,0.88) 50%, rgba(240,238,230,0.45) 85%, rgba(240,238,230,0) 100%)",
         }}
       />
 
@@ -162,7 +162,7 @@ export function HeroBrainV2() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
             className="mt-7 font-display text-5xl md:text-6xl lg:text-[68px] leading-[1.0] tracking-[-0.02em] text-foreground"
-            style={{ textShadow: "0 2px 30px rgba(0,0,0,0.8)" }}
+            style={{ textShadow: "0 1px 18px rgba(240,238,230,0.9)" }}
           >
             Scale without the headcount.
             <br />
@@ -174,7 +174,7 @@ export function HeroBrainV2() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.25 }}
             className="mt-7 max-w-[520px] text-[17px] md:text-[18px] leading-relaxed text-[var(--foreground-dim)]"
-            style={{ textShadow: "0 1px 16px rgba(0,0,0,0.7)" }}
+            style={{ textShadow: "0 1px 12px rgba(240,238,230,0.9)" }}
           >
             Kortex builds AI operational systems — from customer call to paid invoice — so businesses scale with far greater leverage.
           </motion.p>
@@ -324,7 +324,7 @@ function BrainCore() {
         className="absolute inset-0 rounded-full"
         style={{
           background:
-            "radial-gradient(circle at 50% 50%, rgba(94,234,212,0.26), rgba(94,234,212,0.07) 38%, transparent 72%)",
+            "radial-gradient(circle at 50% 50%, rgba(193, 95, 60,0.26), rgba(193, 95, 60,0.07) 38%, transparent 72%)",
           filter: "blur(24px)",
         }}
       />

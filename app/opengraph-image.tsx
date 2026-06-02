@@ -14,8 +14,8 @@ export default async function Image() {
           width: "100%",
           display: "flex",
           flexDirection: "column",
-          background: "#07090C",
-          color: "#E8E9F0",
+          background: "#F0EEE6",
+          color: "#191815",
           padding: "72px",
           position: "relative",
           fontFamily: "sans-serif",
@@ -27,7 +27,7 @@ export default async function Image() {
             position: "absolute",
             inset: 0,
             backgroundImage:
-              "linear-gradient(to right, rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.025) 1px, transparent 1px)",
+              "linear-gradient(to right, rgba(25,24,21,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(25,24,21,0.05) 1px, transparent 1px)",
             backgroundSize: "64px 64px",
             opacity: 0.7,
           }}
@@ -39,7 +39,7 @@ export default async function Image() {
             position: "absolute",
             inset: 0,
             background:
-              "radial-gradient(ellipse 60% 55% at 78% 50%, rgba(94,234,212,0.20), transparent 65%)",
+              "radial-gradient(ellipse 60% 55% at 78% 50%, rgba(193,95,60,0.18), transparent 65%)",
           }}
         />
 
@@ -57,7 +57,7 @@ export default async function Image() {
               width="21"
               height="21"
               rx="4"
-              stroke="#E8E9F0"
+              stroke="#191815"
               strokeOpacity="0.35"
               strokeWidth="1"
               fill="none"
@@ -67,7 +67,7 @@ export default async function Image() {
               y1="9"
               x2="19"
               y2="9"
-              stroke="#E8E9F0"
+              stroke="#191815"
               strokeOpacity="0.55"
               strokeWidth="1.25"
               strokeLinecap="round"
@@ -77,12 +77,12 @@ export default async function Image() {
               y1="15"
               x2="19"
               y2="15"
-              stroke="#5EEAD4"
+              stroke="#C15F3C"
               strokeWidth="1.75"
               strokeLinecap="round"
             />
-            <circle cx="12" cy="15" r="2" fill="#5EEAD4" />
-            <circle cx="12" cy="15" r="4" fill="#5EEAD4" fillOpacity="0.15" />
+            <circle cx="12" cy="15" r="2" fill="#C15F3C" />
+            <circle cx="12" cy="15" r="4" fill="#C15F3C" fillOpacity="0.15" />
           </svg>
           <span
             style={{ fontSize: "30px", fontWeight: 500, letterSpacing: "-0.01em" }}
@@ -118,7 +118,7 @@ export default async function Image() {
               letterSpacing: "-0.02em",
               fontFamily: "serif",
               fontStyle: "italic",
-              color: "#5EEAD4",
+              color: "#C15F3C",
               marginTop: "6px",
             }}
           >
@@ -128,7 +128,7 @@ export default async function Image() {
             style={{
               fontSize: "26px",
               lineHeight: 1.4,
-              color: "#B6BAC5",
+              color: "#54524B",
               marginTop: "36px",
               maxWidth: "780px",
             }}
@@ -152,7 +152,7 @@ export default async function Image() {
               fontSize: "20px",
               letterSpacing: "0.12em",
               textTransform: "uppercase",
-              color: "#8A8F9A",
+              color: "#87867F",
             }}
           >
             kortexconsulting.com
@@ -162,8 +162,8 @@ export default async function Image() {
               display: "flex",
               alignItems: "center",
               gap: "10px",
-              border: "1px solid #2A2E42",
-              background: "rgba(18,20,28,0.7)",
+              border: "1px solid #D8D3C2",
+              background: "rgba(255,255,255,0.7)",
               borderRadius: "999px",
               padding: "10px 18px",
             }}
@@ -172,7 +172,7 @@ export default async function Image() {
               style={{
                 width: "8px",
                 height: "8px",
-                background: "#5EEAD4",
+                background: "#C15F3C",
                 borderRadius: "50%",
               }}
             />
@@ -182,7 +182,7 @@ export default async function Image() {
                 fontSize: "14px",
                 letterSpacing: "0.15em",
                 textTransform: "uppercase",
-                color: "#B6BAC5",
+                color: "#54524B",
               }}
             >
               AI &amp; Automation Engineering

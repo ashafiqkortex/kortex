@@ -16,7 +16,7 @@ export function PageHeader({
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 60% 40% at 20% 0%, rgba(94,234,212,0.06), transparent 60%)",
+            "radial-gradient(ellipse 60% 40% at 20% 0%, rgba(193, 95, 60,0.06), transparent 60%)",
         }}
       />
       <Container size="wide" className="relative">

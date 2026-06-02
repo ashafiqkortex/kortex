@@ -49,7 +49,7 @@ export function HeroBrain() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 50% 65% at 72% 50%, rgba(94,234,212,0.10), transparent 65%)",
+            "radial-gradient(ellipse 50% 65% at 72% 50%, rgba(193, 95, 60,0.10), transparent 65%)",
         }}
       />
 
@@ -72,7 +72,7 @@ export function HeroBrain() {
         className="absolute inset-y-0 left-0 w-full md:w-[58%] pointer-events-none"
         style={{
           background:
-            "linear-gradient(to right, rgba(7,9,12,0.94) 0%, rgba(7,9,12,0.78) 45%, rgba(7,9,12,0.35) 80%, rgba(7,9,12,0) 100%)",
+            "linear-gradient(to right, rgba(240,238,230,0.95) 0%, rgba(240,238,230,0.85) 45%, rgba(240,238,230,0.4) 80%, rgba(240,238,230,0) 100%)",
         }}
       />
 
@@ -97,7 +97,7 @@ export function HeroBrain() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
             className="mt-7 font-display text-5xl md:text-6xl lg:text-[76px] leading-[0.98] tracking-[-0.02em] text-foreground"
-            style={{ textShadow: "0 2px 30px rgba(0,0,0,0.7)" }}
+            style={{ textShadow: "0 1px 18px rgba(240,238,230,0.9)" }}
           >
             AI that knows{" "}
             <span className="italic text-[var(--accent)]">your business</span>.
@@ -110,7 +110,7 @@ export function HeroBrain() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.25 }}
             className="mt-7 max-w-xl text-[17px] md:text-[18px] leading-relaxed text-[var(--foreground-dim)]"
-            style={{ textShadow: "0 1px 16px rgba(0,0,0,0.7)" }}
+            style={{ textShadow: "0 1px 12px rgba(240,238,230,0.9)" }}
           >
             Custom RAG, agents, and automation — engineered into your own systems and data. For companies that want AI <em>inside</em> the business, not bolted on.
           </motion.p>
@@ -266,7 +266,7 @@ function BrainCore() {
         className="absolute inset-0 rounded-full"
         style={{
           background:
-            "radial-gradient(circle at 50% 50%, rgba(94,234,212,0.22), rgba(94,234,212,0.05) 38%, transparent 70%)",
+            "radial-gradient(circle at 50% 50%, rgba(193, 95, 60,0.22), rgba(193, 95, 60,0.05) 38%, transparent 70%)",
           filter: "blur(22px)",
         }}
       />
