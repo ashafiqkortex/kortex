@@ -31,12 +31,12 @@ export function Button({
   disabled = false,
 }: Props) {
   const base =
-    "group inline-flex items-center justify-center gap-2 rounded-full font-medium tracking-tight transition-all duration-200 relative overflow-hidden";
+    "group inline-flex items-center justify-center gap-2 rounded-full font-medium tracking-tight transition-all duration-200 relative overflow-hidden text-center leading-tight";
 
   const sizes: Record<Size, string> = {
-    sm: "h-9 px-4 text-[14px]",
-    md: "h-11 px-5 text-[15px]",
-    lg: "h-12 px-6 text-[17px]",
+    sm: "min-h-9 px-4 py-1.5 text-[14px]",
+    md: "min-h-11 px-5 py-2 text-[15px]",
+    lg: "min-h-12 px-6 py-2.5 text-[15px] md:text-[17px]",
   };
 
   const variants: Record<Variant, string> = {
@@ -50,11 +50,11 @@ export function Button({
 
   const content = (
     <>
-      <span className="relative z-10 flex items-center gap-2">
+      <span className="relative z-10 flex flex-wrap items-center justify-center gap-x-2 gap-y-0.5">
         {children}
         {arrow && (
           <ArrowUpRight
-            className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+            className="h-4 w-4 shrink-0 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
             strokeWidth={1.75}
           />
         )}

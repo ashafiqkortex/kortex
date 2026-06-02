@@ -53,11 +53,11 @@ export default async function CaseStudyPage({
           {/* Metrics + Client */}
           <div className="grid gap-0 md:grid-cols-[1fr_2fr] rounded-xl border border-[var(--border)] bg-[var(--surface)]/40 overflow-hidden">
             <div className="p-8 border-b md:border-b-0 md:border-r border-[var(--border)] bg-[var(--background-elev)]/60">
-              <div className="text-[11px] font-mono uppercase tracking-widest text-[var(--muted)]">
+              <div className="text-[12px] font-mono uppercase tracking-widest text-[var(--muted)]">
                 Client
               </div>
               <div className="mt-2 text-foreground text-[18px]">{cs.client}</div>
-              <div className="mt-8 text-[11px] font-mono uppercase tracking-widest text-[var(--muted)]">
+              <div className="mt-8 text-[12px] font-mono uppercase tracking-widest text-[var(--muted)]">
                 Stack
               </div>
               <div className="mt-3 flex flex-wrap gap-1.5">
@@ -77,7 +77,7 @@ export default async function CaseStudyPage({
                   <div className="font-display text-4xl text-[var(--accent)]">
                     {m.value}
                   </div>
-                  <div className="mt-2 text-[11px] font-mono uppercase tracking-widest text-[var(--muted)] leading-tight">
+                  <div className="mt-2 text-[12px] font-mono uppercase tracking-widest text-[var(--muted)] leading-tight">
                     {m.label}
                   </div>
                 </div>
@@ -109,7 +109,7 @@ export default async function CaseStudyPage({
 
             <div className="max-w-2xl space-y-20">
               <section id="problem" className="scroll-mt-24">
-                <div className="text-[11px] font-mono uppercase tracking-widest text-[var(--accent)] mb-5">
+                <div className="text-[12px] font-mono uppercase tracking-widest text-[var(--accent)] mb-5">
                   / Problem
                 </div>
                 <h2 className="font-display text-3xl md:text-4xl leading-tight tracking-[-0.02em] text-foreground">
@@ -121,7 +121,7 @@ export default async function CaseStudyPage({
               </section>
 
               <section id="built" className="scroll-mt-24">
-                <div className="text-[11px] font-mono uppercase tracking-widest text-[var(--accent)] mb-5">
+                <div className="text-[12px] font-mono uppercase tracking-widest text-[var(--accent)] mb-5">
                   / What we built
                 </div>
                 <h2 className="font-display text-3xl md:text-4xl leading-tight tracking-[-0.02em] text-foreground">
@@ -148,7 +148,7 @@ export default async function CaseStudyPage({
               </section>
 
               <section id="outcome" className="scroll-mt-24">
-                <div className="text-[11px] font-mono uppercase tracking-widest text-[var(--accent)] mb-5">
+                <div className="text-[12px] font-mono uppercase tracking-widest text-[var(--accent)] mb-5">
                   / Outcome
                 </div>
                 <h2 className="font-display text-3xl md:text-4xl leading-tight tracking-[-0.02em] text-foreground">
@@ -160,7 +160,7 @@ export default async function CaseStudyPage({
               </section>
 
               <section id="thesis" className="scroll-mt-24">
-                <div className="text-[11px] font-mono uppercase tracking-widest text-[var(--accent)] mb-5">
+                <div className="text-[12px] font-mono uppercase tracking-widest text-[var(--accent)] mb-5">
                   / The thesis in action
                 </div>
                 <blockquote className="border-l-2 border-[var(--accent)] pl-6 italic font-display text-2xl md:text-3xl leading-[1.2] tracking-[-0.01em] text-foreground">
@@ -183,7 +183,7 @@ export default async function CaseStudyPage({
               href={`/case-studies/${next.slug}`}
               className="group rounded-xl border border-[var(--border)] bg-[var(--surface)]/40 hover:border-[var(--accent)]/40 hover:bg-[var(--surface)] p-8 transition-all"
             >
-              <div className="text-[11px] font-mono uppercase tracking-widest text-[var(--muted)] mb-3">
+              <div className="text-[12px] font-mono uppercase tracking-widest text-[var(--muted)] mb-3">
                 Next case study →
               </div>
               <div className="text-[12px] font-mono text-[var(--accent)] mb-2">

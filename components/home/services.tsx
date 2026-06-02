@@ -141,7 +141,7 @@ export function Services() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-[10px] font-mono uppercase tracking-[0.25em] text-[var(--muted-2)]"
+          className="text-[11px] font-mono uppercase tracking-[0.25em] text-[var(--muted)]"
         >
           What We Build
         </motion.div>
@@ -190,7 +190,7 @@ export function Services() {
           transition={{ duration: 1, delay: 0.3 }}
           className="mt-20 md:mt-28 relative"
         >
-          <div className="relative h-28 md:h-36 flex items-center justify-center overflow-hidden">
+          <div className="relative flex items-center justify-center overflow-hidden py-3 md:py-4">
             {/* Glow backdrop — more muted */}
             <div
               className="absolute inset-0"
@@ -242,8 +242,8 @@ export function Services() {
                   initial={{ opacity: 0.3 }}
                   animate={flowInView ? { opacity: 1 } : { opacity: 0.3 }}
                   transition={{ duration: 0.5, delay: 0.4 + i * 0.15 }}
-                  filter="url(#node-glow)"
                 >
+                  <g filter="url(#node-glow)">
                   {/* Outer ring pulse */}
                   <circle
                     cx={node.x}
@@ -291,13 +291,14 @@ export function Services() {
                       repeatCount="indefinite"
                     />
                   </circle>
+                  </g>
 
                   {/* Label */}
                   <text
                     x={node.x}
                     y="60"
                     textAnchor="middle"
-                    className="text-[10px] font-mono uppercase tracking-wider font-semibold"
+                    className="text-[12px] font-mono uppercase tracking-wide font-semibold"
                     fill="var(--foreground)"
                   >
                     {node.label}
@@ -331,7 +332,7 @@ export function Services() {
           </div>
 
           {/* Caption */}
-          <p className="mt-3 text-center text-[11px] font-mono uppercase tracking-[0.2em] text-[var(--accent)]">
+          <p className="mt-3 text-center text-[12px] font-mono uppercase tracking-[0.2em] text-[var(--accent)]">
             From customer call to paid invoice — automatically
           </p>
         </motion.div>
@@ -342,7 +343,7 @@ export function Services() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-16 md:mt-20 text-center text-[15px] md:text-[17px] text-[var(--foreground-dim)] font-light max-w-lg mx-auto"
+          className="mt-8 md:mt-10 text-center text-[16px] md:text-[18px] text-[var(--foreground-dim)] max-w-lg mx-auto"
         >
           Operations become one connected system.
         </motion.p>
@@ -434,10 +435,10 @@ export function Services() {
                     {service.short.map((paragraph, j) => (
                       <p
                         key={j}
-                        className={`text-[12px] md:text-[14px] leading-[1.85] font-light ${
+                        className={`text-[14px] md:text-[15px] leading-[1.7] ${
                           j === 0
-                            ? "text-[var(--foreground-dim)] opacity-90"
-                            : "mt-3 text-[var(--muted)] opacity-80"
+                            ? "text-foreground"
+                            : "mt-3 text-[var(--foreground-dim)]"
                         }`}
                       >
                         {paragraph}
@@ -456,7 +457,7 @@ export function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.3 }}
-          className="mt-28 md:mt-36 flex flex-col items-center text-center"
+          className="mt-16 md:mt-20 flex flex-col items-center text-center"
         >
           <div
             className="w-12 h-px mb-8"

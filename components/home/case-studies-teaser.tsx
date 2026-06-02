@@ -44,7 +44,7 @@ export function CaseStudiesTeaser() {
                 <div className="relative h-44 border-b border-[var(--border)] overflow-hidden bg-[var(--background-elev)]">
                   <div className="absolute inset-0 bg-grid-fine opacity-40" />
                   <CaseStudyGlyph index={i} />
-                  <div className="absolute top-4 left-4 text-[10px] font-mono uppercase tracking-widest text-[var(--muted-2)]">
+                  <div className="absolute top-4 left-4 text-[11px] font-mono uppercase tracking-widest text-[var(--muted)]">
                     0{i + 1} / Case Study
                   </div>
                   <div className="absolute top-4 right-4 h-6 w-6 rounded-full bg-[var(--background)]/80 border border-[var(--border-bright)] flex items-center justify-center group-hover:border-[var(--accent)] transition-colors">
@@ -57,7 +57,7 @@ export function CaseStudiesTeaser() {
                 </div>
 
                 <div className="p-6">
-                  <div className="flex items-center gap-2 text-[11px] font-mono uppercase tracking-widest text-[var(--accent)] mb-3">
+                  <div className="flex items-center gap-2 text-[12px] font-mono uppercase tracking-widest text-[var(--accent)] mb-3">
                     <span className="h-px w-4 bg-[var(--accent)]/50" />
                     {cs.tag}
                   </div>
@@ -74,7 +74,7 @@ export function CaseStudiesTeaser() {
                         <div className="font-display text-xl text-[var(--accent)]">
                           {m.value}
                         </div>
-                        <div className="mt-1 text-[10px] font-mono uppercase tracking-widest text-[var(--muted-2)] leading-tight">
+                        <div className="mt-1 text-[11px] font-mono uppercase tracking-widest text-[var(--muted)] leading-tight">
                           {m.label}
                         </div>
                       </div>

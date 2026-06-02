@@ -148,7 +148,7 @@ export function HeroBrainV2() {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[var(--border-bright)] bg-[var(--surface)]/70 backdrop-blur text-[11px] font-mono uppercase tracking-widest text-[var(--foreground-dim)]"
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[var(--border-bright)] bg-[var(--surface)]/70 backdrop-blur text-[12px] font-mono uppercase tracking-widest text-[var(--foreground-dim)]"
           >
             <span className="relative flex h-1.5 w-1.5">
               <span className="pulse-dot absolute inline-flex h-full w-full rounded-full bg-[var(--accent)]" />
@@ -173,7 +173,7 @@ export function HeroBrainV2() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.25 }}
-            className="mt-7 max-w-[540px] text-[21px] md:text-[23px] leading-relaxed text-[var(--foreground-dim)]"
+            className="mt-7 max-w-[540px] text-[19px] md:text-[21px] leading-relaxed text-[var(--foreground-dim)]"
             style={{ textShadow: "0 1px 12px rgba(240,238,230,0.9)" }}
           >
             Kortex builds operational AI systems that replace fragmented coordination with connected infrastructure — allowing businesses to scale faster without adding overhead.
@@ -203,7 +203,7 @@ export function HeroBrainV2() {
             ].map((m) => (
               <div key={m.l}>
                 <div className="font-display text-xl md:text-2xl text-foreground leading-tight">{m.n}</div>
-                <div className="mt-1 text-[10px] font-mono uppercase tracking-widest text-[var(--muted)]">
+                <div className="mt-1 text-[11px] font-mono uppercase tracking-widest text-[var(--muted)]">
                   {m.l}
                 </div>
               </div>

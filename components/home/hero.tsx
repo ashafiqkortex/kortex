@@ -37,7 +37,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[var(--border-bright)] bg-[var(--surface)]/60 backdrop-blur text-[11px] font-mono uppercase tracking-widest text-[var(--foreground-dim)]"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[var(--border-bright)] bg-[var(--surface)]/60 backdrop-blur text-[12px] font-mono uppercase tracking-widest text-[var(--foreground-dim)]"
             >
               <span className="relative flex h-1.5 w-1.5">
                 <span className="pulse-dot absolute inline-flex h-full w-full rounded-full bg-[var(--accent)]" />
@@ -94,7 +94,7 @@ export function Hero() {
               ].map((m) => (
                 <div key={m.l}>
                   <div className="font-display text-3xl text-foreground">{m.n}</div>
-                  <div className="mt-1 text-[11px] font-mono uppercase tracking-widest text-[var(--muted)]">
+                  <div className="mt-1 text-[12px] font-mono uppercase tracking-widest text-[var(--muted)]">
                     {m.l}
                   </div>
                 </div>
@@ -194,7 +194,7 @@ function HeroTerminal() {
           <div className="ml-3 text-[11px] font-mono text-[var(--muted)] tracking-wider">
             kortex — truth_layer.diagnostic
           </div>
-          <div className="ml-auto flex items-center gap-1.5 text-[10px] font-mono uppercase text-[var(--muted-2)] tracking-widest">
+          <div className="ml-auto flex items-center gap-1.5 text-[11px] font-mono uppercase text-[var(--muted)] tracking-widest">
             <span className="relative flex h-1.5 w-1.5">
               <span className="pulse-dot absolute inline-flex h-full w-full rounded-full bg-[var(--accent)]" />
               <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[var(--accent)]" />

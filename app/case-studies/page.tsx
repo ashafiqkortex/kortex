@@ -35,10 +35,10 @@ export default function CaseStudiesIndexPage() {
               >
                 <div className="grid md:grid-cols-[1fr_2fr] gap-0">
                   <div className="p-8 md:p-10 border-b md:border-b-0 md:border-r border-[var(--border)] bg-[var(--background-elev)]/60">
-                    <div className="text-[10px] font-mono uppercase tracking-widest text-[var(--muted-2)]">
+                    <div className="text-[11px] font-mono uppercase tracking-widest text-[var(--muted)]">
                       0{i + 1} / Case
                     </div>
-                    <div className="mt-3 text-[11px] font-mono uppercase tracking-widest text-[var(--accent)]">
+                    <div className="mt-3 text-[12px] font-mono uppercase tracking-widest text-[var(--accent)]">
                       {cs.tag}
                     </div>
                     <div className="mt-8 grid grid-cols-3 gap-3">
@@ -47,7 +47,7 @@ export default function CaseStudiesIndexPage() {
                           <div className="font-display text-2xl text-[var(--accent)]">
                             {m.value}
                           </div>
-                          <div className="mt-1 text-[10px] font-mono uppercase tracking-widest text-[var(--muted-2)] leading-tight">
+                          <div className="mt-1 text-[11px] font-mono uppercase tracking-widest text-[var(--muted)] leading-tight">
                             {m.label}
                           </div>
                         </div>

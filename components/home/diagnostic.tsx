@@ -143,7 +143,7 @@ export function Diagnostic() {
                 kortex.diagnostic
               </div>
             </div>
-            <div className="flex items-center gap-2 text-[11px] font-mono uppercase tracking-widest text-[var(--muted)]">
+            <div className="flex items-center gap-2 text-[12px] font-mono uppercase tracking-widest text-[var(--muted)]">
               <span className="relative flex h-1.5 w-1.5">
                 <span className="pulse-dot absolute inline-flex h-full w-full rounded-full bg-[var(--accent)]" />
                 <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[var(--accent)]" />
@@ -153,7 +153,7 @@ export function Diagnostic() {
           </div>
 
           <form onSubmit={submit} className="p-6 md:p-8">
-            <label className="block text-[11px] font-mono uppercase tracking-widest text-[var(--muted)] mb-3">
+            <label className="block text-[12px] font-mono uppercase tracking-widest text-[var(--muted)] mb-3">
               What&apos;s eating your team&apos;s time?
             </label>
             <textarea
@@ -166,15 +166,15 @@ export function Diagnostic() {
             />
 
             {phase === "idle" && (
-              <div className="mt-4 flex flex-wrap gap-2">
+              <div className="mt-4 grid sm:grid-cols-2 gap-2.5">
                 {EXAMPLES.map((ex) => (
                   <button
                     key={ex}
                     type="button"
                     onClick={() => setValue(ex)}
-                    className="text-[12px] text-[var(--foreground-dim)] hover:text-[var(--accent)] bg-[var(--surface)] border border-[var(--border-bright)] hover:border-[var(--accent)]/50 rounded-full px-3.5 py-1.5 transition-colors"
+                    className="text-left text-[13px] leading-snug text-[var(--foreground-dim)] hover:text-[var(--accent)] bg-[var(--surface)] border border-[var(--border-bright)] hover:border-[var(--accent)]/50 rounded-lg px-4 py-3 transition-colors"
                   >
-                    {ex.split(" ").slice(0, 6).join(" ")}...
+                    {ex}
                   </button>
                 ))}
               </div>
@@ -214,7 +214,7 @@ export function Diagnostic() {
           {(phase === "streaming" || phase === "done" || phase === "error") && (
             <div className="border-t border-[var(--border)] bg-[var(--background)]/60">
               <div className="px-6 md:px-8 py-4 border-b border-[var(--border)]">
-                <div className="text-[11px] font-mono uppercase tracking-widest text-[var(--muted)]">
+                <div className="text-[12px] font-mono uppercase tracking-widest text-[var(--muted)]">
                   Output · diagnosis
                 </div>
               </div>

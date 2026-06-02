@@ -75,7 +75,7 @@ export function ContactForm() {
       />
 
       <div className="flex items-center justify-between pt-2">
-        <div className="text-[11px] font-mono uppercase tracking-widest text-[var(--muted-2)]">
+        <div className="text-[12px] font-mono uppercase tracking-widest text-[var(--muted)]">
           Response within 1 business day
         </div>
         <Button
@@ -108,7 +108,7 @@ function Field({
 }) {
   return (
     <label className="block">
-      <div className="text-[11px] font-mono uppercase tracking-widest text-[var(--muted)] mb-2">
+      <div className="text-[12px] font-mono uppercase tracking-widest text-[var(--foreground-dim)] mb-2">
         {label}
         {required && <span className="text-[var(--accent)] ml-1">*</span>}
       </div>

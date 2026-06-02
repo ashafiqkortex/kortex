@@ -41,10 +41,10 @@ export default function ServicesPage() {
                         <Icon size={22} strokeWidth={1.5} />
                       </div>
                       <div>
-                        <div className="text-[11px] font-mono uppercase tracking-widest text-[var(--muted-2)]">
+                        <div className="text-[12px] font-mono uppercase tracking-widest text-[var(--muted)]">
                           Service · 0{i + 1}
                         </div>
-                        <div className="text-[11px] font-mono uppercase tracking-widest text-[var(--accent)] mt-1">
+                        <div className="text-[12px] font-mono uppercase tracking-widest text-[var(--accent)] mt-1">
                           {service.slug.replace(/-/g, " · ")}
                         </div>
                       </div>
@@ -62,7 +62,7 @@ export default function ServicesPage() {
                       {service.deep}
                     </p>
                     <div className="mt-10 rounded-xl border border-[var(--border)] bg-[var(--surface)]/40 overflow-hidden">
-                      <div className="px-5 py-3 border-b border-[var(--border)] text-[11px] font-mono uppercase tracking-widest text-[var(--muted)]">
+                      <div className="px-5 py-3 border-b border-[var(--border)] text-[12px] font-mono uppercase tracking-widest text-[var(--muted)]">
                         We build
                       </div>
                       <ul className="divide-y divide-[var(--border)]">

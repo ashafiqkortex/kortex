@@ -94,7 +94,7 @@ export function Problem() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-[11px] font-mono uppercase tracking-[0.2em] text-[var(--muted-2)]"
+          className="text-[12px] font-mono uppercase tracking-[0.2em] text-[var(--muted)]"
         >
           The Problem
         </motion.div>
@@ -234,7 +234,7 @@ export function Problem() {
                   </div>
                   <div className="space-y-3">
                     <div className="flex items-baseline gap-3">
-                      <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--muted-2)]">
+                      <span className="text-[11px] font-mono uppercase tracking-widest text-[var(--muted)]">
                         Pitch
                       </span>
                       <span className="text-[15px] text-foreground/80 line-through decoration-[var(--accent)] decoration-1">

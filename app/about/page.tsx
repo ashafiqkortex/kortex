@@ -67,7 +67,7 @@ export default function AboutPage() {
 
           {/* Principles */}
           <div className="mt-24">
-            <div className="flex items-center gap-2 text-[11px] font-mono uppercase tracking-widest text-[var(--muted)] mb-8">
+            <div className="flex items-center gap-2 text-[12px] font-mono uppercase tracking-widest text-[var(--muted)] mb-8">
               <span className="h-px w-6 bg-[var(--border-bright)]" />
               Principles · 05
             </div>

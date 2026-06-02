@@ -52,7 +52,7 @@ export function Footer() {
 
           {SECTIONS.map((section) => (
             <div key={section.title}>
-              <div className="text-[11px] font-mono uppercase tracking-widest text-[var(--muted-2)] mb-4">
+              <div className="text-[12px] font-mono uppercase tracking-widest text-[var(--muted)] mb-4">
                 {section.title}
               </div>
               <ul className="space-y-2.5">

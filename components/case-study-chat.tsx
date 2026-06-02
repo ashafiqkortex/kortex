@@ -121,7 +121,7 @@ export function CaseStudyChat({ slug, client, tag, starterQuestions }: Props) {
       className="scroll-mt-24"
       id="ask"
     >
-      <div className="flex items-center gap-2 text-[11px] font-mono uppercase tracking-widest text-[var(--accent)] mb-5">
+      <div className="flex items-center gap-2 text-[12px] font-mono uppercase tracking-widest text-[var(--accent)] mb-5">
         <span className="h-px w-4 bg-[var(--accent)]/50" />
         / Ask the case study
       </div>
@@ -156,14 +156,14 @@ export function CaseStudyChat({ slug, client, tag, starterQuestions }: Props) {
             {hasConversation && (
               <button
                 onClick={reset}
-                className="flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-widest text-[var(--muted)] hover:text-[var(--accent)] transition-colors"
+                className="flex items-center gap-1.5 text-[12px] font-mono uppercase tracking-widest text-[var(--muted)] hover:text-[var(--accent)] transition-colors"
                 disabled={streaming}
               >
                 <RotateCcw size={12} strokeWidth={1.75} />
                 Reset
               </button>
             )}
-            <div className="flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-widest text-[var(--muted)]">
+            <div className="flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-widest text-[var(--muted)]">
               <span className="relative flex h-1.5 w-1.5">
                 <span className="pulse-dot absolute inline-flex h-full w-full rounded-full bg-[var(--accent)]" />
                 <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[var(--accent)]" />

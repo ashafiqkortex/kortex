@@ -46,7 +46,7 @@ export function Nav() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="px-3.5 py-2 text-[13.5px] text-[var(--foreground-dim)] hover:text-foreground transition-colors"
+                className="px-3.5 py-2 text-[15px] text-[var(--foreground-dim)] hover:text-foreground transition-colors"
               >
                 {item.label}
               </Link>
@@ -78,7 +78,7 @@ export function Nav() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setMobileOpen(false)}
-                  className="px-2 py-3 text-sm text-[var(--foreground-dim)] hover:text-foreground border-b border-[var(--border)] last:border-0"
+                  className="px-2 py-3.5 text-[16px] text-[var(--foreground-dim)] hover:text-foreground border-b border-[var(--border)] last:border-0"
                 >
                   {item.label}
                 </Link>

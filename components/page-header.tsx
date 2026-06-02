@@ -20,7 +20,7 @@ export function PageHeader({
         }}
       />
       <Container size="wide" className="relative">
-        <div className="flex items-center gap-2 text-[11px] font-mono uppercase tracking-widest text-[var(--muted)] mb-5">
+        <div className="flex items-center gap-2 text-[12px] font-mono uppercase tracking-widest text-[var(--muted)] mb-5">
           <span className="h-px w-6 bg-[var(--border-bright)]" />
           {eyebrow}
         </div>

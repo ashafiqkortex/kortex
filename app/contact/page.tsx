@@ -73,7 +73,7 @@ export default function ContactPage() {
 
               {/* Booking placeholder */}
               <div className="mt-8 rounded-xl border border-dashed border-[var(--border-bright)] bg-[var(--background-elev)]/60 p-8 text-center">
-                <div className="text-[11px] font-mono uppercase tracking-widest text-[var(--muted)] mb-2">
+                <div className="text-[12px] font-mono uppercase tracking-widest text-[var(--foreground-dim)] mb-2">
                   Direct booking
                 </div>
                 <div className="font-display text-xl text-foreground">
@@ -86,7 +86,7 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <div className="text-[11px] font-mono uppercase tracking-widest text-[var(--muted)] mb-4">
+              <div className="text-[12px] font-mono uppercase tracking-widest text-[var(--foreground-dim)] mb-4">
                 Or send a message
               </div>
               <ContactForm />
