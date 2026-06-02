@@ -174,7 +174,7 @@ export function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.25 }}
-          className="mt-10 max-w-md text-[13px] leading-[1.9] text-[var(--muted)] font-light"
+          className="mt-10 max-w-md text-[14px] leading-[1.9] text-[var(--muted)] font-light"
         >
           Kortex builds connected operational systems that coordinate
           communication, workflows, data, and execution automatically —
@@ -317,7 +317,7 @@ export function Services() {
                     y="58"
                     textAnchor="middle"
                     className="text-[9px] font-mono uppercase tracking-wider"
-                    fill="rgba(138, 143, 154, 0.6)"
+                    fill="rgba(193, 95, 60, 0.6)"
                   >
                     {node.label}
                   </text>
@@ -361,7 +361,7 @@ export function Services() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-16 md:mt-20 text-center text-[14px] md:text-[15px] text-[var(--foreground-dim)] font-light max-w-lg mx-auto"
+          className="mt-16 md:mt-20 text-center text-[15px] md:text-[17px] text-[var(--foreground-dim)] font-light max-w-lg mx-auto"
         >
           Operations become one connected system.
         </motion.p>
@@ -382,7 +382,7 @@ export function Services() {
                 className="relative rounded-xl p-7 md:p-9 lg:p-10 transition-all duration-500"
                 style={{
                   background:
-                    "linear-gradient(135deg, rgba(18, 20, 28, 0.5) 0%, rgba(15, 17, 23, 0.3) 100%)",
+                    "linear-gradient(135deg, var(--surface-2) 0%, var(--surface) 100%)",
                 }}
               >
                 {/* Hover topology texture */}
@@ -453,7 +453,7 @@ export function Services() {
                     {service.short.map((paragraph, j) => (
                       <p
                         key={j}
-                        className={`text-[12px] md:text-[13px] leading-[1.85] font-light ${
+                        className={`text-[12px] md:text-[14px] leading-[1.85] font-light ${
                           j === 0
                             ? "text-[var(--foreground-dim)] opacity-90"
                             : "mt-3 text-[var(--muted)] opacity-80"
@@ -483,7 +483,7 @@ export function Services() {
               background: "linear-gradient(90deg, transparent, rgba(193, 95, 60, 0.3), transparent)",
             }}
           />
-          <p className="text-[16px] md:text-[18px] font-light tracking-wide text-[var(--foreground-dim)]">
+          <p className="text-[18px] md:text-[20px] font-light tracking-wide text-[var(--foreground-dim)]">
             The next generation of SMBs won&apos;t operate manually.
           </p>
         </motion.div>

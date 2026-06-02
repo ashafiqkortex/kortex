@@ -115,7 +115,7 @@ export function HeroBrainV2() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 45% 60% at 78% 50%, rgba(193, 95, 60,0.12), transparent 65%)",
+            "radial-gradient(ellipse 45% 60% at 78% 50%, rgba(193, 95, 60,0.05), transparent 65%)",
         }}
       />
 
@@ -173,10 +173,10 @@ export function HeroBrainV2() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.25 }}
-            className="mt-7 max-w-[520px] text-[17px] md:text-[18px] leading-relaxed text-[var(--foreground-dim)]"
+            className="mt-7 max-w-[520px] text-[19px] md:text-[20px] leading-relaxed text-[var(--foreground-dim)]"
             style={{ textShadow: "0 1px 12px rgba(240,238,230,0.9)" }}
           >
-            Kortex builds AI operational systems — from customer call to paid invoice — so businesses scale with far greater leverage.
+            Kortex builds connected operational systems that coordinate communication, workflows, data, and execution automatically — allowing businesses to scale with significantly greater leverage.
           </motion.p>
 
           <motion.div
@@ -319,16 +319,6 @@ function BrainCore() {
       transition={{ duration: 1.4, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
       className="relative w-[420px] h-[420px] sm:w-[480px] sm:h-[480px] md:w-[540px] md:h-[540px] lg:w-[600px] lg:h-[600px]"
     >
-      {/* Outer ambient glow */}
-      <div
-        className="absolute inset-0 rounded-full"
-        style={{
-          background:
-            "radial-gradient(circle at 50% 50%, rgba(193, 95, 60,0.26), rgba(193, 95, 60,0.07) 38%, transparent 72%)",
-          filter: "blur(24px)",
-        }}
-      />
-
       {/* Breathing wrapper */}
       <motion.div
         animate={{ scale: [1, 1.028, 1], rotate: [-0.6, 0.6, -0.6] }}
@@ -392,9 +382,6 @@ function BrainCore() {
             </clipPath>
           </defs>
 
-          {/* Interior wash */}
-          <ellipse cx="200" cy="215" rx="125" ry="135" fill="url(#brain-center-v2)" />
-
           {/* Hex lattice clipped to brain shape (very subtle texture) */}
           <g clipPath="url(#brain-silhouette)" opacity="0.18">
             <rect x="0" y="0" width="400" height="400" fill="url(#hex-pattern)" />
@@ -413,14 +400,6 @@ function BrainCore() {
                 attributeName="opacity"
                 values="0;0.6;0.6;0"
                 keyTimes="0;0.1;0.9;1"
-                dur="8s"
-                repeatCount="indefinite"
-              />
-            </rect>
-            <rect x="0" width="400" height="18" opacity="0.15">
-              <animate
-                attributeName="y"
-                values="55;345;55"
                 dur="8s"
                 repeatCount="indefinite"
               />

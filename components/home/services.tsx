@@ -9,7 +9,7 @@ import { SERVICES } from "@/lib/services";
 // Abstract operational glyphs
 const GLYPHS: Record<string, React.ReactNode> = {
   "operational-workflows": (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
       <path d="M4 6h4M4 12h8M4 18h6" />
       <circle cx="18" cy="6" r="2" />
       <circle cx="18" cy="12" r="2" />
@@ -18,7 +18,7 @@ const GLYPHS: Record<string, React.ReactNode> = {
     </svg>
   ),
   "operational-ai-agents": (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
       <circle cx="12" cy="8" r="3" />
       <path d="M12 11v4" />
       <circle cx="6" cy="18" r="2" />
@@ -28,7 +28,7 @@ const GLYPHS: Record<string, React.ReactNode> = {
     </svg>
   ),
   "operational-intelligence": (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
       <rect x="4" y="4" width="16" height="16" rx="2" opacity="0.4" />
       <path d="M8 9h8M8 12h5M8 15h6" />
       <circle cx="17" cy="14" r="3" />
@@ -36,14 +36,14 @@ const GLYPHS: Record<string, React.ReactNode> = {
     </svg>
   ),
   "ai-oversight-systems": (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
       <circle cx="12" cy="12" r="8" opacity="0.3" />
       <circle cx="12" cy="12" r="4" />
       <path d="M12 4v4M12 16v4M4 12h4M16 12h4" strokeDasharray="1 2" opacity="0.5" />
     </svg>
   ),
   "connected-operations": (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
       <circle cx="6" cy="6" r="2" />
       <circle cx="18" cy="6" r="2" />
       <circle cx="6" cy="18" r="2" />
@@ -174,7 +174,7 @@ export function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.25 }}
-          className="mt-10 max-w-md text-[13px] leading-[1.9] text-[var(--muted)] font-light"
+          className="mt-10 max-w-md text-[14px] leading-[1.9] text-[var(--muted)] font-light"
         >
           Kortex builds connected operational systems that coordinate
           communication, workflows, data, and execution automatically —
@@ -231,11 +231,11 @@ export function Services() {
                     y1="32"
                     x2={FLOW_NODES[i + 1].x - 8}
                     y2="32"
-                    stroke="rgba(193, 95, 60, 0.15)"
-                    strokeWidth="1"
+                    stroke="rgba(193, 95, 60, 0.4)"
+                    strokeWidth="1.5"
                   />
                   {/* Animated pulse on line */}
-                  <circle r="2" fill="rgba(193, 95, 60, 0.6)">
+                  <circle r="2.5" fill="#F97316" filter="url(#node-glow)">
                     <animateMotion
                       dur={`${1.5 + i * 0.2}s`}
                       repeatCount="indefinite"
@@ -244,7 +244,7 @@ export function Services() {
                     />
                     <animate
                       attributeName="opacity"
-                      values="0;0.8;0.8;0"
+                      values="0;1;1;0"
                       keyTimes="0;0.2;0.8;1"
                       dur={`${1.5 + i * 0.2}s`}
                       begin={`${i * 0.3}s`}
@@ -269,7 +269,7 @@ export function Services() {
                     cy="32"
                     r="12"
                     fill="none"
-                    stroke="rgba(193, 95, 60, 0.2)"
+                    stroke="rgba(193, 95, 60, 0.35)"
                     strokeWidth="1"
                   >
                     <animate
@@ -290,18 +290,18 @@ export function Services() {
                   <circle
                     cx={node.x}
                     cy="32"
-                    r="6"
+                    r="8"
                     fill="var(--background)"
-                    stroke="rgba(193, 95, 60, 0.5)"
-                    strokeWidth="1.5"
+                    stroke="var(--accent)"
+                    strokeWidth="2"
                   />
 
                   {/* Inner dot */}
                   <circle
                     cx={node.x}
                     cy="32"
-                    r="2.5"
-                    fill="rgba(193, 95, 60, 0.7)"
+                    r="3.5"
+                    fill="var(--accent)"
                   >
                     <animate
                       attributeName="opacity"
@@ -314,10 +314,10 @@ export function Services() {
                   {/* Label */}
                   <text
                     x={node.x}
-                    y="58"
+                    y="60"
                     textAnchor="middle"
-                    className="text-[9px] font-mono uppercase tracking-wider"
-                    fill="rgba(138, 143, 154, 0.6)"
+                    className="text-[10px] font-mono uppercase tracking-wider font-medium"
+                    fill="var(--foreground-dim)"
                   >
                     {node.label}
                   </text>
@@ -325,7 +325,7 @@ export function Services() {
               ))}
 
               {/* Main traveling pulse — full journey */}
-              <circle r="3" fill="rgba(193, 95, 60, 0.8)" filter="url(#node-glow)">
+              <circle r="3.5" fill="#F97316" filter="url(#node-glow)">
                 <animateMotion
                   dur="5s"
                   repeatCount="indefinite"
@@ -350,7 +350,7 @@ export function Services() {
           </div>
 
           {/* Caption */}
-          <p className="mt-3 text-center text-[10px] font-mono uppercase tracking-[0.2em] text-[var(--muted-2)]">
+          <p className="mt-3 text-center text-[11px] font-mono uppercase tracking-[0.2em] text-[var(--accent)]">
             From customer call to paid invoice — automatically
           </p>
         </motion.div>
@@ -361,7 +361,7 @@ export function Services() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-16 md:mt-20 text-center text-[14px] md:text-[15px] text-[var(--foreground-dim)] font-light max-w-lg mx-auto"
+          className="mt-16 md:mt-20 text-center text-[15px] md:text-[17px] text-[var(--foreground-dim)] font-light max-w-lg mx-auto"
         >
           Operations become one connected system.
         </motion.p>
@@ -379,10 +379,10 @@ export function Services() {
             >
               {/* Card */}
               <div
-                className="relative rounded-xl p-7 md:p-9 lg:p-10 transition-all duration-500"
+                className="relative rounded-xl p-7 md:p-9 lg:p-10 border border-[var(--border)] transition-all duration-500 group-hover:border-[var(--border-bright)]"
                 style={{
                   background:
-                    "linear-gradient(135deg, rgba(18, 20, 28, 0.5) 0%, rgba(15, 17, 23, 0.3) 100%)",
+                    "linear-gradient(135deg, var(--surface-2) 0%, var(--surface) 100%)",
                 }}
               >
                 {/* Hover topology texture */}
@@ -434,7 +434,7 @@ export function Services() {
                   {/* Number + Glyph + Title */}
                   <div className="lg:w-64 shrink-0 flex items-start gap-4">
                     {/* Glyph */}
-                    <div className="w-9 h-9 text-[var(--accent)] opacity-50 group-hover:opacity-80 transition-opacity duration-500">
+                    <div className="w-11 h-11 shrink-0 rounded-lg flex items-center justify-center bg-[var(--accent)]/10 border border-[var(--accent)]/25 text-[var(--accent)] group-hover:bg-[var(--accent)]/[0.16] group-hover:border-[var(--accent)]/40 transition-colors duration-500 [&_svg]:w-[22px] [&_svg]:h-[22px]">
                       {GLYPHS[service.slug]}
                     </div>
 
@@ -453,7 +453,7 @@ export function Services() {
                     {service.short.map((paragraph, j) => (
                       <p
                         key={j}
-                        className={`text-[12px] md:text-[13px] leading-[1.85] font-light ${
+                        className={`text-[12px] md:text-[14px] leading-[1.85] font-light ${
                           j === 0
                             ? "text-[var(--foreground-dim)] opacity-90"
                             : "mt-3 text-[var(--muted)] opacity-80"
@@ -483,7 +483,7 @@ export function Services() {
               background: "linear-gradient(90deg, transparent, rgba(193, 95, 60, 0.3), transparent)",
             }}
           />
-          <p className="text-[16px] md:text-[18px] font-light tracking-wide text-[var(--foreground-dim)]">
+          <p className="text-[18px] md:text-[20px] font-light tracking-wide text-[var(--foreground-dim)]">
             The next generation of SMBs won&apos;t operate manually.
           </p>
         </motion.div>

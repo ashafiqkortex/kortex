@@ -109,7 +109,7 @@ export function HeroBrain() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.25 }}
-            className="mt-7 max-w-xl text-[17px] md:text-[18px] leading-relaxed text-[var(--foreground-dim)]"
+            className="mt-7 max-w-xl text-[19px] md:text-[20px] leading-relaxed text-[var(--foreground-dim)]"
             style={{ textShadow: "0 1px 12px rgba(240,238,230,0.9)" }}
           >
             Custom RAG, agents, and automation — engineered into your own systems and data. For companies that want AI <em>inside</em> the business, not bolted on.

@@ -16,7 +16,7 @@ export function Logo({ className, wordmark = true }: { className?: string; wordm
     <div className={cn("flex items-center gap-2.5", className)}>
       <LogoMark />
       {wordmark && (
-        <span className="text-[17px] font-medium tracking-[-0.01em] text-foreground">
+        <span className="text-[19px] font-medium tracking-[-0.01em] text-foreground">
           Kortex
         </span>
       )}

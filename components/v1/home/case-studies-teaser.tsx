@@ -64,7 +64,7 @@ export function CaseStudiesTeaser() {
                   <h3 className="font-display text-[26px] leading-[1.1] tracking-[-0.01em] text-foreground">
                     {cs.client}
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[var(--foreground-dim)]">
+                  <p className="mt-3 text-[15px] leading-relaxed text-[var(--foreground-dim)]">
                     {cs.tagline}
                   </p>
 

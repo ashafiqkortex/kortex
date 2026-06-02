@@ -37,7 +37,7 @@ export function ContactForm() {
         <h3 className="mt-5 font-display text-2xl md:text-[28px] leading-tight text-foreground">
           Message received.
         </h3>
-        <p className="mt-3 text-[15px] text-[var(--foreground-dim)] max-w-md mx-auto">
+        <p className="mt-3 text-[17px] text-[var(--foreground-dim)] max-w-md mx-auto">
           We&apos;ll be in touch within one business day. If it&apos;s urgent, you can book a call directly above.
         </p>
       </div>
@@ -118,7 +118,7 @@ function Field({
           required={required}
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          className="w-full resize-none bg-[var(--background)] border border-[var(--border)] rounded-lg p-3.5 text-[15px] text-foreground placeholder:text-[var(--muted-2)] focus:outline-none focus:border-[var(--accent)]/60 transition-colors"
+          className="w-full resize-none bg-[var(--background)] border border-[var(--border)] rounded-lg p-3.5 text-[17px] text-foreground placeholder:text-[var(--muted-2)] focus:outline-none focus:border-[var(--accent)]/60 transition-colors"
         />
       ) : (
         <input
@@ -126,7 +126,7 @@ function Field({
           required={required}
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          className="w-full bg-[var(--background)] border border-[var(--border)] rounded-lg px-3.5 h-11 text-[15px] text-foreground placeholder:text-[var(--muted-2)] focus:outline-none focus:border-[var(--accent)]/60 transition-colors"
+          className="w-full bg-[var(--background)] border border-[var(--border)] rounded-lg px-3.5 h-11 text-[17px] text-foreground placeholder:text-[var(--muted-2)] focus:outline-none focus:border-[var(--accent)]/60 transition-colors"
         />
       )}
     </label>

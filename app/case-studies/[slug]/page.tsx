@@ -56,7 +56,7 @@ export default async function CaseStudyPage({
               <div className="text-[11px] font-mono uppercase tracking-widest text-[var(--muted)]">
                 Client
               </div>
-              <div className="mt-2 text-foreground text-[16px]">{cs.client}</div>
+              <div className="mt-2 text-foreground text-[18px]">{cs.client}</div>
               <div className="mt-8 text-[11px] font-mono uppercase tracking-widest text-[var(--muted)]">
                 Stack
               </div>

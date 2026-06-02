@@ -71,7 +71,7 @@ export default function CaseStudiesIndexPage() {
                         className="shrink-0 text-[var(--muted-2)] group-hover:text-[var(--accent)] group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"
                       />
                     </div>
-                    <p className="mt-5 text-[15px] leading-relaxed text-[var(--foreground-dim)] max-w-xl">
+                    <p className="mt-5 text-[17px] leading-relaxed text-[var(--foreground-dim)] max-w-xl">
                       {cs.tagline}
                     </p>
                     <div className="mt-6 flex flex-wrap gap-2">

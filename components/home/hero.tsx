@@ -62,7 +62,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.25 }}
-              className="mt-7 max-w-xl text-[17px] md:text-[18px] leading-relaxed text-[var(--foreground-dim)]"
+              className="mt-7 max-w-xl text-[19px] md:text-[20px] leading-relaxed text-[var(--foreground-dim)]"
             >
               AI, automation, and integration engineering for companies that have outgrown the dashboard. Your tools tell you what was typed. We build the systems that know what&apos;s actually happening — and act on it.
             </motion.p>
@@ -204,7 +204,7 @@ function HeroTerminal() {
         </div>
 
         {/* Terminal body */}
-        <div className="p-5 font-mono text-[13px] leading-[1.8] min-h-[320px]">
+        <div className="p-5 font-mono text-[14px] leading-[1.8] min-h-[320px]">
           {typed.map((line, i) => {
             const tone = LINES[i]?.tone ?? "out";
             return (

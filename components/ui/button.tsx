@@ -34,9 +34,9 @@ export function Button({
     "group inline-flex items-center justify-center gap-2 rounded-full font-medium tracking-tight transition-all duration-200 relative overflow-hidden";
 
   const sizes: Record<Size, string> = {
-    sm: "h-9 px-4 text-[13px]",
-    md: "h-11 px-5 text-[14px]",
-    lg: "h-12 px-6 text-[15px]",
+    sm: "h-9 px-4 text-[14px]",
+    md: "h-11 px-5 text-[15px]",
+    lg: "h-12 px-6 text-[17px]",
   };
 
   const variants: Record<Variant, string> = {
@@ -62,7 +62,14 @@ export function Button({
     </>
   );
 
-  const classes = cn(base, sizes[size], variants[variant], disabled && "opacity-40 pointer-events-none", className);
+  const classes = cn(
+    base,
+    sizes[size],
+    variants[variant],
+    disabled &&
+      "bg-[var(--surface-2)] text-[var(--muted)] shadow-[0_0_0_1px_var(--border)] hover:bg-[var(--surface-2)] hover:text-[var(--muted)] pointer-events-none",
+    className
+  );
 
   if (href) {
     return (

@@ -28,7 +28,7 @@ export function PageHeader({
           {title}
         </h1>
         {description && (
-          <p className="mt-7 max-w-2xl text-[17px] leading-relaxed text-[var(--foreground-dim)]">
+          <p className="mt-7 max-w-2xl text-[19px] leading-relaxed text-[var(--foreground-dim)]">
             {description}
           </p>
         )}

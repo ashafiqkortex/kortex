@@ -162,7 +162,7 @@ export function Diagnostic() {
               disabled={phase === "streaming"}
               rows={3}
               placeholder="e.g. My sales team spends 10 hours a week building quotes. The data exists in our CRM and ERP, but pulling it together is manual and error-prone..."
-              className="w-full resize-none bg-[var(--background)] border border-[var(--border)] rounded-lg p-4 text-[15px] text-foreground placeholder:text-[var(--muted-2)] focus:outline-none focus:border-[var(--accent)]/60 transition-colors"
+              className="w-full resize-none bg-[var(--background)] border border-[var(--border)] rounded-lg p-4 text-[17px] text-foreground placeholder:text-[var(--muted-2)] focus:outline-none focus:border-[var(--accent)]/60 transition-colors"
             />
 
             {phase === "idle" && (
@@ -230,7 +230,7 @@ export function Diagnostic() {
               </div>
               {phase === "done" && (
                 <div className="px-6 md:px-8 py-5 border-t border-[var(--border)] bg-[var(--surface)]/40 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-                  <div className="text-[13px] text-[var(--muted)]">
+                  <div className="text-[14px] text-[var(--muted)]">
                     Ready for the full diagnostic and a scoped proposal?
                   </div>
                   <Button href="/contact" size="sm" arrow>

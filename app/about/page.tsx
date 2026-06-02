@@ -53,7 +53,7 @@ export default function AboutPage() {
 
       <div className="py-16 md:py-24">
         <Container size="default">
-          <div className="grid gap-6 md:gap-10 text-[17px] md:text-[18px] leading-relaxed text-[var(--foreground-dim)]">
+          <div className="grid gap-6 md:gap-10 text-[19px] md:text-[20px] leading-relaxed text-[var(--foreground-dim)]">
             <p>
               Kortex was built on a simple conviction: most of what&apos;s sold as &quot;AI consulting&quot; is deck production and tool recommendation. The companies that actually get value from AI and automation are the ones that partner with engineers — people who sit with the problem, design the system, write the code, deploy it, and stay long enough to see it change the business.
             </p>
@@ -83,7 +83,7 @@ export default function AboutPage() {
                   <h3 className="font-display text-[28px] md:text-[30px] leading-tight tracking-[-0.01em] text-foreground">
                     {p.title}
                   </h3>
-                  <p className="mt-4 text-[15px] leading-relaxed text-[var(--foreground-dim)]">
+                  <p className="mt-4 text-[17px] leading-relaxed text-[var(--foreground-dim)]">
                     {p.body}
                   </p>
                 </div>
@@ -96,7 +96,7 @@ export default function AboutPage() {
                   <h3 className="font-display text-[28px] md:text-[30px] leading-tight tracking-[-0.01em] text-foreground">
                     Work with us.
                   </h3>
-                  <p className="mt-4 text-[15px] leading-relaxed text-[var(--foreground-dim)]">
+                  <p className="mt-4 text-[17px] leading-relaxed text-[var(--foreground-dim)]">
                     Twenty minutes is usually enough to tell you honestly whether we can help.
                   </p>
                 </div>

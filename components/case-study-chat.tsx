@@ -128,7 +128,7 @@ export function CaseStudyChat({ slug, client, tag, starterQuestions }: Props) {
       <h2 className="font-display text-3xl md:text-4xl leading-tight tracking-[-0.02em] text-foreground">
         Talk to this engagement.
       </h2>
-      <p className="mt-4 text-[16px] leading-relaxed text-[var(--foreground-dim)] max-w-xl">
+      <p className="mt-4 text-[18px] leading-relaxed text-[var(--foreground-dim)] max-w-xl">
         An agent loaded with the full context of this case study. Ask how it would apply to your situation, why we built it this way, or what the pitfalls were. Live, streaming, scoped to this one engagement.
       </p>
 
@@ -144,7 +144,7 @@ export function CaseStudyChat({ slug, client, tag, starterQuestions }: Props) {
               </span>
             </div>
             <div>
-              <div className="text-[13px] font-medium text-foreground leading-tight">
+              <div className="text-[14px] font-medium text-foreground leading-tight">
                 {client}
               </div>
               <div className="text-[10.5px] font-mono uppercase tracking-widest text-[var(--muted)] leading-tight mt-0.5">
@@ -180,7 +180,7 @@ export function CaseStudyChat({ slug, client, tag, starterQuestions }: Props) {
         >
           {!hasConversation && (
             <div className="flex flex-col items-start gap-5">
-              <p className="text-[14px] text-[var(--muted)] leading-relaxed">
+              <p className="text-[15px] text-[var(--muted)] leading-relaxed">
                 Agent loaded with context for <span className="text-foreground">{client}</span>. Ask a question or start with one of these:
               </p>
               <div className="flex flex-col gap-2 w-full">
@@ -188,7 +188,7 @@ export function CaseStudyChat({ slug, client, tag, starterQuestions }: Props) {
                   <button
                     key={q}
                     onClick={() => send(q)}
-                    className="group text-left text-[14px] text-[var(--foreground-dim)] hover:text-[var(--accent)] border border-[var(--border)] hover:border-[var(--accent)]/40 rounded-lg px-4 py-3 transition-all"
+                    className="group text-left text-[15px] text-[var(--foreground-dim)] hover:text-[var(--accent)] border border-[var(--border)] hover:border-[var(--accent)]/40 rounded-lg px-4 py-3 transition-all"
                   >
                     <span className="font-mono text-[11px] text-[var(--muted-2)] group-hover:text-[var(--accent)] mr-3">
                       ›
@@ -209,7 +209,7 @@ export function CaseStudyChat({ slug, client, tag, starterQuestions }: Props) {
           ))}
 
           {error && (
-            <div className="mt-4 p-3 rounded-lg border border-[var(--danger)]/40 bg-[var(--danger)]/5 text-[13px] text-[var(--danger)]">
+            <div className="mt-4 p-3 rounded-lg border border-[var(--danger)]/40 bg-[var(--danger)]/5 text-[14px] text-[var(--danger)]">
               {error}
             </div>
           )}

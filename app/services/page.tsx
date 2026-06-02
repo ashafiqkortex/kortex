@@ -52,7 +52,7 @@ export default function ServicesPage() {
                     <h2 className="font-display text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] text-foreground">
                       {service.name}
                     </h2>
-                    <p className="mt-5 text-[17px] italic text-[var(--accent)]">
+                    <p className="mt-5 text-[19px] italic text-[var(--accent)]">
                       {service.tagline}
                     </p>
                   </div>

@@ -59,7 +59,7 @@ export default function ContactPage() {
                         <Icon size={16} strokeWidth={1.75} />
                       </div>
                       <div>
-                        <div className="text-[14px] text-foreground font-medium">
+                        <div className="text-[15px] text-foreground font-medium">
                           {h.label}
                         </div>
                         <div className="mt-1 text-[13.5px] text-[var(--foreground-dim)] leading-relaxed">
@@ -79,7 +79,7 @@ export default function ContactPage() {
                 <div className="font-display text-xl text-foreground">
                   Cal.com embed goes here
                 </div>
-                <p className="mt-3 text-[13px] text-[var(--muted)]">
+                <p className="mt-3 text-[14px] text-[var(--muted)]">
                   Send us your Cal.com link and we&apos;ll wire it in.
                 </p>
               </div>

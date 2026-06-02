@@ -132,7 +132,7 @@ export function Problem() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-14 max-w-md text-[15px] leading-[1.9] text-[var(--muted)] font-light"
+          className="mt-14 max-w-md text-[17px] leading-[1.9] text-[var(--muted)] font-light"
         >
           <p>
             More hires. More software. More coordination.
@@ -237,11 +237,11 @@ export function Problem() {
                       <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--muted-2)]">
                         Pitch
                       </span>
-                      <span className="text-[14px] text-foreground/80 line-through decoration-[var(--accent)] decoration-1">
+                      <span className="text-[15px] text-foreground/80 line-through decoration-[var(--accent)] decoration-1">
                         {m.says}
                       </span>
                     </div>
-                    <p className="text-[15px] md:text-[16px] leading-relaxed text-[var(--foreground-dim)]">
+                    <p className="text-[17px] md:text-[18px] leading-relaxed text-[var(--foreground-dim)]">
                       {m.reality}
                     </p>
                   </div>
@@ -288,7 +288,7 @@ export function Problem() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="mt-10 max-w-md text-[14px] leading-[1.85] text-[var(--muted)] font-light"
+            className="mt-10 max-w-md text-[15px] leading-[1.85] text-[var(--muted)] font-light"
           >
             Kortex builds operational AI systems that replace fragmented
             coordination with connected infrastructure — allowing businesses to
