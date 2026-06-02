@@ -166,17 +166,17 @@ export function HeroBrainV2() {
           >
             Scale without the headcount.
             <br />
-            <span className="italic text-[var(--accent)]">With AI that runs your operations automatically.</span>
+            <span className="italic text-[var(--accent)]">With AI that runs your operations autonomously.</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.25 }}
-            className="mt-7 max-w-[520px] text-[19px] md:text-[20px] leading-relaxed text-[var(--foreground-dim)]"
+            className="mt-7 max-w-[540px] text-[21px] md:text-[23px] leading-relaxed text-[var(--foreground-dim)]"
             style={{ textShadow: "0 1px 12px rgba(240,238,230,0.9)" }}
           >
-            Kortex builds connected operational systems that coordinate communication, workflows, data, and execution automatically — allowing businesses to scale with significantly greater leverage.
+            Kortex builds operational AI systems that replace fragmented coordination with connected infrastructure — allowing businesses to scale faster without adding overhead.
           </motion.p>
 
           <motion.div

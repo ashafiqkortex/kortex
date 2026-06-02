@@ -62,12 +62,14 @@ export function Button({
     </>
   );
 
+  const variantClass = disabled
+    ? "bg-[var(--muted)] text-white cursor-not-allowed pointer-events-none shadow-[0_0_0_1px_var(--border-bright)]"
+    : variants[variant];
+
   const classes = cn(
     base,
     sizes[size],
-    variants[variant],
-    disabled &&
-      "bg-[var(--surface-2)] text-[var(--muted)] shadow-[0_0_0_1px_var(--border)] hover:bg-[var(--surface-2)] hover:text-[var(--muted)] pointer-events-none",
+    variantClass,
     className
   );
 

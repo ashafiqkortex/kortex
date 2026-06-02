@@ -147,14 +147,16 @@ body {
   font-feature-settings: "calt", "ss01";
 }
 
-/* Reset button */
-button {
-  background: transparent;
-  border: 0;
-  padding: 0;
-  cursor: pointer;
-  color: inherit;
-  font: inherit;
+/* Reset button — in @layer base so Tailwind utilities (bg-*, text-*) win */
+@layer base {
+  button {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    color: inherit;
+    font: inherit;
+  }
 }
 
 :focus-visible {

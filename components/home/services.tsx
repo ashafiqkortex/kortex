@@ -162,8 +162,8 @@ export function Services() {
           transition={{ duration: 0.8, delay: 0.15 }}
           className="mt-1 font-display text-4xl md:text-5xl lg:text-[3.5rem] tracking-[-0.03em] italic font-light leading-[1.0]"
           style={{
-            color: "rgba(193, 95, 60, 0.7)",
-            textShadow: "0 0 40px rgba(193, 95, 60, 0.15)",
+            color: "var(--accent)",
+            textShadow: "0 0 40px rgba(193, 95, 60, 0.12)",
           }}
         >
           run on.
@@ -174,7 +174,7 @@ export function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.25 }}
-          className="mt-10 max-w-md text-[14px] leading-[1.9] text-[var(--muted)] font-light"
+          className="mt-10 max-w-lg text-[16px] md:text-[17px] leading-[1.8] text-[var(--muted)] font-light"
         >
           Kortex builds connected operational systems that coordinate
           communication, workflows, data, and execution automatically —
@@ -231,8 +231,8 @@ export function Services() {
                     y1="32"
                     x2={FLOW_NODES[i + 1].x - 8}
                     y2="32"
-                    stroke="rgba(193, 95, 60, 0.4)"
-                    strokeWidth="1.5"
+                    stroke="rgba(193, 95, 60, 0.55)"
+                    strokeWidth="1.75"
                   />
                   {/* Animated pulse on line */}
                   <circle r="2.5" fill="#F97316" filter="url(#node-glow)">
@@ -316,8 +316,8 @@ export function Services() {
                     x={node.x}
                     y="60"
                     textAnchor="middle"
-                    className="text-[10px] font-mono uppercase tracking-wider font-medium"
-                    fill="var(--foreground-dim)"
+                    className="text-[10px] font-mono uppercase tracking-wider font-semibold"
+                    fill="var(--foreground)"
                   >
                     {node.label}
                   </text>

@@ -172,7 +172,7 @@ export function Diagnostic() {
                     key={ex}
                     type="button"
                     onClick={() => setValue(ex)}
-                    className="text-[12px] text-[var(--muted)] hover:text-[var(--accent)] border border-[var(--border)] hover:border-[var(--accent)]/40 rounded-full px-3 py-1.5 transition-colors"
+                    className="text-[12px] text-[var(--foreground-dim)] hover:text-[var(--accent)] bg-[var(--surface)] border border-[var(--border-bright)] hover:border-[var(--accent)]/50 rounded-full px-3.5 py-1.5 transition-colors"
                   >
                     {ex.split(" ").slice(0, 6).join(" ")}...
                   </button>
