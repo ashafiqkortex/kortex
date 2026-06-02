@@ -50,7 +50,7 @@ export function Problem() {
               <path
                 d="M 80 0 L 0 0 0 80"
                 fill="none"
-                stroke="rgba(94, 234, 212, 0.015)"
+                stroke="rgba(193, 95, 60, 0.015)"
                 strokeWidth="1"
               />
             </pattern>
@@ -59,7 +59,7 @@ export function Problem() {
 
           {/* Disconnected operational nodes — fragmented system visualization */}
           <g
-            stroke="rgba(94, 234, 212, 0.06)"
+            stroke="rgba(193, 95, 60, 0.06)"
             strokeWidth="1"
             fill="none"
             strokeDasharray="4 6"
@@ -77,7 +77,7 @@ export function Problem() {
           </g>
 
           {/* Disconnected nodes */}
-          <g fill="rgba(94, 234, 212, 0.04)">
+          <g fill="rgba(193, 95, 60, 0.04)">
             <circle cx="120" cy="200" r="4" />
             <circle cx="160" cy="240" r="3" />
             <circle cx="80" cy="400" r="3" />
@@ -118,9 +118,9 @@ export function Problem() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mt-3 font-display text-2xl md:text-3xl lg:text-4xl tracking-[-0.01em] italic font-light"
           style={{
-            color: "rgba(94, 234, 212, 0.85)",
+            color: "rgba(193, 95, 60, 0.85)",
             textShadow:
-              "0 0 40px rgba(94, 234, 212, 0.4), 0 0 80px rgba(94, 234, 212, 0.2)",
+              "0 0 40px rgba(193, 95, 60, 0.4), 0 0 80px rgba(193, 95, 60, 0.2)",
           }}
         >
           It&apos;s not working.
@@ -160,9 +160,9 @@ export function Problem() {
           >
             <defs>
               <linearGradient id="line-fade" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="rgba(94, 234, 212, 0.15)" />
-                <stop offset="50%" stopColor="rgba(94, 234, 212, 0.03)" />
-                <stop offset="100%" stopColor="rgba(94, 234, 212, 0.15)" />
+                <stop offset="0%" stopColor="rgba(193, 95, 60, 0.15)" />
+                <stop offset="50%" stopColor="rgba(193, 95, 60, 0.03)" />
+                <stop offset="100%" stopColor="rgba(193, 95, 60, 0.15)" />
               </linearGradient>
             </defs>
             {/* Horizontal broken line between top cards */}
@@ -181,7 +181,7 @@ export function Problem() {
               y1="46%"
               x2="25%"
               y2="54%"
-              stroke="rgba(94, 234, 212, 0.08)"
+              stroke="rgba(193, 95, 60, 0.08)"
               strokeWidth="1"
               strokeDasharray="2 6"
             />
@@ -190,7 +190,7 @@ export function Problem() {
               y1="46%"
               x2="75%"
               y2="54%"
-              stroke="rgba(94, 234, 212, 0.08)"
+              stroke="rgba(193, 95, 60, 0.08)"
               strokeWidth="1"
               strokeDasharray="2 6"
             />
@@ -214,7 +214,7 @@ export function Problem() {
                   className="absolute -inset-px rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"
                   style={{
                     background:
-                      "radial-gradient(ellipse at 50% 0%, rgba(94, 234, 212, 0.08), transparent 70%)",
+                      "radial-gradient(ellipse at 50% 0%, rgba(193, 95, 60, 0.08), transparent 70%)",
                   }}
                 />
 
@@ -225,7 +225,7 @@ export function Problem() {
                     className="absolute inset-x-0 top-0 h-px"
                     style={{
                       background:
-                        "linear-gradient(90deg, transparent, rgba(94, 234, 212, 0.15) 50%, transparent)",
+                        "linear-gradient(90deg, transparent, rgba(193, 95, 60, 0.15) 50%, transparent)",
                     }}
                   />
 
@@ -265,7 +265,7 @@ export function Problem() {
               className="absolute -inset-20 pointer-events-none"
               style={{
                 background:
-                  "radial-gradient(ellipse at center, rgba(94, 234, 212, 0.06), transparent 70%)",
+                  "radial-gradient(ellipse at center, rgba(193, 95, 60, 0.06), transparent 70%)",
               }}
             />
 
@@ -276,7 +276,7 @@ export function Problem() {
               className="relative mt-2 font-display text-2xl md:text-3xl lg:text-[2.5rem] tracking-[-0.02em] leading-[1.3]"
               style={{
                 color: "var(--accent)",
-                textShadow: "0 0 50px rgba(94, 234, 212, 0.3)",
+                textShadow: "0 0 50px rgba(193, 95, 60, 0.3)",
               }}
             >
               Now they scale through systems.

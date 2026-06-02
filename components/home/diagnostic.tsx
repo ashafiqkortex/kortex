@@ -110,7 +110,7 @@ export function Diagnostic() {
         className="absolute inset-0 pointer-events-none opacity-70"
         style={{
           background:
-            "radial-gradient(ellipse 60% 60% at 50% 40%, rgba(94,234,212,0.05), transparent 70%)",
+            "radial-gradient(ellipse 60% 60% at 50% 40%, rgba(193, 95, 60,0.05), transparent 70%)",
         }}
       />
 

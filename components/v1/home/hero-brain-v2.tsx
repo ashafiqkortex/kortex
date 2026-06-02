@@ -115,7 +115,7 @@ export function HeroBrainV2() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 45% 60% at 78% 50%, rgba(94,234,212,0.12), transparent 65%)",
+            "radial-gradient(ellipse 45% 60% at 78% 50%, rgba(193, 95, 60,0.12), transparent 65%)",
         }}
       />
 
@@ -324,7 +324,7 @@ function BrainCore() {
         className="absolute inset-0 rounded-full"
         style={{
           background:
-            "radial-gradient(circle at 50% 50%, rgba(94,234,212,0.26), rgba(94,234,212,0.07) 38%, transparent 72%)",
+            "radial-gradient(circle at 50% 50%, rgba(193, 95, 60,0.26), rgba(193, 95, 60,0.07) 38%, transparent 72%)",
           filter: "blur(24px)",
         }}
       />

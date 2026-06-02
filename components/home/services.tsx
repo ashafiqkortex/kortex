@@ -88,7 +88,7 @@ export function Services() {
               <path
                 d="M 120 0 L 0 0 0 120"
                 fill="none"
-                stroke="rgba(94, 234, 212, 0.012)"
+                stroke="rgba(193, 95, 60, 0.012)"
                 strokeWidth="1"
               />
             </pattern>
@@ -96,7 +96,7 @@ export function Services() {
           <rect width="100%" height="100%" fill="url(#services-grid)" />
 
           {/* Left side flowing paths */}
-          <g stroke="rgba(94, 234, 212, 0.025)" strokeWidth="1" fill="none">
+          <g stroke="rgba(193, 95, 60, 0.025)" strokeWidth="1" fill="none">
             <path d="M 0 300 Q 200 280, 400 320 T 800 300">
               <animate
                 attributeName="d"
@@ -108,7 +108,7 @@ export function Services() {
           </g>
 
           {/* Right side balancing topology */}
-          <g stroke="rgba(94, 234, 212, 0.02)" strokeWidth="1" fill="none">
+          <g stroke="rgba(193, 95, 60, 0.02)" strokeWidth="1" fill="none">
             <path d="M 100% 200 Q calc(100% - 200px) 180, calc(100% - 400px) 220">
               <animate
                 attributeName="d"
@@ -122,7 +122,7 @@ export function Services() {
           </g>
 
           {/* Scattered nodes — both sides */}
-          <g fill="rgba(94, 234, 212, 0.02)">
+          <g fill="rgba(193, 95, 60, 0.02)">
             <circle cx="12%" cy="25%" r="3" />
             <circle cx="8%" cy="55%" r="2" />
             <circle cx="15%" cy="80%" r="2" />
@@ -162,8 +162,8 @@ export function Services() {
           transition={{ duration: 0.8, delay: 0.15 }}
           className="mt-1 font-display text-4xl md:text-5xl lg:text-[3.5rem] tracking-[-0.03em] italic font-light leading-[1.0]"
           style={{
-            color: "rgba(94, 234, 212, 0.7)",
-            textShadow: "0 0 40px rgba(94, 234, 212, 0.15)",
+            color: "rgba(193, 95, 60, 0.7)",
+            textShadow: "0 0 40px rgba(193, 95, 60, 0.15)",
           }}
         >
           run on.
@@ -196,7 +196,7 @@ export function Services() {
               className="absolute inset-0"
               style={{
                 background:
-                  "radial-gradient(ellipse 70% 100% at 50% 50%, rgba(94, 234, 212, 0.025), transparent 60%)",
+                  "radial-gradient(ellipse 70% 100% at 50% 50%, rgba(193, 95, 60, 0.025), transparent 60%)",
               }}
             />
 
@@ -208,10 +208,10 @@ export function Services() {
             >
               <defs>
                 <linearGradient id="flow-line-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="rgba(94, 234, 212, 0)" />
-                  <stop offset="15%" stopColor="rgba(94, 234, 212, 0.35)" />
-                  <stop offset="85%" stopColor="rgba(94, 234, 212, 0.35)" />
-                  <stop offset="100%" stopColor="rgba(94, 234, 212, 0)" />
+                  <stop offset="0%" stopColor="rgba(193, 95, 60, 0)" />
+                  <stop offset="15%" stopColor="rgba(193, 95, 60, 0.35)" />
+                  <stop offset="85%" stopColor="rgba(193, 95, 60, 0.35)" />
+                  <stop offset="100%" stopColor="rgba(193, 95, 60, 0)" />
                 </linearGradient>
                 <filter id="node-glow" x="-100%" y="-100%" width="300%" height="300%">
                   <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
@@ -231,11 +231,11 @@ export function Services() {
                     y1="32"
                     x2={FLOW_NODES[i + 1].x - 8}
                     y2="32"
-                    stroke="rgba(94, 234, 212, 0.15)"
+                    stroke="rgba(193, 95, 60, 0.15)"
                     strokeWidth="1"
                   />
                   {/* Animated pulse on line */}
-                  <circle r="2" fill="rgba(94, 234, 212, 0.6)">
+                  <circle r="2" fill="rgba(193, 95, 60, 0.6)">
                     <animateMotion
                       dur={`${1.5 + i * 0.2}s`}
                       repeatCount="indefinite"
@@ -269,7 +269,7 @@ export function Services() {
                     cy="32"
                     r="12"
                     fill="none"
-                    stroke="rgba(94, 234, 212, 0.2)"
+                    stroke="rgba(193, 95, 60, 0.2)"
                     strokeWidth="1"
                   >
                     <animate
@@ -292,7 +292,7 @@ export function Services() {
                     cy="32"
                     r="6"
                     fill="var(--background)"
-                    stroke="rgba(94, 234, 212, 0.5)"
+                    stroke="rgba(193, 95, 60, 0.5)"
                     strokeWidth="1.5"
                   />
 
@@ -301,7 +301,7 @@ export function Services() {
                     cx={node.x}
                     cy="32"
                     r="2.5"
-                    fill="rgba(94, 234, 212, 0.7)"
+                    fill="rgba(193, 95, 60, 0.7)"
                   >
                     <animate
                       attributeName="opacity"
@@ -325,7 +325,7 @@ export function Services() {
               ))}
 
               {/* Main traveling pulse — full journey */}
-              <circle r="3" fill="rgba(94, 234, 212, 0.8)" filter="url(#node-glow)">
+              <circle r="3" fill="rgba(193, 95, 60, 0.8)" filter="url(#node-glow)">
                 <animateMotion
                   dur="5s"
                   repeatCount="indefinite"
@@ -392,7 +392,7 @@ export function Services() {
                   <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                       <pattern id={`card-grid-${i}`} x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(94, 234, 212, 0.03)" strokeWidth="1" />
+                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(193, 95, 60, 0.03)" strokeWidth="1" />
                       </pattern>
                     </defs>
                     <rect width="100%" height="100%" fill={`url(#card-grid-${i})`} />
@@ -404,7 +404,7 @@ export function Services() {
                   className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
                   style={{
                     background:
-                      "radial-gradient(ellipse 50% 50% at 15% 0%, rgba(94, 234, 212, 0.04), transparent 60%)",
+                      "radial-gradient(ellipse 50% 50% at 15% 0%, rgba(193, 95, 60, 0.04), transparent 60%)",
                   }}
                 />
 
@@ -412,19 +412,19 @@ export function Services() {
                 <div
                   className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                   style={{
-                    boxShadow: "inset 0 0 0 1px rgba(94, 234, 212, 0.06)",
+                    boxShadow: "inset 0 0 0 1px rgba(193, 95, 60, 0.06)",
                   }}
                 />
 
                 {/* Hover connection line animation */}
                 <div className="absolute top-4 right-4 w-16 h-8 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
                   <svg viewBox="0 0 64 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="8" cy="16" r="2" fill="rgba(94, 234, 212, 0.3)" />
-                    <circle cx="32" cy="16" r="2" fill="rgba(94, 234, 212, 0.3)" />
-                    <circle cx="56" cy="16" r="2" fill="rgba(94, 234, 212, 0.3)" />
-                    <line x1="10" y1="16" x2="30" y2="16" stroke="rgba(94, 234, 212, 0.15)" strokeWidth="1" />
-                    <line x1="34" y1="16" x2="54" y2="16" stroke="rgba(94, 234, 212, 0.15)" strokeWidth="1" />
-                    <circle r="1.5" fill="rgba(94, 234, 212, 0.6)">
+                    <circle cx="8" cy="16" r="2" fill="rgba(193, 95, 60, 0.3)" />
+                    <circle cx="32" cy="16" r="2" fill="rgba(193, 95, 60, 0.3)" />
+                    <circle cx="56" cy="16" r="2" fill="rgba(193, 95, 60, 0.3)" />
+                    <line x1="10" y1="16" x2="30" y2="16" stroke="rgba(193, 95, 60, 0.15)" strokeWidth="1" />
+                    <line x1="34" y1="16" x2="54" y2="16" stroke="rgba(193, 95, 60, 0.15)" strokeWidth="1" />
+                    <circle r="1.5" fill="rgba(193, 95, 60, 0.6)">
                       <animateMotion dur="1.5s" repeatCount="indefinite" path="M 8 16 L 56 16" />
                     </circle>
                   </svg>
@@ -480,7 +480,7 @@ export function Services() {
           <div
             className="w-12 h-px mb-8"
             style={{
-              background: "linear-gradient(90deg, transparent, rgba(94, 234, 212, 0.3), transparent)",
+              background: "linear-gradient(90deg, transparent, rgba(193, 95, 60, 0.3), transparent)",
             }}
           />
           <p className="text-[16px] md:text-[18px] font-light tracking-wide text-[var(--foreground-dim)]">
