@@ -68,7 +68,7 @@ export function Services() {
   const flowInView = useInView(flowRef, { once: true, margin: "-100px" });
 
   return (
-    <section id="services" className="relative py-24 md:py-36 overflow-hidden border-b border-[var(--border)]">
+    <section id="services" className="relative py-20 md:py-28 overflow-hidden border-b border-[var(--border)]">
       {/* Operational topology background — more balanced */}
       <div className="absolute inset-0 pointer-events-none">
         <svg
@@ -331,22 +331,23 @@ export function Services() {
             </svg>
           </div>
 
-          {/* Caption */}
-          <p className="mt-3 text-center text-[12px] font-mono uppercase tracking-[0.2em] text-[var(--accent)]">
-            From customer call to paid invoice — automatically
-          </p>
         </motion.div>
 
-        {/* Emotional bridge */}
-        <motion.p
+        {/* Caption + statement — one unit */}
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-8 md:mt-10 text-center text-[16px] md:text-[18px] text-[var(--foreground-dim)] max-w-lg mx-auto"
+          className="mt-8 md:mt-10 text-center"
         >
-          Operations become one connected system.
-        </motion.p>
+          <p className="text-[12px] font-mono uppercase tracking-[0.2em] text-[var(--accent)]">
+            From customer call to paid invoice — automatically
+          </p>
+          <p className="mt-3 font-display text-[22px] md:text-[28px] leading-tight tracking-[-0.01em] text-foreground max-w-xl mx-auto">
+            Operations become one connected system.
+          </p>
+        </motion.div>
 
         {/* Services list — with hover life */}
         <div className="mt-16 md:mt-20 space-y-4 md:space-y-5">
@@ -435,10 +436,10 @@ export function Services() {
                     {service.short.map((paragraph, j) => (
                       <p
                         key={j}
-                        className={`text-[14px] md:text-[15px] leading-[1.7] ${
+                        className={`leading-[1.7] ${
                           j === 0
-                            ? "text-foreground"
-                            : "mt-3 text-[var(--foreground-dim)]"
+                            ? "text-[15px] md:text-[16px] font-medium text-foreground"
+                            : "mt-2.5 text-[14px] md:text-[15px] text-[var(--muted)]"
                         }`}
                       >
                         {paragraph}
@@ -457,15 +458,15 @@ export function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.3 }}
-          className="mt-16 md:mt-20 flex flex-col items-center text-center"
+          className="mt-14 md:mt-16 flex flex-col items-center text-center"
         >
           <div
-            className="w-12 h-px mb-8"
+            className="w-12 h-px mb-6"
             style={{
               background: "linear-gradient(90deg, transparent, rgba(193, 95, 60, 0.3), transparent)",
             }}
           />
-          <p className="text-[18px] md:text-[20px] font-light tracking-wide text-[var(--foreground-dim)]">
+          <p className="font-display text-[24px] md:text-[30px] leading-tight tracking-[-0.01em] text-foreground max-w-xl">
             The next generation of SMBs won&apos;t operate manually.
           </p>
         </motion.div>

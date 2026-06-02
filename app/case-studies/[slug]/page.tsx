@@ -178,7 +178,7 @@ export default async function CaseStudyPage({
           </div>
 
           {/* Next + CTA */}
-          <div className="mt-24 md:mt-32 grid gap-6 md:grid-cols-2">
+          <div className="mt-16 md:mt-24 grid gap-6 md:grid-cols-2">
             <Link
               href={`/case-studies/${next.slug}`}
               className="group rounded-xl border border-[var(--border)] bg-[var(--surface)]/40 hover:border-[var(--accent)]/40 hover:bg-[var(--surface)] p-8 transition-all"

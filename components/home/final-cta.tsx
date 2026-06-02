@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 export function FinalCTA() {
   return (
-    <section className="relative py-28 md:py-40 overflow-hidden">
+    <section className="relative py-20 md:py-28 overflow-hidden">
       {/* Backgrounds */}
       <div className="absolute inset-0 bg-grid opacity-50 pointer-events-none" />
       <div

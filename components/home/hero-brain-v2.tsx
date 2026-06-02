@@ -109,7 +109,7 @@ export function HeroBrainV2() {
   return (
     <section
       ref={heroRef}
-      className="relative overflow-hidden pt-32 md:pt-40 pb-24 md:pb-32 border-b border-[var(--border)]"
+      className="relative overflow-hidden pt-32 md:pt-40 pb-20 md:pb-28 border-b border-[var(--border)]"
     >
       <div
         className="absolute inset-0 pointer-events-none"
@@ -173,7 +173,7 @@ export function HeroBrainV2() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.25 }}
-            className="mt-7 max-w-[540px] text-[19px] md:text-[21px] leading-relaxed text-[var(--foreground-dim)]"
+            className="mt-7 max-w-[540px] text-[21px] md:text-[23px] leading-relaxed text-[var(--foreground-dim)]"
             style={{ textShadow: "0 1px 12px rgba(240,238,230,0.9)" }}
           >
             Kortex builds operational AI systems that replace fragmented coordination with connected infrastructure — allowing businesses to scale faster without adding overhead.

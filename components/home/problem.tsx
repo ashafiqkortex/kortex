@@ -30,7 +30,7 @@ const MISALIGNMENTS = [
 
 export function Problem() {
   return (
-    <section className="relative py-32 md:py-44 overflow-hidden border-b border-[var(--border)]">
+    <section className="relative py-24 md:py-32 overflow-hidden border-b border-[var(--border)]">
       {/* Operational topology background — very subtle disconnected system */}
       <div className="absolute inset-0 pointer-events-none">
         <svg
@@ -152,7 +152,7 @@ export function Problem() {
         </motion.div>
 
         {/* Cards — staggered, with atmospheric depth */}
-        <div className="mt-24 md:mt-32 relative">
+        <div className="mt-16 md:mt-24 relative">
           {/* Disconnected lines between cards — visual fragmentation */}
           <svg
             className="absolute inset-0 w-full h-full pointer-events-none"
@@ -257,7 +257,7 @@ export function Problem() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1.2, delay: 0.1 }}
-          className="mt-24 md:mt-32 flex flex-col items-center text-center"
+          className="mt-16 md:mt-24 flex flex-col items-center text-center"
         >
           <div className="relative">
             {/* Ambient glow behind statement */}

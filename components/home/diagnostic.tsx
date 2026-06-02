@@ -104,7 +104,7 @@ export function Diagnostic() {
   }
 
   return (
-    <section id="diagnostic" className="relative py-28 md:py-36 border-b border-[var(--border)]">
+    <section id="diagnostic" className="relative py-20 md:py-28 border-b border-[var(--border)]">
       {/* Ambient glow */}
       <div
         className="absolute inset-0 pointer-events-none opacity-70"

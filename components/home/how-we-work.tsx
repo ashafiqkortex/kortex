@@ -34,7 +34,7 @@ const PILLARS = [
 
 export function HowWeWork() {
   return (
-    <section className="relative py-28 md:py-36 border-b border-[var(--border)]">
+    <section className="relative py-20 md:py-28 border-b border-[var(--border)]">
       <Container size="wide">
         <SectionHeader
           eyebrow="How We Work"

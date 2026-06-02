@@ -42,7 +42,7 @@ export function HeroBrain() {
   return (
     <section
       ref={heroRef}
-      className="relative overflow-hidden pt-32 md:pt-40 pb-24 md:pb-32 border-b border-[var(--border)]"
+      className="relative overflow-hidden pt-32 md:pt-40 pb-20 md:pb-28 border-b border-[var(--border)]"
     >
       {/* Deep radial accent glow centered on the brain */}
       <div

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
@@ -16,8 +17,12 @@ const NAV = [
 ];
 
 export function Nav() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const isActive = (href: string) =>
+    pathname === href || (href !== "/" && pathname.startsWith(href));
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16);
@@ -41,12 +46,17 @@ export function Nav() {
             <Logo />
           </Link>
 
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden md:flex items-center gap-0.5 rounded-full border border-[var(--border-bright)] bg-[var(--surface)]/70 backdrop-blur px-1.5 py-1.5">
             {NAV.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="px-3.5 py-2 text-[15px] text-[var(--foreground-dim)] hover:text-foreground transition-colors"
+                className={cn(
+                  "px-4 py-1.5 rounded-full text-[14.5px] font-medium transition-colors",
+                  isActive(item.href)
+                    ? "text-foreground bg-[var(--background-elev)] shadow-[inset_0_0_0_1px_var(--border-bright)]"
+                    : "text-[var(--foreground-dim)] hover:text-foreground hover:bg-[var(--background-elev)]",
+                )}
               >
                 {item.label}
               </Link>
@@ -78,7 +88,12 @@ export function Nav() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setMobileOpen(false)}
-                  className="px-2 py-3.5 text-[16px] text-[var(--foreground-dim)] hover:text-foreground border-b border-[var(--border)] last:border-0"
+                  className={cn(
+                    "px-2 py-3.5 text-[16px] border-b border-[var(--border)] last:border-0 transition-colors",
+                    isActive(item.href)
+                      ? "text-[var(--accent)] font-medium"
+                      : "text-[var(--foreground-dim)] hover:text-foreground",
+                  )}
                 >
                   {item.label}
                 </Link>

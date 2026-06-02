@@ -87,7 +87,7 @@ export default function ServicesPage() {
             })}
           </div>
 
-          <div className="mt-24 md:mt-32 rounded-2xl border border-[var(--border-bright)] bg-[var(--surface)]/60 p-10 md:p-14 text-center relative overflow-hidden">
+          <div className="mt-16 md:mt-24 rounded-2xl border border-[var(--border-bright)] bg-[var(--surface)]/60 p-10 md:p-14 text-center relative overflow-hidden">
             <div className="absolute inset-0 bg-grid opacity-30 pointer-events-none" />
             <div className="relative">
               <h3 className="font-display text-3xl md:text-4xl leading-tight tracking-[-0.02em] text-foreground max-w-2xl mx-auto">

@@ -10,7 +10,7 @@ import { ArrowUpRight } from "lucide-react";
 
 export function CaseStudiesTeaser() {
   return (
-    <section id="work" className="relative py-28 md:py-36 border-b border-[var(--border)]">
+    <section id="work" className="relative py-20 md:py-28 border-b border-[var(--border)]">
       <Container size="wide">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
           <SectionHeader
