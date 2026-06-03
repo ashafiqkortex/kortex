@@ -53,13 +53,13 @@ export default function BlogIndexPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <PageHeader
-        eyebrow="Blog · Field Notes"
+        eyebrow="Blog"
         title={
           <>
-            Systems, not <span className="italic text-[var(--accent)]">software.</span>
+            Built to run, <span className="italic text-[var(--accent)]">not to rent.</span>
           </>
         }
-        description="Plain writing for contractors doing $500K–$10M: what off-the-shelf tools really cost, why most AI projects flop, and how to grow when you can't hire."
+        description="Practical writing on automation and AI systems for $500K–$10M home services contractors who've outgrown off-the-shelf."
       />
 
       <div className="py-16 md:py-24">
