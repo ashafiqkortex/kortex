@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 4 Revenue Leaks | Kortex Framework</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #191815;
+            --accent: #C15F3C;
+            --leak1: #DC2626;
+            --leak2: #B45309;
+            --leak3: #15803D;
+            --leak4: #A8492A;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @media print {
+            body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            @page { size: letter; margin: 0.5in; }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: white;
+            color: #191815;
+            line-height: 1.5;
+        }
+
+        .page {
+            max-width: 8.5in;
+            min-height: 11in;
+            margin: 0 auto;
+            padding: 48px;
+            background: white;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 3px solid var(--primary);
+        }
+
+        .logo {
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--primary);
+        }
+
+        .header-right {
+            text-align: right;
+            font-size: 12px;
+            color: #6E6D66;
+        }
+
+        /* Title Section */
+        .title-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .title-section h1 {
+            font-size: 36px;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .title-section .subtitle {
+            font-size: 16px;
+            color: #6E6D66;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Big Number */
+        .big-stat {
+            background: linear-gradient(135deg, var(--primary) 0%, #191815 100%);
+            color: white;
+            text-align: center;
+            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+        }
+
+        .big-stat .number {
+            font-size: 48px;
+            font-weight: 700;
+        }
+
+        .big-stat .label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Leak Cards Grid */
+        .leaks-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .leak-card {
+            border-radius: 12px;
+            padding: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .leak-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+        }
+
+        .leak-card.leak1 { background: #F6E1D8; }
+        .leak-card.leak1::before { background: var(--leak1); }
+
+        .leak-card.leak2 { background: #F4EAD7; }
+        .leak-card.leak2::before { background: var(--leak2); }
+
+        .leak-card.leak3 { background: #ECF1E8; }
+        .leak-card.leak3::before { background: var(--leak3); }
+
+        .leak-card.leak4 { background: #FBF3EE; }
+        .leak-card.leak4::before { background: var(--leak4); }
+
+        .leak-number {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        .leak1 .leak-number { background: var(--leak1); }
+        .leak2 .leak-number { background: var(--leak2); color: #191815; }
+        .leak3 .leak-number { background: var(--leak3); }
+        .leak4 .leak-number { background: var(--leak4); }
+
+        .leak-card h3 {
+            font-size: 18px;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .leak-card .stat {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .leak1 .stat { color: var(--leak1); }
+        .leak2 .stat { color: #B45309; }
+        .leak3 .stat { color: #15803D; }
+        .leak4 .stat { color: var(--leak4); }
+
+        .leak-card .description {
+            font-size: 13px;
+            color: #54524B;
+            margin-bottom: 12px;
+        }
+
+        .leak-card .solution {
+            font-size: 12px;
+            background: rgba(0,0,0,0.05);
+            padding: 8px 12px;
+            border-radius: 6px;
+        }
+
+        .leak-card .solution strong {
+            color: var(--primary);
+        }
+
+        /* Formula Section */
+        .formula-section {
+            background: #FAF9F4;
+            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 32px;
+        }
+
+        .formula-section h2 {
+            font-size: 16px;
+            color: var(--primary);
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .formula {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .formula-item {
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        .formula-item.leak1 { background: #F6E1D8; }
+        .formula-item.leak2 { background: #F4EAD7; }
+        .formula-item.leak3 { background: #ECF1E8; }
+        .formula-item.leak4 { background: #F1E2D8; }
+
+        .formula-item .label {
+            font-weight: 600;
+            display: block;
+        }
+
+        .formula-plus {
+            font-size: 24px;
+            font-weight: 300;
+            color: #8A887F;
+        }
+
+        .formula-equals {
+            font-size: 24px;
+            font-weight: 300;
+            color: #8A887F;
+        }
+
+        .formula-total {
+            background: var(--primary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .formula-total .label {
+            font-weight: 600;
+            display: block;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px;
+            background: linear-gradient(135deg, var(--accent) 0%, #C15F3C 100%);
+            border-radius: 12px;
+            color: white;
+        }
+
+        .cta-section .text h3 {
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        .cta-section .text p {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: white;
+            color: var(--accent);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 32px;
+            padding-top: 16px;
+            border-top: 1px solid #E4E0D3;
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: #8A887F;
+        }
+
+        .sources {
+            font-size: 10px;
+            color: #8A887F;
+            margin-top: 16px;
+        }
+    
+body{background:#F0EEE6 !important;color:#191815;font-family:'Inter',system-ui,sans-serif;}
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;letter-spacing:-0.01em;}
+</style>
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="logo">KORTEX</div>
+            <div class="header-right">
+                The 4 Revenue Leaks Framework<br>
+                Home Services AI Operations
+            </div>
+        </header>
+
+        <div class="title-section">
+            <h1>The 4 Revenue Leaks</h1>
+            <p class="subtitle">Every home services company loses money to these four operational gaps. AI can plug them all.</p>
+        </div>
+
+        <div class="big-stat">
+            <div class="number">$150K - $500K</div>
+            <div class="label">Typical annual revenue leak for a $3M-$10M home services company</div>
+        </div>
+
+        <div class="leaks-grid">
+            <div class="leak-card leak1">
+                <div class="leak-number">1</div>
+                <h3>Missed Calls</h3>
+                <div class="stat">27% of calls go unanswered</div>
+                <p class="description">
+                    85% of unanswered calls don't leave voicemail. 67% call your competitor instead. 42% of calls come after hours when you're closed.
+                </p>
+                <div class="solution">
+                    <strong>AI Fix:</strong> 24/7 AI Phone Agent answers every call, qualifies leads, books jobs directly into your system
+                </div>
+            </div>
+
+            <div class="leak-card leak2">
+                <div class="leak-number">2</div>
+                <h3>Unsold Estimates</h3>
+                <div class="stat">50% of estimates die without follow-up</div>
+                <p class="description">
+                    Average contractor follows up 1.2 times. Best practice is 5 touches. Systematic follow-up improves close rates by 8-12 percentage points.
+                </p>
+                <div class="solution">
+                    <strong>AI Fix:</strong> Automated follow-up at Day 1, 3, 7 via text/email. Tracks which estimates need attention.
+                </div>
+            </div>
+
+            <div class="leak-card leak3">
+                <div class="leak-number">3</div>
+                <h3>Dormant Customers</h3>
+                <div class="stat">60% of your database is dormant</div>
+                <p class="description">
+                    Past customers who haven't used you in 12+ months. Reactivating them costs 3-5x less than new customer acquisition. They spend 31% more.
+                </p>
+                <div class="solution">
+                    <strong>AI Fix:</strong> Personalized reactivation campaigns, maintenance reminders, referral automation
+                </div>
+            </div>
+
+            <div class="leak-card leak4">
+                <div class="leak-number">4</div>
+                <h3>Reputation Gap</h3>
+                <div class="stat">Each 1-star gap = 5-9% revenue loss</div>
+                <p class="description">
+                    4.5-star businesses get 3x more clicks than 4.0-star. 37% of negative reviews cite communication problems — exactly what AI solves.
+                </p>
+                <div class="solution">
+                    <strong>AI Fix:</strong> Automated review collection, AI responses to all reviews, competitor monitoring
+                </div>
+            </div>
+        </div>
+
+        <div class="formula-section">
+            <h2>Your Total Revenue Leak</h2>
+            <div class="formula">
+                <div class="formula-item leak1">
+                    <span class="label">Missed Calls</span>
+                    $___
+                </div>
+                <span class="formula-plus">+</span>
+                <div class="formula-item leak2">
+                    <span class="label">Unsold Estimates</span>
+                    $___
+                </div>
+                <span class="formula-plus">+</span>
+                <div class="formula-item leak3">
+                    <span class="label">Dormant Customers</span>
+                    $___
+                </div>
+                <span class="formula-plus">+</span>
+                <div class="formula-item leak4">
+                    <span class="label">Reputation Gap</span>
+                    $___
+                </div>
+                <span class="formula-equals">=</span>
+                <div class="formula-total">
+                    <span class="label">Total Leak</span>
+                    $___/year
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <div class="text">
+                <h3>Find Your Exact Revenue Leak</h3>
+                <p>Our AI Operations Audit analyzes your actual data across all 4 categories.</p>
+            </div>
+            <a href="#" class="cta-btn">Calculate Your Leak</a>
+        </div>
+
+        <div class="sources">
+            <strong>Sources:</strong> Industry benchmarks from ServiceTitan, Housecall Pro, Jobber, Invoca, BrightLocal, and home services market research (2024-2026). Individual results vary based on market, operations, and customer base.
+        </div>
+
+        <footer class="footer">
+            <div>KORTEX | AI Operations Partner for Home Services</div>
+            <div>kortex.ai</div>
+        </footer>
+    </div>
+</body>
+</html>

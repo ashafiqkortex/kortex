@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Readiness Checklist | Kortex</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #191815;
+            --accent: #C15F3C;
+            --success: #15803D;
+            --warning: #B45309;
+            --danger: #DC2626;
+            --light: #FAF9F4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #F0EEE6 0%, #E4E0D3 100%);
+            min-height: 100vh;
+            color: #191815;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--primary);
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: #6E6D66;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .checklist-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 32px;
+            margin-bottom: 24px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--light);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        .section-icon.calls { background: #F6E1D8; }
+        .section-icon.estimates { background: #F4EAD7; }
+        .section-icon.customers { background: #ECF1E8; }
+        .section-icon.reputation { background: #F1E2D8; }
+
+        .question {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 16px 0;
+            border-bottom: 1px solid #E4E0D3;
+        }
+
+        .question:last-child {
+            border-bottom: none;
+        }
+
+        .question input[type="checkbox"] {
+            display: none;
+        }
+
+        .checkbox-custom {
+            width: 24px;
+            height: 24px;
+            min-width: 24px;
+            border: 2px solid #D8D3C2;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            margin-top: 2px;
+        }
+
+        .checkbox-custom:hover {
+            border-color: var(--accent);
+        }
+
+        .question input[type="checkbox"]:checked + .checkbox-custom {
+            background: var(--success);
+            border-color: var(--success);
+        }
+
+        .question input[type="checkbox"]:checked + .checkbox-custom::after {
+            content: '\\2713';
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .question-text {
+            flex: 1;
+        }
+
+        .question-text .main {
+            font-size: 15px;
+            color: #191815;
+            margin-bottom: 4px;
+        }
+
+        .question-text .hint {
+            font-size: 13px;
+            color: #8A887F;
+        }
+
+        .points {
+            font-size: 12px;
+            color: var(--accent);
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        /* Score Section */
+        .score-section {
+            background: linear-gradient(135deg, var(--primary) 0%, #191815 100%);
+            color: white;
+            padding: 32px;
+            border-radius: 16px;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .score-label {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+
+        .score-value {
+            font-size: 64px;
+            font-weight: 700;
+        }
+
+        .score-max {
+            font-size: 20px;
+            opacity: 0.7;
+        }
+
+        .score-bar {
+            height: 8px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 4px;
+            margin: 24px 0;
+            overflow: hidden;
+        }
+
+        .score-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--danger) 0%, var(--warning) 50%, var(--success) 100%);
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+
+        .score-interpretation {
+            padding: 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        .score-interpretation .title {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        /* Results Grid */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .result-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+        }
+
+        .result-card .category {
+            font-size: 12px;
+            color: #6E6D66;
+            margin-bottom: 8px;
+        }
+
+        .result-card .score {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .result-card .score.low { color: var(--danger); }
+        .result-card .score.medium { color: var(--warning); }
+        .result-card .score.high { color: var(--success); }
+
+        .result-card .max {
+            font-size: 14px;
+            color: #8A887F;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        }
+
+        .cta-section h3 {
+            font-size: 22px;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .cta-section p {
+            color: #6E6D66;
+            margin-bottom: 24px;
+            font-size: 15px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 16px 40px;
+            background: linear-gradient(135deg, var(--accent) 0%, #C15F3C 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(67, 97, 238, 0.3);
+        }
+
+        .cta-secondary {
+            display: block;
+            margin-top: 16px;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        /* Hidden by default */
+        .results-container {
+            display: none;
+        }
+
+        .results-container.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .calculate-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, var(--accent) 0%, #C15F3C 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .calculate-btn:hover {
+            transform: translateY(-2px);
+        }
+    
+body{background:#F0EEE6 !important;color:#191815;font-family:'Inter',system-ui,sans-serif;}
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;letter-spacing:-0.01em;}
+</style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">KORTEX</div>
+            <h1>AI Readiness Checklist</h1>
+            <p class="subtitle">15 questions to assess if your home services business is ready to leverage AI for growth</p>
+        </header>
+
+        <form id="checklist-form">
+            <!-- Call Handling Section -->
+            <div class="checklist-card">
+                <h2 class="section-title">
+                    <span class="section-icon calls">1</span>
+                    Call Handling
+                </h2>
+
+                <div class="question">
+                    <input type="checkbox" id="q1" data-category="calls" data-points="8">
+                    <label class="checkbox-custom" for="q1"></label>
+                    <div class="question-text">
+                        <div class="main">Do you know your missed call percentage?</div>
+                        <div class="hint">Have you measured how many inbound calls go unanswered?</div>
+                    </div>
+                    <span class="points">8 pts</span>
+                </div>
+
+                <div class="question">
+                    <input type="checkbox" id="q2" data-category="calls" data-points="10">
+                    <label class="checkbox-custom" for="q2"></label>
+                    <div class="question-text">
+                        <div class="main">Do you have live coverage for after-hours calls?</div>
+                        <div class="hint">Not voicemail — actual live answering or AI agent</div>
+                    </div>
+                    <span class="points">10 pts</span>
+                </div>
+
+                <div class="question">
+                    <input type="checkbox" id="q3" data-category="calls" data-points="7">
+                    <label class="checkbox-custom" for="q3"></label>
+                    <div class="question-text">
+                        <div class="main">Do you track call-to-booking conversion rate?</div>
+                        <div class="hint">What percentage of answered calls become booked jobs?</div>
+                    </div>
+                    <span class="points">7 pts</span>
+                </div>
+
+                <div class="question">
+                    <input type="checkbox" id="q4" data-category="calls" data-points="5">
+                    <label class="checkbox-custom" for="q4"></label>
+                    <div class="question-text">
+                        <div class="main">Can your CSRs book jobs without manager approval?</div>
+                        <div class="hint">Empowered to schedule directly into the calendar</div>
+                    </div>
+                    <span class="points">5 pts</span>
+                </div>
+            </div>
+
+            <!-- Estimate Follow-Up Section -->
+            <div class="checklist-card">
+                <h2 class="section-title">
+                    <span class="section-icon estimates">2</span>
+                    Estimate Follow-Up
+                </h2>
+
+                <div class="question">
+                    <input type="checkbox" id="q5" data-category="estimates" data-points="8">
+                    <label class="checkbox-custom" for="q5"></label>
+                    <div class="question-text">
+                        <div class="main">Do you have a systematic follow-up process for unsold estimates?</div>
+                        <div class="hint">Not ad-hoc — a defined sequence that happens every time</div>
+                    </div>
+                    <span class="points">8 pts</span>
+                </div>
+
+                <div class="question">
+                    <input type="checkbox" id="q6" data-category="estimates" data-points="7">
+                    <label class="checkbox-custom" for="q6"></label>
+                    <div class="question-text">
+                        <div class="main">Do you follow up at least 3 times before closing an estimate as lost?</div>
+                        <div class="hint">Industry best practice is 5 touches</div>
+                    </div>
+                    <span class="points">7 pts</span>
+                </div>
+
+                <div class="question">
+                    <input type="checkbox" id="q7" data-category="estimates" data-points="10">
+                    <label class="checkbox-custom" for="q7"></label>
+                    <div class="question-text">
+                        <div class="main">Is your estimate follow-up automated (not manual)?</div>
+                        <div class="hint">System sends follow-ups automatically at Day 1, 3, 7, etc.</div>
+                    </div>
+                    <span class="points">10 pts</span>
+                </div>
+
+                <div class="question">
+                    <input type="checkbox" id="q8" data-category="estimates" data-points="5">
+                    <label class="checkbox-custom" for="q8"></label>
+                    <div class="question-text">
+                        <div class="main">Do you track your estimate close rate?</div>
+                        <div class="hint">Know what percentage of estimates convert to jobs</div>
+                    </div>
+                    <span class="points">5 pts</span>
+                </div>
+            </div>
+
+            <!-- Customer Retention Section -->
+            <div class="checklist-card">
+                <h2 class="section-title">
+                    <span class="section-icon customers">3</span>
+                    Customer Retention
+                </h2>
+
+                <div class="question">
+                    <input type="checkbox" id="q9" data-category="customers" data-points="7">
+                    <label class="checkbox-custom" for="q9"></label>
+                    <div class="question-text">
+                        <div class="main">Do you know how many customers in your database are dormant?</div>
+                        <div class="hint">No service in 12+ months</div>
+                    </div>
+                    <span class="points">7 pts</span>
+                </div>
+
+                <div class="question">
+                    <input type="checkbox" id="q10" data-category="customers" data-points="8">
+                    <label class="checkbox-custom" for="q10"></label>
+                    <div class="question-text">
+                        <div class="main">Do you send automated maintenance reminders?</div>
+                        <div class="hint">Seasonal tune-up reminders, filter replacement notices, etc.</div>
+                    </div>
+                    <span class="points">8 pts</span>
+                </div>
+
+                <div class="question">
+                    <input type="checkbox" id="q11" data-category="customers" data-points="10">
+                    <label class="checkbox-custom" for="q11"></label>
+                    <div class="question-text">
+                        <div class="main">Do you have a maintenance plan or membership program?</div>
+                        <div class="hint">Recurring revenue from preventive maintenance agreements</div>
+                    </div>
+                    <span class="points">10 pts</span>
+                </div>
+            </div>
+
+            <!-- Reputation Section -->
+            <div class="checklist-card">
+                <h2 class="section-title">
+                    <span class="section-icon reputation">4</span>
+                    Online Reputation
+                </h2>
+
+                <div class="question">
+                    <input type="checkbox" id="q12" data-category="reputation" data-points="5">
+                    <label class="checkbox-custom" for="q12"></label>
+                    <div class="question-text">
+                        <div class="main">Is your Google rating 4.5 stars or higher?</div>
+                        <div class="hint">4.5+ stars get 3x more clicks than 4.0 stars</div>
+                    </div>
+                    <span class="points">5 pts</span>
+                </div>
+
+                <div class="question">
+                    <input type="checkbox" id="q13" data-category="reputation" data-points="5">
+                    <label class="checkbox-custom" for="q13"></label>
+                    <div class="question-text">
+                        <div class="main">Do you have 100+ Google reviews?</div>
+                        <div class="hint">Businesses with 50+ reviews get 3x more clicks</div>
+                    </div>
+                    <span class="points">5 pts</span>
+                </div>
+
+                <div class="question">
+                    <input type="checkbox" id="q14" data-category="reputation" data-points="8">
+                    <label class="checkbox-custom" for="q14"></label>
+                    <div class="question-text">
+                        <div class="main">Do you automatically request reviews after completed jobs?</div>
+                        <div class="hint">System sends review request without manual effort</div>
+                    </div>
+                    <span class="points">8 pts</span>
+                </div>
+
+                <div class="question">
+                    <input type="checkbox" id="q15" data-category="reputation" data-points="7">
+                    <label class="checkbox-custom" for="q15"></label>
+                    <div class="question-text">
+                        <div class="main">Do you respond to all reviews within 48 hours?</div>
+                        <div class="hint">Both positive and negative reviews</div>
+                    </div>
+                    <span class="points">7 pts</span>
+                </div>
+            </div>
+
+            <button type="submit" class="calculate-btn">Calculate My AI Readiness Score</button>
+        </form>
+
+        <div class="results-container" id="results">
+            <div class="score-section">
+                <div class="score-label">Your AI Readiness Score</div>
+                <div>
+                    <span class="score-value" id="totalScore">0</span>
+                    <span class="score-max">/ 100</span>
+                </div>
+                <div class="score-bar">
+                    <div class="score-fill" id="scoreFill" style="width: 0%"></div>
+                </div>
+                <div class="score-interpretation" id="interpretation">
+                    <div class="title"></div>
+                    <div class="description"></div>
+                </div>
+            </div>
+
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="category">Call Handling</div>
+                    <div class="score" id="callsScore">0</div>
+                    <div class="max">/ 30</div>
+                </div>
+                <div class="result-card">
+                    <div class="category">Estimate Follow-Up</div>
+                    <div class="score" id="estimatesScore">0</div>
+                    <div class="max">/ 30</div>
+                </div>
+                <div class="result-card">
+                    <div class="category">Customer Retention</div>
+                    <div class="score" id="customersScore">0</div>
+                    <div class="max">/ 25</div>
+                </div>
+                <div class="result-card">
+                    <div class="category">Online Reputation</div>
+                    <div class="score" id="reputationScore">0</div>
+                    <div class="max">/ 25</div>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <h3 id="ctaTitle">See Your Revenue Leak</h3>
+                <p id="ctaText">Based on your score, you have significant opportunities to capture more revenue with AI. Let's quantify exactly how much.</p>
+                <a href="#" class="cta-btn">Calculate My Revenue Leak</a>
+                <a href="#" class="cta-secondary">Or book a free AI Operations Audit</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('checklist-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            let total = 0;
+            let scores = {
+                calls: 0,
+                estimates: 0,
+                customers: 0,
+                reputation: 0
+            };
+
+            checkboxes.forEach(cb => {
+                if (cb.checked) {
+                    const points = parseInt(cb.dataset.points);
+                    const category = cb.dataset.category;
+                    total += points;
+                    scores[category] += points;
+                }
+            });
+
+            // Update displays
+            document.getElementById('totalScore').textContent = total;
+            document.getElementById('scoreFill').style.width = total + '%';
+
+            document.getElementById('callsScore').textContent = scores.calls;
+            document.getElementById('estimatesScore').textContent = scores.estimates;
+            document.getElementById('customersScore').textContent = scores.customers;
+            document.getElementById('reputationScore').textContent = scores.reputation;
+
+            // Add color classes
+            const scoreCards = document.querySelectorAll('.result-card .score');
+            scoreCards.forEach((card, index) => {
+                card.classList.remove('low', 'medium', 'high');
+                const values = [scores.calls, scores.estimates, scores.customers, scores.reputation];
+                const maxes = [30, 30, 25, 25];
+                const percent = values[index] / maxes[index];
+                if (percent < 0.4) card.classList.add('low');
+                else if (percent < 0.7) card.classList.add('medium');
+                else card.classList.add('high');
+            });
+
+            // Interpretation
+            const interp = document.getElementById('interpretation');
+            let title, desc, ctaTitle, ctaText;
+
+            if (total < 30) {
+                title = 'High Revenue Leak Risk';
+                desc = 'Your operations have significant gaps that AI can address. You\'re likely losing $150K-$400K annually to missed calls, unsold estimates, dormant customers, and reputation issues.';
+                ctaTitle = 'You\'re Leaving Money on the Table';
+                ctaText = 'With a score this low, AI implementation could transform your business. Let\'s find out exactly how much revenue you\'re losing.';
+            } else if (total < 60) {
+                title = 'Moderate Revenue Leak';
+                desc = 'You have some systems in place but significant room for improvement. AI could help you capture an additional $80K-$200K in annual revenue.';
+                ctaTitle = 'Good Foundation, Big Opportunity';
+                ctaText = 'You\'ve built some infrastructure but have clear gaps. An AI audit will show you exactly where to focus for maximum ROI.';
+            } else if (total < 80) {
+                title = 'Good, With Room to Optimize';
+                desc = 'You\'re ahead of most competitors. AI can help you optimize what\'s working and plug the remaining gaps for an estimated $40K-$100K in additional revenue.';
+                ctaTitle = 'Fine-Tune for Excellence';
+                ctaText = 'You\'re doing better than most. Let\'s identify the specific areas where AI can take you from good to great.';
+            } else {
+                title = 'Excellent AI Readiness';
+                desc = 'You\'re operating at a high level. AI can help you scale what\'s working and maintain your competitive advantage as the market evolves.';
+                ctaTitle = 'Ready to Scale';
+                ctaText = 'Your systems are strong. Let\'s explore how AI can help you scale efficiently without adding headcount.';
+            }
+
+            interp.querySelector('.title').textContent = title;
+            interp.querySelector('.description').textContent = desc;
+            document.getElementById('ctaTitle').textContent = ctaTitle;
+            document.getElementById('ctaText').textContent = ctaText;
+
+            // Show results
+            document.getElementById('results').classList.add('show');
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Revenue Leak Calculator | Kortex</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #191815;
+            --accent: #C15F3C;
+            --accent-light: #C15F3C;
+            --success: #15803D;
+            --warning: #B45309;
+            --danger: #DC2626;
+            --light: #FAF9F4;
+            --text: #191815;
+            --text-muted: #6E6D66;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #F0EEE6 0%, #E4E0D3 100%);
+            min-height: 100vh;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .calculator-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 32px;
+            margin-bottom: 24px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--light);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+
+        .form-group .hint {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #E4E0D3;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 4px rgba(67, 97, 238, 0.1);
+        }
+
+        .calculate-btn {
+            width: 100%;
+            padding: 16px 32px;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .calculate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(67, 97, 238, 0.3);
+        }
+
+        .results {
+            display: none;
+        }
+
+        .results.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .total-leak {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(135deg, var(--primary) 0%, #191815 100%);
+            border-radius: 16px;
+            color: white;
+            margin-bottom: 24px;
+        }
+
+        .total-leak .label {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+
+        .total-leak .amount {
+            font-size: 56px;
+            font-weight: 700;
+            color: var(--danger);
+        }
+
+        .total-leak .per-month {
+            font-size: 18px;
+            opacity: 0.8;
+            margin-top: 8px;
+        }
+
+        .leak-breakdown {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .leak-card {
+            background: var(--light);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            border-left: 4px solid var(--accent);
+        }
+
+        .leak-card.missed-calls { border-left-color: #DC2626; }
+        .leak-card.estimates { border-left-color: #B45309; }
+        .leak-card.dormant { border-left-color: #15803D; }
+        .leak-card.reputation { border-left-color: #C15F3C; }
+
+        .leak-card .leak-name {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .leak-card .leak-amount {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .leak-card .leak-percent {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .insight-box {
+            background: linear-gradient(135deg, #F4EAD7 0%, #F4EAD7 100%);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .insight-box h3 {
+            font-size: 16px;
+            color: #B45309;
+            margin-bottom: 12px;
+        }
+
+        .insight-box p {
+            color: #B45309;
+            font-size: 15px;
+        }
+
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+
+        .solution-card {
+            background: white;
+            border: 2px solid #E4E0D3;
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .solution-card.priority {
+            border-color: var(--success);
+            background: linear-gradient(135deg, #ECF1E8 0%, #ECF1E8 100%);
+        }
+
+        .solution-card .priority-badge {
+            display: inline-block;
+            background: var(--success);
+            color: white;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+
+        .solution-card h4 {
+            font-size: 18px;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .solution-card .solution-desc {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+
+        .solution-card .roi-estimate {
+            font-size: 14px;
+            color: var(--success);
+            font-weight: 600;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            border-radius: 16px;
+            color: white;
+        }
+
+        .cta-section h3 {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .cta-section p {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 24px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 16px 40px;
+            background: white;
+            color: var(--accent);
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+        }
+
+        .benchmark-note {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 24px;
+            padding: 16px;
+            background: var(--light);
+            border-radius: 8px;
+        }
+
+        .methodology {
+            margin-top: 40px;
+            padding: 24px;
+            background: white;
+            border-radius: 12px;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .methodology h4 {
+            color: var(--text);
+            margin-bottom: 12px;
+        }
+
+        .methodology ul {
+            margin-left: 20px;
+        }
+
+        .methodology li {
+            margin-bottom: 8px;
+        }
+    
+body{background:#F0EEE6 !important;color:#191815;font-family:'Inter',system-ui,sans-serif;}
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;letter-spacing:-0.01em;}
+</style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">KORTEX</div>
+            <h1>AI Revenue Leak Calculator</h1>
+            <p class="subtitle">Discover how much revenue your home services business is losing to operational gaps that AI can fix</p>
+        </header>
+
+        <form id="calculator-form">
+            <div class="calculator-card">
+                <h2 class="section-title">Your Business Details</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="trade">Trade / Industry</label>
+                        <select id="trade" required>
+                            <option value="">Select your trade</option>
+                            <option value="hvac">HVAC</option>
+                            <option value="plumbing">Plumbing</option>
+                            <option value="electrical">Electrical</option>
+                            <option value="roofing">Roofing</option>
+                            <option value="other">Other Home Services</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="revenue">Annual Revenue</label>
+                        <select id="revenue" required>
+                            <option value="">Select range</option>
+                            <option value="1000000">$1M - $2M</option>
+                            <option value="3000000">$2M - $5M</option>
+                            <option value="7500000">$5M - $10M</option>
+                            <option value="15000000">$10M - $20M</option>
+                            <option value="25000000">$20M+</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="avgTicket">Average Ticket Size ($)</label>
+                        <input type="number" id="avgTicket" placeholder="e.g., 350" required>
+                        <p class="hint">Your typical service call or job value</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="callsPerDay">Inbound Calls Per Day</label>
+                        <input type="number" id="callsPerDay" placeholder="e.g., 25" required>
+                        <p class="hint">Total calls your business receives daily</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calculator-card">
+                <h2 class="section-title">Current Operations</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="estimatesPerMonth">Estimates Sent Per Month</label>
+                        <input type="number" id="estimatesPerMonth" placeholder="e.g., 50">
+                        <p class="hint">Number of quotes/proposals you send monthly</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="estimateValue">Average Estimate Value ($)</label>
+                        <input type="number" id="estimateValue" placeholder="e.g., 2500">
+                        <p class="hint">Typical value of proposals (larger jobs)</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="pastCustomers">Total Past Customers</label>
+                        <input type="number" id="pastCustomers" placeholder="e.g., 3000">
+                        <p class="hint">Customers in your database from all time</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="googleRating">Your Google Rating</label>
+                        <input type="number" id="googleRating" step="0.1" min="1" max="5" placeholder="e.g., 4.2">
+                        <p class="hint">Current Google Business Profile star rating</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="competitorRating">Top Competitor's Rating</label>
+                        <input type="number" id="competitorRating" step="0.1" min="1" max="5" placeholder="e.g., 4.7">
+                        <p class="hint">Best-rated competitor in your market</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="hasFollowUp">Do you have automated estimate follow-up?</label>
+                        <select id="hasFollowUp">
+                            <option value="no">No - Manual or none</option>
+                            <option value="yes">Yes - Automated sequences</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="calculate-btn">Calculate My Revenue Leaks</button>
+        </form>
+
+        <div class="results" id="results">
+            <div class="total-leak">
+                <p class="label">Estimated Annual Revenue Leaking</p>
+                <p class="amount" id="totalLeak">$0</p>
+                <p class="per-month">That's <span id="monthlyLeak">$0</span> every month</p>
+            </div>
+
+            <div class="leak-breakdown">
+                <div class="leak-card missed-calls">
+                    <p class="leak-name">Missed Calls</p>
+                    <p class="leak-amount" id="missedCallsLeak">$0</p>
+                    <p class="leak-percent" id="missedCallsPercent">0%</p>
+                </div>
+                <div class="leak-card estimates">
+                    <p class="leak-name">Unsold Estimates</p>
+                    <p class="leak-amount" id="estimatesLeak">$0</p>
+                    <p class="leak-percent" id="estimatesPercent">0%</p>
+                </div>
+                <div class="leak-card dormant">
+                    <p class="leak-name">Dormant Customers</p>
+                    <p class="leak-amount" id="dormantLeak">$0</p>
+                    <p class="leak-percent" id="dormantPercent">0%</p>
+                </div>
+                <div class="leak-card reputation">
+                    <p class="leak-name">Reputation Gap</p>
+                    <p class="leak-amount" id="reputationLeak">$0</p>
+                    <p class="leak-percent" id="reputationPercent">0%</p>
+                </div>
+            </div>
+
+            <div class="insight-box" id="insightBox">
+                <h3>Key Insight</h3>
+                <p id="insightText"></p>
+            </div>
+
+            <div class="calculator-card">
+                <h2 class="section-title">Recommended AI Solutions</h2>
+                <div class="solutions-grid" id="solutionsGrid">
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <h3>Want the Full Picture?</h3>
+                <p>This calculator uses industry benchmarks. Our AI Operations Audit analyzes YOUR actual data to find the exact revenue leaks in your business.</p>
+                <a href="#" class="cta-btn">Book Your AI Audit</a>
+            </div>
+
+            <div class="benchmark-note">
+                Calculations based on industry research from ServiceTitan, Housecall Pro, Jobber, and home services benchmarks. Your actual results may vary based on your specific market, operations, and customer base.
+            </div>
+        </div>
+
+        <div class="methodology">
+            <h4>How We Calculate Revenue Leaks</h4>
+            <ul>
+                <li><strong>Missed Calls:</strong> 27% of home services calls go unanswered (industry average). 46% of answered calls convert to jobs. We calculate lost revenue from the gap.</li>
+                <li><strong>Unsold Estimates:</strong> 50% of estimates go unsold without follow-up. Systematic 5-touch follow-up recovers 8-12% of those lost deals.</li>
+                <li><strong>Dormant Customers:</strong> 60% of past customers are dormant (no service in 12+ months). 10% can be reactivated with targeted outreach. Existing customers spend 31% more than new ones.</li>
+                <li><strong>Reputation Gap:</strong> Each star rating difference impacts revenue by 5-9%. Businesses at 4.5+ stars get 3x more clicks than those at 4.0 stars.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const formatter = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD',
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0
+        });
+
+        document.getElementById('calculator-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Get inputs
+            const trade = document.getElementById('trade').value;
+            const revenue = parseFloat(document.getElementById('revenue').value) || 0;
+            const avgTicket = parseFloat(document.getElementById('avgTicket').value) || 350;
+            const callsPerDay = parseFloat(document.getElementById('callsPerDay').value) || 20;
+            const estimatesPerMonth = parseFloat(document.getElementById('estimatesPerMonth').value) || 0;
+            const estimateValue = parseFloat(document.getElementById('estimateValue').value) || avgTicket * 3;
+            const pastCustomers = parseFloat(document.getElementById('pastCustomers').value) || 0;
+            const googleRating = parseFloat(document.getElementById('googleRating').value) || 4.0;
+            const competitorRating = parseFloat(document.getElementById('competitorRating').value) || 4.5;
+            const hasFollowUp = document.getElementById('hasFollowUp').value === 'yes';
+
+            // Calculate Revenue Leak 1: Missed Calls
+            // 27% missed × 46% would convert × avg ticket × 365 days
+            const missedCallsPerDay = callsPerDay * 0.27;
+            const lostJobsPerDay = missedCallsPerDay * 0.46;
+            const missedCallsLeak = lostJobsPerDay * avgTicket * 365;
+
+            // Calculate Revenue Leak 2: Unsold Estimates
+            // 50% go unsold, 8% recoverable with follow-up
+            let estimatesLeak = 0;
+            if (estimatesPerMonth > 0 && !hasFollowUp) {
+                const unsoldEstimates = estimatesPerMonth * 0.50 * 12; // annual
+                const recoverableEstimates = unsoldEstimates * 0.08;
+                estimatesLeak = recoverableEstimates * estimateValue;
+            }
+
+            // Calculate Revenue Leak 3: Dormant Customers
+            // 60% dormant × 10% reactivatable × avg ticket × 1.31 (existing customer premium)
+            let dormantLeak = 0;
+            if (pastCustomers > 0) {
+                const dormantCustomers = pastCustomers * 0.60;
+                const reactivatable = dormantCustomers * 0.10;
+                dormantLeak = reactivatable * avgTicket * 1.31;
+            }
+
+            // Calculate Revenue Leak 4: Reputation Gap
+            // Star gap × 7% revenue impact
+            let reputationLeak = 0;
+            const starGap = Math.max(0, competitorRating - googleRating);
+            if (starGap > 0 && revenue > 0) {
+                reputationLeak = starGap * 0.07 * revenue;
+            }
+
+            // Total
+            const totalLeak = missedCallsLeak + estimatesLeak + dormantLeak + reputationLeak;
+            const monthlyLeak = totalLeak / 12;
+
+            // Update display
+            document.getElementById('totalLeak').textContent = formatter.format(totalLeak);
+            document.getElementById('monthlyLeak').textContent = formatter.format(monthlyLeak);
+
+            document.getElementById('missedCallsLeak').textContent = formatter.format(missedCallsLeak);
+            document.getElementById('estimatesLeak').textContent = formatter.format(estimatesLeak);
+            document.getElementById('dormantLeak').textContent = formatter.format(dormantLeak);
+            document.getElementById('reputationLeak').textContent = formatter.format(reputationLeak);
+
+            // Percentages
+            const total = totalLeak || 1;
+            document.getElementById('missedCallsPercent').textContent = Math.round(missedCallsLeak / total * 100) + '% of total';
+            document.getElementById('estimatesPercent').textContent = Math.round(estimatesLeak / total * 100) + '% of total';
+            document.getElementById('dormantPercent').textContent = Math.round(dormantLeak / total * 100) + '% of total';
+            document.getElementById('reputationPercent').textContent = Math.round(reputationLeak / total * 100) + '% of total';
+
+            // Find biggest leak for insight
+            const leaks = [
+                { name: 'Missed Calls', value: missedCallsLeak, solution: 'AI Phone Agent' },
+                { name: 'Unsold Estimates', value: estimatesLeak, solution: 'AI Estimate Follow-Up' },
+                { name: 'Dormant Customers', value: dormantLeak, solution: 'AI Customer Reactivation' },
+                { name: 'Reputation Gap', value: reputationLeak, solution: 'AI Reputation Manager' }
+            ].sort((a, b) => b.value - a.value);
+
+            const biggest = leaks[0];
+            const insightText = document.getElementById('insightText');
+
+            if (biggest.value > 0) {
+                insightText.textContent = `Your biggest revenue leak is ${biggest.name}, costing you approximately ${formatter.format(biggest.value)} per year. An ${biggest.solution} could recover a significant portion of this lost revenue within 60-90 days.`;
+            } else {
+                insightText.textContent = `Based on your inputs, we need more data to identify your biggest opportunity. Book an AI Operations Audit for a complete analysis of your business.`;
+            }
+
+            // Generate solution cards
+            const solutionsGrid = document.getElementById('solutionsGrid');
+            solutionsGrid.innerHTML = '';
+
+            const solutions = [
+                {
+                    leak: 'Missed Calls',
+                    value: missedCallsLeak,
+                    name: 'AI Phone Agent',
+                    desc: 'Answer 100% of calls 24/7. Qualify leads, book appointments, route emergencies. Never miss another opportunity.',
+                    roi: `Could recover up to ${formatter.format(missedCallsLeak * 0.6)} annually`
+                },
+                {
+                    leak: 'Unsold Estimates',
+                    value: estimatesLeak,
+                    name: 'AI Estimate Follow-Up',
+                    desc: 'Automated follow-up sequences at Day 1, 3, 7. Smart timing, personalized messages, tracks which estimates need attention.',
+                    roi: `Could recover up to ${formatter.format(estimatesLeak * 0.8)} annually`
+                },
+                {
+                    leak: 'Dormant Customers',
+                    value: dormantLeak,
+                    name: 'AI Customer Reactivation',
+                    desc: 'Mine your database for dormant customers. Personalized re-engagement, maintenance reminders, referral automation.',
+                    roi: `Could recover up to ${formatter.format(dormantLeak * 0.7)} annually`
+                },
+                {
+                    leak: 'Reputation Gap',
+                    value: reputationLeak,
+                    name: 'AI Reputation Manager',
+                    desc: 'Automated review collection post-job. AI responds to all reviews. Monitor competitors. Build your star rating.',
+                    roi: `Could recover up to ${formatter.format(reputationLeak * 0.5)} annually`
+                }
+            ].sort((a, b) => b.value - a.value);
+
+            solutions.forEach((sol, index) => {
+                if (sol.value > 0) {
+                    const card = document.createElement('div');
+                    card.className = 'solution-card' + (index === 0 ? ' priority' : '');
+                    card.innerHTML = `
+                        ${index === 0 ? '<span class="priority-badge">Highest Priority</span>' : ''}
+                        <h4>${sol.name}</h4>
+                        <p class="solution-desc">${sol.desc}</p>
+                        <p class="roi-estimate">${sol.roi}</p>
+                    `;
+                    solutionsGrid.appendChild(card);
+                }
+            });
+
+            // Show results
+            document.getElementById('results').classList.add('show');
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
