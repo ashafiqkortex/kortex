@@ -26,6 +26,7 @@ const SECTIONS = [
     links: [
       { href: "/about", label: "About" },
       { href: "/blog", label: "Blog" },
+      { href: "/tools", label: "Free Tools" },
       { href: "/contact", label: "Contact" },
     ],
   },
