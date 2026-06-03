@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 720" width="1600" height="720" role="img" aria-label="Renting versus owning: cost, roadmap, fit, and ownership compared">
+  <defs><pattern id="dg6" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#C15F3C" stroke-opacity="0.05"/></pattern></defs>
+  <rect width="1600" height="720" fill="#F0EEE6"/><rect width="1600" height="720" fill="url(#dg6)"/>
+
+  <!-- headers -->
+  <text x="700" y="110" font-family="ui-monospace,monospace" font-size="22" letter-spacing="2" fill="#8A887F" text-anchor="middle">RENT · off-the-shelf</text>
+  <text x="1180" y="110" font-family="ui-monospace,monospace" font-size="22" letter-spacing="2" fill="#A8492A" text-anchor="middle">OWN · custom</text>
+
+  <!-- columns -->
+  <rect x="520" y="150" width="360" height="500" rx="16" fill="#FAF9F4" stroke="#D8D3C2" stroke-width="2" stroke-dasharray="8 8"/>
+  <rect x="1000" y="150" width="360" height="500" rx="16" fill="#FAF9F4" stroke="#C15F3C" stroke-width="2.5"/>
+
+  <g font-family="ui-monospace,monospace" font-size="17">
+    <!-- row labels -->
+    <g fill="#54524B" text-anchor="end">
+      <text x="480" y="230">Cost</text><text x="480" y="350">Roadmap</text><text x="480" y="470">Fit</text><text x="480" y="590">Ownership</text>
+    </g>
+    <!-- rent -->
+    <g fill="#8A887F" text-anchor="middle">
+      <text x="700" y="230">$20K / yr · forever</text>
+      <text x="700" y="350">vendor decides</text>
+      <text x="700" y="470">generic</text>
+      <text x="700" y="590">nothing</text>
+    </g>
+    <!-- own -->
+    <g fill="#191815" text-anchor="middle">
+      <text x="1180" y="230">$40–80K · once</text>
+      <text x="1180" y="350">you decide</text>
+      <text x="1180" y="470">your workflows</text>
+      <text x="1180" y="590">code + data</text>
+    </g>
+  </g>
+  <line x1="380" y1="290" x2="1360" y2="290" stroke="#E4E0D3"/>
+  <line x1="380" y1="410" x2="1360" y2="410" stroke="#E4E0D3"/>
+  <line x1="380" y1="530" x2="1360" y2="530" stroke="#E4E0D3"/>
+</svg>

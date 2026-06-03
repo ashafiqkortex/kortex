@@ -25,6 +25,7 @@ const SECTIONS = [
     title: "Company",
     links: [
       { href: "/about", label: "About" },
+      { href: "/blog", label: "Blog" },
       { href: "/contact", label: "Contact" },
     ],
   },
@@ -39,7 +40,7 @@ export function Footer() {
           <div>
             <Logo />
             <p className="mt-5 text-[14px] leading-relaxed text-[var(--foreground-dim)] max-w-xs">
-              Engineers, not consultants. We build the truth layer under your operations.
+              Engineers, not consultants. We build the operational systems modern businesses run on.
             </p>
             <div className="mt-6 flex items-center gap-2 text-[12px] font-mono uppercase tracking-widest text-[var(--muted)]">
               <span className="relative flex h-1.5 w-1.5">
@@ -73,7 +74,7 @@ export function Footer() {
 
         <div className="mt-16 pt-6 border-t border-[var(--border)] flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-[12px] text-[var(--muted)]">
           <div>&copy; {new Date().getFullYear()} Kortex Consulting. All rights reserved.</div>
-          <div className="font-mono tracking-wide">The truth layer under your operations.</div>
+          <div className="font-mono tracking-wide">The systems layer behind modern operations.</div>
         </div>
       </Container>
     </footer>

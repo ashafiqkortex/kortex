@@ -5,6 +5,7 @@ import { CustomSolutions } from "@/components/home/custom-solutions";
 import { Diagnostic } from "@/components/home/diagnostic";
 import { CaseStudiesTeaser } from "@/components/home/case-studies-teaser";
 import { HowWeWork } from "@/components/home/how-we-work";
+import { BlogTeaser } from "@/components/home/blog-teaser";
 import { FinalCTA } from "@/components/home/final-cta";
 
 export default function HomePage() {
@@ -17,6 +18,7 @@ export default function HomePage() {
       <Diagnostic />
       <CaseStudiesTeaser />
       <HowWeWork />
+      <BlogTeaser />
       <FinalCTA />
     </>
   );

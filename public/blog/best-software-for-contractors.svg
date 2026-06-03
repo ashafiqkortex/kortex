@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" role="img" aria-label="Five separate software tools tangled together by manual connections">
+  <defs>
+    <pattern id="g6" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#C15F3C" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="r6" cx="50%" cy="28%" r="68%">
+      <stop offset="0%" stop-color="#C15F3C" stop-opacity="0.09"/>
+      <stop offset="60%" stop-color="#C15F3C" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="800" fill="#F0EEE6"/>
+  <rect width="1600" height="800" fill="url(#g6)"/>
+  <rect width="1600" height="800" fill="url(#r6)"/>
+
+  <!-- tangled manual connections (the integration burden) -->
+  <g stroke="#C15F3C" stroke-width="2" fill="none" opacity="0.55">
+    <path d="M250 330 C 450 520, 620 200, 800 360"/>
+    <path d="M520 330 C 700 540, 920 220, 1080 360"/>
+    <path d="M800 330 C 980 540, 1180 220, 1350 360"/>
+    <path d="M250 360 C 600 640, 1000 640, 1350 360"/>
+  </g>
+
+  <!-- five separate tools -->
+  <g>
+    <rect x="170" y="300" width="160" height="120" rx="14" fill="#FAF9F4" stroke="#A8492A" stroke-width="2.5"/>
+    <rect x="440" y="300" width="160" height="120" rx="14" fill="#FAF9F4" stroke="#A8492A" stroke-width="2.5"/>
+    <rect x="710" y="300" width="160" height="120" rx="14" fill="#A8492A"/>
+    <rect x="980" y="300" width="160" height="120" rx="14" fill="#FAF9F4" stroke="#A8492A" stroke-width="2.5"/>
+    <rect x="1250" y="300" width="160" height="120" rx="14" fill="#FAF9F4" stroke="#A8492A" stroke-width="2.5"/>
+  </g>
+  <g font-family="ui-monospace, monospace" font-size="16" text-anchor="middle">
+    <text x="250" y="367" fill="#54524B">Jobber</text>
+    <text x="520" y="367" fill="#54524B">Housecall</text>
+    <text x="790" y="367" fill="#F0EEE6">ServiceTitan</text>
+    <text x="1060" y="367" fill="#54524B">QuickBooks</text>
+    <text x="1330" y="367" fill="#54524B">CompanyCam</text>
+  </g>
+  <text x="800" y="540" font-family="ui-monospace, monospace" font-size="18" letter-spacing="2" fill="#54524B" text-anchor="middle">FIVE TOOLS · ONE HUMAN HOLDING THEM TOGETHER</text>
+</svg>

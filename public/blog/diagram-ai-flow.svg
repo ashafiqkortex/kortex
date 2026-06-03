@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" role="img" aria-label="End to end automated workflow from call to review with zero human touches">
+  <defs>
+    <pattern id="dg1" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#C15F3C" stroke-opacity="0.05"/></pattern>
+    <marker id="ar1" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#C15F3C"/></marker>
+  </defs>
+  <rect width="1600" height="700" fill="#F0EEE6"/>
+  <rect width="1600" height="700" fill="url(#dg1)"/>
+
+  <text x="80" y="120" font-family="ui-monospace,monospace" font-size="20" letter-spacing="3" fill="#A8492A">THE SYSTEM, END TO END</text>
+
+  <g font-family="ui-monospace,monospace" font-size="22" text-anchor="middle">
+    <!-- row of steps -->
+    <g>
+      <rect x="80"  y="300" width="180" height="90" rx="12" fill="#FAF9F4" stroke="#C15F3C" stroke-width="2"/><text x="170" y="352" fill="#191815">Call 9pm</text>
+      <rect x="340" y="300" width="180" height="90" rx="12" fill="#FAF9F4" stroke="#C15F3C" stroke-width="2"/><text x="430" y="352" fill="#191815">Booked</text>
+      <rect x="600" y="300" width="180" height="90" rx="12" fill="#FAF9F4" stroke="#C15F3C" stroke-width="2"/><text x="690" y="352" fill="#191815">Dispatched</text>
+      <rect x="860" y="300" width="180" height="90" rx="12" fill="#FAF9F4" stroke="#C15F3C" stroke-width="2"/><text x="950" y="352" fill="#191815">Invoiced</text>
+      <rect x="1120" y="300" width="180" height="90" rx="12" fill="#A8492A"/><text x="1210" y="352" fill="#F0EEE6">Paid</text>
+      <rect x="1380" y="300" width="160" height="90" rx="12" fill="#FAF9F4" stroke="#C15F3C" stroke-width="2"/><text x="1460" y="352" fill="#191815">Review</text>
+    </g>
+    <g stroke="#C15F3C" stroke-width="2.5" marker-end="url(#ar1)">
+      <line x1="262" y1="345" x2="334" y2="345"/><line x1="522" y1="345" x2="594" y2="345"/>
+      <line x1="782" y1="345" x2="854" y2="345"/><line x1="1042" y1="345" x2="1114" y2="345"/>
+      <line x1="1302" y1="345" x2="1374" y2="345"/>
+    </g>
+  </g>
+
+  <g transform="translate(600,470)">
+    <rect x="0" y="0" width="400" height="64" rx="32" fill="none" stroke="#A8492A" stroke-width="2" stroke-dasharray="3 8"/>
+    <text x="200" y="41" font-family="ui-monospace,monospace" font-size="22" letter-spacing="2" fill="#A8492A" text-anchor="middle">0 HUMAN TOUCHES</text>
+  </g>
+</svg>

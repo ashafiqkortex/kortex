@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" role="img" aria-label="One customer typed by hand into three different systems">
+  <defs><pattern id="dg5" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#C15F3C" stroke-opacity="0.05"/></pattern>
+  <marker id="ar5" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#C15F3C"/></marker></defs>
+  <rect width="1600" height="700" fill="#F0EEE6"/><rect width="1600" height="700" fill="url(#dg5)"/>
+  <text x="120" y="90" font-family="ui-monospace,monospace" font-size="20" letter-spacing="3" fill="#A8492A">THE DOUBLE-ENTRY TAX</text>
+
+  <!-- one customer -->
+  <rect x="120" y="290" width="240" height="120" rx="14" fill="#A8492A"/>
+  <text x="240" y="345" font-family="ui-monospace,monospace" font-size="20" fill="#F0EEE6" text-anchor="middle">1 customer</text>
+  <text x="240" y="378" font-family="ui-monospace,monospace" font-size="15" fill="#F0EEE6" fill-opacity="0.8" text-anchor="middle">one job</text>
+
+  <!-- arrows (typed by hand) -->
+  <g stroke="#C15F3C" stroke-width="2" fill="none" marker-end="url(#ar5)" stroke-dasharray="6 6">
+    <path d="M360 320 C 560 220, 720 200, 900 210"/>
+    <path d="M360 350 C 560 350, 720 350, 900 350"/>
+    <path d="M360 380 C 560 480, 720 500, 900 490"/>
+  </g>
+  <text x="640" y="180" font-family="ui-monospace,monospace" font-size="15" fill="#8A887F" text-anchor="middle">typed again, by hand, every time</text>
+
+  <!-- three systems -->
+  <g font-family="ui-monospace,monospace" font-size="19" text-anchor="middle" fill="#191815">
+    <rect x="900" y="160" width="320" height="100" rx="12" fill="#FAF9F4" stroke="#C15F3C" stroke-width="2"/><text x="1060" y="218">Housecall Pro</text>
+    <rect x="900" y="300" width="320" height="100" rx="12" fill="#FAF9F4" stroke="#C15F3C" stroke-width="2"/><text x="1060" y="358">QuickBooks</text>
+    <rect x="900" y="440" width="320" height="100" rx="12" fill="#FAF9F4" stroke="#C15F3C" stroke-width="2"/><text x="1060" y="498">CompanyCam</text>
+  </g>
+  <text x="1380" y="358" font-family="Georgia,serif" font-style="italic" font-size="30" fill="#A8492A" text-anchor="middle">3x</text>
+</svg>

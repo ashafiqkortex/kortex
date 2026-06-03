@@ -88,9 +88,7 @@ export default function ServicesPage() {
             })}
           </div>
 
-          {/* Custom Solutions — capstone after the five disciplines */}
-          <CustomSolutions id="custom" asSection={false} />
-
+          {/* Decision point — bridge from the five into the systems capstone */}
           <div className="mt-16 md:mt-24 rounded-2xl border border-[var(--border-bright)] bg-[var(--surface)]/60 p-10 md:p-14 text-center relative overflow-hidden">
             <div className="absolute inset-0 bg-grid opacity-30 pointer-events-none" />
             <div className="relative">
@@ -107,6 +105,9 @@ export default function ServicesPage() {
               </div>
             </div>
           </div>
+
+          {/* Custom Solutions — capstone that closes the page */}
+          <CustomSolutions id="custom" asSection={false} />
         </Container>
       </div>
     </>

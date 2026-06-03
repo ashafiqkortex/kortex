@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" role="img" aria-label="One subscription splitting into many hidden costs">
+  <defs>
+    <pattern id="g1" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#C15F3C" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="r1" cx="22%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#C15F3C" stop-opacity="0.10"/>
+      <stop offset="60%" stop-color="#C15F3C" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="800" fill="#F0EEE6"/>
+  <rect width="1600" height="800" fill="url(#g1)"/>
+  <rect width="1600" height="800" fill="url(#r1)"/>
+
+  <!-- the single visible cost -->
+  <rect x="150" y="320" width="250" height="160" rx="14" fill="#A8492A"/>
+  <text x="275" y="392" font-family="Georgia, serif" font-size="46" fill="#F0EEE6" text-anchor="middle" font-style="italic">$20K</text>
+  <text x="275" y="430" font-family="ui-monospace, monospace" font-size="17" letter-spacing="3" fill="#F0EEE6" fill-opacity="0.7" text-anchor="middle">SUBSCRIPTION</text>
+
+  <!-- fan of hidden costs -->
+  <g stroke="#C15F3C" stroke-width="2" fill="none" opacity="0.85">
+    <path d="M400 400 C 620 200, 900 180, 1180 170"/>
+    <path d="M400 400 C 620 300, 920 290, 1240 300"/>
+    <path d="M400 400 C 640 400, 980 410, 1300 420"/>
+    <path d="M400 400 C 620 500, 920 520, 1240 540"/>
+    <path d="M400 400 C 620 600, 900 640, 1180 660"/>
+  </g>
+  <g fill="#A8492A">
+    <circle cx="1180" cy="170" r="9"/><circle cx="1240" cy="300" r="9"/>
+    <circle cx="1300" cy="420" r="9"/><circle cx="1240" cy="540" r="9"/>
+    <circle cx="1180" cy="660" r="9"/>
+  </g>
+  <g font-family="ui-monospace, monospace" font-size="18" fill="#54524B">
+    <text x="1205" y="176">re-entry</text>
+    <text x="1265" y="306">chasing quotes</text>
+    <text x="1325" y="426">double entry</text>
+    <text x="1265" y="546">slow collection</text>
+    <text x="1205" y="666">workarounds</text>
+  </g>
+</svg>

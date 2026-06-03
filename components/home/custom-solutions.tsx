@@ -80,12 +80,13 @@ export function CustomSolutions({
         <div className="max-w-2xl">
           <Eyebrow />
           <h2 className="mt-5 font-display text-3xl md:text-[38px] tracking-[-0.02em] text-[#F4F1E8] leading-[1.1]">
-            Some problems don&apos;t fit a category.{" "}
-            <span className="italic text-[#DB8A5F]">We build those from scratch.</span>
+            Some operational problems don&apos;t fit inside standard systems.{" "}
+            <span className="italic text-[#DB8A5F]">We engineer the systems layer around them.</span>
           </h2>
           <p className="mt-5 text-[16px] md:text-[17px] leading-[1.7] text-[#F4F1E8]/70">
-            When growth turns into coordination work and off-the-shelf tools
-            start breaking, you need operational infrastructure — not another app.
+            When growth turns into coordination work and standard systems stop
+            fitting the way the business actually operates, you need operational
+            infrastructure — not another app.
           </p>
         </div>
         <div className="shrink-0">
@@ -108,12 +109,15 @@ export function CustomSolutions({
           </h2>
           <div className="mt-6 space-y-4 text-[16px] md:text-[17px] leading-[1.7] text-[#F4F1E8]/70">
             <p>
-              More approvals. More edge cases. More duct tape between tools that
-              were never built to talk.
+              More approvals. More edge cases. More duct tape between systems
+              that were never designed to work together.
             </p>
             <p>
-              At some point you don&apos;t need more software.{" "}
-              <span className="text-[#F4F1E8] font-medium">You need operational infrastructure.</span>
+              At some point, teams stop scaling. They start coordinating.
+            </p>
+            <p>
+              That&apos;s usually when the business needs more than another app.{" "}
+              <span className="text-[#F4F1E8] font-medium">It needs operational infrastructure.</span>
             </p>
           </div>
           <div className="mt-8">
@@ -138,17 +142,13 @@ export function CustomSolutions({
           </div>
           <pre className="px-5 py-5 overflow-x-auto font-mono text-[12.5px] md:text-[13px] leading-[2] text-[#F4F1E8]/90">
             <code>
-              <span className={cmt}>{"# the problem was never the team"}</span>{"\n\n"}
-              <span className={key}>{"run_on:   "}</span>{"your real workflows"}
-              <span className={cmt}>{"   # not a template"}</span>{"\n"}
-              <span className={key}>{"handles:  "}</span>
-              <span className={str}>{"3 approvals, custom quote, tech rerouted"}</span>{"\n"}
-              <span className={key}>{"flow:     "}</span>
-              <span className={str}>{"call → quote → dispatch → invoice"}</span>{"\n"}
-              <span className={key}>{"evolves:  "}</span>{"with the business"}
-              <span className={cmt}>{"   # not a rebuild"}</span>{"\n"}
-              <span className={key}>{"owned_by: "}</span>{"your team"}
-              <span className={cmt}>{"   # your environment"}</span>
+              <span className={cmt}>{"# coordination is the bottleneck"}</span>{"\n\n"}
+              {"customer_call_received"}<span className={cmt}>{"  →  "}</span>{"quote_generated"}<span className={cmt}>{"  →  "}</span>{"approval_pending"}{"\n\n"}
+              <span className={key}>{"if "}</span>{"approved            "}<span className={cmt}>{"  →  "}</span><span className={str}>{"assign_dispatch()"}</span>{"\n"}
+              <span className={key}>{"if "}</span>{"tech_unavailable    "}<span className={cmt}>{"  →  "}</span><span className={str}>{"reroute_dispatch()"}</span>{"\n"}
+              <span className={key}>{"if "}</span>{"customer_reschedules"}<span className={cmt}>{"  →  "}</span><span className={str}>{"update_calendar()"}</span>{" · "}<span className={str}>{"notify_dispatch()"}</span>{"\n"}
+              <span className={key}>{"if "}</span>{"payment_overdue     "}<span className={cmt}>{"  →  "}</span><span className={str}>{"trigger_follow_up()"}</span>{"\n\n"}
+              <span className={cmt}>{"status:"}</span>{" "}<span className={str}>{"operational"}</span><span className={cmt}>{"   # every branch handled"}</span>
             </code>
           </pre>
         </div>

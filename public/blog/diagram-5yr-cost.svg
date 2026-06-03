@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" role="img" aria-label="Five year cost: renting SaaS keeps climbing while a one-time custom build stays flat">
+  <defs><pattern id="dg2" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#C15F3C" stroke-opacity="0.05"/></pattern></defs>
+  <rect width="1600" height="700" fill="#F0EEE6"/><rect width="1600" height="700" fill="url(#dg2)"/>
+  <text x="120" y="90" font-family="ui-monospace,monospace" font-size="20" letter-spacing="3" fill="#A8492A">COST OVER 5 YEARS</text>
+
+  <!-- axes -->
+  <line x1="200" y1="560" x2="1450" y2="560" stroke="#54524B" stroke-width="2"/>
+  <line x1="200" y1="120" x2="200" y2="560" stroke="#54524B" stroke-width="2"/>
+  <g font-family="ui-monospace,monospace" font-size="16" fill="#8A887F" text-anchor="middle">
+    <text x="350" y="590">Yr 1</text><text x="600" y="590">Yr 2</text><text x="850" y="590">Yr 3</text><text x="1100" y="590">Yr 4</text><text x="1350" y="590">Yr 5</text>
+  </g>
+
+  <!-- SaaS rising -->
+  <polyline points="200,560 350,476 600,392 850,308 1100,224 1350,140" fill="none" stroke="#A8492A" stroke-width="4"/>
+  <g fill="#A8492A"><circle cx="350" cy="476" r="6"/><circle cx="600" cy="392" r="6"/><circle cx="850" cy="308" r="6"/><circle cx="1100" cy="224" r="6"/><circle cx="1350" cy="140" r="6"/></g>
+  <text x="1360" y="135" font-family="ui-monospace,monospace" font-size="18" fill="#A8492A">Rent · ~$100K</text>
+
+  <!-- custom one-time then flat -->
+  <polyline points="200,560 350,308 600,308 850,308 1100,308 1350,308" fill="none" stroke="#C15F3C" stroke-width="4" stroke-dasharray="10 6"/>
+  <text x="1090" y="290" font-family="ui-monospace,monospace" font-size="18" fill="#C15F3C">Own · $40–80K once</text>
+
+  <!-- crossover -->
+  <circle cx="850" cy="308" r="11" fill="none" stroke="#191815" stroke-width="2.5"/>
+  <text x="850" y="260" font-family="ui-monospace,monospace" font-size="16" fill="#191815" text-anchor="middle">break-even ~Yr 3</text>
+</svg>
