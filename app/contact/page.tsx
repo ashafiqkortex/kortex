@@ -2,15 +2,21 @@ import type { Metadata } from "next";
 import { Container } from "@/components/ui/container";
 import { PageHeader } from "@/components/page-header";
 import { ContactForm } from "@/components/contact-form";
-import { Calendar, Mail, Clock } from "lucide-react";
+import { Calendar, Mail, Clock, Phone, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact — Kortex Consulting",
   description:
-    "Book a 20-minute discovery call or send us a message. We'll tell you honestly whether we can help.",
+    "Call (301) 889-8546, book a 20-minute discovery call, or send us a message. We'll tell you honestly whether we can help.",
 };
 
 const HIGHLIGHTS = [
+  {
+    icon: Phone,
+    label: "(301) 889-8546",
+    href: "tel:+13018898546",
+    body: "Call or text. Fastest way to reach us during business hours.",
+  },
   {
     icon: Calendar,
     label: "20-minute discovery",
@@ -24,13 +30,37 @@ const HIGHLIGHTS = [
   {
     icon: Mail,
     label: "hello@kortexconsulting.com",
+    href: "mailto:hello@kortexconsulting.com",
     body: "Prefer email? We respond within one business day.",
   },
 ];
 
+const SITE = "https://kortexconsulting.com";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Kortex Consulting",
+  url: SITE,
+  telephone: "+1-301-889-8546",
+  email: "hello@kortexconsulting.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "6604 Millwood Rd",
+    addressLocality: "Bethesda",
+    addressRegion: "MD",
+    postalCode: "20817",
+    addressCountry: "US",
+  },
+};
+
 export default function ContactPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <PageHeader
         eyebrow="Contact"
         title={
@@ -60,7 +90,16 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <div className="text-[15px] text-foreground font-medium">
-                          {h.label}
+                          {h.href ? (
+                            <a
+                              href={h.href}
+                              className="hover:text-[var(--accent)] transition-colors"
+                            >
+                              {h.label}
+                            </a>
+                          ) : (
+                            h.label
+                          )}
                         </div>
                         <div className="mt-1 text-[14px] text-[var(--foreground-dim)] leading-relaxed">
                           {h.body}
@@ -82,6 +121,22 @@ export default function ContactPage() {
                 <p className="mt-3 text-[14px] text-[var(--muted)]">
                   Send us your Cal.com link and we&apos;ll wire it in.
                 </p>
+              </div>
+
+              <div className="mt-8 flex gap-4 p-5 rounded-xl border border-[var(--border)] bg-[var(--surface)]/40">
+                <div className="shrink-0 flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border-bright)] bg-[var(--background)] text-[var(--accent)]">
+                  <MapPin size={16} strokeWidth={1.75} />
+                </div>
+                <div>
+                  <div className="text-[15px] text-foreground font-medium">
+                    Kortex Consulting
+                  </div>
+                  <address className="mt-1 not-italic text-[14px] text-[var(--foreground-dim)] leading-relaxed">
+                    6604 Millwood Rd
+                    <br />
+                    Bethesda, MD 20817
+                  </address>
+                </div>
               </div>
             </div>
 

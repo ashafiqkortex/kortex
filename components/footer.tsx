@@ -43,6 +43,30 @@ export function Footer() {
             <p className="mt-5 text-[14px] leading-relaxed text-[var(--foreground-dim)] max-w-xs">
               Engineers, not consultants. We build the operational systems modern businesses run on.
             </p>
+            <div className="mt-6 space-y-1.5 text-[14px] text-[var(--foreground-dim)]">
+              <div>
+                <a
+                  href="tel:+13018898546"
+                  className="hover:text-[var(--accent)] transition-colors"
+                >
+                  (301) 889-8546
+                </a>
+              </div>
+              <div>
+                <a
+                  href="mailto:hello@kortexconsulting.com"
+                  className="hover:text-[var(--accent)] transition-colors"
+                >
+                  hello@kortexconsulting.com
+                </a>
+              </div>
+              <address className="not-italic leading-relaxed">
+                6604 Millwood Rd
+                <br />
+                Bethesda, MD 20817
+              </address>
+            </div>
+
             <div className="mt-6 flex items-center gap-2 text-[12px] font-mono uppercase tracking-widest text-[var(--muted)]">
               <span className="relative flex h-1.5 w-1.5">
                 <span className="pulse-dot absolute inline-flex h-full w-full rounded-full bg-[var(--success)]" />
