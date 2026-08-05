@@ -97,7 +97,8 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-16 pt-6 border-t border-[var(--border)] flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-[12px] text-[var(--muted)]">
+        {/* pb on mobile keeps the last row clear of the floating WhatsApp button */}
+        <div className="mt-16 pt-6 pb-12 md:pb-0 border-t border-[var(--border)] flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-[12px] text-[var(--muted)]">
           <div>&copy; {new Date().getFullYear()} Kortex Consulting. All rights reserved.</div>
           <div className="font-mono tracking-wide">The systems layer behind modern operations.</div>
         </div>
