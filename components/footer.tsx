@@ -7,6 +7,8 @@ const SECTIONS = [
     title: "Services",
     links: [
       { href: "/ai-receptionist", label: "AI Receptionist" },
+      { href: "/ai-receptionist/after-hours", label: "After-Hours Answering" },
+      { href: "/ai-customer-service", label: "AI Customer Service" },
       { href: "/services#workflow-automation", label: "Workflow Automation" },
       { href: "/services#custom-agents", label: "Custom Agents" },
       { href: "/services#ai-engineering", label: "AI Engineering" },

@@ -347,6 +347,29 @@ export default function AiReceptionistPage() {
           </div>
 
           <p className="mt-8 max-w-2xl text-[16px] leading-[1.7] text-[var(--foreground-dim)]">
+            Most businesses do not need all of it at once. If the calls you are losing arrive at
+            night, start with{" "}
+            <Link
+              href="/ai-receptionist/after-hours"
+              className="text-[var(--accent)] hover:underline"
+            >
+              after-hours coverage
+            </Link>
+            . If you are a small operation weighing this against hiring, read{" "}
+            <Link
+              href="/ai-receptionist/small-business"
+              className="text-[var(--accent)] hover:underline"
+            >
+              the small business comparison
+            </Link>
+            . For inbound support volume rather than new enquiries, that is{" "}
+            <Link href="/ai-customer-service" className="text-[var(--accent)] hover:underline">
+              AI customer service
+            </Link>
+            .
+          </p>
+
+          <p className="mt-5 max-w-2xl text-[16px] leading-[1.7] text-[var(--foreground-dim)]">
             The receptionist is usually the first piece, not the last. Once calls are handled, the
             same approach applies to follow-up, dispatch, and reporting — see{" "}
             <Link href="/services" className="text-[var(--accent)] hover:underline">
