@@ -6,6 +6,7 @@ const SECTIONS = [
   {
     title: "Services",
     links: [
+      { href: "/ai-receptionist", label: "AI Receptionist" },
       { href: "/services#workflow-automation", label: "Workflow Automation" },
       { href: "/services#custom-agents", label: "Custom Agents" },
       { href: "/services#ai-engineering", label: "AI Engineering" },
