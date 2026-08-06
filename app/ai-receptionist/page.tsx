@@ -44,7 +44,7 @@ const CAPABILITIES = [
   {
     icon: MessageSquare,
     title: "Texts back the ones it can't close",
-    body: "A caller who hangs up gets an SMS within seconds. Missed call text back recovers the leads that would otherwise never call again.",
+    body: "A caller who hangs up gets an SMS within seconds. Missed call text back recovers the leads an automated phone answering service would otherwise lose for good.",
   },
 ];
 
@@ -97,6 +97,10 @@ const FAQS = [
     a: "No. The agent sits in front of the number you already publish and connects to the scheduling system you already run. Nothing gets ripped out and your number does not change.",
   },
   {
+    q: "How much does an AI receptionist cost?",
+    a: "Pricing depends on call volume and how much the agent has to do — answering and taking a message is cheaper than qualifying, booking, and writing back into your scheduling system. The number that matters is the comparison: work out what one booked job is worth to you, then how many calls you miss in a month. For most businesses taking meaningful inbound volume, an automated call answering service pays for itself well before it covers a receptionist's salary.",
+  },
+  {
     q: "How long does it take to go live?",
     a: "Typically a couple of weeks from the first conversation to handling live calls. Most of that time is spent learning how your business actually answers the phone and tuning the agent against real calls, not on technical setup.",
   },
@@ -111,6 +115,15 @@ const jsonLd = {
       "@type": "Service",
       "@id": `${URL}#service`,
       name: "AI Receptionist",
+      alternateName: [
+        "AI answering service",
+        "AI phone answering service",
+        "AI phone receptionist",
+        "AI call answering service",
+        "Automated answering service",
+        "Virtual assistant answering service",
+        "AI voice agent",
+      ],
       serviceType: "AI receptionist and phone answering service",
       description:
         "An AI voice agent that answers every inbound call 24/7, qualifies the caller, books the appointment into your scheduling system, and texts back callers who hang up.",
@@ -173,10 +186,11 @@ export default function AiReceptionistPage() {
       <div className="py-16 md:py-20 border-b border-[var(--border)]">
         <Container size="default">
           <p className="max-w-3xl text-[20px] md:text-[23px] leading-[1.6] text-foreground">
-            An AI receptionist is a voice agent that answers your business phone, holds a real
+            An AI receptionist is an AI voice agent that answers your business phone, holds a real
             conversation with the caller, works out what they need, and books the appointment into
-            your scheduling system — 24 hours a day, on unlimited calls at once. Some people call it
-            an AI phone answering service; the job is the same.
+            your scheduling system — 24 hours a day, on unlimited calls at once. You will see it
+            sold as an AI phone answering service, an automated answering service, or a virtual
+            assistant that answers calls. Same job, different label.
           </p>
           <p className="mt-6 max-w-3xl text-[17px] leading-[1.7] text-[var(--foreground-dim)]">
             It is not a voicemail box with better manners, and it is not an answering service that
