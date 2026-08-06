@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" role="img" aria-label="A call flowing through six steps from ringing to a booked appointment, with an escalation branch to a human">
+  <defs>
+    <pattern id="g1" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#C15F3C" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="r1" cx="50%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#C15F3C" stop-opacity="0.10"/>
+      <stop offset="60%" stop-color="#C15F3C" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#A8492A"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="800" fill="#F0EEE6"/>
+  <rect width="1600" height="800" fill="url(#g1)"/>
+  <rect width="1600" height="800" fill="url(#r1)"/>
+
+  <text x="120" y="150" font-family="Georgia, serif" font-size="26" fill="#8A8578">One inbound call</text>
+
+  <!-- main chain -->
+  <g font-family="Georgia, serif" font-size="19" fill="#F4F1E8" text-anchor="middle">
+    <rect x="120" y="330" width="190" height="80" rx="12" fill="#A8492A"/>
+    <text x="215" y="368">Rings</text><text x="215" y="392" font-size="15" fill="#F0DCD2">under 1 sec</text>
+    <rect x="360" y="330" width="190" height="80" rx="12" fill="#A8492A"/>
+    <text x="455" y="368">Understands</text><text x="455" y="392" font-size="15" fill="#F0DCD2">what they need</text>
+    <rect x="600" y="330" width="190" height="80" rx="12" fill="#A8492A"/>
+    <text x="695" y="368">Qualifies</text><text x="695" y="392" font-size="15" fill="#F0DCD2">your questions</text>
+    <rect x="840" y="330" width="190" height="80" rx="12" fill="#A8492A"/>
+    <text x="935" y="368">Checks</text><text x="935" y="392" font-size="15" fill="#F0DCD2">real availability</text>
+    <rect x="1080" y="330" width="190" height="80" rx="12" fill="#A8492A"/>
+    <text x="1175" y="368">Books</text><text x="1175" y="392" font-size="15" fill="#F0DCD2">into calendar</text>
+  </g>
+  <g stroke="#A8492A" stroke-width="2" fill="none">
+    <line x1="310" y1="370" x2="356" y2="370" marker-end="url(#a3)"/>
+    <line x1="550" y1="370" x2="596" y2="370" marker-end="url(#a3)"/>
+    <line x1="790" y1="370" x2="836" y2="370" marker-end="url(#a3)"/>
+    <line x1="1030" y1="370" x2="1076" y2="370" marker-end="url(#a3)"/>
+  </g>
+
+  <!-- outcome -->
+  <rect x="1320" y="330" width="160" height="80" rx="12" fill="none" stroke="#A8492A" stroke-width="3"/>
+  <text x="1400" y="378" font-family="Georgia, serif" font-size="20" fill="#A8492A" text-anchor="middle">Job on</text>
+  <text x="1400" y="402" font-family="Georgia, serif" font-size="20" fill="#A8492A" text-anchor="middle">the board</text>
+  <line x1="1270" y1="370" x2="1316" y2="370" stroke="#A8492A" stroke-width="2" marker-end="url(#a3)"/>
+
+  <!-- escalation branch -->
+  <path d="M695 410 L695 545 L1150 545" fill="none" stroke="#8A8578" stroke-width="2" stroke-dasharray="8 8" marker-end="url(#a3)"/>
+  <rect x="1160" y="510" width="290" height="72" rx="12" fill="none" stroke="#C9C3B4" stroke-width="2"/>
+  <text x="1305" y="545" font-family="Georgia, serif" font-size="19" fill="#5F5B52" text-anchor="middle">Escalates to a human</text>
+  <text x="1305" y="568" font-family="Georgia, serif" font-size="15" fill="#8A8578" text-anchor="middle">with the context already gathered</text>
+  <text x="700" y="588" font-family="Georgia, serif" font-size="17" fill="#8A8578">emergency, complaint, anything off-script</text>
+
+  <text x="120" y="700" font-family="Georgia, serif" font-size="21" fill="#5F5B52">The caller hangs up with an appointment, not a promise of a call back.</text>
+</svg>

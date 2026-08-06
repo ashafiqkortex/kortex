@@ -1146,6 +1146,138 @@ export const POSTS: Post[] = [
       },
     ],
   },
+  {
+    slug: "how-does-an-ai-receptionist-work",
+    title: "How Does an AI Receptionist Work? The Eight Seconds That Matter",
+    excerpt:
+      "What actually happens between the phone ringing and a job landing on your calendar — including the calls it should refuse to handle.",
+    category: "Fundamentals",
+    date: "2026-08-06",
+    readingTime: "9 min read",
+    author: "Kortex",
+    metaDescription:
+      "How an AI receptionist works, step by step: what happens on the call, what it connects to, what it cannot do, and how to judge whether it is worth it for your business.",
+    keywords: [
+      "how does an ai receptionist work",
+      "what is an ai receptionist",
+      "is an ai receptionist worth it",
+      "how much does an ai receptionist cost",
+      "ai receptionist how it works",
+    ],
+    hero: "/blog/how-does-an-ai-receptionist-work.svg",
+    heroAlt:
+      "A call moving through six steps from ringing to a booked appointment, with a dashed branch escalating to a human",
+    takeaways: [
+      "An AI receptionist answers, works out what the caller needs, qualifies against your rules, checks real availability, and books — usually inside a couple of minutes.",
+      "The capability that matters is writing to your calendar during the call. Anything that only takes a message has moved the work, not done it.",
+      "Your phone number does not change. The agent sits in front of the number you already publish.",
+      "The escalation rules matter more than the conversation quality. Decide what it must never handle before it handles anything.",
+    ],
+    faqs: [
+      {
+        q: "How does an AI receptionist work?",
+        a: "It answers your business number on the first ring, holds a natural spoken conversation, works out what the caller needs, asks the qualifying questions you defined, checks real availability in your scheduling system, and books the appointment before the caller hangs up. Anything outside its rules gets transferred to a person with the context already gathered.",
+      },
+      {
+        q: "What is an AI receptionist?",
+        a: "An AI receptionist is a voice agent that answers your business phone and completes an outcome rather than taking a message. It is the same underlying technology as any AI agent, scoped to one job: handling inbound calls. It runs 24 hours a day and handles unlimited simultaneous calls.",
+      },
+      {
+        q: "Do I have to change my phone number?",
+        a: "No. The agent sits in front of the number you already publish — your existing number forwards to it, either all the time, only outside business hours, or only when nobody picks up within a few rings. Nothing changes for people who already have your number.",
+      },
+      {
+        q: "What happens on a call it cannot handle?",
+        a: "It transfers to a human, and this is the part worth designing carefully. You define the escalation rules — genuine emergencies, existing customers with a complaint, anything sitting outside the script — and those route immediately with the conversation so far attached, so the caller does not repeat themselves.",
+      },
+      {
+        q: "Is an AI receptionist worth it?",
+        a: "It depends on two numbers: how many calls you currently miss, and what one booked job is worth. A business missing a handful of calls a week where each job is worth several hundred dollars reaches the answer quickly. A business with low, steady volume where callers reliably leave voicemail probably does not need one.",
+      },
+      {
+        q: "How much does an AI receptionist cost?",
+        a: "Pricing usually tracks capability rather than call volume, because there is no per-minute staffing cost to recover — which is the structural difference from a traditional answering service billing you per minute. The useful comparison is not against another provider's rate but against the value of the jobs currently going unanswered.",
+      },
+    ],
+    body: [
+      {
+        type: "p",
+        text: "Most explanations of how these systems work describe the marketing. This is the mechanics: what happens between the phone ringing and a job appearing on your calendar, and what should happen when the call is one it has no business handling.",
+      },
+      { type: "h2", text: "What happens during the call?" },
+      {
+        type: "p",
+        text: "Six things, and the whole sequence usually takes less time than reaching a human at a traditional service.",
+      },
+      {
+        type: "ul",
+        items: [
+          "**It answers.** Under a second, every time, including when three people call at once. No hold music, no queue position.",
+          "**It works out what they want.** Spoken conversation rather than a phone menu — the caller describes the problem in their own words.",
+          "**It qualifies.** The questions your intake form asks: what is wrong, where, how urgent, existing customer or new.",
+          "**It checks availability.** Against your actual scheduling system, not a generic slot list.",
+          "**It books.** The appointment is committed during the call, so the caller hangs up with a time rather than a promise.",
+          "**It writes it down.** The transcript, the caller details, and the outcome go into your systems automatically.",
+        ],
+      },
+      {
+        type: "callout",
+        text: "Step five is the one that separates the products. Everything up to it is conversation. Booking is the part that removes work rather than relocating it.",
+      },
+      { type: "h2", text: "What does it connect to?" },
+      {
+        type: "p",
+        text: "Your phone number and your scheduling system, at minimum. The number does not change — your existing line forwards to the agent, and you choose when: all the time, only after hours, or only when nobody picks up within a few rings. That last option is how most businesses start, because it changes nothing about the calls you are already answering well.",
+      },
+      {
+        type: "p",
+        text: "The scheduling connection is the one that determines whether this is useful. An agent that cannot see real availability can only collect a preferred time for someone on your side to confirm later, and that is a message with extra steps.",
+      },
+      { type: "h2", text: "What can it not do?" },
+      {
+        type: "p",
+        text: "A useful amount, and any vendor unwilling to be specific about this is worth treating carefully.",
+      },
+      {
+        type: "p",
+        text: "It is poor at genuine distress. It cannot exercise judgement about a situation nobody anticipated. It does not know things you never told it — pricing exceptions, the customer who always gets a discount, the neighbourhood you stopped serving last year. And it will not notice that a caller is upset in the way an experienced person notices.",
+      },
+      {
+        type: "p",
+        text: "Which is why the escalation rules deserve more attention than the conversation quality. Decide what it must never handle alone before deciding how it should sound.",
+      },
+      {
+        type: "quote",
+        text: "The failure mode that damages a business is not an awkward sentence. It is a caller with a real emergency being handled competently by something that did not understand the stakes.",
+      },
+      { type: "h2", text: "How do you tell whether it is worth it?" },
+      {
+        type: "p",
+        text: "Two numbers, and you can work them out in about ten minutes.",
+      },
+      {
+        type: "p",
+        text: "First, how many calls actually go unanswered — check your phone records rather than estimating, because almost everyone guesses low. Second, what one booked job is worth to you on average.",
+      },
+      {
+        type: "p",
+        text: "Multiply the missed calls by a realistic conversion rate and then by job value. For businesses where a job is worth several hundred dollars and a handful of calls a week go unanswered, the arithmetic tends to settle the question quickly. For low, steady volume where callers reliably leave voicemail and wait, it often does not — and that is a legitimate answer.",
+      },
+      {
+        type: "p",
+        text: "If you would rather compare against a traditional provider first, we published [the published per-minute rates side by side](/best-answering-service), and [what to ask any provider](/blog/choosing-an-answering-service) before signing.",
+      },
+      { type: "h2", text: "Where does it fit with everything else?" },
+      {
+        type: "p",
+        text: "This is one agent doing one job. If you want the product rather than the explanation, that is [the AI receptionist we build](/ai-receptionist) — and the same approach applies to support volume, document handling, and follow-up. See [what AI agents do inside a business](/ai-agents-for-business) for the broader version, or [how we build them](/ai-agent-development) for the engineering underneath.",
+      },
+      {
+        type: "p",
+        text: "The reason the phone is usually first is not that it is the most sophisticated application. It is that the cost of getting it wrong is unusually easy to measure, and unusually hard to argue with.",
+      },
+    ],
+  },
 ];
 
 export function getPost(slug: string): Post | undefined {
