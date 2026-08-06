@@ -8,7 +8,7 @@ import { ArrowUpRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "AI Implementation Case Studies | Kortex Consulting",
   description:
-    "Selected work: HVAC operational OS, Truth Layer AI governance, and Sales Intelligence behavioral funnel truth.",
+    "Selected AI implementation work: an HVAC operational OS, the Truth Layer AI governance system, and Sales Intelligence behavioural funnel truth.",
   alternates: { canonical: "https://kortexconsulting.com/case-studies" },
 };
 

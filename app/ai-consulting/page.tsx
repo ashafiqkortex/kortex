@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     "AI consulting that ships working systems, not slide decks. We build on your data, in your environment — and tell you honestly when AI is the wrong answer.",
   alternates: { canonical: URL },
   openGraph: {
+    images: [{ url: `${SITE}/opengraph-image`, width: 1200, height: 630 }],
     title: "AI Consulting Services for Small Business | Kortex",
     description:
       "An AI consulting firm that builds. Working systems in weeks, on your data, in your environment.",

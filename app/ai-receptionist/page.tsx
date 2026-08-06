@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     "An AI receptionist answers every call 24/7, qualifies the caller, and books the job. Stop losing the 27% of calls that go unanswered to a competitor.",
   alternates: { canonical: URL },
   openGraph: {
+    images: [{ url: `${SITE}/opengraph-image`, width: 1200, height: 630 }],
     title: "AI Receptionist — Answer Every Call 24/7 | Kortex",
     description:
       "An AI receptionist answers every call, qualifies the caller, and books the job — 24/7, in your voice, wired into your scheduling system.",

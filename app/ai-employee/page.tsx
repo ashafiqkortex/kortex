@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     "An AI employee owns an outcome rather than answering questions. What that means in practice, which jobs it can hold, and where the idea falls apart.",
   alternates: { canonical: URL },
   openGraph: {
+    images: [{ url: `${SITE}/opengraph-image`, width: 1200, height: 630 }],
     title: "AI Employee — What It Can Actually Own | Kortex",
     description:
       "What an AI employee is, which jobs one can genuinely hold, and where the metaphor stops being useful.",

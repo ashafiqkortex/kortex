@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     "What an AI SDR does well, where it embarrasses you, and when building into your own stack beats buying a seat. An honest read on AI sales agents.",
   alternates: { canonical: URL },
   openGraph: {
+    images: [{ url: `${SITE}/opengraph-image`, width: 1200, height: 630 }],
     title: "AI SDR — Build vs Buy for Sales Prospecting | Kortex",
     description:
       "An honest account of what these tools do well, where they fail, and when to build rather than buy.",

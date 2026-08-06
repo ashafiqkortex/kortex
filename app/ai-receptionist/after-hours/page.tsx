@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     "An after-hours answering service that triages emergencies and books the rest — so nobody gets woken at 2am for a question that could have waited until Monday.",
   alternates: { canonical: URL },
   openGraph: {
+    images: [{ url: `${SITE}/opengraph-image`, width: 1200, height: 630 }],
     title: "After-Hours Answering Service — 24/7 Coverage | Kortex",
     description:
       "24/7 answering service with emergency triage. Wakes your on-call tech only when it is genuinely an emergency.",

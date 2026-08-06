@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     "AI customer service that resolves tickets instead of deflecting them. Built into your helpdesk and phone system, with clean handover to your team when it matters.",
   alternates: { canonical: URL },
   openGraph: {
+    images: [{ url: `${SITE}/opengraph-image`, width: 1200, height: 630 }],
     title: "AI Customer Service & Call Center Automation | Kortex",
     description:
       "AI customer service and contact center AI that resolves the repetitive volume and hands the rest to your team with full context.",

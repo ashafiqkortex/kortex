@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     "An AI consultant based in Bethesda, working across DC, suburban Maryland and Northern Virginia. We build working systems, and we can do it in your office.",
   alternates: { canonical: URL },
   openGraph: {
+    images: [{ url: `${SITE}/opengraph-image`, width: 1200, height: 630 }],
     title: "AI Consultant in Washington DC Metro | Kortex",
     description:
       "AI consulting and automation for businesses across DC, Maryland and Northern Virginia. Based in Bethesda.",

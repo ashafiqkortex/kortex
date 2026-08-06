@@ -11,7 +11,7 @@ const SITE = "https://kortexconsulting.com";
 export const metadata: Metadata = {
   title: "Blog — Kortex Consulting",
   description:
-    "Field notes on AI systems, automation, and operations for home services contractors doing $500K–$10M. Build vs. buy, the real cost of off-the-shelf software, and growing without hiring.",
+    "Field notes on AI systems, automation and operations — build vs buy, the real cost of off-the-shelf software, and how to grow without hiring.",
   alternates: { canonical: `${SITE}/blog` },
 };
 

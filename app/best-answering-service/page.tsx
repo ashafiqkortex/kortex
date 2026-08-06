@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     "Published prices from AnswerConnect, Ruby and PATLive, converted to a like-for-like cost per minute — plus who each one is genuinely best for.",
   alternates: { canonical: URL },
   openGraph: {
+    images: [{ url: `${SITE}/opengraph-image`, width: 1200, height: 630 }],
     title: "Best Answering Service for Small Business | Kortex",
     description:
       "A like-for-like comparison of answering service pricing, using each provider's own published rates.",

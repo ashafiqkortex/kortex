@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     "Where AI agents actually earn their place in a business: front desk, support, back office, and sales follow-up. Plus the jobs they are still bad at.",
   alternates: { canonical: URL },
   openGraph: {
+    images: [{ url: `${SITE}/opengraph-image`, width: 1200, height: 630 }],
     title: "AI Agents for Business — Built Into Your Ops | Kortex",
     description:
       "Practical uses for AI agents in business operations — and an honest account of where they still fall short.",

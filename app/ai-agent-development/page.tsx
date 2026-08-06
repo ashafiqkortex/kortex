@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     "Custom AI agents built to act inside your systems, not just answer questions. Scoped tightly, wired to your data, and handed over with the guardrails documented.",
   alternates: { canonical: URL },
   openGraph: {
+    images: [{ url: `${SITE}/opengraph-image`, width: 1200, height: 630 }],
     title: "AI Agent Development Company | Custom AI Agents",
     description:
       "AI agent development that starts with the boundary, not the model. Custom agents that read, decide, and act inside your systems.",

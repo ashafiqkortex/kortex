@@ -40,7 +40,7 @@ export const POSTS: Post[] = [
     readingTime: "9 min read",
     author: "Asim, Kortex",
     metaDescription:
-      "The best software for HVAC, plumbing, and electrical contractors — Jobber, Housecall Pro, ServiceTitan, QuickBooks, and CompanyCam — what each does well, and what to do when you outgrow them.",
+      "The best software for HVAC, plumbing and electrical contractors — Jobber, Housecall Pro, ServiceTitan, QuickBooks — what each does well, and its ceiling.",
     keywords: [
       "best software for contractors",
       "best HVAC software",
@@ -164,7 +164,7 @@ export const POSTS: Post[] = [
     readingTime: "7 min read",
     author: "Asim, Kortex",
     metaDescription:
-      "Is ServiceTitan worth it? The subscription is only half the cost. Here's the real five-year math for contractors — and when a custom-built system beats off-the-shelf.",
+      "Is ServiceTitan worth it? The subscription is only half the cost. The real five-year math — and when a custom-built system beats off-the-shelf.",
     keywords: [
       "is ServiceTitan worth it",
       "ServiceTitan alternative",
@@ -355,7 +355,7 @@ export const POSTS: Post[] = [
     readingTime: "6 min read",
     author: "Asim, Kortex",
     metaDescription:
-      "Can't hire enough techs? Here's how home services contractors grow without adding headcount — by automating the coordination work, not the craft. Same crew, more output.",
+      "Can't hire enough techs? How contractors grow without adding headcount — by automating the coordination work, not the craft. Same crew, more output.",
     keywords: [
       "grow HVAC business without hiring",
       "scale plumbing company",
@@ -632,7 +632,7 @@ export const POSTS: Post[] = [
     readingTime: "8 min read",
     author: "Kortex",
     metaDescription:
-      "What is an AI agent? A direct definition, how agents differ from chatbots and workflow automation, what they are genuinely good at, and when you should not build one.",
+      "What is an AI agent? A direct definition, how agents differ from chatbots and automation, what they are good at, and when not to build one.",
     keywords: [
       "what is an ai agent",
       "what are ai agents",
@@ -898,7 +898,7 @@ export const POSTS: Post[] = [
     readingTime: "8 min read",
     author: "Kortex",
     metaDescription:
-      "AI for accountants and CPA firms: adoption is already mainstream, but capacity has not moved. What actually returns hours, what to leave alone, and why individual tool use does not compound.",
+      "AI for accountants: adoption is already mainstream, but capacity has not moved. What actually returns hours, and why individual tool use does not compound.",
     keywords: [
       "ai for accountants",
       "artificial intelligence in accounting",
@@ -1023,7 +1023,7 @@ export const POSTS: Post[] = [
     readingTime: "8 min read",
     author: "Kortex",
     metaDescription:
-      "AI for law firms: adoption is near-universal but governance is not. What the 2026 survey data actually shows, where AI earns its place in a practice, and what to put around it.",
+      "AI for law firms: adoption is near-universal but governance is not. What the 2026 data shows, where AI earns its place, and what to put around it.",
     keywords: [
       "ai for law firms",
       "ai for legal",
@@ -1156,7 +1156,7 @@ export const POSTS: Post[] = [
     readingTime: "9 min read",
     author: "Kortex",
     metaDescription:
-      "How an AI receptionist works, step by step: what happens on the call, what it connects to, what it cannot do, and how to judge whether it is worth it for your business.",
+      "How an AI receptionist works, step by step: what happens on the call, what it connects to, what it cannot do, and how to judge if it is worth it.",
     keywords: [
       "how does an ai receptionist work",
       "what is an ai receptionist",

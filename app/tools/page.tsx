@@ -7,7 +7,7 @@ import { ArrowUpRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Free Tools — Kortex Consulting",
   description:
-    "Free tools for home services contractors: an AI readiness checklist, a revenue-leak calculator, the 4 revenue leaks framework, and a sample AI operations audit report.",
+    "Free tools: an AI readiness checklist, a revenue-leak calculator, the 4 revenue leaks framework, and a sample AI operations audit report.",
   alternates: { canonical: "https://kortexconsulting.com/tools" },
 };
 

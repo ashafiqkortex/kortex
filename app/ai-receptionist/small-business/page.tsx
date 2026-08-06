@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     "An answering service for small business that books jobs instead of taking messages. No per-minute billing, no rota to staff, and no receptionist salary to carry.",
   alternates: { canonical: URL },
   openGraph: {
+    images: [{ url: `${SITE}/opengraph-image`, width: 1200, height: 630 }],
     title: "Answering Service for Small Business — AI, 24/7 | Kortex",
     description:
       "A virtual receptionist for small business that answers every call, qualifies the caller, and books the job — without a receptionist salary.",
