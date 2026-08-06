@@ -374,6 +374,10 @@ export default function AiReceptionistPage() {
             <Link href="/ai-customer-service" className="text-[var(--accent)] hover:underline">
               AI customer service
             </Link>
+            . If you are weighing us against a traditional provider, we published{" "}
+            <Link href="/best-answering-service" className="text-[var(--accent)] hover:underline">
+              a like-for-like price comparison
+            </Link>
             . To put a number on it first, the{" "}
             <Link href="/tools" className="text-[var(--accent)] hover:underline">
               free revenue leak calculator

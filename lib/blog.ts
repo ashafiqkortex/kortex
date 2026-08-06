@@ -825,7 +825,7 @@ export const POSTS: Post[] = [
       { type: "h2", text: "Why does per-minute billing catch people out?" },
       {
         type: "p",
-        text: "The established providers — Ruby, PATLive, AnswerConnect, Abby Connect and most of the traditional field — bill per minute against a monthly allowance, with an overage rate once you go past it. This is not hidden and it is not sinister. It is a direct consequence of paying people to sit and wait for your phone to ring.",
+        text: "The established providers — [Ruby, PATLive, AnswerConnect](/best-answering-service), Abby Connect and most of the traditional field — bill per minute against a monthly allowance, with an overage rate once you go past it. This is not hidden and it is not sinister. It is a direct consequence of paying people to sit and wait for your phone to ring.",
       },
       {
         type: "p",
