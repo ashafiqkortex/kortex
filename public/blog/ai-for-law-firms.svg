@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" role="img" aria-label="A high bar for AI adoption in law firms beside a near-empty bar for AI training and governance">
+  <defs>
+    <pattern id="g1" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#C15F3C" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="r1" cx="28%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#C15F3C" stop-opacity="0.10"/>
+      <stop offset="60%" stop-color="#C15F3C" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="800" fill="#F0EEE6"/>
+  <rect width="1600" height="800" fill="url(#g1)"/>
+  <rect width="1600" height="800" fill="url(#r1)"/>
+
+  <line x1="260" y1="640" x2="1360" y2="640" stroke="#C9C3B4" stroke-width="2"/>
+
+  <!-- bar 1: usage, tall -->
+  <rect x="380" y="200" width="230" height="440" rx="10" fill="#A8492A"/>
+  <text x="495" y="168" font-family="Georgia, serif" font-size="52" fill="#A8492A" text-anchor="middle">69%</text>
+  <text x="495" y="692" font-family="Georgia, serif" font-size="23" fill="#5F5B52" text-anchor="middle">use generative AI at work</text>
+
+  <!-- bar 2: training, short -->
+  <rect x="1000" y="530" width="230" height="110" rx="10" fill="none" stroke="#A8492A" stroke-width="3" stroke-dasharray="8 8"/>
+  <text x="1115" y="498" font-family="Georgia, serif" font-size="52" fill="#8A8578" text-anchor="middle">46%</text>
+  <text x="1115" y="692" font-family="Georgia, serif" font-size="23" fill="#5F5B52" text-anchor="middle">have any training on it</text>
+
+  <!-- the gap -->
+  <line x1="700" y1="230" x2="960" y2="230" stroke="#A8492A" stroke-opacity="0.45" stroke-width="2" stroke-dasharray="7 8"/>
+  <line x1="700" y1="560" x2="960" y2="560" stroke="#A8492A" stroke-opacity="0.45" stroke-width="2" stroke-dasharray="7 8"/>
+  <text x="830" y="386" font-family="Georgia, serif" font-size="27" fill="#A8492A" text-anchor="middle">the gap</text>
+  <text x="830" y="422" font-family="Georgia, serif" font-size="19" fill="#8A8578" text-anchor="middle">is the risk</text>
+
+  <text x="260" y="756" font-family="Georgia, serif" font-size="20" fill="#8A8578">8am Legal Industry Report, 2026. 54% say their firm has no training and no plans to add any.</text>
+</svg>

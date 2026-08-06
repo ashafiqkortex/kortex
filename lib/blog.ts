@@ -888,6 +888,264 @@ export const POSTS: Post[] = [
       },
     ],
   },
+  {
+    slug: "ai-for-accountants",
+    title: "AI for Accountants: Adoption Is Solved. Capacity Isn't.",
+    excerpt:
+      "Most accounting firms now use AI weekly. Very few have gained a day back. The gap between those two facts is where the actual work is.",
+    category: "Verticals",
+    date: "2026-08-06",
+    readingTime: "8 min read",
+    author: "Kortex",
+    metaDescription:
+      "AI for accountants and CPA firms: adoption is already mainstream, but capacity has not moved. What actually returns hours, what to leave alone, and why individual tool use does not compound.",
+    keywords: [
+      "ai for accountants",
+      "artificial intelligence in accounting",
+      "accounting automation ai",
+      "ai for cpa firms",
+      "ai tools for accounting",
+    ],
+    hero: "/blog/ai-for-accountants.svg",
+    heroAlt:
+      "Four accountants using separate AI tools on the left, against a single firm-wide workflow on the right",
+    takeaways: [
+      "Adoption is no longer the question: 60% of tax professionals now use AI for research at least weekly, up from 33% a year earlier.",
+      "Individual tool use does not compound. Ten people using ChatGPT well is ten people saving minutes, not a firm gaining capacity.",
+      "The work that returns real hours is unglamorous: document intake, data extraction, and client chasing — not tax research.",
+      "Anything touching a filing position needs a review step by design, not by policy.",
+    ],
+    faqs: [
+      {
+        q: "How are accounting firms actually using AI?",
+        a: "Mostly for research and drafting. A Blue J and CPA.com survey of over 1,000 tax professionals found 60% now use AI for tax research at least weekly, up from 33% the year before. Broader surveys put overall firm adoption around 73%. What remains rare is AI wired into the firm's own workflows rather than sitting in a browser tab beside them.",
+      },
+      {
+        q: "Does AI actually save accounting firms time?",
+        a: "For individuals, clearly yes — minutes per task on research, summarising, and first drafts. At firm level the picture is much weaker, because individual savings do not aggregate into capacity unless the work itself is restructured. A partner saving twenty minutes a day does not let you take on more clients.",
+      },
+      {
+        q: "What should a CPA firm automate first?",
+        a: "Client document intake and the chasing that surrounds it. It is high volume, low judgement, painful for staff, and its cost is visible in January. Tax research is the more interesting problem and the less valuable one to automate, because it is already fast for someone who knows what they are doing.",
+      },
+      {
+        q: "Is it safe to use AI on client tax data?",
+        a: "It depends entirely on where the data goes and what your engagement letters and professional obligations say. The practical rule we build to is that anything touching a filing position gets a human review step designed into the workflow — not written into a policy document nobody reads under deadline.",
+      },
+      {
+        q: "Will AI replace accountants?",
+        a: "It has not replaced the constraint, which is qualified people. Most firms cannot hire enough of them, and that is why AI is interesting here — not as a substitute for judgement, but as a way to stop spending scarce judgement on data entry and follow-up emails.",
+      },
+      {
+        q: "How much does an AI implementation cost for an accounting firm?",
+        a: "Scope decides it, but the structure matters more than the number. A small, paid, buildable first piece — one workflow, running on your real data — tells you more than a long discovery phase and caps the downside if the fit is wrong. Be wary of anyone who cannot price a first small step.",
+      },
+    ],
+    body: [
+      {
+        type: "p",
+        text: "The interesting question about AI in accounting stopped being whether firms use it about a year ago. A Blue J and CPA.com survey of more than a thousand tax professionals found **60% now use AI for tax research at least weekly**, up from 33% the year before. Broader industry surveys put overall firm adoption somewhere around 73%.",
+      },
+      {
+        type: "p",
+        text: "So adoption of AI for accountants is solved. Ask the same firms whether they have more capacity than last year and the answer is usually no. That gap is the whole subject.",
+      },
+      { type: "h2", text: "Why doesn't individual AI use turn into firm capacity?" },
+      {
+        type: "p",
+        text: "Because saving minutes is not the same as freeing a person. Ten accountants each saving twenty minutes a day is a genuinely nice thing and it is not a hire. The time comes back in fragments, spread across people, at moments when there is nothing useful to redeploy it into.",
+      },
+      {
+        type: "p",
+        text: "It also does not accumulate. When someone works out a good prompt for summarising a client's trial balance, that knowledge lives in their chat history. The person beside them starts from scratch. When they leave, it goes with them.",
+      },
+      {
+        type: "callout",
+        text: "A firm does not get faster because its people are individually faster. It gets faster when the work itself changes shape.",
+      },
+      { type: "h2", text: "What actually returns hours?" },
+      {
+        type: "p",
+        text: "The unglamorous end. Research is where firms start because it is the most visible use of AI for accountants and the most fun to demo. It is also, for a competent practitioner, already quite fast.",
+      },
+      {
+        type: "p",
+        text: "The hours are buried somewhere less interesting:",
+      },
+      {
+        type: "ul",
+        items: [
+          "**Document intake.** Clients send a shoebox of PDFs, photos, and statements. Someone opens each one, works out what it is, renames it, and files it. That is pure volume with almost no judgement in it.",
+          "**Data extraction.** Pulling figures off documents and into your system, then checking them against last year. Tedious, error-prone, and entirely mechanical.",
+          "**The chasing.** The missing-information emails that go out and do not come back. Nobody keeps that follow-up schedule properly in March.",
+          "**Client questions.** The same twenty questions every season, answered individually by whoever picks up.",
+        ],
+      },
+      {
+        type: "p",
+        text: "None of that is exciting, and all of it is real. It is also the work that gets worse exactly when you have the least slack — which is why the cost is easiest to see in January and easiest to forget in June.",
+      },
+      { type: "h2", text: "What should stay well away from automation?" },
+      {
+        type: "p",
+        text: "Anything that touches a filing position. Not because the technology cannot draft it, but because the accountability sits with a person whose licence is attached to the outcome.",
+      },
+      {
+        type: "p",
+        text: "The practical version of that is a review step built into the workflow rather than written into a policy. Policies get skipped under deadline pressure; a workflow that cannot complete without a signature does not. If you take one design principle from this, take that one.",
+      },
+      {
+        type: "quote",
+        text: "The question is not whether a human checks it. It is whether the system makes it possible to skip the check at 11pm on 14 April.",
+      },
+      { type: "h2", text: "So where should a firm start?" },
+      {
+        type: "p",
+        text: "Pick the one process where the cost is visible and the success measure is unambiguous. For most firms that is document intake, because everyone already knows how much of the season it eats and nobody enjoys defending it.",
+      },
+      {
+        type: "p",
+        text: "Then build it as a firm system rather than a personal habit — something with a defined input, a defined output, and a partner able to see what it did. That is the difference between [an AI tool and an AI system](/blog/ai-features-vs-ai-systems), and it is the reason most firms have adopted AI without gaining anything from it.",
+      },
+      {
+        type: "p",
+        text: "If the process spans several systems and varies case by case, that is [agent-shaped work](/ai-agent-development). If it runs the same way every time, a rule is cheaper and easier to live with. Most firms need some of both, and telling them apart is most of the value of the first conversation.",
+      },
+    ],
+  },
+  {
+    slug: "ai-for-law-firms",
+    title: "AI for Law Firms: Everyone Is Using It, Almost Nobody Is Governing It",
+    excerpt:
+      "69% of legal professionals use generative AI at work. Over half say their firm offers no training on it and has no plans to. That gap is a liability.",
+    category: "Verticals",
+    date: "2026-08-06",
+    readingTime: "8 min read",
+    author: "Kortex",
+    metaDescription:
+      "AI for law firms: adoption is near-universal but governance is not. What the 2026 survey data actually shows, where AI earns its place in a practice, and what to put around it.",
+    keywords: [
+      "ai for law firms",
+      "ai for legal",
+      "ai for lawyers",
+      "legal ai",
+      "artificial intelligence for law firms",
+    ],
+    hero: "/blog/ai-for-law-firms.svg",
+    heroAlt:
+      "A tall bar showing 69% of legal professionals using generative AI beside a much shorter bar for firms providing training",
+    takeaways: [
+      "Adoption figures range from 30% to 92% depending on how the question is asked — the spread itself is the finding.",
+      "54% of legal professionals say their firm provides no training on responsible generative AI use and has no plans to.",
+      "Unsupervised AI use is already happening in most firms. The choice is whether it happens with a system around it.",
+      "Client intake and document handling return more hours than legal research, and carry less professional risk.",
+    ],
+    faqs: [
+      {
+        q: "How many lawyers actually use AI?",
+        a: "It depends entirely on the question asked. Wolters Kluwer found 92% of legal professionals use at least one AI tool in daily work. The 8am Legal Industry Report found 69% personally use generative AI for work. The American Bar Association put deliberate AI tool use at 30%, up from 11% in 2023. Clio reported 71% of solo practitioners and 75% of small firms. The honest summary is that most lawyers touch AI regularly and far fewer do so deliberately.",
+      },
+      {
+        q: "What is the biggest AI risk for a law firm?",
+        a: "Not the technology — the absence of anything around it. The 8am 2026 report found 54% of respondents say their firm has provided no training on responsible generative AI use and has no current plans to. Meanwhile most of their people are using it anyway. Unsupervised use is the default state in a majority of firms.",
+      },
+      {
+        q: "Where does AI for legal work genuinely help?",
+        a: "Client intake, document handling, and the administrative layer around matters — the work that is high volume, low judgement, and currently done by whoever has capacity. Legal research is the more discussed application and the riskier one, because a plausible wrong citation is worse than no answer.",
+      },
+      {
+        q: "Can AI be used on privileged or confidential client information?",
+        a: "That depends on where the data goes, what your professional obligations require, and what your engagement terms say. The architectural question — whether information leaves your environment at all — has to be settled before anything is built, not retrofitted afterwards. It usually determines what can be built.",
+      },
+      {
+        q: "Should a small firm bother with AI?",
+        a: "Solo and small firms report some of the highest adoption in the profession, which makes sense — they feel administrative load most directly and have nobody to delegate it to. The caution is the same one that applies to large firms, just with less infrastructure behind it.",
+      },
+      {
+        q: "What does AI governance for a law firm actually mean?",
+        a: "In practice: a written statement of what may and may not be put into which tools, a record of what was used on which matter, and a review step on anything client-facing. It does not require a committee. It requires the answers to exist somewhere other than in individual judgement under time pressure.",
+      },
+    ],
+    body: [
+      {
+        type: "p",
+        text: "Survey figures for legal AI use are all over the place, and the spread is more informative than any single number. Wolters Kluwer reports **92%** of legal professionals using at least one AI tool daily. The 8am Legal Industry Report finds **69%** personally using generative AI for work. The American Bar Association puts deliberate use at **30%**, up from 11% in 2023.",
+      },
+      {
+        type: "p",
+        text: "Those are not contradictory so much as measuring different things: incidental exposure, personal use, and considered adoption of AI for legal work. Read together they say something fairly clear. Most lawyers are using this. Far fewer are doing it on purpose.",
+      },
+      { type: "h2", text: "What does the governance data actually show?" },
+      {
+        type: "p",
+        text: "This is the number worth sitting with. In the 8am 2026 report, **54% of respondents said their firm has provided no training on the responsible use of generative AI and has no current plans to do so**.",
+      },
+      {
+        type: "stat",
+        items: [
+          { value: "69%", label: "personally use generative AI at work" },
+          { value: "54%", label: "have no firm training, and none planned" },
+          { value: "30%", label: "deliberate AI tool use, up from 11% in 2023" },
+        ],
+      },
+      {
+        type: "p",
+        text: "Put those side by side and the position is uncomfortable. Unsupervised use is not a risk a majority of firms might face at some point. It is the current operating state.",
+      },
+      {
+        type: "callout",
+        text: "The decision in front of most firms is not whether their people use AI. It is whether that use happens with anything around it.",
+      },
+      { type: "h2", text: "Why is legal research the wrong place to start?" },
+      {
+        type: "p",
+        text: "Legal research is where most firms begin, because it is the most obvious application of AI for law firms and the easiest to try. It is also where the failure mode is worst: a confident, well-formatted, wrong citation is more dangerous than no answer, because it reads exactly like a right one.",
+      },
+      {
+        type: "p",
+        text: "That does not make research off-limits. It makes it the application that most needs verification built around it — which is a larger piece of work than the research capability itself, and rarely what firms budget for.",
+      },
+      { type: "h2", text: "Where does it earn its place?" },
+      {
+        type: "p",
+        text: "The administrative layer, where volume is high and judgement is low:",
+      },
+      {
+        type: "ul",
+        items: [
+          "**Client intake.** Capturing the enquiry, running conflicts, collecting what is needed to open a matter. Repetitive, and slow intake loses instructions to whoever responded faster.",
+          "**Document handling.** Sorting, extracting, and cross-checking against what is already on file — as opposed to drafting the substance.",
+          "**Matter administration.** Deadlines, status updates, the chasing that fills a day without appearing on any bill.",
+          "**The phone.** Enquiries arriving outside hours go to whoever answers. [An answering system that books rather than takes messages](/ai-receptionist/after-hours) is unglamorous and measurable.",
+        ],
+      },
+      {
+        type: "p",
+        text: "None of that touches advice, which is precisely why it is where to start. The professional risk is low and the recovered time is real.",
+      },
+      { type: "h2", text: "What should a firm put around it?" },
+      {
+        type: "p",
+        text: "Less than people fear. Governance here does not mean a committee and a six-month policy exercise. It means three things existing in writing rather than in individual judgement at 9pm.",
+      },
+      {
+        type: "ul",
+        items: [
+          "What may be put into which tools, and what may never be.",
+          "A record of what was used on which matter.",
+          "A review step on anything that reaches a client.",
+        ],
+      },
+      {
+        type: "p",
+        text: "The architectural question sits underneath all three: does client information leave your environment at all? That has to be settled before anything gets built, because it determines what can be built. Retrofitting it is expensive and usually means starting again.",
+      },
+      {
+        type: "p",
+        text: "This is the same discipline we apply to [any agent that acts on real systems](/ai-agent-development) — boundaries first, capability second. In a professional services context the boundaries simply carry more weight, because the person accountable for the output has a licence attached to it.",
+      },
+    ],
+  },
 ];
 
 export function getPost(slug: string): Post | undefined {
