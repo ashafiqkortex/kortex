@@ -5,9 +5,10 @@ import { ContactForm } from "@/components/contact-form";
 import { Calendar, Mail, Clock, Phone, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact — Kortex Consulting",
+  title: "Contact Kortex Consulting — AI Consultants in Bethesda MD",
   description:
     "Call (301) 889-8546, book a 20-minute discovery call, or send us a message. We'll tell you honestly whether we can help.",
+  alternates: { canonical: "https://kortexconsulting.com/contact" },
 };
 
 const HIGHLIGHTS = [

@@ -25,6 +25,9 @@ export async function generateMetadata({
   return {
     title: `${cs.client} — Kortex Consulting`,
     description: cs.tagline,
+    alternates: {
+      canonical: `https://kortexconsulting.com/case-studies/${cs.slug}`,
+    },
   };
 }
 

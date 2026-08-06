@@ -7,9 +7,10 @@ import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Services — Kortex Consulting",
+  title: "AI Automation & Engineering Services | Kortex",
   description:
-    "Workflow automation, custom agents, AI engineering, AI governance, and integrations. Five disciplines that compose into real operational systems.",
+    "Workflow automation, custom AI agents, AI engineering, governance, and integrations. Five disciplines that compose into one real operational system.",
+  alternates: { canonical: "https://kortexconsulting.com/services" },
 };
 
 export default function ServicesPage() {

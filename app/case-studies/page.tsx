@@ -6,9 +6,10 @@ import { CASE_STUDIES } from "@/lib/case-studies";
 import { ArrowUpRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Case Studies — Kortex Consulting",
+  title: "AI Implementation Case Studies | Kortex Consulting",
   description:
     "Selected work: HVAC operational OS, Truth Layer AI governance, and Sales Intelligence behavioral funnel truth.",
+  alternates: { canonical: "https://kortexconsulting.com/case-studies" },
 };
 
 export default function CaseStudiesIndexPage() {

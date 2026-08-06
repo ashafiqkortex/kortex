@@ -4,9 +4,10 @@ import { PageHeader } from "@/components/page-header";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "About — Kortex Consulting",
+  title: "About Kortex — an AI Consulting Firm That Builds",
   description:
-    "An engineering firm disguised as a consultancy. We build the truth layer under our clients' operations.",
+    "An AI consulting firm that is really an engineering firm in disguise. We build the truth layer under our clients' operations — working systems, not slide decks.",
+  alternates: { canonical: "https://kortexconsulting.com/about" },
 };
 
 const PRINCIPLES = [

@@ -28,28 +28,10 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title:
-    "Kortex Consulting — Custom AI & Automation for Your Business",
+  title: "AI Consulting & Automation for Business | Kortex",
   description:
-    "AI & automation consultancy building generative AI, AI agents, custom RAG, and workflow automation directly into your business — for SMBs to enterprises that want AI built on their own data, in their own environment.",
-  keywords: [
-    "AI consulting",
-    "AI consultancy",
-    "AI for business",
-    "AI automation",
-    "generative AI consulting",
-    "custom AI solutions",
-    "AI agents",
-    "AI implementation",
-    "AI strategy",
-    "RAG",
-    "AI for small business",
-    "enterprise AI",
-    "AI integration",
-    "AI on your data",
-    "workflow automation",
-    "AI transformation",
-  ],
+    "Kortex builds AI agents, automation, and operational systems into your business. AI consulting for SMBs across the Washington DC metro and nationwide.",
+  alternates: { canonical: "https://kortexconsulting.com" },
   openGraph: {
     title:
       "Kortex Consulting — Custom AI & Automation for Your Business",
