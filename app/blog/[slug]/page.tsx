@@ -265,6 +265,10 @@ export default async function BlogPostPage({
           url: SITE,
         },
         mainEntityOfPage: `${SITE}/blog/${post.slug}`,
+        speakable: {
+          "@type": "SpeakableSpecification",
+          cssSelector: ["#key-takeaways", "#faq"],
+        },
       },
       {
         "@type": "FAQPage",
@@ -355,7 +359,7 @@ export default async function BlogPostPage({
         <Container size="default">
           <div className="max-w-2xl">
             {/* Key takeaways (AEO answer-first) */}
-            <div className="mb-12 rounded-2xl border border-[var(--border-bright)] bg-[var(--background-elev)]/70 p-6 md:p-8">
+            <div id="key-takeaways" className="mb-12 rounded-2xl border border-[var(--border-bright)] bg-[var(--background-elev)]/70 p-6 md:p-8">
               <div className="text-[12px] font-mono uppercase tracking-widest text-[var(--accent)] mb-4">
                 The short version
               </div>
@@ -377,7 +381,7 @@ export default async function BlogPostPage({
             ))}
 
             {/* FAQ (AEO + FAQPage schema) */}
-            <section className="mt-16">
+            <section id="faq" className="mt-16">
               <h2 className="font-display text-2xl md:text-[32px] leading-tight tracking-[-0.02em] text-foreground mb-8">
                 Questions contractors ask
               </h2>

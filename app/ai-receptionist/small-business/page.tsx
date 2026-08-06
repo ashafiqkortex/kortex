@@ -91,6 +91,15 @@ const jsonLd = {
       audience: { "@type": "BusinessAudience", name: "Small businesses and sole traders" },
     },
     faqSchema(URL, FAQS),
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${URL}#breadcrumb`,
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE },
+        { "@type": "ListItem", position: 2, name: "AI Receptionist", item: `${SITE}/ai-receptionist` },
+        { "@type": "ListItem", position: 3, name: "Answering Service for Small Business", item: URL },
+      ],
+    },
   ],
 };
 

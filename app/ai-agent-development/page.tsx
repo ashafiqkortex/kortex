@@ -94,6 +94,14 @@ const jsonLd = {
       areaServed: { "@type": "Country", name: "United States" },
     },
     faqSchema(URL, FAQS),
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${URL}#breadcrumb`,
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE },
+        { "@type": "ListItem", position: 2, name: "AI Agent Development", item: URL },
+      ],
+    },
   ],
 };
 
