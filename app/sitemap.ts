@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE}/ai-agents-for-business`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE}/ai-employee`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE}/ai-sdr`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${SITE}/ai-consultant-washington-dc`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE}/case-studies`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${SITE}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },

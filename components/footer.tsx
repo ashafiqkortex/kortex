@@ -34,6 +34,7 @@ const SECTIONS = [
       { href: "/about", label: "About" },
       { href: "/blog", label: "Blog" },
       { href: "/tools", label: "Free Tools" },
+      { href: "/ai-consultant-washington-dc", label: "Washington DC Metro" },
       { href: "/contact", label: "Contact" },
     ],
   },
