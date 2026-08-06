@@ -89,7 +89,7 @@ export default function ToolsPage() {
               Want the real thing, not the sample?
             </h3>
             <p className="mt-4 text-[16px] leading-relaxed text-[var(--foreground-dim)] max-w-xl mx-auto">
-              Book a 30-minute roadmap call and we'll map your operation live — what
+              Book a 30-minute roadmap call and we&apos;ll map your operation live — what
               to automate first, what it costs, and what your shop runs like in six months.
             </p>
             <div className="mt-7">
