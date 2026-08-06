@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { PageHeader } from "@/components/page-header";
 import { CustomSolutions } from "@/components/home/custom-solutions";
@@ -171,6 +172,38 @@ export default function ServicesPage() {
 
           {/* Custom Solutions — capstone that closes the page */}
           <CustomSolutions id="custom" asSection={false} />
+        </Container>
+      </div>
+
+      <div className="pb-4">
+        <Container size="wide">
+          <p className="max-w-3xl text-[16px] leading-[1.75] text-[var(--foreground-dim)]">
+            Several of these have a page of their own, because they are where most
+            engagements start:{" "}
+            <Link href="/ai-receptionist" className="text-[var(--accent)] hover:underline">
+              the AI receptionist
+            </Link>
+            ,{" "}
+            <Link href="/ai-customer-service" className="text-[var(--accent)] hover:underline">
+              AI customer service
+            </Link>
+            ,{" "}
+            <Link href="/ai-agent-development" className="text-[var(--accent)] hover:underline">
+              AI agent development
+            </Link>
+            , and{" "}
+            <Link href="/ai-employee" className="text-[var(--accent)] hover:underline">
+              handing a whole job to an AI employee
+            </Link>
+            . If you are in the DC area, we also work{" "}
+            <Link
+              href="/ai-consultant-washington-dc"
+              className="text-[var(--accent)] hover:underline"
+            >
+              on site across the metro
+            </Link>
+            .
+          </p>
         </Container>
       </div>
 

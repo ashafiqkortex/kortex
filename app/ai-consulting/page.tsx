@@ -156,7 +156,11 @@ export default function AiConsultingPage() {
             recommendation that someone else now has to implement.
           </p>
           <p className="mt-6 max-w-3xl text-[17px] leading-[1.7] text-[var(--foreground-dim)]">
-            We are engineers who consult, not consultants who subcontract. That distinction shows up
+            We are{" "}
+            <Link href="/about" className="text-[var(--accent)] hover:underline">
+              engineers who consult
+            </Link>
+            , not consultants who subcontract. That distinction shows up
             in week one, when you are looking at something running against your own data rather than
             reading a maturity assessment.
           </p>

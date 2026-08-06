@@ -366,7 +366,11 @@ export default function AiReceptionistPage() {
             <Link href="/ai-customer-service" className="text-[var(--accent)] hover:underline">
               AI customer service
             </Link>
-            .
+            . To put a number on it first, the{" "}
+            <Link href="/tools" className="text-[var(--accent)] hover:underline">
+              free revenue leak calculator
+            </Link>{" "}
+            takes about two minutes.
           </p>
 
           <p className="mt-5 max-w-2xl text-[16px] leading-[1.7] text-[var(--foreground-dim)]">

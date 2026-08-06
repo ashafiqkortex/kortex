@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { PageHeader } from "@/components/page-header";
 import { ArrowUpRight } from "lucide-react";
@@ -91,6 +92,15 @@ export default function ToolsPage() {
             <p className="mt-4 text-[16px] leading-relaxed text-[var(--foreground-dim)] max-w-xl mx-auto">
               Book a 30-minute roadmap call and we&apos;ll map your operation live — what
               to automate first, what it costs, and what your shop runs like in six months.
+              Or read what we would actually build:{" "}
+              <Link href="/ai-receptionist" className="text-[var(--accent)] hover:underline">
+                an AI receptionist
+              </Link>{" "}
+              for the phone, or{" "}
+              <Link href="/ai-consulting" className="text-[var(--accent)] hover:underline">
+                a broader engagement
+              </Link>{" "}
+              if the problem is wider.
             </p>
             <div className="mt-7">
               <a

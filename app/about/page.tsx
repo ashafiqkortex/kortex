@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { PageHeader } from "@/components/page-header";
 import { Button } from "@/components/ui/button";
@@ -80,7 +81,11 @@ export default function AboutPage() {
               We build the truth layer under our clients&apos; operations. That means we&apos;re less interested in the tool landscape than in what the tools are missing. Less interested in dashboards than in what happens <em className="text-foreground">before</em> things make it to a dashboard. We care about ground truth — the state of the business as it actually is, not as it&apos;s been reported.
             </p>
             <p>
-              We work across five disciplines — workflow automation, custom agents, AI engineering, AI governance, and integrations — because real operational problems don&apos;t respect service categories. A broken sales funnel is also a data problem, an agent problem, and an integration problem. We engineer across the whole surface.
+              We work across{" "}
+              <Link href="/services" className="text-[var(--accent)] hover:underline">
+                five disciplines
+              </Link>{" "}
+              — workflow automation, custom agents, AI engineering, AI governance, and integrations — because real operational problems don&apos;t respect service categories. A broken sales funnel is also a data problem, an agent problem, and an integration problem. We engineer across the whole surface.
             </p>
           </div>
 
@@ -116,7 +121,12 @@ export default function AboutPage() {
                     Work with us.
                   </h3>
                   <p className="mt-4 text-[17px] leading-relaxed text-[var(--foreground-dim)]">
-                    Twenty minutes is usually enough to tell you honestly whether we can help.
+                    Twenty minutes is usually enough to tell you honestly whether we can help. Or
+                    read{" "}
+                    <Link href="/case-studies" className="text-[var(--accent)] hover:underline">
+                      what we have shipped
+                    </Link>{" "}
+                    first.
                   </p>
                 </div>
                 <div className="mt-8">

@@ -171,7 +171,11 @@ export default function AiAgentsForBusinessPage() {
             })}
           </div>
           <p className="mt-10 max-w-2xl text-[16px] leading-[1.7] text-[var(--foreground-dim)]">
-            The first two have pages of their own —{" "}
+            Sales follow-up has a page of its own too, including an honest read on when to{" "}
+            <Link href="/ai-sdr" className="text-[var(--accent)] hover:underline">
+              build an AI SDR rather than buy one
+            </Link>
+            . The first two also have pages —{" "}
             <Link href="/ai-receptionist" className="text-[var(--accent)] hover:underline">
               the AI receptionist
             </Link>{" "}

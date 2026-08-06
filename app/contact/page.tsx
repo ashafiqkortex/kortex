@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { PageHeader } from "@/components/page-header";
 import { ContactForm } from "@/components/contact-form";
@@ -146,6 +147,27 @@ export default function ContactPage() {
                 Or send a message
               </div>
               <ContactForm />
+
+              <p className="mt-8 text-[15px] leading-[1.75] text-[var(--foreground-dim)]">
+                Not sure what you need yet? Most people arrive at one of four
+                things:{" "}
+                <Link href="/ai-receptionist" className="text-[var(--accent)] hover:underline">
+                  an AI receptionist
+                </Link>{" "}
+                when the phone is the bottleneck,{" "}
+                <Link href="/ai-customer-service" className="text-[var(--accent)] hover:underline">
+                  AI customer service
+                </Link>{" "}
+                when support volume is,{" "}
+                <Link href="/ai-agent-development" className="text-[var(--accent)] hover:underline">
+                  a custom agent
+                </Link>{" "}
+                when the work spans several systems, or{" "}
+                <Link href="/ai-consulting" className="text-[var(--accent)] hover:underline">
+                  a broader engagement
+                </Link>{" "}
+                when you know something is slow but not what.
+              </p>
             </div>
           </div>
         </Container>

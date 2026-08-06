@@ -150,7 +150,7 @@ export const POSTS: Post[] = [
       },
       {
         type: "p",
-        text: "Keep QuickBooks. Keep what works. But the day your team is the glue holding five logins together, the move is to build the layer underneath them. One that knows your shop, runs the handoffs on its own, and that you actually own. That's the difference between renting five tools and running one system.",
+        text: "Keep QuickBooks. Keep what works. But the day your team is the glue holding five logins together, the move is to build the layer underneath them — and increasingly that layer includes [agents doing the handoffs themselves](/ai-agents-for-business). One that knows your shop, runs the handoffs on its own, and that you actually own. That's the difference between renting five tools and running one system.",
       },
     ],
   },
@@ -247,7 +247,7 @@ export const POSTS: Post[] = [
       },
       {
         type: "p",
-        text: "If that second number is bigger than your subscription, you've outgrown off-the-shelf. The fix isn't shopping for another platform. It's a system built around how you already work, instead of the other way around.",
+        text: "If that second number is bigger than your subscription, you've outgrown off-the-shelf. The fix isn't shopping for another platform. It's [a system built around how you already work](/ai-consulting), instead of the other way around.",
       },
     ],
   },
@@ -341,7 +341,7 @@ export const POSTS: Post[] = [
       },
       {
         type: "p",
-        text: "The only way you get a real system is to build one on your data and connect it to your stack. Not a subscription with an AI tab tacked on. Something that actually knows how you run, and then runs it for you.",
+        text: "The only way you get a real system is to build one on your data and connect it to your stack. Not a subscription with an AI tab tacked on. Something that actually knows how you run, and then runs it — which in practice means [an agent with real access to your systems](/ai-agent-development), not a feature for you.",
       },
     ],
   },
@@ -432,7 +432,7 @@ export const POSTS: Post[] = [
       },
       {
         type: "callout",
-        text: "Same crew, close to double the work out the door, nobody new on payroll. When you literally can't hire, automation isn't a nice-to-have. It's the only growth lever you actually control.",
+        text: "Same crew, close to double the work out the door, nobody new on payroll. When you literally can't hire, automation isn't a nice-to-have. It's the only growth lever you actually control — and the first job most shops hand over is [the phone](/ai-receptionist), because it is the one nobody has time for. The broader version of that idea is [an AI employee](/ai-employee): a defined job, owned end to end.",
       },
       {
         type: "p",
@@ -520,7 +520,7 @@ export const POSTS: Post[] = [
       },
       {
         type: "p",
-        text: "Here's the part that should bug you: this problem doesn't shrink as you grow. It multiplies. The only way to stop paying it is to build the connections the off-the-shelf tools were never going to give you.",
+        text: "Here's the part that should bug you: this problem doesn't shrink as you grow. It multiplies. Two of the biggest line items — [answering the phone](/ai-receptionist) and [handling the same customer questions over and over](/ai-customer-service) — come off the desk entirely once they're built properly. The rest is building the connections the off-the-shelf tools were never going to give you.",
       },
     ],
   },
@@ -618,7 +618,7 @@ export const POSTS: Post[] = [
       },
       {
         type: "p",
-        text: "The gut check is simple. If a builder can't put something running on your data in front of you fast, they shouldn't be building it. Off-the-shelf got you this far, and that's worth something. But if it's the thing slowing you down now, the next move isn't another platform. It's a system built for exactly how you run.",
+        text: "The gut check is simple. If [whoever you're talking to](/ai-consulting) can't put something running on your data in front of you fast, they shouldn't be building it. Off-the-shelf got you this far, and that's worth something. But if it's the thing slowing you down now, the next move isn't another platform. It's a system built for exactly how you run.",
       },
     ],
   },
