@@ -9,6 +9,8 @@ const SECTIONS = [
       { href: "/ai-consulting", label: "AI Consulting" },
       { href: "/ai-receptionist", label: "AI Receptionist" },
       { href: "/ai-agent-development", label: "AI Agent Development" },
+      { href: "/ai-employee", label: "AI Employee" },
+      { href: "/ai-sdr", label: "AI SDR" },
       { href: "/ai-receptionist/after-hours", label: "After-Hours Answering" },
       { href: "/ai-customer-service", label: "AI Customer Service" },
       { href: "/services#workflow-automation", label: "Workflow Automation" },
