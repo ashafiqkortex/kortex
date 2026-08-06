@@ -43,8 +43,25 @@ export default async function CaseStudyPage({
   const idx = CASE_STUDIES.findIndex((c) => c.slug === slug);
   const next = CASE_STUDIES[(idx + 1) % CASE_STUDIES.length];
 
+  const SITE = "https://kortexconsulting.com";
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `${SITE}/case-studies/${cs.slug}#article`,
+    headline: `${cs.client} — ${cs.tagline}`,
+    description: cs.tagline,
+    url: `${SITE}/case-studies/${cs.slug}`,
+    author: { "@type": "Organization", name: "Kortex Consulting", url: SITE },
+    publisher: { "@id": `${SITE}/#organization` },
+    mainEntityOfPage: `${SITE}/case-studies/${cs.slug}`,
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <PageHeader
         eyebrow={`${cs.tag} · Case Study`}
         title={<>{cs.headline}</>}

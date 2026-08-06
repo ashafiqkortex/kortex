@@ -5,17 +5,79 @@ import { CustomSolutions } from "@/components/home/custom-solutions";
 import { SERVICES } from "@/lib/services";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import { FaqSection, faqSchema, PROVIDER, type Faq } from "@/components/faq-section";
+
+const SITE = "https://kortexconsulting.com";
+const URL = `${SITE}/services`;
 
 export const metadata: Metadata = {
   title: "AI Automation & Engineering Services | Kortex",
   description:
     "Workflow automation, custom AI agents, AI engineering, governance, and integrations. Five disciplines that compose into one real operational system.",
-  alternates: { canonical: "https://kortexconsulting.com/services" },
+  alternates: { canonical: URL },
+};
+
+const FAQS: Faq[] = [
+  {
+    q: "Do we have to buy all five disciplines?",
+    a: "No, and almost nobody does. They are listed separately because they are distinct skills, but real problems cut across them — a broken quoting process is usually a workflow problem, a data problem, and an integration problem at once. We scope to the problem, not the category.",
+  },
+  {
+    q: "What does an engagement cost?",
+    a: "It depends on scope, but the structure matters more than the number. We would rather start with a small, paid, buildable piece than a long discovery phase, because that caps your downside if the fit turns out to be wrong.",
+  },
+  {
+    q: "Do we need to replace our current software?",
+    a: "Almost never. The work is usually to make the systems you already run behave like one system, rather than to swap them out. Replacement projects are slow, expensive, and rarely the actual constraint.",
+  },
+  {
+    q: "How do you handle it when something breaks?",
+    a: "Systems are built to fail loudly rather than silently — the failure mode we see most often in inherited automation is a rule that quietly stopped firing months ago and nobody noticed. Logging and alerting are part of the build, not an add-on.",
+  },
+  {
+    q: "What if we do not know which service we need?",
+    a: "That is the normal starting position and it is what the first conversation is for. Most people arrive describing a symptom — quotes take too long, nobody knows what is on site today — and the discipline that fixes it is our problem to work out, not yours.",
+  },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": `${URL}#service`,
+      name: "AI Automation and Engineering Services",
+      serviceType: "AI engineering, automation, and systems integration",
+      description:
+        "Five composable disciplines — operational workflows, AI agents, operational intelligence, AI oversight, and connected operations — engineered into one working system.",
+      url: URL,
+      provider: PROVIDER,
+      areaServed: { "@type": "Country", name: "United States" },
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Kortex services",
+        itemListElement: SERVICES.map((s) => ({
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: s.name,
+            description: s.tagline,
+            url: `${URL}#${s.slug}`,
+          },
+        })),
+      },
+    },
+    faqSchema(URL, FAQS),
+  ],
 };
 
 export default function ServicesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <PageHeader
         eyebrow="Services · 05"
         title={
@@ -111,6 +173,8 @@ export default function ServicesPage() {
           <CustomSolutions id="custom" asSection={false} />
         </Container>
       </div>
+
+      <FaqSection heading="What do people ask about the work?" faqs={FAQS} />
     </>
   );
 }

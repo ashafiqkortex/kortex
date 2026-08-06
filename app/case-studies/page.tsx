@@ -12,9 +12,28 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://kortexconsulting.com/case-studies" },
 };
 
+const SITE = "https://kortexconsulting.com";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": `${SITE}/case-studies#list`,
+  name: "Kortex Consulting case studies",
+  itemListElement: CASE_STUDIES.map((cs, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    url: `${SITE}/case-studies/${cs.slug}`,
+    name: cs.client,
+  })),
+};
+
 export default function CaseStudiesIndexPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <PageHeader
         eyebrow="Case Studies · 03"
         title={

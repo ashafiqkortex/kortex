@@ -10,6 +10,20 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://kortexconsulting.com/about" },
 };
 
+const SITE = "https://kortexconsulting.com";
+
+// Person schema for the founder is still pending a confirmed name and role.
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": `${SITE}/about#aboutpage`,
+  url: `${SITE}/about`,
+  name: "About Kortex Consulting",
+  description:
+    "An AI consulting firm that is really an engineering firm in disguise. We build the truth layer under our clients' operations.",
+  mainEntity: { "@id": `${SITE}/#organization` },
+};
+
 const PRINCIPLES = [
   {
     n: "01",
@@ -41,6 +55,10 @@ const PRINCIPLES = [
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <PageHeader
         eyebrow="About"
         title={
