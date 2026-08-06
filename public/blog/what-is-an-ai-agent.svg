@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" role="img" aria-label="A chatbot answering a single question beside an agent looping through several steps and acting on systems">
+  <defs>
+    <pattern id="g1" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#C15F3C" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="r1" cx="70%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#C15F3C" stop-opacity="0.10"/>
+      <stop offset="60%" stop-color="#C15F3C" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#A8492A"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="800" fill="#F0EEE6"/>
+  <rect width="1600" height="800" fill="url(#g1)"/>
+  <rect width="1600" height="800" fill="url(#r1)"/>
+
+  <!-- LEFT: chatbot — one question, one answer -->
+  <text x="150" y="180" font-family="Georgia, serif" font-size="26" fill="#8A8578">Chatbot</text>
+  <rect x="150" y="215" width="330" height="90" rx="12" fill="none" stroke="#C9C3B4" stroke-width="2"/>
+  <text x="180" y="268" font-family="Georgia, serif" font-size="24" fill="#5F5B52">Question</text>
+  <line x1="315" y1="315" x2="315" y2="385" stroke="#C9C3B4" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="150" y="390" width="330" height="90" rx="12" fill="none" stroke="#C9C3B4" stroke-width="2"/>
+  <text x="180" y="443" font-family="Georgia, serif" font-size="24" fill="#5F5B52">Answer</text>
+  <text x="150" y="545" font-family="Georgia, serif" font-size="20" fill="#8A8578">Nothing changed.</text>
+
+  <!-- divider -->
+  <line x1="600" y1="150" x2="600" y2="620" stroke="#C9C3B4" stroke-width="1" stroke-dasharray="6 8"/>
+
+  <!-- RIGHT: agent — loop + actions -->
+  <text x="700" y="180" font-family="Georgia, serif" font-size="26" fill="#A8492A">Agent</text>
+
+  <circle cx="900" cy="360" r="132" fill="none" stroke="#C15F3C" stroke-opacity="0.35" stroke-width="2" stroke-dasharray="7 9"/>
+  <rect x="800" y="212" width="200" height="66" rx="12" fill="#A8492A"/>
+  <text x="900" y="253" font-family="Georgia, serif" font-size="22" fill="#F4F1E8" text-anchor="middle">Decide</text>
+  <rect x="1010" y="326" width="176" height="66" rx="12" fill="#A8492A"/>
+  <text x="1098" y="367" font-family="Georgia, serif" font-size="22" fill="#F4F1E8" text-anchor="middle">Act</text>
+  <rect x="800" y="440" width="200" height="66" rx="12" fill="#A8492A"/>
+  <text x="900" y="481" font-family="Georgia, serif" font-size="22" fill="#F4F1E8" text-anchor="middle">Check</text>
+  <rect x="614" y="326" width="176" height="66" rx="12" fill="none" stroke="#A8492A" stroke-width="2"/>
+  <text x="702" y="367" font-family="Georgia, serif" font-size="22" fill="#A8492A" text-anchor="middle">Goal</text>
+
+  <!-- systems it acts on -->
+  <g stroke="#A8492A" stroke-opacity="0.45" stroke-width="2" fill="none">
+    <line x1="1186" y1="359" x2="1300" y2="250" marker-end="url(#ar)"/>
+    <line x1="1186" y1="359" x2="1300" y2="359" marker-end="url(#ar)"/>
+    <line x1="1186" y1="359" x2="1300" y2="468" marker-end="url(#ar)"/>
+  </g>
+  <g font-family="Georgia, serif" font-size="19" fill="#5F5B52">
+    <rect x="1308" y="222" width="150" height="56" rx="10" fill="none" stroke="#C9C3B4" stroke-width="2"/>
+    <text x="1383" y="257" text-anchor="middle">Calendar</text>
+    <rect x="1308" y="331" width="150" height="56" rx="10" fill="none" stroke="#C9C3B4" stroke-width="2"/>
+    <text x="1383" y="366" text-anchor="middle">CRM</text>
+    <rect x="1308" y="440" width="150" height="56" rx="10" fill="none" stroke="#C9C3B4" stroke-width="2"/>
+    <text x="1383" y="475" text-anchor="middle">Records</text>
+  </g>
+
+  <text x="700" y="600" font-family="Georgia, serif" font-size="20" fill="#8A8578">Something changed.</text>
+</svg>

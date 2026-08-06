@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" role="img" aria-label="A meter showing cost rising with call volume under per-minute billing, against a flat line">
+  <defs>
+    <pattern id="g1" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#C15F3C" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="r1" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#C15F3C" stop-opacity="0.10"/>
+      <stop offset="60%" stop-color="#C15F3C" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="800" fill="#F0EEE6"/>
+  <rect width="1600" height="800" fill="url(#g1)"/>
+  <rect width="1600" height="800" fill="url(#r1)"/>
+
+  <!-- axes -->
+  <line x1="220" y1="620" x2="1400" y2="620" stroke="#C9C3B4" stroke-width="2"/>
+  <line x1="220" y1="160" x2="220" y2="620" stroke="#C9C3B4" stroke-width="2"/>
+  <text x="220" y="678" font-family="Georgia, serif" font-size="22" fill="#8A8578">More calls answered</text>
+  <text x="150" y="150" font-family="Georgia, serif" font-size="22" fill="#8A8578">Cost</text>
+
+  <!-- per-minute: rises with success -->
+  <path d="M220 588 C 520 560, 800 430, 1120 250 S 1330 176, 1390 168" fill="none" stroke="#A8492A" stroke-width="5"/>
+  <circle cx="1390" cy="168" r="9" fill="#A8492A"/>
+  <text x="1130" y="130" font-family="Georgia, serif" font-size="26" fill="#A8492A">Per-minute billing</text>
+  <text x="1130" y="164" font-family="Georgia, serif" font-size="19" fill="#8A8578">A good month costs more</text>
+
+  <!-- flat -->
+  <path d="M220 512 L1390 512" fill="none" stroke="#5F5B52" stroke-width="4" stroke-dasharray="10 10"/>
+  <circle cx="1390" cy="512" r="9" fill="#5F5B52"/>
+  <text x="1130" y="482" font-family="Georgia, serif" font-size="26" fill="#5F5B52">Flat</text>
+  <text x="1130" y="558" font-family="Georgia, serif" font-size="19" fill="#8A8578">Growth is free</text>
+
+  <!-- the gap -->
+  <line x1="1060" y1="286" x2="1060" y2="512" stroke="#A8492A" stroke-opacity="0.5" stroke-width="2" stroke-dasharray="6 7"/>
+  <text x="1000" y="410" font-family="Georgia, serif" font-size="20" fill="#A8492A" text-anchor="end">the penalty</text>
+
+  <!-- caption -->
+  <text x="220" y="736" font-family="Georgia, serif" font-size="21" fill="#5F5B52">Ask how it is billed before you ask what it costs.</text>
+</svg>

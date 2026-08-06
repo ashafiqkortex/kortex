@@ -622,6 +622,272 @@ export const POSTS: Post[] = [
       },
     ],
   },
+  {
+    slug: "what-is-an-ai-agent",
+    title: "What Is an AI Agent? A Plain Answer, and Where the Word Gets Abused",
+    excerpt:
+      "An AI agent pursues a goal across several steps and acts on your systems. Everything else being sold under the name is something simpler wearing the label.",
+    category: "Fundamentals",
+    date: "2026-08-06",
+    readingTime: "8 min read",
+    author: "Kortex",
+    metaDescription:
+      "What is an AI agent? A direct definition, how agents differ from chatbots and workflow automation, what they are genuinely good at, and when you should not build one.",
+    keywords: [
+      "what is an ai agent",
+      "what are ai agents",
+      "agentic ai",
+      "ai agent vs chatbot",
+      "autonomous ai agents",
+    ],
+    hero: "/blog/what-is-an-ai-agent.svg",
+    heroAlt:
+      "A chatbot answering one question beside an agent looping through decide, act and check while writing to calendar, CRM and records",
+    takeaways: [
+      "An AI agent pursues a goal across multiple steps, decides what to do next, and acts on real systems. A chatbot produces text.",
+      "The difference that matters commercially is not intelligence — it is whether the thing can change something in your business.",
+      "Agents suit exception-heavy work spanning several systems. For work that runs the same way every time, a rule is cheaper and easier to debug.",
+      "Most failed agent projects failed on scope or access, not on model capability.",
+    ],
+    faqs: [
+      {
+        q: "What is an AI agent?",
+        a: "An AI agent is software that pursues a goal across several steps rather than answering a single question. It decides what to do next, uses tools and systems to do it, checks the result, and adapts when something does not go to plan. The defining property is that it takes actions in real systems rather than only producing text.",
+      },
+      {
+        q: "What is the difference between an AI agent and a chatbot?",
+        a: "A chatbot responds to a prompt and stops. An agent holds a goal, takes several steps toward it, and changes something — booking an appointment, updating a record, sending an invoice. After a chatbot conversation, nothing in your business is different. After an agent runs, something is.",
+      },
+      {
+        q: "What is agentic AI?",
+        a: "Agentic AI is the general term for systems built around agents — software that plans, acts, and adapts rather than responding to one instruction at a time. It describes an approach rather than a specific product, which is part of why the term is used so loosely in marketing.",
+      },
+      {
+        q: "Are AI agents the same as workflow automation?",
+        a: "No. Automation follows a path you defined in advance. An agent decides the path as it goes. That flexibility helps with messy, exception-heavy work and hurts anywhere you need the identical outcome every time. Most working systems combine both, with rules handling the predictable share.",
+      },
+      {
+        q: "What are AI agents actually good at?",
+        a: "Work that is high volume, spans several systems, and varies case by case — answering and qualifying calls, resolving repetitive support tickets, reconciling documents against records, and chasing follow-ups. All of these share reversible mistakes and a clear definition of done.",
+      },
+      {
+        q: "When should you not build an AI agent?",
+        a: "When the process runs identically every time, because a rule is cheaper, faster, and far easier to debug. And when the process has never actually been defined — an agent will not settle a disagreement about how the work should be done, it will pick one interpretation and apply it at speed.",
+      },
+    ],
+    body: [
+      {
+        type: "p",
+        text: "An AI agent is software that pursues a goal across several steps. It works out what to do next, uses your systems to do it, checks what happened, and adjusts when something does not go to plan. That is the whole definition, and everything useful about the category follows from it.",
+      },
+      {
+        type: "p",
+        text: "The word has been stretched to cover almost anything with a language model attached, which makes it hard to evaluate what anyone is selling. So it is worth being precise about the line.",
+      },
+      { type: "h2", text: "What separates an agent from a chatbot?" },
+      {
+        type: "p",
+        text: "A chatbot answers. An agent acts. After a conversation with a chatbot, your business is exactly as it was — you have some text. After an agent runs, an appointment exists, a record has changed, an invoice has gone out.",
+      },
+      {
+        type: "p",
+        text: "That distinction is not about how clever the underlying model is. A very capable model with no access to your systems is still a chatbot. A modest model wired into your calendar and your records is an agent. Access is the dividing line, not intelligence.",
+      },
+      {
+        type: "callout",
+        text: "The practical test: if the thing succeeds completely, has anything in your business changed? If not, it is a chatbot, whatever the vendor calls it.",
+      },
+      { type: "h2", text: "How is an agent different from workflow automation?" },
+      {
+        type: "p",
+        text: "Automation follows the path you defined. An agent decides the path. If you have ever built a Zapier chain, you have defined a path — when this happens, do that, then that. It works beautifully right up until reality produces a case you did not anticipate, at which point it either breaks loudly or, more often, does the wrong thing quietly.",
+      },
+      {
+        type: "p",
+        text: "An agent handles that case by reasoning about it. That is genuinely valuable for messy work, and it is a liability everywhere you need the same outcome every single time. Determinism is a feature when you can have it.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Same steps every time, no judgement needed — use a rule. Cheaper, faster, debuggable at 2am.",
+          "Steps vary, exceptions are common, judgement spans systems — an agent earns its place.",
+          "Most real systems are a mix, with rules doing the predictable majority and an agent handling the tail.",
+        ],
+      },
+      { type: "h2", text: "What do agents actually need to work?" },
+      {
+        type: "p",
+        text: "Four things, and the model is not one of them. Models are a commodity that improves without your involvement. What decides whether an agent survives contact with a real business is much less glamorous.",
+      },
+      {
+        type: "ul",
+        items: [
+          "A boundary — what it may do, and what it must never do without a human. Written down before any code exists.",
+          "Context — what it can see. An agent reasoning over stale or partial data makes confident, wrong decisions.",
+          "Actions — what it can change, with permissions on every write path and a way back where the cost of being wrong is high.",
+          "Evidence — every decision logged with its reasoning and inputs, so that when it errs you can see why rather than guess.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Notice that three of those four are about restraint rather than capability. That is not caution for its own sake — it is where the failures actually come from.",
+      },
+      { type: "h2", text: "Why do most agent projects fail?" },
+      {
+        type: "p",
+        text: "Rarely because the model was not good enough. In practice, projects die for two reasons that have nothing to do with AI.",
+      },
+      {
+        type: "p",
+        text: "The first is scope. The agent was pointed at a job nobody had defined, so there was no way to say whether it was doing it correctly. The second is access. It could not reach the systems that hold the truth, so it worked from a partial picture and produced answers that were plausible and wrong.",
+      },
+      {
+        type: "quote",
+        text: "Agents amplify whatever structure already exists in a business, including its absence.",
+      },
+      {
+        type: "p",
+        text: "This is why the honest first question is not which model to use. It is whether you can write down what a correct outcome looks like. If you cannot, that is the first piece of work — and it is not an AI project.",
+      },
+      { type: "h2", text: "So should you build one?" },
+      {
+        type: "p",
+        text: "If the work is repetitive and identical every time, no — build a rule and spend the difference elsewhere. If the work is exception-heavy, spans several systems, and currently has a person opening four tabs to apply judgement, then an agent is pointed at the right shape of problem.",
+      },
+      {
+        type: "p",
+        text: "And if you are not sure which of those describes your situation, that uncertainty is itself the finding. It usually means the process needs defining before anything gets built on top of it.",
+      },
+    ],
+  },
+  {
+    slug: "choosing-an-answering-service",
+    title: "How to Choose an Answering Service (and the Billing Trap Nobody Mentions)",
+    excerpt:
+      "Most answering service comparisons argue about price. The pricing model matters more — and the standard one charges you extra for having a good month.",
+    category: "Operations",
+    date: "2026-08-06",
+    readingTime: "7 min read",
+    author: "Kortex",
+    metaDescription:
+      "How to choose an answering service: the per-minute billing trap, what actually separates providers, and the six questions worth asking before you sign.",
+    keywords: [
+      "best answering service",
+      "answering service comparison",
+      "answering service pricing",
+      "virtual receptionist companies",
+      "how to choose an answering service",
+    ],
+    hero: "/blog/choosing-an-answering-service.svg",
+    heroAlt:
+      "A chart showing cost rising steeply with call volume under per-minute billing against a flat line",
+    takeaways: [
+      "The pricing model matters more than the price. Per-minute billing means a busy month costs more than a quiet one.",
+      "Ask what counts as a minute — hold time and post-call work often draw from the same allowance as talk time.",
+      "The deciding capability is whether it can book an appointment, not whether it can take a message.",
+      "Test your busiest hour, not your average one. Simultaneous calls are where most services quietly fail.",
+    ],
+    faqs: [
+      {
+        q: "How much does an answering service cost?",
+        a: "Most established providers bill per minute against a monthly allowance, with an overage rate once you exceed it. That means your cost tracks your call volume rather than your capability, and a busy month costs more than a quiet one. Automated services generally do not carry the same per-minute staffing cost, so their pricing tends to track capability instead of usage.",
+      },
+      {
+        q: "What is the best answering service for a small business?",
+        a: "The one that books work rather than collecting messages. For a small business the deciding factors are usually whether it can commit an appointment during the call, whether it handles several callers at once, and whether the bill stays predictable in a busy month. A service that only takes a name and number has moved the work rather than done it.",
+      },
+      {
+        q: "Is per-minute billing bad?",
+        a: "Not inherently, but understand what it does to your incentives. Under per-minute billing every extra call costs you more, which means a successful marketing month arrives with a larger invoice. Businesses with low, steady volume often do fine on it. Businesses that are growing, or that spike seasonally, tend not to.",
+      },
+      {
+        q: "What counts as a minute?",
+        a: "This varies by provider and it is worth asking directly. With several services, minutes include more than live talk time — hold time and the administrative work a receptionist does around your call can draw from the same allowance. A three-minute conversation is not always three minutes on the bill.",
+      },
+      {
+        q: "Should I use a human or an AI answering service?",
+        a: "Humans still handle genuine complexity and emotional situations better. AI handles volume, simultaneous calls, and out-of-hours coverage without a rota, and it does not have a worse day at 3am than at 3pm. Many businesses end up with a mix, and several providers now sell exactly that combination.",
+      },
+      {
+        q: "How long should I be locked in?",
+        a: "A long contract is a reasonable thing to walk away from, but it matters less than how quickly the service can be changed when your business changes. A provider that needs three weeks to update your pricing script is a liability during a busy season, regardless of the contract length.",
+      },
+    ],
+    body: [
+      {
+        type: "p",
+        text: "Most comparisons of answering services argue about the monthly price. That is the least useful number available, because it tells you almost nothing about what you will actually be charged or whether the service will do the job you need.",
+      },
+      {
+        type: "p",
+        text: "Two things matter more. How it is billed, and whether it can finish a call rather than pass it back to you.",
+      },
+      { type: "h2", text: "Why does per-minute billing catch people out?" },
+      {
+        type: "p",
+        text: "The established providers — Ruby, PATLive, AnswerConnect, Abby Connect and most of the traditional field — bill per minute against a monthly allowance, with an overage rate once you go past it. This is not hidden and it is not sinister. It is a direct consequence of paying people to sit and wait for your phone to ring.",
+      },
+      {
+        type: "p",
+        text: "But look at what it does to your incentives. Every additional call costs you more. Run a successful campaign and the invoice grows with the pipeline. Have your best month in two years and you are billed for it.",
+      },
+      {
+        type: "callout",
+        text: "Under per-minute billing, growth is a cost line. That is a strange property for a service whose entire purpose is to help you capture more work.",
+      },
+      {
+        type: "p",
+        text: "There is a second-order version of this worth asking about directly: what counts as a minute? With several providers, the allowance covers more than live talk time — hold time and the work done around your call can draw from the same pool. It is a reasonable policy, and it means a three-minute conversation is not necessarily three minutes on the bill.",
+      },
+      { type: "h2", text: "Does it book, or only take a message?" },
+      {
+        type: "p",
+        text: "This is the capability that decides whether the service is worth anything, and it is the one most comparisons skip.",
+      },
+      {
+        type: "p",
+        text: "A message is a task you still have to do. Somebody calls, the service takes a name and number, and now the job sits in your inbox waiting for you to call back. By the time you do, most callers have worked down the list and hired whoever picked up and solved the problem there and then.",
+      },
+      {
+        type: "p",
+        text: "A service that can see your calendar and commit a time during the call has actually removed the work. One that cannot has moved it, with a delay attached. When you are evaluating providers, this single question separates them more sharply than price does.",
+      },
+      { type: "h2", text: "What happens at your busiest hour?" },
+      {
+        type: "p",
+        text: "Ask about your peak, not your average. The calls you lose do not arrive evenly through the week — they cluster, usually at the worst possible moment, and a service staffed for your average will put the second and third callers on hold precisely when it matters most.",
+      },
+      {
+        type: "p",
+        text: "This is the structural advantage automated services have, and it is worth being clear-eyed about the trade. Software handles unlimited simultaneous calls without a rota; it is worse than a good human at genuine complexity and at reading distress. Which of those matters more depends entirely on what your callers ring about.",
+      },
+      { type: "h2", text: "What should you ask any provider?" },
+      {
+        type: "ul",
+        items: [
+          "How is it billed — per minute, per call, or flat? And what is the overage rate?",
+          "What counts as a minute? Does hold time or post-call admin draw from the allowance?",
+          "Can it book into my calendar during the call, or does it take a message?",
+          "What happens when three people call at once?",
+          "How does it know my service area, my pricing, and what counts as an emergency?",
+          "How quickly can the script be changed when my business changes?",
+        ],
+      },
+      {
+        type: "p",
+        text: "None of those are trick questions, and a good provider will answer all six straightforwardly. The ones that get evasive about billing mechanics are usually evasive for a reason.",
+      },
+      { type: "h2", text: "So which should you choose?" },
+      {
+        type: "p",
+        text: "If your call volume is low and steady and your callers mostly need a message passed on, a traditional service is perfectly reasonable and you should not overthink it.",
+      },
+      {
+        type: "p",
+        text: "If you are growing, if your volume spikes, if calls arrive outside business hours, or if the value of a booked job is high enough that a missed call genuinely hurts — then billing that punishes volume is working against you, and the ability to book during the call is worth more than any price difference between providers.",
+      },
+    ],
+  },
 ];
 
 export function getPost(slug: string): Post | undefined {
