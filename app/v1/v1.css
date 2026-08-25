@@ -130,3 +130,9 @@ body:has(.kx10) > a[href*="wa.me"],
 body:has(.kx10) > div:has(> a[href*="wa.me"]){display:none!important}
 body:has(.kx10){background:var(--ground);display:block}
 body:has(.kx10) > main{flex:none;margin:0;padding:0;max-width:none}
+
+/* Official brand lockup replaces the CSS-drawn mark. The kit is the source of
+   truth — see components/logo.tsx and github.com/blazerianone/kortex-brand. */
+.brand img{height:26px;width:auto;display:block}
+.site-footer .brand img{height:24px}
+.map-mark{width:30px;height:30px;margin:0 auto 4px;display:block}
