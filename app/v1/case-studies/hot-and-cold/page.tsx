@@ -304,10 +304,8 @@ export default function HotAndColdCaseStudy() {
           <div className="honesty-note">
             <span>INTERNAL — NOT FOR LAUNCH</span>
             <p>
-              Open against Hot &amp; Cold before this page ships: the go-live date; written
-              permission to name the company (quote permission confirmed 24 Aug — naming is a
-              separate confirmation); whether the QuickBooks two-way line is true of the build
-              rather than planned; the company&apos;s actual city (Bethesda is Kortex&apos;s
+              Open against Hot &amp; Cold before this page ships: the go-live date; whether the
+              QuickBooks two-way line is true of the build rather than planned; the company&apos;s actual city (Bethesda is Kortex&apos;s
               address, no source doc names Hot &amp; Cold&apos;s); and every elapsed-time figure
               for the build — weeks to the first working piece, hours of the owner&apos;s and
               office manager&apos;s time, how long the field crew took to get going, what data

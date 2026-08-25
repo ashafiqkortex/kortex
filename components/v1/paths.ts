@@ -2,17 +2,16 @@
 // without falling out into the old design. Anything already rebuilt gets its
 // /v1 path; anything not yet written points at a stub that says so.
 export const BUILT = new Set(["/", "/contact", "/blog", "/case-studies/hot-and-cold",
-  "/ai-receptionist", "/answer-engine-optimization", "/mep-contractors", "/construction-contractors"]);
+  "/ai-receptionist", "/answer-engine-optimization", "/mep-contractors", "/construction-contractors",
+  "/servicetitan-alternative", "/tools", "/tools/rent-vs-own"]);
 
 export const PLANNED: Record<string, string> = {
   "/operations-system": "The flagship offer page",
   "/operations-system/what-it-costs": "Cost, process, ownership and timeline",
   "/builders-and-general-contractors": "Builders and general contractors",
-  "/servicetitan-alternative": "Kortex alongside or instead of ServiceTitan",
   "/procore-alternative": "Kortex alongside or instead of Procore",
   "/field-service-software-quickbooks": "How the QuickBooks sync actually works",
   "/certified-payroll": "Certified payroll guides",
-  "/tools/rent-vs-own": "Rent vs own calculator",
   "/hvac-operations-software": "HVAC",
   "/electrical-contractor-software": "Electrical",
   "/plumbing-software": "Plumbing",

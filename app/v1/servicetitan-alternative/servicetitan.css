@@ -1,0 +1,254 @@
+/* Kortex — ServiceTitan alternative page. Design system supplies tokens, type,
+   buttons, .eyebrow / .section-index / .grid-overlay / .faq-grid / .v1-form.
+   Everything here is st- scoped. Bands alternate dark and paper; amber stays
+   scarce — one filled amber element per screenful. No hostile versus styling:
+   the two options get equal visual dignity throughout. */
+
+/* Placeholder marker — bracketed copy that still needs confirmation. */
+.ph{background:rgba(240,160,32,.13);border:1px dashed rgba(240,160,32,.55);padding:1px 6px;
+  font:500 .82em "IBM Plex Mono",monospace;letter-spacing:.02em;color:#a86e0a}
+.st-dark .ph{color:#f2b45c}
+
+/* ---- hero ---- */
+.st-hero{background:var(--ground);color:var(--text);position:relative;overflow:hidden;
+  padding:150px 7vw 84px}
+.st-hero>*:not(.grid-overlay){position:relative;z-index:2}
+.st-hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:6vw;align-items:center}
+.st-hero h1{font-size:clamp(44px,5vw,72px);line-height:1;letter-spacing:-.015em;margin:26px 0 0;max-width:17ch}
+.st-lede{font-size:19px;line-height:1.62;color:var(--muted);max-width:56ch;margin:24px 0 0}
+.st-hero .actions{margin-top:32px}
+.st-support{font-size:15px;line-height:1.6;color:#8a8985;max-width:54ch;margin:20px 0 0}
+.st-trust{list-style:none;display:flex;flex-wrap:wrap;gap:14px 26px;margin:30px 0 0;
+  padding:22px 0 0;border-top:1px solid var(--rules)}
+.st-trust li{display:flex;align-items:center;gap:9px;
+  font:500 11px "IBM Plex Mono",monospace;letter-spacing:.1em;color:#b9b7b1}
+.st-trust svg{width:14px;height:14px;color:var(--amber)}
+
+/* hero fork diagram: one workflow entering two paths, neither styled as the
+   winner — same border, same type, same weight. */
+.st-fork{border:1px solid var(--rules);background:var(--surface)}
+.st-fork-top{padding:16px 18px;border-bottom:1px solid var(--rules)}
+.st-fork-top span{display:block;font:500 9px "IBM Plex Mono",monospace;letter-spacing:.16em;
+  color:var(--amber);margin-bottom:8px}
+.st-fork-top p{margin:0;font-size:14.5px;line-height:1.55;color:var(--text)}
+.st-fork-paths{display:grid;grid-template-columns:1fr 1fr}
+.st-fork-path{padding:16px 18px}
+.st-fork-path:first-child{border-right:1px solid var(--rules)}
+.st-fork-path strong{display:block;font:600 13px "Oswald",system-ui,sans-serif;
+  letter-spacing:.05em;text-transform:uppercase;color:var(--text)}
+.st-fork-path ol{list-style:none;margin:12px 0 0;padding:0}
+.st-fork-path li{position:relative;padding:9px 0 9px 20px;font-size:13.5px;line-height:1.5;
+  color:var(--muted);border-bottom:1px dashed #3a3c40}
+.st-fork-path li:last-child{border-bottom:0}
+.st-fork-path li:before{content:"";position:absolute;left:0;top:14px;width:8px;height:8px;
+  border:1px solid #6d6e71}
+.st-fork-q{padding:13px 18px;border-top:1px solid var(--rules);
+  font:500 9px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#8a8985}
+
+/* ---- the decision ---- */
+.st-decision{background:var(--paper);color:var(--ink)}
+.st-decision .section-index{color:#6d6e71}
+.st-head h2{font-size:clamp(34px,4vw,54px);max-width:18ch;margin:0}
+.st-head>p{font-size:18px;line-height:1.65;color:#5c5c5b;max-width:62ch;margin:22px 0 0}
+.st-decision-grid{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:start;margin-top:56px}
+.st-decision-col p{font-size:17px;line-height:1.65;color:#5c5c5b;margin:0 0 20px;max-width:60ch}
+.st-decision-col p strong{color:var(--ink)}
+.st-decision-verdict{border-top:2px solid var(--amber);padding-top:20px;margin-top:8px}
+.st-decision-verdict p{font-size:17px;line-height:1.6;color:var(--ink);margin:0;font-weight:500}
+
+/* ---- comparison matrix ---- */
+.st-compare{background:var(--surface);color:var(--text)}
+.st-matrix{margin-top:56px;border-top:1px solid var(--rules)}
+.st-matrix-head{display:grid;grid-template-columns:.8fr 1.1fr 1.1fr;gap:24px;padding:14px 16px;
+  border-bottom:1px solid var(--rules);font:500 10px "IBM Plex Mono",monospace;
+  letter-spacing:.15em;color:#8a8985}
+.st-row{display:grid;grid-template-columns:.8fr 1.1fr 1.1fr;gap:24px;padding:20px 16px;
+  border-bottom:1px solid var(--rules)}
+.st-row:nth-child(odd){background:rgba(232,230,225,.03)}
+.st-row h3{font:600 16px "Oswald",system-ui,sans-serif;letter-spacing:.035em;
+  text-transform:uppercase;margin:0;color:var(--text)}
+.st-row p{margin:0;font-size:15.5px;line-height:1.6;color:var(--muted)}
+.st-cell-label{display:none;font:500 9px "IBM Plex Mono",monospace;letter-spacing:.14em;
+  color:#8a8985;margin-bottom:6px}
+.st-accuracy{display:grid;grid-template-columns:.35fr 1.65fr;gap:25px;align-items:start;
+  background:var(--ground);border-top:1px solid var(--rules);padding:22px 24px;margin-top:24px}
+.st-accuracy span{font:500 9px/1.6 "IBM Plex Mono",monospace;letter-spacing:.13em;color:var(--amber)}
+.st-accuracy p{margin:0;font-size:14px;line-height:1.62;color:var(--muted)}
+
+/* ---- better-fit twin panels ---- */
+.st-fit{background:var(--paper);color:var(--ink)}
+.st-fit .section-index{color:#6d6e71}
+.st-fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:56px}
+.st-panel{background:#d5d3cd;border:1px solid #c3c1bb;padding:30px;display:flex;flex-direction:column}
+.st-panel>span{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#8a5200}
+.st-panel h3{font-size:26px;margin:14px 0 0}
+.st-panel ul{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-direction:column}
+.st-panel li{display:flex;align-items:flex-start;gap:12px;padding:11px 0;
+  font-size:15px;line-height:1.55;color:#585957;border-bottom:1px dashed #b3b1ab}
+.st-panel li:last-child{border-bottom:0}
+.st-panel li svg{width:16px;min-width:16px;margin-top:3px;color:#9b5d00}
+.st-panel-close{margin:22px 0 0;padding-top:18px;border-top:1px solid #aaa8a2;
+  font-size:14.5px;line-height:1.6;color:#585957;font-style:italic}
+
+/* ---- keep both ---- */
+.st-both{background:var(--ground);color:var(--text)}
+.st-both-flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:2vw;align-items:stretch;
+  margin-top:56px}
+.st-both-node{border:1px solid var(--rules);background:var(--surface);padding:22px}
+.st-both-node span{display:block;font:500 9px "IBM Plex Mono",monospace;letter-spacing:.15em;
+  color:#8a8985;margin-bottom:10px}
+.st-both-node.mid span{color:var(--amber)}
+.st-both-node.mid{border-color:rgba(240,160,32,.4)}
+.st-both-node strong{font:600 17px "Oswald",system-ui,sans-serif;letter-spacing:.03em;
+  text-transform:uppercase;color:var(--text)}
+.st-both-node p{margin:8px 0 0;font-size:13.5px;line-height:1.55;color:var(--muted)}
+.st-both-flow>i{align-self:center;width:2.2vw;min-width:22px;height:1px;background:#66676a;position:relative}
+.st-both-flow>i:after{content:"";position:absolute;right:0;top:-3px;border-left:7px solid #66676a;
+  border-top:3px solid transparent;border-bottom:3px solid transparent}
+.st-both-list{margin-top:44px;display:grid;grid-template-columns:1fr 1fr;gap:0 5vw}
+.st-both-list li{display:flex;gap:12px;align-items:flex-start;padding:12px 0;
+  font-size:15.5px;line-height:1.55;color:var(--muted);border-bottom:1px solid var(--rules);list-style:none}
+.st-both-list svg{width:16px;min-width:16px;margin-top:4px;color:var(--amber)}
+.st-both-list{padding:0}
+.st-caution{display:grid;grid-template-columns:.35fr 1.65fr;gap:25px;align-items:start;
+  background:var(--surface);border-top:1px solid var(--rules);padding:22px 24px;margin-top:40px}
+.st-caution span{font:500 9px/1.6 "IBM Plex Mono",monospace;letter-spacing:.13em;color:var(--amber)}
+.st-caution p{margin:0;font-size:14px;line-height:1.62;color:var(--muted)}
+
+/* ---- full cost ---- */
+.st-cost{background:var(--paper);color:var(--ink)}
+.st-cost .section-index{color:#6d6e71}
+.st-cost-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:56px}
+.st-cost-col{border:1px solid #c3c1bb;background:#d5d3cd;padding:28px}
+.st-cost-col>span{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#8a5200}
+.st-cost-col ul{list-style:none;padding:0;margin:18px 0 0}
+.st-cost-col li{padding:10px 0;font-size:15px;line-height:1.55;color:#585957;
+  border-bottom:1px dashed #b3b1ab}
+.st-cost-col li:last-child{border-bottom:0}
+.st-effect{margin-top:44px;border-top:1px solid var(--ink)}
+.st-effect li{list-style:none;display:grid;grid-template-columns:30px 1fr;gap:16px;
+  padding:16px 12px;font-size:16.5px;line-height:1.55;color:var(--ink);border-bottom:1px solid #c2c0ba}
+.st-effect li b{font:500 9px "IBM Plex Mono",monospace;letter-spacing:.12em;color:#9a5b00;padding-top:5px}
+.st-effect{padding:0}
+.st-cost .actions{margin-top:38px}
+/* ghost button inherits the dark-ground text colour; on paper it needs ink */
+.st-cost .button.ghost{color:var(--ink);border-color:#a9a7a1}
+.st-cost .button.ghost:hover{border-color:var(--amber);color:#8a5200}
+
+/* ---- fit review centerpiece ---- */
+.st-review{background:var(--surface);color:var(--text)}
+.st-review-grid{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:start;margin-top:56px}
+.st-review-copy p{font-size:17px;line-height:1.65;color:var(--muted);margin:0 0 18px;max-width:56ch}
+.st-review-copy ul{list-style:none;padding:0;margin:26px 0 0;border-top:1px solid var(--rules)}
+.st-review-copy li{display:flex;gap:12px;align-items:flex-start;padding:12px 0;
+  font-size:15.5px;line-height:1.55;color:var(--muted);border-bottom:1px solid var(--rules)}
+.st-review-copy li svg{width:16px;min-width:16px;margin-top:4px;color:var(--amber)}
+.st-honest{margin:26px 0 0;font-size:17px;line-height:1.6;color:var(--text);font-weight:500}
+/* four outcomes — the design says Kortex will recommend any of them */
+.st-outcomes{border:1px solid var(--rules);background:var(--ground)}
+.st-outcomes>span{display:block;padding:14px 18px;border-bottom:1px solid var(--rules);
+  font:500 9px "IBM Plex Mono",monospace;letter-spacing:.16em;color:var(--amber)}
+.st-outcomes ol{list-style:none;margin:0;padding:6px 18px 12px;counter-reset:o}
+.st-outcomes li{counter-increment:o;position:relative;padding:15px 0 15px 40px;
+  border-bottom:1px dashed #3a3c40}
+.st-outcomes li:last-child{border-bottom:0}
+.st-outcomes li:before{content:"0" counter(o);position:absolute;left:0;top:16px;
+  font:600 11px "IBM Plex Mono",monospace;color:#8a8985}
+.st-outcomes strong{font:600 16px "Oswald",system-ui,sans-serif;letter-spacing:.03em;
+  text-transform:uppercase;color:var(--text)}
+.st-outcomes p{margin:5px 0 0;font-size:13.5px;line-height:1.55;color:var(--muted)}
+.st-review-cta{margin-top:36px;display:flex;flex-wrap:wrap;align-items:center;gap:22px}
+.st-reassure{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.13em;color:#8a8985}
+
+/* ---- FAQ (design system supplies .faq-grid on paper) ---- */
+.st-faq h2{font-size:clamp(34px,4vw,52px)}
+
+/* ---- final CTA + form ---- */
+.st-final{background:var(--ground);color:var(--text)}
+.st-final-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:6vw;align-items:start;margin-top:56px}
+.st-final-promise p{font-size:17px;line-height:1.65;color:var(--muted);margin:22px 0 0;max-width:50ch}
+.st-final-promise .direct-call{margin-top:28px;display:inline-block}
+/* The .v1-form base styles live in the contact page's stylesheet, not the
+   design system, so the pieces this form needs are declared here — scoped to
+   .st-form-wrap and adapted to the dark ground. */
+.st-form-wrap .v1-form{display:flex;flex-direction:column;gap:18px;padding:30px 32px;border:1px solid var(--rules)}
+.st-form-wrap .v1-form>div[data-step]{display:flex;flex-direction:column;gap:18px}
+.st-form-wrap .form-index{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.16em;color:#8a8985;margin:0}
+.st-form-wrap .v1-form label{display:flex;flex-direction:column;gap:8px;
+  font:500 11px "IBM Plex Mono",monospace;letter-spacing:.1em;text-transform:uppercase}
+.st-form-wrap .v1-form label em{font-style:normal;color:var(--amber)}
+.st-form-wrap .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.st-form-wrap .v1-form textarea{resize:vertical;min-height:96px}
+.st-form-wrap .v1-form ::placeholder{color:#6f7073}
+.st-form-wrap .v1-form .button{align-self:flex-start;margin-top:4px}
+.st-form-wrap .v1-form .button[disabled]{opacity:.6;cursor:progress}
+.st-form-wrap .form-error{margin:0;padding:13px 15px;background:rgba(168,73,42,.16);
+  border-left:3px solid #a8492a;font-size:14.5px;line-height:1.55;color:#e2a189}
+.st-form-wrap .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.st-form-wrap .form-sent{padding:52px 34px;text-align:center;border:1px solid var(--amber)}
+.st-form-wrap .form-sent-mark{display:inline-flex;width:46px;height:46px;align-items:center;
+  justify-content:center;border:1px solid var(--amber);color:var(--amber);margin-bottom:20px}
+.st-form-wrap .form-sent-mark svg{width:22px;height:22px}
+.st-form-wrap .form-sent h3{font:600 27px "Oswald",system-ui,sans-serif;text-transform:uppercase;
+  letter-spacing:.02em;margin:0}
+.st-form-wrap .form-sent p{margin:12px auto 0;max-width:44ch;font-size:16px;line-height:1.62}
+.st-form-wrap .form-note{font-size:13.5px;line-height:1.55}
+@media(max-width:900px){.st-form-wrap .form-row{grid-template-columns:1fr}
+  .st-form-wrap .v1-form{padding:24px 22px}
+  .st-form-wrap .v1-form .button{width:100%;justify-content:space-between}}
+
+/* form reuses .v1-form from the design system but sits on the dark ground */
+.st-form-wrap .v1-form{background:var(--surface);border-color:var(--rules)}
+.st-form-wrap .v1-form label{color:#b9b7b1}
+.st-form-wrap .v1-form input,.st-form-wrap .v1-form textarea,.st-form-wrap .v1-form select{
+  background:var(--ground);border-color:#3a3c40;color:var(--text);
+  font:400 16px/1.5 "Barlow",system-ui,sans-serif;padding:13px 14px;width:100%;
+  text-transform:none;letter-spacing:0}
+.st-form-wrap .v1-form input:focus-visible,.st-form-wrap .v1-form textarea:focus-visible,
+.st-form-wrap .v1-form select:focus-visible{outline:2px solid var(--amber);outline-offset:1px}
+.st-form-wrap .form-note{color:#8a8985}
+.st-form-wrap .form-note a{color:var(--amber);border-bottom:1px solid rgba(240,160,32,.4)}
+.st-form-wrap .form-sent{background:var(--surface);border-color:var(--amber)}
+.st-form-wrap .form-sent h3{color:var(--text)}
+.st-form-wrap .form-sent p{color:var(--muted)}
+.st-form-wrap .form-sent a{color:var(--amber);border-bottom:1px solid rgba(240,160,32,.4)}
+.st-step{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.16em;color:var(--amber);margin:0}
+.st-radio-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:2px}
+.st-radio-row label{flex-direction:row;align-items:center;gap:8px;border:1px solid #3a3c40;
+  padding:11px 14px;cursor:pointer;font:500 11px "IBM Plex Mono",monospace;letter-spacing:.08em}
+.st-radio-row input{width:auto;accent-color:var(--amber)}
+.st-radio-row label:has(input:checked){border-color:var(--amber);color:var(--text)}
+
+/* ---- responsive ---- */
+@media(max-width:1100px){
+  .st-hero-grid{grid-template-columns:1fr;gap:52px}
+  .st-fork{max-width:640px}
+}
+@media(max-width:900px){
+  .st-hero{padding:126px 22px 62px}
+  .st-decision-grid,.st-review-grid,.st-final-grid,.st-cost-grid,.st-fit-grid{grid-template-columns:1fr}
+  .st-decision-grid{gap:36px;margin-top:44px}
+  /* matrix rows become decision cards: label, then ServiceTitan, then Kortex */
+  .st-matrix-head{display:none}
+  .st-row{grid-template-columns:1fr;gap:12px;padding:22px 0}
+  .st-cell-label{display:block}
+  .st-row p{font-size:17px}
+  .st-accuracy,.st-caution{grid-template-columns:1fr;gap:12px}
+  .st-both-flow{grid-template-columns:1fr}
+  .st-both-flow>i{transform:rotate(90deg);justify-self:center;margin:6px 0}
+  .st-both-list{grid-template-columns:1fr}
+  .st-effect li{font-size:15.5px}
+  .st-review-cta{align-items:flex-start;flex-direction:column}
+  .st-final-grid{gap:44px}
+}
+@media(max-width:600px){
+  .st-hero .actions{width:100%}
+  .st-fork-paths{grid-template-columns:1fr}
+  .st-fork-path:first-child{border-right:0;border-bottom:1px solid var(--rules)}
+  .st-panel{padding:22px}
+  .st-both-node{padding:18px}
+  .st-radio-row{flex-direction:column;align-items:stretch}
+}
+@media(prefers-reduced-motion:reduce){
+  .st-row,.st-panel{transition:none}
+}
