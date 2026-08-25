@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Arrow } from "./icons";
+import { v1 } from "./paths";
 import { NAV, PHONE, PHONE_HREF, type NavGroup, type NavLink } from "./nav-data";
 
 const isGroup = (item: NavGroup | NavLink): item is NavGroup => "items" in item;
@@ -65,7 +66,7 @@ export function SiteHeader() {
 
   return (
     <header className="site-header" ref={navRef as React.RefObject<HTMLElement>} onBlurCapture={onBlurCapture}>
-      <Link className="brand" href="/" aria-label="Kortex">
+      <Link className="brand" href="/v1" aria-label="Kortex">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/brand/kortex-lockup-horizontal-field.svg" alt="Kortex" width={151} height={36} />
       </Link>
@@ -94,23 +95,23 @@ export function SiteHeader() {
                   <div className="dropdown-section" key={section.heading ?? i}>
                     {section.heading && <p>{section.heading}</p>}
                     {section.lead && (
-                      <Link className={section.lead.note && item.width ? "resource-lead" : "dropdown-lead"} href={section.lead.href}>
+                      <Link className={section.lead.note && item.width ? "resource-lead" : "dropdown-lead"} href={v1(section.lead.href)}>
                         <span>{section.lead.label}</span>
                         {section.lead.note && (item.width ? <small>{section.lead.note}</small> : <strong>{section.lead.note}</strong>)}
                       </Link>
                     )}
                     {section.nested && (
                       <div className="nested-links">
-                        {section.nested.map((l) => <Link key={l.href} href={l.href}>{l.label}</Link>)}
+                        {section.nested.map((l) => <Link key={l.href} href={v1(l.href)}>{l.label}</Link>)}
                       </div>
                     )}
-                    {section.links?.map((l) => <Link key={l.href} href={l.href}>{l.label}</Link>)}
+                    {section.links?.map((l) => <Link key={l.href} href={v1(l.href)}>{l.label}</Link>)}
                   </div>
                 ))}
               </div>
             </div>
           ) : (
-            <Link key={item.href} href={item.href}>{item.label}</Link>
+            <Link key={item.href} href={v1(item.href)}>{item.label}</Link>
           )
         )}
       </nav>
@@ -120,7 +121,7 @@ export function SiteHeader() {
           <span className="phone-full">{PHONE}</span>
           <span className="phone-mobile" aria-label="Call Kortex">☎</span>
         </a>
-        <Link className="nav-cta" href="/contact">Book a working session <Arrow /></Link>
+        <Link className="nav-cta" href={v1("/contact")}>Book a working session <Arrow /></Link>
       </div>
 
       <div className={`mobile-navigation${mobileOpen ? " is-open" : ""}`}>
@@ -143,19 +144,19 @@ export function SiteHeader() {
                         <div key={section.heading ?? i}>
                           {section.heading && <span>{section.heading}</span>}
                           {section.lead && (
-                            <Link className="mobile-lead" href={section.lead.href}>
+                            <Link className="mobile-lead" href={v1(section.lead.href)}>
                               {section.lead.label}{section.lead.note && <small>{section.lead.note}</small>}
                             </Link>
                           )}
-                          {section.nested?.map((l) => <Link key={l.href} href={l.href}>{l.label}</Link>)}
-                          {section.links?.map((l) => <Link key={l.href} href={l.href}>{l.label}</Link>)}
+                          {section.nested?.map((l) => <Link key={l.href} href={v1(l.href)}>{l.label}</Link>)}
+                          {section.links?.map((l) => <Link key={l.href} href={v1(l.href)}>{l.label}</Link>)}
                         </div>
                       ))}
                     </div>
                   )}
                 </div>
               ) : (
-                <Link key={item.href} href={item.href}>{item.label}</Link>
+                <Link key={item.href} href={v1(item.href)}>{item.label}</Link>
               )
             )}
           </div>

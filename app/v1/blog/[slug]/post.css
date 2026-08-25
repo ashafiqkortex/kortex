@@ -1,0 +1,77 @@
+/* Kortex — article. One column, generous measure. The answer-first takeaways
+   sit above the body because that is the block an answer engine quotes. */
+
+.post-hero{background:var(--ground);color:var(--text);position:relative;overflow:hidden;
+  padding:132px 4vw 66px}
+.post-back{display:inline-block;margin-bottom:26px;font:400 12px "IBM Plex Mono",monospace;
+  letter-spacing:.09em;color:#8a8985}
+.post-back:hover{color:var(--amber)}
+.post-hero h1{font:600 clamp(32px,4.4vw,56px)/1.06 "Oswald",system-ui,sans-serif;
+  text-transform:uppercase;letter-spacing:.01em;margin:22px 0 0;max-width:20ch}
+.post-meta{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:30px;
+  padding-top:22px;border-top:1px solid var(--rules);
+  font:400 12px "IBM Plex Mono",monospace;letter-spacing:.09em;color:#8a8985}
+.post-meta i{width:26px;height:1px;background:#4a4b4d}
+
+.post-takeaways{background:var(--amber);color:var(--ground);padding:44px 4vw}
+.post-takeaways .section-index{color:#5f3d05;margin:0 0 20px}
+.post-takeaways ul{max-width:82ch;display:grid;gap:12px}
+.post-takeaways li{position:relative;padding-left:26px;font-size:17px;line-height:1.55;font-weight:500}
+.post-takeaways li:before{content:"";position:absolute;left:0;top:11px;width:12px;height:2px;background:var(--ground)}
+
+.post-body{background:var(--paper);color:var(--ink)}
+.post-prose{max-width:74ch;margin:0 auto}
+.post-prose h2{font:600 clamp(24px,2.9vw,33px)/1.16 "Oswald",system-ui,sans-serif;
+  text-transform:uppercase;letter-spacing:.015em;margin:52px 0 16px}
+.post-prose h2:first-child{margin-top:0}
+.post-prose p{font-size:17.5px;line-height:1.7;color:#3f3f3d;margin:0 0 20px}
+.post-prose ul{margin:0 0 24px;display:grid;gap:11px}
+.post-prose li{position:relative;padding-left:24px;font-size:17px;line-height:1.62;color:#3f3f3d}
+.post-prose li:before{content:"";position:absolute;left:0;top:11px;width:11px;height:2px;background:var(--amber)}
+.post-prose blockquote{margin:32px 0;padding:4px 0 4px 26px;border-left:3px solid var(--amber)}
+.post-prose blockquote p{font-size:21px;line-height:1.5;font-style:italic;color:var(--ink);margin:0}
+.post-prose cite{display:block;margin-top:12px;font:400 12px "IBM Plex Mono",monospace;
+  letter-spacing:.09em;font-style:normal;color:#7d7a73}
+.post-callout{margin:34px 0;padding:24px 26px;background:var(--ground);color:var(--text)}
+.post-callout p{margin:0;font-size:16.5px;line-height:1.62;color:var(--muted)}
+.post-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:1px;background:#cfccc4;border:1px solid #cfccc4;margin:34px 0}
+.post-stats>div{background:#fbfaf7;padding:24px 22px}
+.post-stats strong{display:block;font:600 40px "Oswald",system-ui,sans-serif;color:var(--amber);line-height:1}
+.post-stats span{display:block;margin-top:9px;font:400 11px/1.5 "IBM Plex Mono",monospace;
+  letter-spacing:.1em;color:#6d6b66}
+.post-prose figure{margin:36px 0}
+.post-prose figure img{width:100%;height:auto;border:1px solid #cfccc4}
+.post-prose figcaption{margin-top:10px;font:400 12px "IBM Plex Mono",monospace;color:#7d7a73}
+
+.post-faq{background:#e2ded4;color:var(--ink)}
+.post-faq .section-index{color:#6d6e71}
+.post-faq h2{font:600 clamp(26px,3.2vw,38px)/1.12 "Oswald",system-ui,sans-serif;
+  text-transform:uppercase;letter-spacing:.015em;margin:0}
+
+.post-cta{background:var(--surface);color:var(--text);position:relative;overflow:hidden;
+  padding:82px 4vw;text-align:center}
+.post-cta h2{font:600 clamp(27px,3.4vw,42px)/1.1 "Oswald",system-ui,sans-serif;
+  text-transform:uppercase;letter-spacing:.015em;margin:0}
+.post-cta p{max-width:60ch;margin:18px auto 28px;font-size:17px;line-height:1.62;color:var(--muted)}
+.post-cta .button{margin:0 auto}
+.post-more{background:var(--paper);color:var(--ink)}
+.post-more .section-index{color:#6d6e71}
+.post-more .blog-grid{margin-top:26px}
+
+@media(max-width:900px){
+  .post-hero{padding:118px 22px 52px}
+  .post-takeaways{padding:34px 22px}
+  .post-cta{padding:62px 22px}
+}
+
+/* Inline markdown from lib/blog.ts */
+.prose-link{color:#8a5200;border-bottom:1px solid #d6bd97;transition:.15s}
+.prose-link:hover{color:#5f3d05;border-bottom-color:#8a5200}
+.prose-underline{text-decoration:underline;text-underline-offset:2px;text-decoration-color:var(--amber)}
+.post-prose strong{font-weight:600;color:var(--ink)}
+.post-prose em{font-style:italic}
+.post-prose code{font:500 .9em "IBM Plex Mono",monospace;background:#e2ded4;
+  border:1px solid #cfccc4;padding:2px 6px}
+.post-callout .prose-link{color:var(--amber);border-bottom-color:#7a5410}
+.post-callout strong{color:var(--text)}

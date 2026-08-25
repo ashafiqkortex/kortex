@@ -1,3 +1,4 @@
+import { v1 } from "./paths";
 import { Arrow, Check } from "./icons";
 
 const capabilities = [
@@ -97,8 +98,8 @@ export default function KortexHomeV10() {
     <section className="industries section-pad" id="industries">
       <div className="split-heading"><div><p className="section-index">INDUSTRIES</p><h2>Built for businesses where the real work happens in the field.</h2></div><p>Kortex works where the operation is complex, the handoffs are expensive and standard software stops fitting.</p></div>
       <div className="industry-grid">
-        <article className="industry-card"><div className="industry-top"><span>01</span><span>MEP CONTRACTORS</span></div><div className="industry-photo"><img src="/assets/mep-field.png" alt="Mechanical technician inspecting equipment in a commercial mechanical room"/><span>MEP / FIELD OPERATIONS</span></div><h3>Mechanical. Electrical. Plumbing.</h3><p>Operational systems for service work, projects, field crews, certified payroll and complex billing.</p><ul><li><Check/> Carry more service contracts</li><li><Check/> Connect field work to billing</li><li><Check/> Manage prevailing-wage complexity</li></ul><a href="/mep-contractors">See how Kortex works for MEP <Arrow/></a></article>
-        <article className="industry-card"><div className="industry-top"><span>02</span><span>CONSTRUCTION</span></div><div className="industry-photo no-image" role="presentation"><span>CONSTRUCTION / PROJECT DELIVERY</span></div><h3>Projects. Field. Financials.</h3><p>Custom systems connecting field documentation, approvals, change work, cost visibility and billing.</p><ul><li><Check/> See project risk sooner</li><li><Check/> Capture and approve change work</li><li><Check/> Protect project margins</li></ul><a href="/construction-contractors">See how Kortex works for construction <Arrow/></a></article>
+        <article className="industry-card"><div className="industry-top"><span>01</span><span>MEP CONTRACTORS</span></div><div className="industry-photo"><img src="/assets/mep-field.png" alt="Mechanical technician inspecting equipment in a commercial mechanical room"/><span>MEP / FIELD OPERATIONS</span></div><h3>Mechanical. Electrical. Plumbing.</h3><p>Operational systems for service work, projects, field crews, certified payroll and complex billing.</p><ul><li><Check/> Carry more service contracts</li><li><Check/> Connect field work to billing</li><li><Check/> Manage prevailing-wage complexity</li></ul><a href={v1("/mep-contractors")}>See how Kortex works for MEP <Arrow/></a></article>
+        <article className="industry-card"><div className="industry-top"><span>02</span><span>CONSTRUCTION</span></div><div className="industry-photo no-image" role="presentation"><span>CONSTRUCTION / PROJECT DELIVERY</span></div><h3>Projects. Field. Financials.</h3><p>Custom systems connecting field documentation, approvals, change work, cost visibility and billing.</p><ul><li><Check/> See project risk sooner</li><li><Check/> Capture and approve change work</li><li><Check/> Protect project margins</li></ul><a href={v1("/construction-contractors")}>See how Kortex works for construction <Arrow/></a></article>
       </div>
     </section>
 
@@ -156,7 +157,7 @@ export default function KortexHomeV10() {
         <div className="client-media"><div className="client-monogram">HC</div><span>CLIENT PHOTO OR VIDEO</span></div>
         <div className="client-quote"><span>THE OWNER&apos;S STANDARD</span><blockquote>“A successful business is one that anyone can run.”</blockquote><div className="client-person"><div><strong>CLIENT NAME</strong><p>COO · HOT &amp; COLD</p></div>{DRAFT_NOTES && <small>NAME + PHOTO TO BE APPROVED</small>}</div></div>
       </div>
-      <div className="testimonial-outcome"><span>WHAT THE SYSTEM PROTECTS</span><p>The operation can keep moving, improving and creating value beyond any one person&apos;s ownership of it.</p><a href="/case-studies/hot-and-cold">Read the Hot &amp; Cold story <Arrow/></a></div>
+      <div className="testimonial-outcome"><span>WHAT THE SYSTEM PROTECTS</span><p>The operation can keep moving, improving and creating value beyond any one person&apos;s ownership of it.</p><a href={v1("/case-studies/hot-and-cold")}>Read the Hot &amp; Cold story <Arrow/></a></div>
     </section>
 
     <section className="firm section-pad" id="firm">
@@ -178,6 +179,6 @@ export default function KortexHomeV10() {
       <div className="faq-grid">{faqs.map(([q,a],i)=><details key={q} {...(i===0 ? {open:true} : {})}><summary><span>0{i+1}</span>{q}<i/></summary><p>{a}</p></details>)}</div>
     </section>
 
-    <section className="contact" id="contact"><div className="grid-overlay"/><p className="eyebrow"><span/> START WITH ONE HIGH-IMPACT WORKFLOW</p><h2>Let’s improve one workflow first.</h2><p>Choose one workflow that is slowing the business down. We’ll map it, show what should change and define a first working piece—so you can see the impact before deciding what comes next.</p><div className="contact-actions"><a className="button" href="/contact">Choose the workflow <Arrow/></a><a className="direct-call" href="tel:+13018898546">Or call (301) 889-8546</a></div></section>
+    <section className="contact" id="contact"><div className="grid-overlay"/><p className="eyebrow"><span/> START WITH ONE HIGH-IMPACT WORKFLOW</p><h2>Let’s improve one workflow first.</h2><p>Choose one workflow that is slowing the business down. We’ll map it, show what should change and define a first working piece—so you can see the impact before deciding what comes next.</p><div className="contact-actions"><a className="button" href={v1("/contact")}>Choose the workflow <Arrow/></a><a className="direct-call" href="tel:+13018898546">Or call (301) 889-8546</a></div></section>
   </>;
 }

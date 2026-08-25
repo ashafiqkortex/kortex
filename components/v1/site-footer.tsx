@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { v1 } from "./paths";
 import { PHONE, PHONE_HREF, EMAIL } from "./nav-data";
 
 const COLUMNS = [
@@ -35,7 +36,7 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="footer-brand">
-        <Link className="brand" href="/" aria-label="Kortex">
+        <Link className="brand" href="/v1" aria-label="Kortex">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/brand/kortex-lockup-horizontal-field.svg" alt="Kortex" width={151} height={36} />
         </Link>
@@ -45,7 +46,7 @@ export function SiteFooter() {
       {COLUMNS.map((col) => (
         <div className="footer-column" key={col.title}>
           <strong>{col.title}</strong>
-          {col.links.map(([href, label]) => <Link key={href} href={href}>{label}</Link>)}
+          {col.links.map(([href, label]) => <Link key={href} href={v1(href)}>{label}</Link>)}
         </div>
       ))}
 

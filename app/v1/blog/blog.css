@@ -1,0 +1,59 @@
+/* Kortex — blog index. Cards, not a feed: an owner scans for the one that
+   names his problem. Shared by the "keep reading" block on post pages. */
+
+.blog-hero{background:var(--ground);color:var(--text);position:relative;overflow:hidden;
+  padding:150px 4vw 78px}
+.blog-hero h1{font:600 clamp(38px,5vw,62px)/1.03 "Oswald",system-ui,sans-serif;
+  text-transform:uppercase;letter-spacing:.01em;margin:26px 0 0;max-width:16ch}
+.blog-lede{font-size:18.5px;line-height:1.62;color:var(--muted);max-width:62ch;margin:22px 0 0}
+
+.blog-body{background:var(--paper);color:var(--ink)}
+
+.blog-lead-card{display:block;background:var(--ground);color:var(--text);
+  padding:44px 46px;border-left:3px solid var(--amber);transition:transform .2s ease}
+.blog-lead-card:hover{transform:translateY(-3px)}
+.blog-lead-card h2{font:600 clamp(27px,3.3vw,40px)/1.12 "Oswald",system-ui,sans-serif;
+  text-transform:uppercase;letter-spacing:.012em;margin:20px 0 0;max-width:22ch}
+.blog-lead-card>p{font-size:17px;line-height:1.62;color:var(--muted);max-width:64ch;margin:16px 0 0}
+.blog-lead-meta,.blog-card-meta{display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  font:400 11px "IBM Plex Mono",monospace;letter-spacing:.09em;color:#7f7e7a}
+.blog-read{display:inline-flex;align-items:center;gap:12px;margin-top:26px;
+  font:600 13px "Oswald",system-ui,sans-serif;letter-spacing:.055em;text-transform:uppercase;color:var(--amber)}
+.blog-read svg{width:18px;height:18px}
+
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));
+  gap:1px;background:#cfccc4;border:1px solid #cfccc4;margin-top:40px}
+.blog-card{background:var(--paper);padding:30px 30px 34px;display:flex;flex-direction:column;
+  gap:14px;transition:background .18s ease}
+.blog-card:hover{background:#fbfaf7}
+.blog-card h3{font:600 21px/1.22 "Oswald",system-ui,sans-serif;text-transform:uppercase;
+  letter-spacing:.015em;color:var(--ink);margin:0;max-width:26ch}
+.blog-card:hover h3{color:#754600}
+.blog-card p{font-size:15.5px;line-height:1.6;color:#5c5c5b;margin:0}
+.blog-card-meta{color:#8a877f}
+.blog-card-date{margin-top:auto;padding-top:8px;font:400 11px "IBM Plex Mono",monospace;
+  letter-spacing:.09em;color:#8a877f}
+.tag{border-color:#b9b5aa;color:#5c5c5b}
+.blog-lead-meta .tag{border-color:#4c4d4f;color:#b9b7b1}
+
+@media(max-width:900px){
+  .blog-hero{padding:126px 22px 60px}
+  .blog-lead-card{padding:28px 24px}
+  .blog-grid{grid-template-columns:1fr}
+}
+
+/* Category strip — on the index and on each category page. */
+.cat-nav{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px;padding-top:26px;border-top:1px solid var(--rules)}
+.cat-nav a{font:500 11px "IBM Plex Mono",monospace;letter-spacing:.11em;text-transform:uppercase;
+  border:1px solid var(--rules);padding:8px 13px;color:#a9a8a4;transition:.15s}
+.cat-nav a:hover{border-color:var(--amber);color:var(--amber)}
+.cat-nav a.is-current{border-color:var(--amber);background:var(--amber);color:var(--ground)}
+.blog-body .cat-nav{border-top-color:#cfccc4}
+.blog-body .cat-nav a{border-color:#cfccc4;color:#5c5c5b}
+.blog-body .cat-nav a:hover{border-color:#8a5200;color:#754600}
+.cat-back{margin-top:36px}
+.post-back{display:inline-block;margin-bottom:22px;font:400 12px "IBM Plex Mono",monospace;
+  letter-spacing:.09em;color:#8a8985}
+.post-back:hover{color:var(--amber)}
+a.tag{transition:.15s}
+a.tag:hover{border-color:var(--amber);color:var(--amber)}
