@@ -150,7 +150,7 @@ export default function HotAndColdCaseStudy() {
       <section className="cs-hero">
         <div className="grid-overlay" />
         <p className="eyebrow"><span /> CLIENT 001 · HOT &amp; COLD CORPORATION</p>
-        <h1>The whole office ran on <em>one spreadsheet anyone could edit.</em></h1>
+        <h1>The whole office ran on <em>one spreadsheet</em> anyone could edit.</h1>
         <p className="cs-lede">
           Hot &amp; Cold is a commercial mechanical contractor in Maryland — thirty people,
           service and projects side by side. Until last year the whole office ran on one

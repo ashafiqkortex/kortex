@@ -1,0 +1,153 @@
+/* Kortex — construction contractors page. Design system supplies tokens, type,
+   buttons, .section-pad, .section-index, .eyebrow, .grid-overlay, .split-heading.
+   Everything page-specific is prefixed conx-. */
+
+/* Placeholder / softened-claim marker — visible in review on both bands. */
+.ph{background:rgba(240,160,32,.13);box-shadow:inset 0 0 0 1px rgba(240,160,32,.4);padding:1px 5px;font-style:normal}
+
+/* ---- hero (dark) ---- */
+.conx-hero{background:var(--ground);color:var(--text);position:relative;overflow:hidden;padding:170px 7vw 0}
+.conx-hero-copy{position:relative;z-index:2;max-width:1050px}
+.conx-hero h1{max-width:1000px}
+.conx-lede{font-size:21px;line-height:1.5;max-width:700px;margin:36px 0 0;color:var(--text)}
+.conx-cta-note{font:400 12px "IBM Plex Mono",monospace;letter-spacing:.04em;color:#7c7b78;margin:20px 0 0}
+.conx-trust{position:relative;z-index:2;border-top:1px solid var(--rules);margin-top:70px;padding:22px 0 42px;
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap;font:400 10px "IBM Plex Mono",monospace;letter-spacing:.13em;color:#7e7f82}
+.conx-trust i{font-style:normal;color:#54555a}
+
+/* ---- shared ---- */
+.conx-takeaway{display:block;margin-top:48px;font:500 23px/1.42 "Barlow",system-ui,sans-serif;max-width:720px}
+
+/* ---- the margin leak (light) ---- */
+.conx-leak{background:var(--paper);color:var(--ink)}
+.conx-leak .section-index{color:#6d6e71}
+.conx-leak-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:6vw;align-items:start}
+.conx-leak-grid h2{max-width:14ch}
+.conx-leak-grid>div>p{font-size:18px;line-height:1.65;color:#5c5c5b;margin:0}
+.conx-leak-grid>div>p+p{margin-top:22px}
+.conx-breaks{list-style:none;margin:60px 0 0;padding:0;border-top:1px solid #cfccc4}
+.conx-breaks li{display:grid;grid-template-columns:54px 1fr;align-items:baseline;gap:0;
+  padding:15px 0;border-bottom:1px solid #cfccc4;font-size:16px;line-height:1.55;color:#494a47;max-width:860px}
+.conx-breaks li span{font:500 10px "IBM Plex Mono",monospace;color:#8a5200}
+.conx-leak .conx-takeaway{color:var(--ink)}
+
+/* ---- field event to financial action (dark) ---- */
+.conx-flow{background:var(--surface);color:var(--text)}
+.conx-flow .split-heading>p{color:var(--muted)}
+.conx-steps{list-style:none;margin:65px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);
+  border-top:1px solid var(--rules);border-bottom:1px solid var(--rules)}
+.conx-steps li{padding:26px 24px 36px;border-right:1px solid var(--rules)}
+.conx-steps li:last-child{border-right:0}
+.conx-steps li>span{font:500 10px "IBM Plex Mono",monospace;color:var(--amber)}
+.conx-steps h3{font-size:21px;letter-spacing:.015em;margin:42px 0 12px}
+.conx-steps p{font-size:14px;line-height:1.62;color:var(--muted);margin:0}
+.conx-flow .conx-takeaway{color:var(--text)}
+
+/* ---- module list (light) ---- */
+.conx-modules{background:var(--paper);color:var(--ink)}
+.conx-modules .section-index{color:#6d6e71}
+.conx-module-list{margin-top:65px;border-top:1px solid var(--ink)}
+.conx-module-list article{display:grid;grid-template-columns:1fr 1fr;gap:5vw;padding:32px 0 36px;border-bottom:1px solid #cfccc4}
+.conx-module-head{display:grid;grid-template-columns:54px 1fr;align-items:baseline}
+.conx-module-head span{font:500 10px "IBM Plex Mono",monospace;color:#8a5200}
+.conx-module-head h3{font-size:27px;line-height:1.12;letter-spacing:.01em;margin:0;max-width:20ch}
+.conx-module-list article>div>p{font-size:16px;line-height:1.62;color:#5c5c5b;margin:0}
+.conx-effect{margin-top:16px!important;color:#494a47!important}
+.conx-effect strong{display:block;font:500 9px "IBM Plex Mono",monospace;letter-spacing:.15em;color:#8a5200;margin-bottom:6px}
+.conx-modules .actions{margin-top:45px}
+
+/* ---- keep your stack (dark) ---- */
+.conx-stack{background:var(--ground);color:var(--text)}
+.conx-stack-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:7vw;align-items:start}
+.conx-stack-grid h2{margin-bottom:30px;max-width:16ch}
+.conx-stack-grid>div>p:not(.section-index){font-size:17px;line-height:1.65;color:var(--muted);margin:0 0 20px}
+.conx-keeps{list-style:none;margin:8px 0 0;padding:0;border-top:1px solid var(--rules)}
+.conx-keeps li{display:flex;align-items:baseline;gap:14px;padding:17px 0;border-bottom:1px solid var(--rules);
+  font-size:15.5px;line-height:1.55}
+.conx-keeps svg{flex:0 0 auto;width:17px;color:var(--amber);transform:translateY(2px)}
+.conx-verify{margin:24px 0 0;font:400 11px/1.7 "IBM Plex Mono",monospace;letter-spacing:.04em;color:#9a9a96}
+
+/* ---- pilot on real work (light) ---- */
+.conx-pilot{background:var(--paper);color:var(--ink)}
+.conx-pilot .section-index{color:#6d6e71}
+.conx-pilot-lede{font-size:17px;line-height:1.65;color:#5c5c5b;max-width:760px;margin:26px 0 0}
+.conx-pilot-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:6vw;margin-top:60px;align-items:start}
+.conx-pilot-steps{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.conx-pilot-steps li{display:grid;grid-template-columns:54px 1fr;padding:22px 0;border-bottom:1px solid #cfccc4}
+.conx-pilot-steps li>span{font:500 10px "IBM Plex Mono",monospace;color:#8a5200;padding-top:6px}
+.conx-pilot-steps h3{font-size:21px;letter-spacing:.015em;margin:0 0 8px}
+.conx-pilot-steps p{font-size:15px;line-height:1.6;color:#5c5c5b;margin:0;max-width:60ch}
+.conx-roles{background:#d5d3cd;border:1px solid #c3c1bb;padding:28px;display:flex;flex-direction:column}
+.conx-roles>strong{font:500 9px "IBM Plex Mono",monospace;letter-spacing:.16em;color:#8a5200}
+.conx-roles ul{list-style:none;margin:18px 0 26px;padding:0;display:flex;flex-direction:column}
+.conx-roles li{display:flex;align-items:baseline;gap:11px;padding:13px 0;border-bottom:1px dashed #b3b0a9;
+  font-size:14.5px;line-height:1.55;color:#44453f}
+.conx-roles li:last-child{border-bottom:0}
+.conx-roles svg{flex:0 0 auto;width:16px;color:#9b5d00;transform:translateY(2px)}
+.conx-roles .button{align-self:flex-start;margin-top:auto}
+
+/* ---- client work (dark) ---- */
+.conx-case{background:var(--surface);color:var(--text)}
+.conx-case-label{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  font:500 10px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#8e8f91;
+  border-bottom:1px solid var(--rules);padding-bottom:18px;margin-bottom:40px}
+.conx-case h2{max-width:19ch}
+.conx-honest{margin:28px 0 0;font-size:15px;line-height:1.7;max-width:78ch;color:var(--muted)}
+.conx-case-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:6vw;margin-top:55px;align-items:start}
+.conx-case-facts>div{border-top:1px solid var(--rules);padding:20px 0 26px}
+.conx-case-facts span{display:block;font:500 9px "IBM Plex Mono",monospace;letter-spacing:.15em;color:var(--amber);margin-bottom:10px}
+.conx-case-facts p{font-size:15.5px;line-height:1.68;color:#c6c4bf;margin:0}
+.conx-case-voice blockquote{margin:0;font:500 21px/1.5 "Barlow",system-ui,sans-serif;color:var(--text)}
+.conx-person{display:flex;align-items:center;gap:18px;margin:30px 0 34px}
+.conx-portrait{width:74px;height:74px;flex:0 0 auto;border:1px dashed #55565a;display:grid;place-items:center;
+  font:400 7px "IBM Plex Mono",monospace;text-align:center;color:#8e8f91}
+.conx-person strong{font:600 15px "Oswald",system-ui,sans-serif;letter-spacing:.05em;text-transform:uppercase}
+.conx-person p{margin:4px 0 0;font:400 10px "IBM Plex Mono",monospace;letter-spacing:.1em;color:#8e8f91}
+
+/* ---- fit (light) ---- */
+.conx-fit{background:var(--paper);color:var(--ink)}
+.conx-fit .section-index{color:#6d6e71}
+.conx-fit-list{list-style:none;margin:60px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;
+  border-top:1px solid var(--ink);border-left:1px solid #cfccc4}
+.conx-fit-list li{display:grid;grid-template-columns:44px 1fr;align-items:baseline;padding:20px 24px 24px 0;
+  border-bottom:1px solid #cfccc4;margin-left:24px;font-size:15.5px;line-height:1.55;color:#494a47}
+.conx-fit-list li span{font:500 10px "IBM Plex Mono",monospace;color:#8a5200}
+.conx-notfit{display:grid;grid-template-columns:.5fr 1.5fr;gap:25px;background:#d4d1ca;padding:24px 26px;margin-top:45px}
+.conx-notfit span{font:500 8px "IBM Plex Mono",monospace;letter-spacing:.12em;color:#915700}
+.conx-notfit p{font-size:14.5px;line-height:1.6;margin:0;color:#565653}
+
+/* ---- final CTA (dark) ---- */
+.conx-contact{background:var(--ground);color:var(--text);position:relative;overflow:hidden;padding:115px 7vw}
+.conx-contact-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:7vw;align-items:center}
+.conx-contact h2{font-size:clamp(42px,5vw,72px)}
+.conx-contact-grid>div>p:not(.eyebrow){font-size:18px;line-height:1.62;color:var(--muted);max-width:56ch;margin:26px 0 0}
+.conx-contact-actions{display:flex;align-items:center;gap:26px;flex-wrap:wrap;margin-top:38px}
+.conx-questions{background:var(--surface);border:1px solid var(--rules);padding:30px}
+.conx-questions>strong{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.16em;color:var(--amber)}
+.conx-questions ol{list-style:none;margin:16px 0 0;padding:0}
+.conx-questions li{display:grid;grid-template-columns:44px 1fr;align-items:baseline;padding:15px 0;
+  border-bottom:1px solid var(--rules);font-size:15px;line-height:1.55;color:#c6c4bf}
+.conx-questions li:last-child{border-bottom:0}
+.conx-questions li span{font:500 10px "IBM Plex Mono",monospace;color:var(--amber)}
+
+/* ---- responsive ---- */
+@media(max-width:1100px){
+  .conx-steps{grid-template-columns:repeat(3,1fr)}
+  .conx-steps li{border-bottom:1px solid var(--rules)}
+}
+@media(max-width:900px){
+  .conx-hero{padding:140px 22px 0}
+  .conx-leak-grid,.conx-stack-grid,.conx-pilot-grid,.conx-case-grid,.conx-contact-grid,.conx-module-list article{grid-template-columns:1fr;gap:34px}
+  .conx-leak-grid h2,.conx-stack-grid h2,.conx-case h2{max-width:none}
+  .conx-steps{grid-template-columns:1fr}
+  .conx-steps li{border-right:0;padding:22px 0 26px}
+  .conx-steps h3{margin-top:16px}
+  .conx-module-list article{padding:26px 0 30px}
+  .conx-module-head h3{max-width:none}
+  .conx-fit-list{grid-template-columns:1fr;border-left:0}
+  .conx-fit-list li{margin-left:0;padding-right:0}
+  .conx-notfit{grid-template-columns:1fr;gap:12px}
+  .conx-takeaway{font-size:20px}
+  .conx-contact{padding:90px 22px}
+  .conx-contact-actions{align-items:flex-start;flex-direction:column}
+}
