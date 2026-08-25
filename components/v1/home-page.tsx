@@ -1,5 +1,4 @@
-const Arrow = () => <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M3 10h13M11 5l5 5-5 5" /></svg>;
-const Check = () => <svg aria-hidden="true" viewBox="0 0 20 20"><path d="m3.5 10.5 4 4 9-9" /></svg>;
+import { Arrow, Check } from "./icons";
 
 const capabilities = [
   ["01", "Field operations", "Job tickets, documentation, time capture and live field updates."],
@@ -57,30 +56,7 @@ const faqs = [
 ];
 
 export default function KortexHomeV10() {
-  return <main className="kx10">
-    <header className="site-header">
-      <a className="brand" href="/" aria-label="Kortex"><img src="/brand/kortex-lockup-horizontal-field.svg" alt="Kortex" width={151} height={36}/></a>
-      <nav className="main-nav" aria-label="Primary navigation">
-        <details className="nav-menu services-menu"><summary>Services <span>⌄</span></summary><div className="dropdown services-dropdown">
-          <a className="dropdown-lead" href="/operations-system"><span>OPERATIONS SYSTEM</span><strong>The full build. Field to invoice, and you own it.</strong></a>
-          <div className="nested-links"><a href="/operations-system/what-it-costs">What it costs</a><a href="/mep-contractors">Built for MEP contractors</a></div>
-          <p>ALSO</p><a href="/ai-receptionist">AI Receptionist</a><a href="/answer-engine-optimization">AI Search Visibility</a>
-          <p>COMPARE</p><a href="/servicetitan-alternative">Kortex vs ServiceTitan</a><a href="/procore-alternative">Kortex vs Procore</a><a href="/field-service-software-quickbooks">Works with QuickBooks</a>
-        </div></details>
-        <details className="nav-menu"><summary>Who it&apos;s for <span>⌄</span></summary><div className="dropdown audience-dropdown"><a href="/mep-contractors">Mechanical, electrical and plumbing</a><a href="/construction-contractors">Self-performing trades</a><a href="/builders-and-general-contractors">Builders and general contractors</a></div></details>
-        <a href="/case-studies/hot-and-cold">Our work</a>
-        <details className="nav-menu"><summary>Resources <span>⌄</span></summary><div className="dropdown resource-dropdown"><a className="resource-lead" href="/tools/rent-vs-own"><span>Rent vs own calculator</span><small>Compare the cost with your own numbers.</small></a><a href="/certified-payroll">Certified payroll guides</a><a href="/blog">Blog</a></div></details>
-        <a href="/about">About</a>
-      </nav>
-      <div className="header-contact"><a className="phone-link" href="tel:+13018898546"><span className="phone-full">(301) 889-8546</span><span className="phone-mobile" aria-label="Call Kortex">☎</span></a><a className="nav-cta" href="/contact">Book a working session <Arrow/></a></div>
-      <details className="mobile-navigation"><summary>MENU</summary><div className="mobile-panel">
-        <details><summary>Services</summary><div><a className="mobile-lead" href="/operations-system">Operations System<small>The full build. Field to invoice, and you own it.</small></a><a href="/operations-system/what-it-costs">What it costs</a><a href="/mep-contractors">Built for MEP contractors</a><span>ALSO</span><a href="/ai-receptionist">AI Receptionist</a><a href="/answer-engine-optimization">AI Search Visibility</a><span>COMPARE</span><a href="/servicetitan-alternative">Kortex vs ServiceTitan</a><a href="/procore-alternative">Kortex vs Procore</a><a href="/field-service-software-quickbooks">Works with QuickBooks</a></div></details>
-        <details><summary>Who it&apos;s for</summary><div><a href="/mep-contractors">Mechanical, electrical and plumbing</a><a href="/construction-contractors">Self-performing trades</a><a href="/builders-and-general-contractors">Builders and general contractors</a></div></details>
-        <a href="/case-studies/hot-and-cold">Our work</a>
-        <details><summary>Resources</summary><div><a href="/tools/rent-vs-own">Rent vs own calculator</a><a href="/certified-payroll">Certified payroll guides</a><a href="/blog">Blog</a></div></details>
-        <a href="/about">About</a>
-      </div></details>
-    </header>
+  return <>
 
     <section className="hero" id="top">
       <div className="grid-overlay"/>
@@ -203,14 +179,5 @@ export default function KortexHomeV10() {
     </section>
 
     <section className="contact" id="contact"><div className="grid-overlay"/><p className="eyebrow"><span/> START WITH ONE HIGH-IMPACT WORKFLOW</p><h2>Let’s improve one workflow first.</h2><p>Choose one workflow that is slowing the business down. We’ll map it, show what should change and define a first working piece—so you can see the impact before deciding what comes next.</p><div className="contact-actions"><a className="button" href="/contact">Choose the workflow <Arrow/></a><a className="direct-call" href="tel:+13018898546">Or call (301) 889-8546</a></div></section>
-    <footer className="site-footer">
-      <div className="footer-brand"><a className="brand" href="/" aria-label="Kortex"><img src="/brand/kortex-lockup-horizontal-field.svg" alt="Kortex" width={151} height={36}/></a><p>Operational systems for MEP and construction companies.</p></div>
-      <div className="footer-column"><strong>WHAT WE BUILD</strong><a href="/operations-system">Operations System</a><a href="/operations-system/what-it-costs">What it costs</a><a href="/ai-receptionist">AI Receptionist</a><a href="/answer-engine-optimization">AI Search Visibility</a></div>
-      <div className="footer-column"><strong>BY TRADE</strong><a href="/mep-contractors">MEP contractors</a><a href="/hvac-operations-software">HVAC</a><a href="/electrical-contractor-software">Electrical</a><a href="/plumbing-software">Plumbing</a><a href="/construction-contractors">Self-performing trades</a><a href="/builders-and-general-contractors">Builders and GCs</a></div>
-      <div className="footer-column"><strong>COMPARE</strong><a href="/servicetitan-alternative">vs ServiceTitan</a><a href="/procore-alternative">vs Procore</a><a href="/field-service-software-quickbooks">Works with QuickBooks</a><a href="/when-off-the-shelf-is-better">When off-the-shelf is better</a></div>
-      <div className="footer-column"><strong>RESOURCES</strong><a href="/certified-payroll">Certified payroll</a><a href="/tools/rent-vs-own">Rent vs own calculator</a><a href="/case-studies/hot-and-cold">Our work</a><a href="/about">About</a><a href="/contact">Contact</a><a href="/blog">Blog</a></div>
-      <div className="footer-trust"><strong>CONTACT KORTEX</strong><a href="tel:+13018898546">(301) 889-8546</a><address>6604 Millwood Rd<br/>Bethesda, MD 20817</address><a href="mailto:hello@kortexconsulting.com">hello@kortexconsulting.com</a><div><a href="#">LinkedIn</a><a href="#">Google Business Profile</a></div></div>
-      <span className="copyright">© 2026 KORTEX</span>
-    </footer>
-  </main>;
+  </>;
 }
