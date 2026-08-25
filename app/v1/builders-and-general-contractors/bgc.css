@@ -1,0 +1,232 @@
+/* Kortex — builders and general contractors page. Design system supplies
+   tokens, type, buttons, .section-pad, .section-index, .eyebrow, .grid-overlay,
+   .split-heading, .faq-grid. Everything page-specific is prefixed bgc-. */
+
+/* Placeholder / softened-claim marker — visible in review on both bands. */
+.ph{background:rgba(240,160,32,.13);box-shadow:inset 0 0 0 1px rgba(240,160,32,.4);padding:1px 5px;font-style:normal}
+
+/* ---- hero (dark, 7/5 split) ---- */
+.bgc-hero{background:var(--ground);color:var(--text);position:relative;overflow:hidden;padding:170px 7vw 0}
+.bgc-hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:7fr 5fr;gap:6vw;align-items:center}
+.bgc-hero h1{font-size:clamp(48px,5.5vw,76px);max-width:15ch}
+.bgc-lede{font-size:21px;line-height:1.55;max-width:640px;margin:34px 0 0;color:var(--text)}
+.bgc-cta-note{font:400 12px "IBM Plex Mono",monospace;letter-spacing:.04em;color:#7c7b78;margin:20px 0 0}
+.bgc-trust{position:relative;z-index:2;border-top:1px solid var(--rules);margin-top:64px;padding:22px 0 42px;
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap;font:400 10px "IBM Plex Mono",monospace;letter-spacing:.13em;color:#7e7f82}
+.bgc-trust i{font-style:normal;color:#54555a}
+
+/* Three active projects feeding one company-standard view.
+   Explanatory interface concept, not a product screenshot. */
+.bgc-hero-visual{display:flex;flex-direction:column;align-items:stretch}
+.bgc-hero-projects{display:flex;flex-direction:column;gap:10px}
+.bgc-proj{border:1px solid var(--rules);background:var(--surface);padding:13px 16px}
+.bgc-proj-head{display:flex;justify-content:space-between;gap:14px;
+  font:500 9px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#8e8f91;margin-bottom:9px}
+.bgc-proj p{margin:0;display:flex;align-items:baseline;gap:9px;font-size:13.5px;line-height:1.45;color:#c6c4bf}
+.bgc-proj p i{flex:0 0 auto;width:7px;height:7px;border-radius:50%;background:var(--amber);transform:translateY(-1px)}
+.bgc-feed{width:1px;height:26px;background:var(--rules);margin:0 auto;position:relative}
+.bgc-feed:after{content:"";position:absolute;left:-3px;bottom:0;border-left:3.5px solid transparent;
+  border-right:3.5px solid transparent;border-top:5px solid #54555a}
+.bgc-standard{border:1px solid #4a4c50;background:#191a1c;padding:17px 18px}
+.bgc-standard>span{font:500 9px "IBM Plex Mono",monospace;letter-spacing:.15em;color:var(--amber)}
+.bgc-standard ul{list-style:none;margin:13px 0 0;padding:0}
+.bgc-standard li{display:flex;align-items:baseline;gap:12px;padding:9px 0;border-top:1px solid #2c2d31;
+  font-size:13px;line-height:1.45;color:#b9b7b1}
+.bgc-standard li b{flex:0 0 auto;font:500 10px "IBM Plex Mono",monospace;color:#8e8f91}
+
+/* ---- shared ---- */
+.bgc-takeaway{display:block;margin-top:48px;font:500 23px/1.42 "Barlow",system-ui,sans-serif;max-width:720px}
+
+/* ---- 01 problem (light, copy + visual) ---- */
+.bgc-problem{background:var(--paper);color:var(--ink)}
+.bgc-problem .section-index{color:#6d6e71}
+.bgc-problem-grid{display:grid;grid-template-columns:5fr 7fr;gap:6vw;align-items:start}
+/* Copy sits first in the DOM (mobile reads copy before visuals); on desktop
+   the visual takes the 5-column left slot per the section build map. */
+.bgc-problem-visual{order:-1}
+.bgc-problem-copy h2{max-width:22ch;margin-bottom:30px}
+.bgc-problem-copy>p{font-size:18px;line-height:1.65;color:#5c5c5b;margin:0}
+.bgc-problem-copy>p+p{margin-top:22px}
+.bgc-problem-list{list-style:none;margin:40px 0 0;padding:0;border-top:1px solid #cfccc4}
+.bgc-problem-list li{display:grid;grid-template-columns:54px 1fr;align-items:baseline;
+  padding:15px 0;border-bottom:1px solid #cfccc4;font-size:16px;line-height:1.55;color:#494a47}
+.bgc-problem-list li span{font:500 10px "IBM Plex Mono",monospace;color:#8a5200}
+.bgc-problem .bgc-takeaway{color:var(--ink)}
+
+/* Project A spreadsheet, Project B inbox, Project C personal tracker —
+   three formats converging on one office. Inconsistency, not carelessness. */
+.bgc-problem-visual{display:flex;flex-direction:column;gap:12px;position:sticky;top:110px}
+.bgc-tracker{border:1px solid #c3c1bb;background:#dedbd4;padding:15px 18px;position:relative}
+.bgc-tracker:after{content:"";position:absolute;left:50%;bottom:-13px;width:1px;height:13px;background:#b3b0a9}
+.bgc-tracker>span{font:500 9px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#8a5200}
+.bgc-tracker p{margin:8px 0 0;font-size:14.5px;line-height:1.5;color:#494a47}
+.bgc-tracker p b{font-weight:600;color:var(--ink)}
+.bgc-office{border:1px solid var(--ink);background:#d3d0c8;padding:17px 18px;margin-top:6px}
+.bgc-office>span{font:500 9px "IBM Plex Mono",monospace;letter-spacing:.15em;color:#565653}
+.bgc-office p{margin:8px 0 0;font-size:14.5px;line-height:1.5;color:#44453f}
+
+/* ---- 02 connected workflow (dark, full width) ---- */
+.bgc-flow{background:var(--surface);color:var(--text)}
+.bgc-flow .split-heading>p{color:var(--muted)}
+.bgc-steps{list-style:none;margin:65px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);
+  border-top:1px solid var(--rules);border-bottom:1px solid var(--rules)}
+.bgc-steps li{display:flex;flex-direction:column;padding:26px 24px 30px;border-right:1px solid var(--rules)}
+.bgc-steps li:last-child{border-right:0}
+.bgc-steps li>span{font:500 10px "IBM Plex Mono",monospace;color:var(--amber)}
+.bgc-steps h3{font-size:20px;letter-spacing:.015em;margin:38px 0 12px}
+.bgc-steps p{font-size:14px;line-height:1.62;color:var(--muted);margin:0 0 22px}
+.bgc-step-meta{margin-top:auto;display:flex;flex-direction:column;gap:9px;border-top:1px solid var(--rules);padding-top:14px}
+.bgc-step-meta small{font:400 9.5px/1.5 "IBM Plex Mono",monospace;letter-spacing:.08em;color:#8e8f91}
+.bgc-step-meta small b{display:block;font-weight:500;letter-spacing:.15em;color:#6d6e71;margin-bottom:2px}
+.bgc-flow .bgc-takeaway{color:var(--text)}
+
+/* ---- 03 starting points (light, readiness featured at double weight) ---- */
+.bgc-starts{background:var(--paper);color:var(--ink)}
+.bgc-starts .section-index{color:#6d6e71}
+.bgc-starts-grid{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:auto auto;gap:22px;margin-top:60px}
+.bgc-featured{grid-row:1/3;border:1px solid var(--ink);background:#dedbd4;padding:34px;
+  display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+.bgc-featured h3{font-size:27px;line-height:1.12;letter-spacing:.01em;margin:0 0 16px}
+.bgc-featured>div>p{font-size:16px;line-height:1.62;color:#5c5c5b;margin:0}
+.bgc-support{border:1px solid #c3c1bb;background:#dedbd4;padding:26px}
+.bgc-support h3{font-size:20px;line-height:1.18;letter-spacing:.015em;margin:0 0 12px}
+.bgc-support p{font-size:15px;line-height:1.6;color:#5c5c5b;margin:0}
+.bgc-effect{margin-top:16px!important;color:#494a47!important}
+.bgc-effect strong{display:block;font:500 9px "IBM Plex Mono",monospace;letter-spacing:.15em;color:#8a5200;margin-bottom:6px}
+.bgc-starts-note{font-size:17px;line-height:1.65;color:#5c5c5b;max-width:760px;margin:45px 0 0}
+.bgc-starts .actions{margin-top:38px}
+
+/* Annotated readiness fragment — generic example values only. */
+.bgc-fragment{border:1px solid #b3b0a9;background:var(--paper)}
+.bgc-fragment-tag{display:block;font:500 8px "IBM Plex Mono",monospace;letter-spacing:.15em;color:#8a877f;
+  padding:11px 16px;border-bottom:1px solid #cfccc4}
+.bgc-fragment ul{list-style:none;margin:0;padding:4px 16px 10px}
+.bgc-fragment li{display:grid;grid-template-columns:130px 1fr;gap:12px;align-items:baseline;
+  padding:8px 0;border-bottom:1px dashed #cfccc4}
+.bgc-fragment li:last-child{border-bottom:0}
+.bgc-fragment li>span{font:500 8.5px "IBM Plex Mono",monospace;letter-spacing:.1em;color:#8a877f}
+.bgc-fragment li p{margin:0;font-size:13.5px;line-height:1.45;color:#44453f;display:flex;align-items:baseline;gap:8px}
+.bgc-fragment li.is-open p{color:#7d4a00;font-weight:600}
+.bgc-fragment li p i{flex:0 0 auto;width:7px;height:7px;border-radius:50%;background:var(--amber);transform:translateY(-1px)}
+
+/* ---- 04 existing systems (dark, keep / fix) ---- */
+.bgc-systems{background:var(--ground);color:var(--text)}
+.bgc-systems-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:7vw;align-items:start}
+.bgc-systems-grid h2{margin-bottom:30px;max-width:16ch}
+.bgc-systems-grid>div>p:not(.section-index):not(.bgc-verify){font-size:17px;line-height:1.65;color:var(--muted);margin:0 0 20px}
+.bgc-verify{margin:24px 0 0;font:400 11px/1.7 "IBM Plex Mono",monospace;letter-spacing:.04em;color:#9a9a96}
+.bgc-keepfix{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--rules)}
+.bgc-keepfix>div{padding:24px}
+.bgc-keepfix>div:first-child{border-right:1px solid var(--rules)}
+.bgc-keepfix strong{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.16em;color:var(--amber)}
+.bgc-keepfix>div:first-child strong{color:#8e8f91}
+.bgc-keepfix ul{list-style:none;margin:14px 0 0;padding:0}
+.bgc-keepfix li{display:flex;align-items:baseline;gap:12px;padding:14px 0;border-bottom:1px solid #2c2d31;
+  font-size:14.5px;line-height:1.5;color:#c6c4bf}
+.bgc-keepfix li:last-child{border-bottom:0}
+.bgc-keepfix svg{flex:0 0 auto;width:15px;transform:translateY(2px);color:#6d6e71}
+.bgc-keepfix>div:last-child svg{color:var(--amber)}
+
+/* ---- 05 one-live-project centerpiece: cream panel on a dark band ---- */
+.bgc-pilot{background:var(--surface);color:var(--text)}
+.bgc-pilot-panel{border-top:3px solid var(--amber);background:var(--paper);color:var(--ink);
+  padding:52px 6vw 46px;text-align:center;max-width:900px;margin:20px auto 0}
+.bgc-pilot-panel h2{max-width:17ch;margin:0 auto}
+.bgc-pilot-panel>p:first-of-type{font-size:18px;line-height:1.62;color:#5c5c5b;max-width:62ch;margin:24px auto 0}
+.bgc-pilot-panel ol{list-style:none;margin:38px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);
+  border-top:1px solid #b3b0a9;text-align:left}
+.bgc-pilot-panel ol li{padding:20px 22px 24px 0;border-right:1px solid #b3b0a9;margin-left:22px;
+  font-size:15px;line-height:1.55;color:#44453f}
+.bgc-pilot-panel ol li:first-child{margin-left:0}
+.bgc-pilot-panel ol li:last-child{border-right:0;padding-right:0}
+.bgc-pilot-panel ol li span{display:block;font:500 10px "IBM Plex Mono",monospace;color:#8a5200;margin-bottom:10px}
+.bgc-pilot-panel .actions{justify-content:center;margin-top:40px}
+.bgc-reassure{margin:26px 0 0;font:500 10px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#8a877f}
+.bgc-reassure i{font-style:normal;color:#b3b0a9;margin:0 6px}
+
+/* ---- 06 FAQ (light; base styles from the design system) ---- */
+.bgc-faq h2{max-width:20ch}
+
+/* ---- 07 final CTA + form (dark) ---- */
+.bgc-final{background:var(--ground);color:var(--text);position:relative;overflow:hidden}
+.bgc-final-head{position:relative;z-index:2}
+.bgc-final-head h2{max-width:18ch}
+.bgc-final-grid{position:relative;z-index:2;display:grid;grid-template-columns:.9fr 1.1fr;gap:6vw;align-items:start;margin-top:56px}
+.bgc-final-promise p{font-size:17px;line-height:1.65;color:var(--muted);margin:0 0 22px;max-width:50ch}
+.bgc-final-promise .direct-call{margin-top:6px;display:inline-block}
+.bgc-related{margin-top:40px!important;font-size:15px!important}
+.bgc-related .inline-link{display:inline-flex;font-size:13px}
+
+/* The .v1-form base styles live in the contact page's stylesheet, not the
+   design system, so the pieces this form needs are declared here — scoped to
+   .bgc-form-wrap and adapted to the dark ground. */
+.bgc-form-wrap .v1-form{display:flex;flex-direction:column;gap:18px;padding:30px 32px;
+  border:1px solid var(--rules);background:var(--surface)}
+.bgc-form-wrap .v1-form>div[data-step]{display:flex;flex-direction:column;gap:18px}
+.bgc-form-wrap .form-index{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.16em;color:#8a8985;margin:0}
+.bgc-form-wrap .v1-form label{display:flex;flex-direction:column;gap:8px;color:#b9b7b1;
+  font:500 11px "IBM Plex Mono",monospace;letter-spacing:.1em;text-transform:uppercase}
+.bgc-form-wrap .v1-form label em{font-style:normal;color:var(--amber)}
+.bgc-form-wrap .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.bgc-form-wrap .v1-form input,.bgc-form-wrap .v1-form textarea{
+  background:var(--ground);border:1px solid #3a3c40;color:var(--text);
+  font:400 16px/1.5 "Barlow",system-ui,sans-serif;padding:13px 14px;width:100%;
+  text-transform:none;letter-spacing:0}
+.bgc-form-wrap .v1-form input:focus-visible,.bgc-form-wrap .v1-form textarea:focus-visible{
+  outline:2px solid var(--amber);outline-offset:1px}
+.bgc-form-wrap .v1-form textarea{resize:vertical;min-height:76px}
+.bgc-form-wrap .v1-form ::placeholder{color:#6f7073}
+.bgc-form-wrap .v1-form .button{align-self:flex-start;margin-top:4px}
+.bgc-form-wrap .v1-form .button[disabled]{opacity:.6;cursor:progress}
+.bgc-form-wrap .form-error{margin:0;padding:13px 15px;background:rgba(168,73,42,.16);
+  border-left:3px solid #a8492a;font-size:14.5px;line-height:1.55;color:#e2a189}
+.bgc-form-wrap .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.bgc-form-wrap .form-sent{padding:52px 34px;text-align:center;border:1px solid var(--amber);
+  background:var(--surface)}
+.bgc-form-wrap .form-sent-mark{display:inline-flex;width:46px;height:46px;align-items:center;
+  justify-content:center;border:1px solid var(--amber);color:var(--amber);margin-bottom:20px}
+.bgc-form-wrap .form-sent-mark svg{width:22px;height:22px}
+.bgc-form-wrap .form-sent h3{font:600 27px "Oswald",system-ui,sans-serif;text-transform:uppercase;
+  letter-spacing:.02em;margin:0;color:var(--text)}
+.bgc-form-wrap .form-sent p{margin:12px auto 0;max-width:44ch;font-size:16px;line-height:1.62;
+  color:var(--muted)}
+.bgc-form-wrap .form-sent a{color:var(--amber);border-bottom:1px solid rgba(240,160,32,.4)}
+.bgc-form-wrap .form-note{font-size:13.5px;line-height:1.55;color:#8a8985}
+.bgc-form-wrap .form-note a{color:var(--amber);border-bottom:1px solid rgba(240,160,32,.4)}
+.bgc-step{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.16em;color:var(--amber);margin:0}
+
+/* ---- responsive ---- */
+@media(max-width:1100px){
+  .bgc-steps{grid-template-columns:repeat(3,1fr)}
+  .bgc-steps li{border-bottom:1px solid var(--rules)}
+  .bgc-starts-grid{grid-template-columns:1fr}
+  .bgc-featured{grid-row:auto}
+}
+@media(max-width:900px){
+  .bgc-hero{padding:140px 22px 0}
+  .bgc-hero-grid,.bgc-problem-grid,.bgc-systems-grid,.bgc-final-grid,.bgc-featured{grid-template-columns:1fr;gap:34px}
+  .bgc-hero h1{max-width:none}
+  .bgc-hero-visual{max-width:520px}
+  .bgc-problem-visual{position:static;order:0}
+  .bgc-problem-copy h2,.bgc-systems-grid h2{max-width:none}
+  .bgc-steps{grid-template-columns:1fr}
+  .bgc-steps li{border-right:0;padding:22px 0 26px}
+  .bgc-steps h3{margin-top:14px}
+  .bgc-featured{padding:26px}
+  .bgc-fragment li{grid-template-columns:112px 1fr}
+  .bgc-keepfix{grid-template-columns:1fr}
+  .bgc-keepfix>div:first-child{border-right:0;border-bottom:1px solid var(--rules)}
+  .bgc-pilot-panel{padding:38px 24px;text-align:left}
+  .bgc-pilot-panel h2,.bgc-pilot-panel>p:first-of-type{margin-left:0}
+  .bgc-pilot-panel ol{grid-template-columns:1fr}
+  .bgc-pilot-panel ol li{margin-left:0;border-right:0;border-bottom:1px solid #b3b0a9;padding:18px 0 20px}
+  .bgc-pilot-panel ol li:last-child{border-bottom:0}
+  .bgc-pilot-panel .actions{justify-content:flex-start}
+  .bgc-takeaway{font-size:20px}
+  .bgc-form-wrap .form-row{grid-template-columns:1fr}
+  .bgc-form-wrap .v1-form{padding:24px 22px}
+  .bgc-form-wrap .v1-form .button{width:100%;justify-content:space-between}
+}
+@media(prefers-reduced-motion:reduce){
+  .bgc-hero-visual *,.bgc-problem-visual *{transition:none!important}
+}

@@ -403,6 +403,13 @@ export default function BestAnsweringServicePage() {
             </div>
           </div>
         </div>
+        <div className="actions">
+          <a className="button ghost" href={v1("/tools/missed-calls")}>Estimate what missed calls cost you <Arrow /></a>
+        </div>
+        <p className="bas-support">
+          The calculator uses your own call volume and job value — it never assumes a provider&apos;s
+          numbers for you.
+        </p>
       </section>
 
       {/* 05 — free missed-call review centerpiece */}

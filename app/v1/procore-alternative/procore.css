@@ -1,0 +1,211 @@
+/* Kortex — Procore alternative page. Design system supplies tokens, type,
+   buttons, .eyebrow / .section-index / .grid-overlay / .faq-grid.
+   Everything here is pcx- scoped. Bands alternate dark and paper; amber stays
+   scarce — one filled amber element per screenful. No hostile versus styling:
+   the three paths get equal visual dignity throughout. */
+
+/* Placeholder marker — bracketed copy that still needs confirmation. */
+.ph{background:rgba(240,160,32,.13);border:1px dashed rgba(240,160,32,.55);padding:1px 6px;font:500 .82em "IBM Plex Mono",monospace;letter-spacing:.02em;color:#a86e0a}
+.pcx-hero .ph,.pcx-review .ph,.pcx-final .ph,.pcx-form-wrap .ph{color:#f2b45c}
+
+/* ---- shared heads ---- */
+.pcx-head h2{font-size:clamp(34px,4vw,54px);max-width:19ch;margin:0}
+.pcx-head>p{font-size:18px;line-height:1.65;color:#5c5c5b;max-width:62ch;margin:22px 0 0}
+.pcx-support{font-size:15px;line-height:1.6;color:#8a8985;max-width:54ch;margin:20px 0 0}
+
+/* ---- hero ---- */
+.pcx-hero{background:var(--ground);color:var(--text);position:relative;overflow:hidden;padding:150px 7vw 84px}
+.pcx-hero>*:not(.grid-overlay){position:relative;z-index:2}
+.pcx-hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:6vw;align-items:center}
+.pcx-hero h1{font-size:clamp(44px,5.3vw,74px);line-height:1;letter-spacing:-.015em;margin:26px 0 0;max-width:18ch}
+.pcx-lede{font-size:19px;line-height:1.62;color:var(--muted);max-width:54ch;margin:24px 0 0}
+.pcx-hero .actions{margin-top:32px}
+.pcx-trust{list-style:none;display:flex;flex-wrap:wrap;gap:14px 26px;margin:30px 0 0;padding:22px 0 0;border-top:1px solid var(--rules)}
+.pcx-trust li{display:flex;align-items:center;gap:9px;font:500 11px "IBM Plex Mono",monospace;letter-spacing:.1em;color:#b9b7b1}
+.pcx-trust svg{width:14px;height:14px;color:var(--amber)}
+
+/* hero fork: one workflow card branching into three equal paths — same border,
+   same type, same weight; no path styled as the winner. */
+.pcx-fork{border:1px solid var(--rules);background:var(--surface)}
+.pcx-fork-top{padding:16px 18px;border-bottom:1px solid var(--rules)}
+.pcx-fork-top span{display:block;font:500 9px "IBM Plex Mono",monospace;letter-spacing:.16em;color:var(--amber);margin-bottom:8px}
+.pcx-fork-top p{margin:0;font-size:15px;line-height:1.55;color:var(--text)}
+.pcx-fork-paths{display:grid;grid-template-rows:repeat(3,1fr)}
+.pcx-fork-path{display:flex;align-items:flex-start;gap:14px;padding:16px 18px;border-bottom:1px solid var(--rules)}
+.pcx-fork-path:last-child{border-bottom:0}
+.pcx-fork-path b{font:600 11px "IBM Plex Mono",monospace;color:#8a8985;padding-top:3px}
+.pcx-fork-path strong{font:600 14px "Oswald",system-ui,sans-serif;letter-spacing:.05em;text-transform:uppercase;color:var(--text)}
+.pcx-fork-q{padding:13px 18px;border-top:1px solid var(--rules);font:500 9px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#8a8985}
+
+/* ---- 01 honest answer ---- */
+.pcx-honest{background:var(--paper);color:var(--ink)}
+.pcx-honest .section-index{color:#6d6e71}
+.pcx-honest-grid{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:start;margin-top:56px}
+.pcx-honest-copy p{font-size:18px;line-height:1.65;color:#5c5c5b;margin:0 0 20px;max-width:60ch}
+.pcx-honest-close{color:var(--ink)!important;font-weight:500;border-top:2px solid var(--amber);padding-top:20px}
+.pcx-honest-panels{display:grid;gap:20px}
+.pcx-panel{background:#d5d3cd;border:1px solid #c3c1bb;padding:26px 28px}
+.pcx-panel>span{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#8a5200}
+.pcx-panel ul{list-style:none;padding:0;margin:16px 0 0}
+.pcx-panel li{display:flex;align-items:flex-start;gap:12px;padding:9px 0;font-size:15px;line-height:1.55;color:#585957;border-bottom:1px dashed #b3b1ab}
+.pcx-panel li:last-child{border-bottom:0}
+.pcx-panel li svg{width:16px;min-width:16px;margin-top:3px;color:#9b5d00}
+
+/* ---- 02 comparison matrix ---- */
+.pcx-compare{background:var(--surface);color:var(--text)}
+.pcx-matrix{margin-top:56px;border-top:1px solid var(--rules)}
+.pcx-matrix-head{display:grid;grid-template-columns:.8fr 1.1fr 1.1fr;gap:24px;padding:14px 16px;border-bottom:1px solid var(--rules);font:500 10px "IBM Plex Mono",monospace;letter-spacing:.15em;color:#8a8985}
+.pcx-row{display:grid;grid-template-columns:.8fr 1.1fr 1.1fr;gap:24px;padding:20px 16px;border-bottom:1px solid var(--rules)}
+.pcx-row:nth-child(odd){background:rgba(232,230,225,.03)}
+.pcx-row h3{font:600 16px "Oswald",system-ui,sans-serif;letter-spacing:.035em;text-transform:uppercase;margin:0;color:var(--text)}
+.pcx-row p{margin:0;font-size:16px;line-height:1.6;color:var(--muted)}
+.pcx-cell-label{display:none;font:500 9px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#8a8985;margin-bottom:6px}
+.pcx-accuracy{display:grid;grid-template-columns:.35fr 1.65fr;gap:25px;align-items:start;background:var(--ground);border-top:1px solid var(--rules);padding:22px 24px;margin-top:24px}
+.pcx-accuracy span{font:500 9px/1.6 "IBM Plex Mono",monospace;letter-spacing:.13em;color:var(--amber)}
+.pcx-accuracy p{margin:0;font-size:14px;line-height:1.62;color:var(--muted)}
+
+/* ---- 03 three fits, equal dignity ---- */
+.pcx-fits{background:var(--paper);color:var(--ink)}
+.pcx-fits .section-index{color:#6d6e71}
+.pcx-fit-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:56px}
+.pcx-fit-card{background:#d5d3cd;border:1px solid #c3c1bb;padding:28px;display:flex;flex-direction:column}
+.pcx-fit-card>span{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#8a5200}
+.pcx-fit-card h3{font-size:23px;margin:14px 0 0}
+.pcx-fit-card>p{font-size:15px;line-height:1.6;color:#585957;margin:18px 0 0}
+.pcx-fit-card ul{list-style:none;padding:0;margin:18px 0 0}
+.pcx-fit-card li{display:flex;align-items:flex-start;gap:12px;padding:10px 0;font-size:15px;line-height:1.55;color:#585957;border-bottom:1px dashed #b3b1ab}
+.pcx-fit-card li:last-child{border-bottom:0}
+.pcx-fit-card li svg{width:16px;min-width:16px;margin-top:3px;color:#9b5d00}
+.pcx-fit-close{margin-top:auto!important;padding-top:18px;border-top:1px solid #aaa8a2;font-size:14.5px!important;line-height:1.6;color:#585957;font-style:italic}
+.pcx-fit-card ul+.pcx-fit-close,.pcx-fit-card p+.pcx-fit-close{margin-top:22px!important}
+
+/* ---- 04 manual-workflow audit ---- */
+.pcx-audit{background:var(--ground);color:var(--text);position:relative;overflow:hidden}
+.pcx-audit-inner{position:relative;z-index:2}
+.pcx-audit .pcx-head>p{color:var(--muted)}
+/* diagnostic path: five roles with amber manual breaks between them */
+.pcx-path{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:56px;border:1px solid var(--rules)}
+.pcx-path-step{display:grid;grid-template-rows:1fr auto;border-right:1px solid var(--rules)}
+.pcx-path-step:last-child{border-right:0}
+.pcx-node{background:var(--surface);padding:18px;display:flex;flex-direction:column;gap:8px}
+.pcx-node b{font:500 9px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#8a8985}
+.pcx-node strong{font:600 15px "Oswald",system-ui,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:var(--text)}
+.pcx-node em{font:500 8px "IBM Plex Mono",monospace;letter-spacing:.13em;color:var(--amber);font-style:normal;margin-top:auto}
+.pcx-break{display:flex;align-items:center;gap:8px;padding:12px 14px;border-top:1px dashed rgba(240,160,32,.5)}
+.pcx-break i{flex:1;height:1px;background:rgba(240,160,32,.5)}
+.pcx-break span{font:500 8px "IBM Plex Mono",monospace;letter-spacing:.12em;color:var(--amber);white-space:nowrap}
+.pcx-audit-grid{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:start;margin-top:52px}
+.pcx-ask-label{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.16em;color:#8a8985}
+.pcx-asks{list-style:none;padding:0;margin:14px 0 0;border-top:1px solid var(--rules)}
+.pcx-asks li{padding:13px 0;font-size:16.5px;line-height:1.55;color:var(--muted);border-bottom:1px solid var(--rules)}
+.pcx-audit-close p{font-size:17px;line-height:1.65;color:var(--text);margin:0;max-width:50ch}
+.pcx-audit-close .button{margin-top:30px}
+
+/* ---- 05 full cost ---- */
+.pcx-cost{background:var(--paper);color:var(--ink)}
+.pcx-cost .section-index{color:#6d6e71}
+.pcx-cost-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:52px}
+.pcx-cost-col{border:1px solid #c3c1bb;background:#d5d3cd;padding:28px}
+.pcx-cost-col>span{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#8a5200}
+.pcx-cost-col ul{list-style:none;padding:0;margin:18px 0 0}
+.pcx-cost-col li{padding:10px 0;font-size:15px;line-height:1.55;color:#585957;border-bottom:1px dashed #b3b1ab}
+.pcx-cost-col li:last-child{border-bottom:0}
+.pcx-effect-lead{margin:44px 0 0;font:500 10px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#8a5200;text-transform:uppercase}
+.pcx-effect{margin:12px 0 0;padding:0;border-top:1px solid var(--ink)}
+.pcx-effect li{list-style:none;display:grid;grid-template-columns:30px 1fr;gap:16px;padding:16px 12px;font-size:16.5px;line-height:1.55;color:var(--ink);border-bottom:1px solid #c2c0ba}
+.pcx-effect li b{font:500 9px "IBM Plex Mono",monospace;letter-spacing:.12em;color:#9a5b00;padding-top:5px}
+.pcx-cost .actions{margin-top:38px}
+.pcx-cost .pcx-support{color:#6f6f6d}
+/* ghost button inherits the dark-ground text colour; on paper it needs ink */
+.pcx-cost .button.ghost{color:var(--ink);border-color:#a9a7a1}
+.pcx-cost .button.ghost:hover{border-color:var(--amber);color:#8a5200}
+
+/* ---- 06 fit review centerpiece ---- */
+.pcx-review{background:var(--surface);color:var(--text)}
+.pcx-review-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:6vw;align-items:start;margin-top:56px}
+.pcx-review-copy p{font-size:17px;line-height:1.65;color:var(--muted);margin:0 0 18px;max-width:54ch}
+.pcx-honest-line{color:var(--text)!important;font-weight:500;font-size:18px!important;margin-top:26px!important}
+.pcx-review-cta{margin-top:32px;display:flex;flex-wrap:wrap;align-items:center;gap:22px}
+.pcx-reassure{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.13em;color:#8a8985}
+/* high-contrast cream panel: one workflow enters, four possible answers out */
+.pcx-outcomes{background:var(--paper);color:var(--ink);border:1px solid #c3c1bb}
+.pcx-outcomes>span{display:block;padding:14px 18px;border-bottom:1px solid #c2c0ba;font:500 9px "IBM Plex Mono",monospace;letter-spacing:.16em;color:#8a5200}
+.pcx-outcomes ol{list-style:none;margin:0;padding:6px 20px 14px;counter-reset:o}
+.pcx-outcomes li{counter-increment:o;position:relative;padding:16px 0 16px 42px;font:600 17px "Oswald",system-ui,sans-serif;letter-spacing:.03em;text-transform:uppercase;color:var(--ink);border-bottom:1px dashed #b3b1ab}
+.pcx-outcomes li:last-child{border-bottom:0}
+.pcx-outcomes li:before{content:"0" counter(o);position:absolute;left:0;top:19px;font:600 11px "IBM Plex Mono",monospace;color:#9a5b00}
+
+/* ---- 07 FAQ (design system supplies .faq-grid on paper) ---- */
+.pcx-faq h2{font-size:clamp(34px,4vw,52px)}
+
+/* ---- 08 final CTA + form ---- */
+.pcx-final{background:var(--ground);color:var(--text);position:relative;overflow:hidden}
+.pcx-final-inner{position:relative;z-index:2}
+.pcx-final-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:6vw;align-items:start;margin-top:56px}
+.pcx-final-promise p{font-size:17px;line-height:1.65;color:var(--muted);margin:22px 0 0;max-width:50ch}
+.pcx-final-promise .direct-call{margin-top:28px;display:inline-block}
+/* The .v1-form base styles live in the contact page's stylesheet, not the
+   design system, so the pieces this form needs are declared here — scoped to
+   .pcx-form-wrap and adapted to the dark ground. */
+.pcx-form-wrap .v1-form{display:flex;flex-direction:column;gap:18px;padding:30px 32px;border:1px solid var(--rules);background:var(--surface)}
+.pcx-form-wrap .v1-form>div[data-step]{display:flex;flex-direction:column;gap:18px}
+.pcx-form-wrap .form-index{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.16em;color:#8a8985;margin:0}
+.pcx-form-wrap .v1-form label{display:flex;flex-direction:column;gap:8px;font:500 11px "IBM Plex Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:#b9b7b1}
+.pcx-form-wrap .v1-form label em{font-style:normal;color:var(--amber)}
+.pcx-form-wrap .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.pcx-form-wrap .v1-form input,.pcx-form-wrap .v1-form textarea,.pcx-form-wrap .v1-form select{background:var(--ground);border:1px solid #3a3c40;color:var(--text);font:400 16px/1.5 "Barlow",system-ui,sans-serif;padding:13px 14px;width:100%;text-transform:none;letter-spacing:0}
+.pcx-form-wrap .v1-form input:focus-visible,.pcx-form-wrap .v1-form textarea:focus-visible,.pcx-form-wrap .v1-form select:focus-visible{outline:2px solid var(--amber);outline-offset:1px}
+.pcx-form-wrap .v1-form textarea{resize:vertical;min-height:96px}
+.pcx-form-wrap .v1-form ::placeholder{color:#6f7073}
+.pcx-form-wrap .v1-form .button{align-self:flex-start;margin-top:4px}
+.pcx-form-wrap .v1-form .button[disabled]{opacity:.6;cursor:progress}
+.pcx-form-wrap .form-error{margin:0;padding:13px 15px;background:rgba(168,73,42,.16);border-left:3px solid #a8492a;font-size:14.5px;line-height:1.55;color:#e2a189}
+.pcx-form-wrap .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.pcx-form-wrap .form-note{font-size:13.5px;line-height:1.55;color:#8a8985}
+.pcx-form-wrap .form-note a{color:var(--amber);border-bottom:1px solid rgba(240,160,32,.4)}
+.pcx-form-wrap .form-sent{padding:52px 34px;text-align:center;border:1px solid var(--amber);background:var(--surface)}
+.pcx-form-wrap .form-sent-mark{display:inline-flex;width:46px;height:46px;align-items:center;justify-content:center;border:1px solid var(--amber);color:var(--amber);margin-bottom:20px}
+.pcx-form-wrap .form-sent-mark svg{width:22px;height:22px}
+.pcx-form-wrap .form-sent h3{font:600 27px "Oswald",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.02em;margin:0;color:var(--text)}
+.pcx-form-wrap .form-sent p{margin:12px auto 0;max-width:44ch;font-size:16px;line-height:1.62;color:var(--muted)}
+.pcx-form-wrap .form-sent a{color:var(--amber);border-bottom:1px solid rgba(240,160,32,.4)}
+.pcx-step{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.16em;color:var(--amber);margin:0}
+.pcx-radio-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:2px}
+.pcx-radio-row label{flex-direction:row;align-items:center;gap:8px;border:1px solid #3a3c40;padding:11px 14px;cursor:pointer;font:500 11px "IBM Plex Mono",monospace;letter-spacing:.08em}
+.pcx-radio-row input{width:auto;accent-color:var(--amber)}
+.pcx-radio-row label:has(input:checked){border-color:var(--amber);color:var(--text)}
+
+/* ---- responsive ---- */
+@media(max-width:1100px){
+  .pcx-hero-grid{grid-template-columns:1fr;gap:52px}
+  .pcx-fork{max-width:560px}
+  .pcx-path{grid-template-columns:1fr;border:0;gap:0}
+  .pcx-path-step{border:1px solid var(--rules);border-bottom:0;grid-template-rows:auto auto}
+  .pcx-path-step:last-child{border-bottom:1px solid var(--rules);border-right:1px solid var(--rules)}
+}
+@media(max-width:900px){
+  .pcx-hero{padding:126px 22px 62px}
+  .pcx-honest-grid,.pcx-review-grid,.pcx-final-grid,.pcx-cost-grid,.pcx-audit-grid{grid-template-columns:1fr}
+  .pcx-honest-grid{gap:40px;margin-top:44px}
+  .pcx-fit-grid{grid-template-columns:1fr}
+  /* matrix rows become decision cards: label first, then Procore, then Kortex */
+  .pcx-matrix-head{display:none}
+  .pcx-row{grid-template-columns:1fr;gap:12px;padding:22px 0}
+  .pcx-cell-label{display:block}
+  .pcx-row p{font-size:17px}
+  .pcx-accuracy{grid-template-columns:1fr;gap:12px}
+  .pcx-asks li{font-size:17px}
+  .pcx-review-cta{align-items:flex-start;flex-direction:column}
+  .pcx-final-grid{gap:44px}
+  .pcx-form-wrap .form-row{grid-template-columns:1fr}
+  .pcx-form-wrap .v1-form{padding:24px 22px}
+  .pcx-form-wrap .v1-form .button{width:100%;justify-content:space-between}
+  .pcx-audit-close .button{width:100%;justify-content:space-between}
+}
+@media(max-width:600px){
+  .pcx-hero .actions{width:100%}
+  .pcx-panel{padding:22px}
+  .pcx-fit-card{padding:22px}
+  .pcx-break span{white-space:normal}
+  .pcx-radio-row{flex-direction:column;align-items:stretch}
+}
