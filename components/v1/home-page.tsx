@@ -59,7 +59,7 @@ const faqs = [
 export default function KortexHomeV10() {
   return <main className="kx10">
     <header className="site-header">
-      <a className="brand" href="/" aria-label="Kortex"><img src="/brand/kortex-lockup-horizontal-dark.svg" alt="Kortex" width={151} height={36}/></a>
+      <a className="brand" href="/" aria-label="Kortex"><img src="/brand/kortex-lockup-horizontal-field.svg" alt="Kortex" width={151} height={36}/></a>
       <nav className="main-nav" aria-label="Primary navigation">
         <details className="nav-menu services-menu"><summary>Services <span>⌄</span></summary><div className="dropdown services-dropdown">
           <a className="dropdown-lead" href="/operations-system"><span>OPERATIONS SYSTEM</span><strong>The full build. Field to invoice, and you own it.</strong></a>
@@ -93,7 +93,7 @@ export default function KortexHomeV10() {
       <div className="system-map" aria-label="Kortex connects field, office, compliance and billing">
         <div className="orbit one"/><div className="orbit two"/>
         <span className="map-label top">FIELD</span><span className="map-label right">OFFICE</span><span className="map-label bottom">BILLING</span><span className="map-label left">COMPLIANCE</span>
-        <div className="map-core"><img className="map-mark" src="/brand/kortex-mark-clay.svg" alt="" width={48} height={48}/><strong>YOUR<br/>OPERATION</strong><small>CONNECTED</small></div>
+        <div className="map-core"><img className="map-mark" src="/brand/kortex-mark-ground.svg" alt="" width={48} height={48}/><strong>YOUR<br/>OPERATION</strong><small>CONNECTED</small></div>
         <b className="node n1"/><b className="node n2"/><b className="node n3"/><b className="node n4"/>
       </div>
       <div className="hero-proof hero-proof-simple"><span>BUILT FOR MEP + CONSTRUCTION · OWNED BY YOUR COMPANY</span></div>
@@ -204,7 +204,7 @@ export default function KortexHomeV10() {
 
     <section className="contact" id="contact"><div className="grid-overlay"/><p className="eyebrow"><span/> START WITH ONE HIGH-IMPACT WORKFLOW</p><h2>Let’s improve one workflow first.</h2><p>Choose one workflow that is slowing the business down. We’ll map it, show what should change and define a first working piece—so you can see the impact before deciding what comes next.</p><div className="contact-actions"><a className="button" href="/contact">Choose the workflow <Arrow/></a><a className="direct-call" href="tel:+13018898546">Or call (301) 889-8546</a></div></section>
     <footer className="site-footer">
-      <div className="footer-brand"><a className="brand" href="/" aria-label="Kortex"><img src="/brand/kortex-lockup-horizontal-dark.svg" alt="Kortex" width={151} height={36}/></a><p>Operational systems for MEP and construction companies.</p></div>
+      <div className="footer-brand"><a className="brand" href="/" aria-label="Kortex"><img src="/brand/kortex-lockup-horizontal-field.svg" alt="Kortex" width={151} height={36}/></a><p>Operational systems for MEP and construction companies.</p></div>
       <div className="footer-column"><strong>WHAT WE BUILD</strong><a href="/operations-system">Operations System</a><a href="/operations-system/what-it-costs">What it costs</a><a href="/ai-receptionist">AI Receptionist</a><a href="/answer-engine-optimization">AI Search Visibility</a></div>
       <div className="footer-column"><strong>BY TRADE</strong><a href="/mep-contractors">MEP contractors</a><a href="/hvac-operations-software">HVAC</a><a href="/electrical-contractor-software">Electrical</a><a href="/plumbing-software">Plumbing</a><a href="/construction-contractors">Self-performing trades</a><a href="/builders-and-general-contractors">Builders and GCs</a></div>
       <div className="footer-column"><strong>COMPARE</strong><a href="/servicetitan-alternative">vs ServiceTitan</a><a href="/procore-alternative">vs Procore</a><a href="/field-service-software-quickbooks">Works with QuickBooks</a><a href="/when-off-the-shelf-is-better">When off-the-shelf is better</a></div>
