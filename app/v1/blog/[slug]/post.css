@@ -2,7 +2,7 @@
    sit above the body because that is the block an answer engine quotes. */
 
 .post-hero{background:var(--ground);color:var(--text);position:relative;overflow:hidden;
-  padding:132px 4vw 66px}
+  padding:132px 7vw 66px}
 .post-back{display:inline-block;margin-bottom:26px;font:400 12px "IBM Plex Mono",monospace;
   letter-spacing:.09em;color:#8a8985}
 .post-back:hover{color:var(--amber)}
@@ -13,14 +13,14 @@
   font:400 12px "IBM Plex Mono",monospace;letter-spacing:.09em;color:#8a8985}
 .post-meta i{width:26px;height:1px;background:#4a4b4d}
 
-.post-takeaways{background:var(--amber);color:var(--ground);padding:44px 4vw}
+.post-takeaways{background:var(--amber);color:var(--ground);padding:44px 7vw}
 .post-takeaways .section-index{color:#5f3d05;margin:0 0 20px}
 .post-takeaways ul{max-width:82ch;display:grid;gap:12px}
 .post-takeaways li{position:relative;padding-left:26px;font-size:17px;line-height:1.55;font-weight:500}
 .post-takeaways li:before{content:"";position:absolute;left:0;top:11px;width:12px;height:2px;background:var(--ground)}
 
 .post-body{background:var(--paper);color:var(--ink)}
-.post-prose{max-width:74ch;margin:0 auto}
+.post-prose{max-width:74ch;margin:0}
 .post-prose h2{font:600 clamp(24px,2.9vw,33px)/1.16 "Oswald",system-ui,sans-serif;
   text-transform:uppercase;letter-spacing:.015em;margin:52px 0 16px}
 .post-prose h2:first-child{margin-top:0}
@@ -50,7 +50,7 @@
   text-transform:uppercase;letter-spacing:.015em;margin:0}
 
 .post-cta{background:var(--surface);color:var(--text);position:relative;overflow:hidden;
-  padding:82px 4vw;text-align:center}
+  padding:82px 7vw;text-align:center}
 .post-cta h2{font:600 clamp(27px,3.4vw,42px)/1.1 "Oswald",system-ui,sans-serif;
   text-transform:uppercase;letter-spacing:.015em;margin:0}
 .post-cta p{max-width:60ch;margin:18px auto 28px;font-size:17px;line-height:1.62;color:var(--muted)}

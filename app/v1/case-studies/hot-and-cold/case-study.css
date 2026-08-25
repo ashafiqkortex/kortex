@@ -31,6 +31,8 @@
 .cs-head h2{font:600 clamp(34px,4vw,54px)/1.05 "Oswald",system-ui,sans-serif;
   letter-spacing:.005em;text-transform:uppercase;margin:0}
 .cs-head>p{font-size:18px;line-height:1.65;color:#5c5c5b;max-width:64ch;margin:22px 0 0}
+/* On the charcoal grounds the paper body colour disappears — use the muted ink. */
+.cs-running .cs-head>p,.cs-measured .cs-head>p{color:var(--muted)}
 
 /* Before / what it cost. Same two-column rhythm as the home page shift list,
    so a reader who came from the home page recognises the pattern. */

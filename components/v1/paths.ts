@@ -1,7 +1,7 @@
 // While the redesign lives under /v1 the whole preview has to be navigable
 // without falling out into the old design. Anything already rebuilt gets its
 // /v1 path; anything not yet written points at a stub that says so.
-export const BUILT = new Set(["/", "/contact", "/blog"]);
+export const BUILT = new Set(["/", "/contact", "/blog", "/case-studies/hot-and-cold"]);
 
 export const PLANNED: Record<string, string> = {
   "/operations-system": "The flagship offer page",
@@ -18,7 +18,6 @@ export const PLANNED: Record<string, string> = {
   "/hvac-operations-software": "HVAC",
   "/electrical-contractor-software": "Electrical",
   "/plumbing-software": "Plumbing",
-  "/case-studies/hot-and-cold": "The Hot & Cold build",
   "/ai-receptionist": "AI receptionist",
   "/about": "About Kortex",
 };

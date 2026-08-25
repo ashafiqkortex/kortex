@@ -2,7 +2,7 @@
    names his problem. Shared by the "keep reading" block on post pages. */
 
 .blog-hero{background:var(--ground);color:var(--text);position:relative;overflow:hidden;
-  padding:150px 4vw 78px}
+  padding:150px 7vw 78px}
 .blog-hero h1{font:600 clamp(38px,5vw,62px)/1.03 "Oswald",system-ui,sans-serif;
   text-transform:uppercase;letter-spacing:.01em;margin:26px 0 0;max-width:16ch}
 .blog-lede{font-size:18.5px;line-height:1.62;color:var(--muted);max-width:62ch;margin:22px 0 0}

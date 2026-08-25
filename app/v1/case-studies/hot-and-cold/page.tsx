@@ -15,7 +15,7 @@ import "./case-study.css";
 export const metadata: Metadata = {
   title: "Hot & Cold — the first build | Kortex",
   description:
-    "A thirty-person commercial mechanical contractor in Bethesda ran its whole office on one editable spreadsheet. What we built, what it replaced, and what has actually been measured since.",
+    "A thirty-person commercial mechanical contractor in Maryland ran its whole office on one editable spreadsheet. What we built, what it replaced, and what the client's own numbers say.",
   robots: { index: false, follow: false },
   alternates: { canonical: "https://kortexconsulting.com/case-studies/hot-and-cold" },
 };
@@ -248,8 +248,8 @@ export default function HotAndColdCaseStudy() {
         <div className="cs-forward">
           <span>WHAT THE CLIENT EXPECTS NEXT — NOT YET MEASURED</span>
           <p>
-            Service contracts from <strong>10</strong> to somewhere between <strong>20 and
-            30</strong> on the same team, about a third of the office manager&apos;s role
+            Service contracts from <strong>10</strong> to somewhere between{" "}
+            <strong>20 and 30</strong>{" "}on the same team, about a third of the office manager&apos;s role
             returned, and manpower efficiency recovered. These are the client&apos;s own
             expectations over the coming measurement window, not results we are asking you to
             take on faith. <strong>We will publish them when they are measured, not

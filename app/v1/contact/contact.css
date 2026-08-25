@@ -2,7 +2,7 @@
    header, footer and .steps / .section-index / .eyebrow / .grid-overlay. */
 
 .contact-hero{background:var(--ground);color:var(--text);position:relative;
-  padding:150px 4vw 82px;overflow:hidden}
+  padding:150px 7vw 82px;overflow:hidden}
 .contact-hero h1{font:600 clamp(38px,5.4vw,68px)/1.02 "Oswald",system-ui,sans-serif;
   letter-spacing:.008em;text-transform:uppercase;margin:26px 0 0;max-width:17ch}
 .contact-lede{font-size:19px;line-height:1.62;color:var(--muted);max-width:60ch;margin:24px 0 0}
@@ -61,7 +61,7 @@
 .form-sent a{color:#754600;border-bottom:1px solid #d6c3ab}
 
 .contact-close{background:var(--surface);color:var(--text);position:relative;overflow:hidden;
-  padding:88px 4vw;text-align:center}
+  padding:88px 7vw;text-align:center}
 .contact-close h2{font:600 clamp(28px,3.6vw,44px)/1.1 "Oswald",system-ui,sans-serif;
   text-transform:uppercase;letter-spacing:.015em;margin:0}
 .contact-close p{max-width:66ch;margin:20px auto 30px;font-size:17px;line-height:1.65;color:var(--muted)}
