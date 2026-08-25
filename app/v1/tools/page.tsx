@@ -25,7 +25,7 @@ export default function ToolsIndexPage() {
         </p>
       </section>
 
-      <section className="tools-body section-pad">
+      <section className="tools-body section-pad tools-index-grid">
         <Link className="tools-card" href={v1("/tools/rent-vs-own")}>
           <span className="tag">CALCULATOR</span>
           <h2>Rent vs own</h2>
@@ -33,6 +33,15 @@ export default function ToolsIndexPage() {
             What per-seat software costs over five years at your headcount, your price and your
             growth — and where a one-time build crosses it. The five-year number nobody puts on
             a pricing page.
+          </p>
+          <span className="tools-card-cta">Open the calculator <Arrow /></span>
+        </Link>
+        <Link className="tools-card" href="/v1/tools/missed-calls">
+          <span className="tag">CALCULATOR</span>
+          <h2>Missed calls</h2>
+          <p>
+            What the unanswered phone costs in a year, at your call volume and your job value —
+            and the honest breakeven against any vendor&apos;s answering quote, including ours.
           </p>
           <span className="tools-card-cta">Open the calculator <Arrow /></span>
         </Link>

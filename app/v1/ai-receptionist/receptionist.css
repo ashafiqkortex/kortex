@@ -172,3 +172,7 @@
   .rcp-form-row{grid-template-columns:1fr}
 }
 @media(prefers-reduced-motion:reduce){.rcp-flow li{animation:none}}
+.rcp-calc-link{margin:14px 0 0}
+.rcp-calc-link a{display:inline-flex;align-items:center;gap:10px;font:600 13px "Oswald",system-ui,sans-serif;
+  letter-spacing:.05em;text-transform:uppercase;color:var(--amber)}
+.rcp-calc-link svg{width:16px;height:16px}

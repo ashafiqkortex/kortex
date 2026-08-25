@@ -3,7 +3,7 @@
 // /v1 path; anything not yet written points at a stub that says so.
 export const BUILT = new Set(["/", "/contact", "/blog", "/case-studies/hot-and-cold",
   "/ai-receptionist", "/answer-engine-optimization", "/mep-contractors", "/construction-contractors",
-  "/servicetitan-alternative", "/tools", "/tools/rent-vs-own"]);
+  "/servicetitan-alternative", "/tools", "/tools/rent-vs-own", "/best-answering-service"]);
 
 export const PLANNED: Record<string, string> = {
   "/operations-system": "The flagship offer page",

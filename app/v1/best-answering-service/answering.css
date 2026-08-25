@@ -1,0 +1,254 @@
+/* Kortex — best-answering-service comparison page. Design system supplies
+   tokens, type, buttons, .eyebrow / .section-index / .grid-overlay /
+   .faq-grid. Everything here is bas- scoped. Bands alternate dark and paper;
+   amber stays scarce — one filled amber element per screenful. Live, AI and
+   hybrid coverage get equal visual dignity: same borders, same type, same
+   weight. No ranking graphics anywhere. */
+
+/* Placeholder marker — bracketed copy that still needs confirmation. */
+.ph{background:rgba(240,160,32,.13);border:1px dashed rgba(240,160,32,.55);padding:1px 6px;
+  font:500 .82em "IBM Plex Mono",monospace;letter-spacing:.02em;color:#a86e0a}
+.bas-dark .ph{color:#f2b45c}
+
+/* ---- hero ---- */
+.bas-hero{background:var(--ground);color:var(--text);position:relative;overflow:hidden;
+  padding:150px 7vw 84px}
+.bas-hero>*:not(.grid-overlay){position:relative;z-index:2}
+.bas-hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:6vw;align-items:center}
+.bas-hero h1{font-size:clamp(44px,5vw,72px);line-height:1;letter-spacing:-.015em;margin:26px 0 0;max-width:18ch}
+.bas-lede{font-size:19px;line-height:1.62;color:var(--muted);max-width:56ch;margin:24px 0 0}
+.bas-lede+.bas-lede{margin-top:14px}
+.bas-hero .actions{margin-top:32px}
+.bas-support{font-size:15px;line-height:1.6;color:#8a8985;max-width:54ch;margin:20px 0 0}
+.bas-disclosure{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;
+  margin:30px 0 0;padding:20px 0 0;border-top:1px solid var(--rules)}
+.bas-disclosure span{font:500 9px/1.7 "IBM Plex Mono",monospace;letter-spacing:.15em;color:var(--amber)}
+.bas-disclosure p{margin:0;font-size:14px;line-height:1.62;color:var(--muted);max-width:56ch}
+
+/* hero branch diagram: one call, three possible endings — none styled as the
+   winner: same border, same type, same weight on every branch. */
+.bas-branch{border:1px solid var(--rules);background:var(--surface)}
+.bas-branch-top{padding:16px 18px;border-bottom:1px solid var(--rules)}
+.bas-branch-top span{display:block;font:500 9px "IBM Plex Mono",monospace;letter-spacing:.16em;
+  color:var(--amber);margin-bottom:8px}
+.bas-branch-top p{margin:0;font-size:14.5px;line-height:1.55;color:var(--text)}
+.bas-branch-paths{display:flex;flex-direction:column}
+.bas-branch-path{padding:15px 18px 15px 38px;position:relative;border-bottom:1px dashed #3a3c40}
+.bas-branch-path:last-child{border-bottom:0}
+.bas-branch-path:before{content:"";position:absolute;left:18px;top:21px;width:8px;height:8px;
+  border:1px solid #6d6e71}
+.bas-branch-path strong{display:block;font:600 13px "Oswald",system-ui,sans-serif;
+  letter-spacing:.05em;text-transform:uppercase;color:var(--text)}
+.bas-branch-path p{margin:6px 0 0;font-size:13.5px;line-height:1.5;color:var(--muted)}
+.bas-branch-q{padding:13px 18px;border-top:1px solid var(--rules);
+  font:500 9px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#8a8985}
+
+/* ---- shared heads ---- */
+.bas-head h2{font-size:clamp(34px,4vw,54px);max-width:20ch;margin:0}
+.bas-head>p{font-size:18px;line-height:1.65;max-width:62ch;margin:22px 0 0}
+.bas-needs .bas-head>p,.bas-review .bas-head>p{color:#5c5c5b}
+
+/* ---- 01 what best means ---- */
+.bas-needs{background:var(--paper);color:var(--ink)}
+.bas-needs .section-index{color:#6d6e71}
+.bas-needs-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:56px;
+  border-top:1px solid #c3c1bb}
+.bas-needs-grid article{padding:26px 22px 26px 0;border-right:1px solid #c3c1bb;margin-right:22px}
+.bas-needs-grid article:last-child{border-right:0;margin-right:0}
+.bas-needs-grid svg{width:22px;height:22px;color:#9b5d00}
+.bas-needs-grid h3{font-size:19px;letter-spacing:.02em;margin:20px 0 10px}
+.bas-needs-grid p{margin:0;font-size:15px;line-height:1.6;color:#5c5c5b}
+.bas-closing{margin:44px 0 0;padding-top:22px;border-top:2px solid var(--amber);
+  font-size:18px;line-height:1.6;color:var(--ink);font-weight:500;max-width:62ch}
+
+/* ---- 02 coverage types — three equal cards ---- */
+.bas-coverage{background:var(--surface);color:var(--text)}
+.bas-coverage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px}
+.bas-coverage-grid article{border:1px solid var(--rules);background:var(--ground);padding:26px;
+  display:flex;flex-direction:column}
+.bas-cover-tag{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.14em;color:var(--amber)}
+.bas-coverage-grid h3{font-size:23px;letter-spacing:.02em;margin:14px 0 0}
+.bas-coverage-grid dl{margin:20px 0 0;display:flex;flex-direction:column}
+.bas-coverage-grid dl>div{padding:13px 0;border-bottom:1px dashed #3a3c40}
+.bas-coverage-grid dt{font:500 9px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#8a8985;
+  margin-bottom:6px}
+.bas-coverage-grid dd{margin:0;font-size:14.5px;line-height:1.58;color:var(--muted)}
+.bas-cover-example{margin:16px 0 0;padding-top:14px;font-size:13.5px;line-height:1.55;
+  color:var(--muted);font-style:italic}
+.bas-cover-example span{display:block;font:500 9px "IBM Plex Mono",monospace;letter-spacing:.14em;
+  color:#8a8985;font-style:normal;margin-bottom:6px}
+.bas-verdict{border-top:2px solid var(--amber);padding-top:20px;margin-top:44px;max-width:640px}
+.bas-verdict p{font-size:17px;line-height:1.62;color:var(--text);margin:0;font-weight:500}
+
+/* ---- 03 provider cards — same structure, same weight, all four ---- */
+.bas-providers{background:var(--paper);color:var(--ink)}
+.bas-providers .section-index{color:#6d6e71}
+.bas-provider-list{margin-top:56px;border-top:1px solid var(--ink);display:flex;flex-direction:column}
+.bas-provider{display:grid;grid-template-columns:.85fr 1.05fr 1.05fr 1.05fr;gap:28px;
+  padding:30px 0;border-bottom:1px solid #c2c0ba}
+.bas-provider-id h3{font-size:24px;letter-spacing:.02em;margin:0}
+.bas-provider-id>span{display:block;font-size:14px;line-height:1.5;color:#5c5c5b;margin-top:8px}
+.bas-provider-tag{display:inline-block;font:500 9px "IBM Plex Mono",monospace;letter-spacing:.13em;
+  color:#8a5200;border:1px solid #b3b1ab;padding:6px 10px;margin-top:14px;font-style:normal}
+.bas-provider-cell>span{display:block;font:500 9px "IBM Plex Mono",monospace;letter-spacing:.14em;
+  color:#8a877f;margin-bottom:8px}
+.bas-provider-cell p{margin:0;font-size:15px;line-height:1.6;color:#585957}
+.bas-accuracy{display:grid;grid-template-columns:.35fr 1.65fr;gap:25px;align-items:start;
+  background:#d4d1ca;padding:22px 24px;margin-top:24px}
+.bas-accuracy span{font:500 9px/1.6 "IBM Plex Mono",monospace;letter-spacing:.13em;color:#915700}
+.bas-accuracy p{margin:0;font-size:14px;line-height:1.62;color:#565653}
+
+/* ---- 04 real cost ---- */
+.bas-cost{background:var(--ground);color:var(--text)}
+.bas-cost-grid{display:grid;grid-template-columns:1fr 1fr;gap:6vw;margin-top:56px;align-items:start}
+.bas-cost-label{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.15em;color:#8a8985;
+  margin:28px 0 0}
+.bas-cost-col>.bas-cost-label:first-child{margin-top:0}
+.bas-formula{margin:14px 0 0;padding:18px 20px;border:1px solid var(--rules);background:var(--surface);
+  font:500 15px/1.6 "IBM Plex Mono",monospace;letter-spacing:.01em;color:var(--text)}
+.bas-formula b{color:var(--amber);font-weight:500}
+.bas-cost-col ul{list-style:none;padding:0;margin:14px 0 0}
+.bas-cost-col li{padding:11px 0;font-size:15.5px;line-height:1.55;color:var(--muted);
+  border-bottom:1px dashed #3a3c40}
+.bas-cost-col li:last-child{border-bottom:0}
+.bas-cost-copy{margin:0;font-size:16.5px;line-height:1.65;color:var(--muted);max-width:56ch}
+.bas-cost-copy strong{color:var(--text)}
+.bas-cost-warning{margin-top:28px;padding:18px 20px;border-left:3px solid var(--amber);
+  background:var(--surface)}
+.bas-cost-warning p{margin:0;font-size:15.5px;line-height:1.6;color:var(--text)}
+
+/* ---- 05 free-review centerpiece ---- */
+.bas-review{background:var(--paper);color:var(--ink)}
+.bas-review .section-index{color:#6d6e71}
+.bas-review-grid{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:start;margin-top:56px}
+.bas-review-model{display:flex;flex-direction:column;border:1px solid #b3b1ab;background:#d5d3cd}
+.bas-review-inputs{padding:22px 24px;border-bottom:1px solid #b3b1ab}
+.bas-review-inputs>span,.bas-review-recs>span{display:block;font:500 9px "IBM Plex Mono",monospace;
+  letter-spacing:.15em;color:#8a5200;margin-bottom:12px}
+.bas-review-inputs ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.bas-review-inputs li{border:1px solid #aaa8a2;padding:8px 12px;
+  font:500 12px "IBM Plex Mono",monospace;letter-spacing:.06em;color:#585957}
+.bas-review-arrow{align-self:center;width:1px;height:26px;background:#8a877f;position:relative;
+  margin:14px 0}
+.bas-review-arrow:after{content:"";position:absolute;bottom:0;left:-3px;
+  border-top:7px solid #8a877f;border-left:3px solid transparent;border-right:3px solid transparent}
+.bas-review-recs{padding:22px 24px}
+.bas-review-recs ol{list-style:none;margin:0;padding:0;counter-reset:r}
+.bas-review-recs li{counter-increment:r;position:relative;padding:13px 0 13px 40px;
+  border-bottom:1px dashed #b3b1ab}
+.bas-review-recs li:last-child{border-bottom:0;padding-bottom:4px}
+.bas-review-recs li:before{content:"0" counter(r);position:absolute;left:0;top:14px;
+  font:600 11px "IBM Plex Mono",monospace;color:#8a877f}
+.bas-review-recs strong{font:600 16px "Oswald",system-ui,sans-serif;letter-spacing:.03em;
+  text-transform:uppercase;color:var(--ink)}
+.bas-review-recs p{margin:4px 0 0;font-size:13.5px;line-height:1.55;color:#585957}
+.bas-leave-label{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.15em;color:#8a877f;margin:0}
+.bas-leave{list-style:none;padding:0;margin:16px 0 0;border-top:1px solid #c2c0ba}
+.bas-leave li{display:flex;gap:12px;align-items:flex-start;padding:12px 0;
+  font-size:15.5px;line-height:1.55;color:#585957;border-bottom:1px solid #c2c0ba}
+.bas-leave svg{width:16px;min-width:16px;margin-top:4px;color:#9b5d00}
+.bas-honest{margin:26px 0 0;font-size:17px;line-height:1.6;color:var(--ink);font-weight:500}
+.bas-review-cta{margin-top:32px;display:flex;flex-wrap:wrap;align-items:center;gap:22px}
+.bas-reassure{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.13em;color:#8a877f}
+.bas-note{margin:22px 0 0;font-size:14px;line-height:1.6;color:#8a877f}
+
+/* ---- 06 proof (placeholder-only until real evidence exists) ---- */
+.bas-proof{background:var(--surface);color:var(--text)}
+.bas-hidden-note{margin:0 0 34px;font-size:14px;line-height:1.6}
+.bas-proof-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:6vw;align-items:start;margin-top:56px}
+.bas-proof-facts{display:flex;flex-direction:column;border-top:1px solid var(--rules)}
+.bas-proof-facts>div{display:grid;grid-template-columns:.4fr 1.6fr;gap:22px;padding:22px 0;
+  border-bottom:1px solid var(--rules)}
+.bas-proof-facts span{font:500 9px/1.7 "IBM Plex Mono",monospace;letter-spacing:.14em;color:var(--amber)}
+.bas-proof-facts p{margin:0;font-size:15.5px;line-height:1.62;color:var(--muted)}
+.bas-proof-person{margin:0}
+.bas-portrait-slot{border:1px dashed #4a4c50;background:var(--ground);min-height:180px;
+  display:grid;place-items:center;padding:20px;
+  font:500 11px "IBM Plex Mono",monospace;letter-spacing:.1em;color:#8a8985}
+.bas-proof-person blockquote{margin:24px 0 0;font-size:17px;line-height:1.6;color:var(--text)}
+.bas-proof-person figcaption{margin-top:16px;font-size:14px;line-height:1.6;color:var(--muted)}
+
+/* ---- 07 FAQ (design system supplies .faq-grid on paper) ---- */
+.bas-faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:5vw;align-items:start}
+.bas-faq-grid h2{font-size:clamp(30px,3.4vw,46px);max-width:14ch}
+.bas-faq .faq-grid{margin-top:0}
+
+/* ---- 08 final CTA + form ---- */
+.bas-final{background:var(--ground);color:var(--text)}
+.bas-final-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:6vw;align-items:start;margin-top:56px}
+.bas-final-promise p{font-size:17px;line-height:1.65;color:var(--muted);margin:22px 0 0;max-width:50ch}
+.bas-final-promise .direct-call{margin-top:28px;display:inline-block}
+
+/* The .v1-form base styles live in the contact page's stylesheet, not the
+   design system, so the pieces this form needs are declared here — scoped to
+   .bas-form-wrap and adapted to the dark ground. */
+.bas-form-wrap .v1-form{display:flex;flex-direction:column;gap:18px;padding:30px 32px;
+  border:1px solid var(--rules);background:var(--surface)}
+.bas-form-wrap .v1-form>div[data-step]{display:flex;flex-direction:column;gap:18px}
+.bas-form-wrap .form-index{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.16em;color:#8a8985;margin:0}
+.bas-form-wrap .v1-form label{display:flex;flex-direction:column;gap:8px;color:#b9b7b1;
+  font:500 11px "IBM Plex Mono",monospace;letter-spacing:.1em;text-transform:uppercase}
+.bas-form-wrap .v1-form label em{font-style:normal;color:var(--amber)}
+.bas-form-wrap .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.bas-form-wrap .v1-form input,.bas-form-wrap .v1-form textarea,.bas-form-wrap .v1-form select{
+  background:var(--ground);border:1px solid #3a3c40;color:var(--text);
+  font:400 16px/1.5 "Barlow",system-ui,sans-serif;padding:13px 14px;width:100%;
+  text-transform:none;letter-spacing:0}
+.bas-form-wrap .v1-form input:focus-visible,.bas-form-wrap .v1-form textarea:focus-visible,
+.bas-form-wrap .v1-form select:focus-visible{outline:2px solid var(--amber);outline-offset:1px}
+.bas-form-wrap .v1-form textarea{resize:vertical;min-height:96px}
+.bas-form-wrap .v1-form ::placeholder{color:#6f7073}
+.bas-form-wrap .v1-form .button{align-self:flex-start;margin-top:4px}
+.bas-form-wrap .v1-form .button[disabled]{opacity:.6;cursor:progress}
+.bas-form-wrap .form-error{margin:0;padding:13px 15px;background:rgba(168,73,42,.16);
+  border-left:3px solid #a8492a;font-size:14.5px;line-height:1.55;color:#e2a189}
+.bas-form-wrap .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.bas-form-wrap .form-sent{padding:52px 34px;text-align:center;border:1px solid var(--amber);
+  background:var(--surface)}
+.bas-form-wrap .form-sent-mark{display:inline-flex;width:46px;height:46px;align-items:center;
+  justify-content:center;border:1px solid var(--amber);color:var(--amber);margin-bottom:20px}
+.bas-form-wrap .form-sent-mark svg{width:22px;height:22px}
+.bas-form-wrap .form-sent h3{font:600 27px "Oswald",system-ui,sans-serif;text-transform:uppercase;
+  letter-spacing:.02em;margin:0;color:var(--text)}
+.bas-form-wrap .form-sent p{margin:12px auto 0;max-width:44ch;font-size:16px;line-height:1.62;
+  color:var(--muted)}
+.bas-form-wrap .form-sent a{color:var(--amber);border-bottom:1px solid rgba(240,160,32,.4)}
+.bas-form-wrap .form-note{font-size:13.5px;line-height:1.55;color:#8a8985}
+.bas-form-wrap .form-note a{color:var(--amber);border-bottom:1px solid rgba(240,160,32,.4)}
+.bas-step{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.16em;color:var(--amber);margin:0}
+
+/* ---- responsive ---- */
+@media(max-width:1100px){
+  .bas-hero-grid{grid-template-columns:1fr;gap:52px}
+  .bas-branch{max-width:640px}
+  .bas-needs-grid{grid-template-columns:1fr 1fr;border-top:0}
+  .bas-needs-grid article{border-top:1px solid #c3c1bb}
+  .bas-coverage-grid{grid-template-columns:1fr}
+}
+@media(max-width:900px){
+  .bas-hero{padding:126px 22px 62px}
+  .bas-cost-grid,.bas-review-grid,.bas-final-grid,.bas-proof-grid,.bas-faq-grid{grid-template-columns:1fr}
+  .bas-cost-grid,.bas-final-grid{gap:44px}
+  .bas-review-grid{gap:40px}
+  .bas-faq-grid{gap:30px}
+  /* provider rows become stacked cards: name, then each labelled cell */
+  .bas-provider{grid-template-columns:1fr;gap:18px;padding:26px 0}
+  .bas-provider-cell p{font-size:17px}
+  .bas-accuracy{grid-template-columns:1fr;gap:12px}
+  .bas-disclosure{grid-template-columns:1fr;gap:8px}
+  .bas-review-cta{align-items:flex-start;flex-direction:column}
+  .bas-proof-facts>div{grid-template-columns:1fr;gap:8px}
+  .bas-form-wrap .form-row{grid-template-columns:1fr}
+  .bas-form-wrap .v1-form{padding:24px 22px}
+  .bas-form-wrap .v1-form .button{width:100%;justify-content:space-between}
+}
+@media(max-width:600px){
+  .bas-hero .actions{width:100%}
+  .bas-needs-grid{grid-template-columns:1fr}
+  .bas-needs-grid article{padding-right:0;margin-right:0;border-right:0}
+  .bas-coverage-grid article{padding:22px}
+  .bas-review-inputs,.bas-review-recs{padding:18px}
+}
+@media(prefers-reduced-motion:reduce){
+  .bas-branch,.bas-provider{transition:none}
+}

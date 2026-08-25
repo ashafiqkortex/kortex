@@ -97,3 +97,9 @@
   .tools-close{padding:64px 22px}
 }
 @media(prefers-reduced-motion:reduce){.rvo-bar i{transition:none}.tools-card:hover{transform:none}}
+
+/* index with more than one tool */
+.tools-index-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:22px;align-items:stretch}
+.tools-index-grid .tools-card{max-width:none;display:flex;flex-direction:column}
+.tools-index-grid .tools-card .tools-card-cta{margin-top:auto;padding-top:22px}
+.tools-index-grid .tools-more{grid-column:1/-1;margin-top:16px}

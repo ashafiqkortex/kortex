@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { Arrow, Check } from "@/components/v1/icons";
 import "./receptionist.css";
@@ -291,6 +292,7 @@ export default function V1AiReceptionistPage() {
           <div>
             <p className="section-index">START WITH THE NUMBERS YOU ALREADY HAVE</p>
             <h2>See what unanswered calls may be costing your business.</h2>
+            <p className="rcp-calc-link"><Link href="/v1/tools/missed-calls">Or run your own numbers first — the missed-call calculator <Arrow /></Link></p>
             <p className="rcp-review-lede">
               In a short review, Kortex looks at your current call volume, missed calls,
               after-hours demand and average job value.
