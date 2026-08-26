@@ -77,7 +77,6 @@ export default function KortexHomeV10() {
     </section>
 
     <section className="statement section-pad">
-      <p className="section-index">THE PROBLEM</p>
       <div className="statement-content"><h2>Your business isn’t standard.<br/>Why should the system running it be?</h2><div><p>Established contractors rarely run on one clean process. Years of experience have created specific workflows, approval rules, customer requirements and exceptions.</p><p>Standard software asks the company to change all of that. Kortex starts with how the business already works—and turns it into a system the entire team can run.</p></div></div>
     </section>
 
@@ -160,21 +159,17 @@ export default function KortexHomeV10() {
       <div className="testimonial-outcome"><span>WHAT THE SYSTEM PROTECTS</span><p>The operation can keep moving, improving and creating value beyond any one person&apos;s ownership of it.</p><a href={v1("/case-studies/hot-and-cold")}>Read the Hot &amp; Cold story <Arrow/></a></div>
     </section>
 
-    <section className="firm section-pad" id="firm">
-      <div className="firm-intro"><p className="section-index amber">WHO WE ARE</p><h2>The people responsible—from workflow mapping through rollout.</h2><p>Kortex is an operations systems firm for established MEP and construction contractors. The team that studies your operation stays accountable for the system it designs, builds and maintains.</p><div className="firm-contact"><span>CALL KORTEX DIRECTLY</span><a href="tel:+13018898546">(301) 889-8546</a><a href="mailto:hello@kortexconsulting.com">hello@kortexconsulting.com</a></div></div>
-      <div className="team-grid">
-        <article><div className="portrait-placeholder team-role-one"/>{DRAFT_NOTES && <span>SAMPLE PROFILE / FOUNDER</span>}<h3>Operations &amp; client strategy</h3><p>Leads workflow mapping with ownership and operations, identifies the dependencies limiting capacity, and stays accountable to the business result—not just the software delivery.</p></article>
-        <article><div className="portrait-placeholder team-role-two"/>{DRAFT_NOTES && <span>SAMPLE PROFILE / SYSTEMS LEAD</span>}<h3>System design &amp; build</h3><p>Translates field and office realities into dependable workflows, including the exceptions, approvals and accounting handoffs that standard demos leave out.</p></article>
-        <article><div className="portrait-placeholder team-role-three"/>{DRAFT_NOTES && <span>SAMPLE PROFILE / IMPLEMENTATION</span>}<h3>Rollout &amp; adoption</h3><p>Runs the pilot with the people closest to the work, turns their feedback into improvements, and remains responsible through training, launch and support.</p></article>
-      </div>
-    </section>
+    {/* The team ("firm") section is parked at Bharathi's request (26 Aug 2026)
+        until real names, roles and photographs exist — the portraits were
+        placeholder triptych renders. Restore it from git history (this file,
+        commit ca5143f or earlier) when the assets are real. */}
 
     <section className="process section-pad" id="process">
       <div className="split-heading"><div><p className="section-index">HOW IT WORKS</p><h2>We begin with the way one real job moves through your company.</h2></div><p>No generic discovery deck. We follow the work, find the dependencies and build in useful phases.</p></div>
       <ol>{[["Follow one job","Trace one actual job or project from first request to final billing.","WORKFLOW MAP"],["Map the breakdowns","Find the approvals, exceptions, re-entry and missing information slowing it down.","PRIORITY BLUEPRINT"],["Build the first piece","Turn the highest-value part into a working connected workflow.","WORKING MODULE"],["Prove it with the team","Pilot it with the field and office, improve it, then decide what comes next.","FIELD-APPROVED ROLLOUT"]].map(([t,c,o],i)=><li key={t}><span>0{i+1}</span><div><h3>{t}</h3><p>{c}</p><strong>{o}</strong></div></li>)}</ol>
     </section>
 
-    <section className="faq section-pad" id="faq">
+    <section className="faq faq-dark section-pad" id="faq">
       <div className="split-heading"><div><p className="section-index">BEFORE YOU CALL</p><h2>What owners ask us first.</h2></div><p>The questions that come up on every first call, answered here so they do not have to be.</p></div>
       <div className="faq-grid">{faqs.map(([q,a],i)=><details key={q} {...(i===0 ? {open:true} : {})}><summary><span>0{i+1}</span>{q}<i/></summary><p>{a}</p></details>)}</div>
     </section>
