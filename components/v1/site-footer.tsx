@@ -40,7 +40,7 @@ export function SiteFooter() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/brand/kortex-lockup-horizontal-field.svg" alt="Kortex" width={151} height={36} />
         </Link>
-        <p>Operational systems for MEP and construction companies.</p>
+        <p>Operational systems for commercial contractors.</p>
       </div>
 
       {COLUMNS.map((col) => (
