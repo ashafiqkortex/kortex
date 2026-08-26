@@ -26,6 +26,12 @@ const COLUMNS = [
     ["/certified-payroll", "Certified payroll"],
     ["/tools/rent-vs-own", "Rent vs own calculator"],
     ["/case-studies/hot-and-cold", "Our work"],
+    // Legacy local-search doorway — footer only, never a primary nav service.
+    ["/ai-consultant-washington-dc", "Washington DC AI consulting"],
+    // Legacy search doorway — footer only, never a primary nav service.
+    ["/ai-agent-development", "AI agent development"],
+    // Plain-language companion to the above — footer only, never primary nav.
+    ["/ai-agents-for-business", "AI agents for business"],
     ["/about", "About"],
     ["/contact", "Contact"],
     ["/blog", "Blog"],

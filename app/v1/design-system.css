@@ -270,3 +270,26 @@ body:has(.kx10) > main{flex:none;margin:0;padding:0;max-width:none}
 .mobile-section a{font-size:13px;padding:9px 12px;color:#b4b3af;display:block}
 .mobile-lead small{display:block;color:#848588;margin-top:3px;font-size:11px}
 @media(prefers-reduced-motion:reduce){.nav-menu.is-open .nav-trigger span{transition:none}}
+
+/* ---- Floating WhatsApp button (components/v1/whatsapp-button.tsx) ----
+   The old site's Tailwind widget is hidden on /v1 (rules above); this is its
+   Field Industrial replacement. WhatsApp green is deliberate — third-party
+   affordance, recognisability is the point. */
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:9;display:flex;align-items:center;gap:0;
+  padding-bottom:env(safe-area-inset-bottom)}
+.wa-circle{display:flex;width:56px;height:56px;align-items:center;justify-content:center;
+  border-radius:50%;background:#25d366;color:#fff;
+  box-shadow:0 6px 20px rgba(0,0,0,.35),0 0 0 1px rgba(0,0,0,.18);
+  transition:transform .2s ease}
+.wa-float:hover .wa-circle{transform:scale(1.06)}
+.wa-float:active .wa-circle{transform:scale(.95)}
+.wa-float:focus-visible{outline:2px solid var(--amber);outline-offset:4px;border-radius:999px}
+.wa-label{overflow:hidden;white-space:nowrap;max-width:0;opacity:0;padding-right:0;
+  font:600 12px "Oswald",system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--text);transition:max-width .3s ease,opacity .3s ease,padding .3s ease}
+.wa-label{background:#17181a;border:1px solid var(--rules);border-radius:999px}
+.wa-float:hover .wa-label,.wa-float:focus-visible .wa-label{max-width:200px;opacity:1;
+  padding:11px 16px;margin-right:12px}
+@media(max-width:900px){.wa-label{display:none}.wa-float{right:16px;bottom:16px}}
+@media(prefers-reduced-motion:reduce){.wa-circle,.wa-label{transition:none}
+  .wa-float:hover .wa-circle{transform:none}}

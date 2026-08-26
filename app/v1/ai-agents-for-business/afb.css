@@ -1,0 +1,230 @@
+/* Kortex — AI agents for business page (plain-language companion to
+   /ai-agent-development). Design system supplies tokens, type, buttons,
+   .eyebrow / .section-index / .grid-overlay / .faq-grid. Everything here is
+   afb- scoped. Bands alternate dark and paper; amber stays scarce and is
+   reserved for the human stop point, the boundary line and the one CTA per
+   screenful. Type follows the doc: hero clamp(48px,5.3vw,74px), section
+   heads 44-58px desktop / 32-40px mobile, body 19-21px desktop / 18px
+   minimum mobile, card copy 17px minimum, eyebrows 12px minimum, notes 14px
+   minimum, ~650px measure. */
+
+/* Placeholder marker — bracketed copy that still needs confirmation. */
+.ph{background:rgba(240,160,32,.13);border:1px dashed rgba(240,160,32,.55);padding:1px 6px;font:500 .82em "IBM Plex Mono",monospace;letter-spacing:.02em;color:#a86e0a}
+.afb-dark .ph{color:#f2b45c}
+.afb-note{margin:26px 0 0;font-size:14px;line-height:1.7;max-width:720px}
+
+/* Doc minimum for eyebrows and section indexes is 12px. */
+.afb-hero .eyebrow,.afb-resp .eyebrow,.afb-decide .eyebrow,.afb-review .eyebrow,.afb-final .eyebrow,
+.afb-plain .section-index,.afb-notfit .section-index,.afb-decide .section-index,.afb-faq .section-index{font-size:12px}
+
+/* shared closing lines */
+.afb-closing{margin:34px 0 0;font-size:18px;line-height:1.6;font-weight:600;max-width:650px}
+
+/* ---- 01 hero (dark, 7/5 split) ---- */
+.afb-hero{background:var(--ground);color:var(--text);position:relative;overflow:hidden;padding:150px 7vw 84px}
+.afb-hero-grid{display:grid;grid-template-columns:7fr 5fr;gap:6vw;align-items:center;position:relative;z-index:2}
+.afb-hero h1{font-size:clamp(48px,5.3vw,74px);line-height:1;letter-spacing:-.015em;margin:0;max-width:18ch}
+.afb-lede{font-size:20px;line-height:1.6;color:var(--muted);max-width:56ch;margin:26px 0 0}
+.afb-support{font-size:16px;line-height:1.6;color:#8a8985;max-width:52ch;margin:24px 0 0}
+.afb-trust{margin:30px 0 0;padding:22px 0 0;border-top:1px solid var(--rules);
+  font:500 12px "IBM Plex Mono",monospace;letter-spacing:.12em;color:#b9b7b1}
+.afb-trust i{font-style:normal;color:#54555a;margin:0 6px}
+
+/* One ordinary workflow moving until the consequential decision stops for a
+   named role. The stop card alone carries amber. */
+.afb-hero-visual{border:1px solid var(--rules);background:var(--surface);padding:18px 20px 20px}
+.afb-hero-visual-tag{display:block;font:500 10px "IBM Plex Mono",monospace;letter-spacing:.15em;color:#8a8985;
+  padding-bottom:14px;border-bottom:1px solid var(--rules)}
+.afb-hero-visual ol{list-style:none;margin:16px 0 0;padding:0}
+.afb-hero-visual li{position:relative;border:1px solid var(--rules);background:var(--ground);padding:14px 16px}
+.afb-hero-visual li+li{margin-top:14px}
+.afb-hero-visual li+li:before{content:"";position:absolute;left:28px;top:-15px;width:1px;height:14px;background:#54555a}
+.afb-hero-visual li>span{display:block;font:500 10px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#8a8985}
+.afb-hero-visual li p{margin:7px 0 0;font-size:15.5px;line-height:1.5;color:var(--muted)}
+.afb-hero-visual li b{display:block;margin-top:9px;font:500 10px "IBM Plex Mono",monospace;letter-spacing:.14em;color:var(--amber)}
+.afb-hero-visual li.is-stop{border-left:3px solid var(--amber)}
+.afb-hero-visual li.is-stop>span{color:var(--amber)}
+.afb-hero-visual li.is-stop p{color:var(--text)}
+
+/* ---- 02 plain-English definition (paper, four equal cards) ---- */
+.afb-plain{background:var(--paper);color:var(--ink)}
+.afb-plain .section-index{color:#6d6e71}
+.afb-plain h2{font-size:clamp(34px,4vw,56px);max-width:22ch}
+.afb-plain-lede{font-size:19px;line-height:1.65;color:#3f3f3d;max-width:650px;margin:26px 0 0}
+.afb-def-grid{margin-top:52px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#cfccc4;border:1px solid #cfccc4}
+/* Equal weight on purpose: the agent card must not look more advanced or
+   desirable than the other three. */
+.afb-def-grid article{background:#efede7;padding:28px 26px 30px;display:flex;flex-direction:column}
+.afb-def-grid article>span{font:500 11px "IBM Plex Mono",monospace;letter-spacing:.16em;color:#8a877f}
+.afb-def-grid h3{font:600 24px "Oswald",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.15;margin:16px 0 12px;color:var(--ink)}
+.afb-def-grid p{margin:0;font-size:17px;line-height:1.6;color:#5c5c5b}
+.afb-plain .afb-closing{color:var(--ink)}
+
+/* ---- 03 contractor responsibilities (dark, three wide rows) ---- */
+.afb-resp{background:var(--surface);color:var(--text)}
+.afb-resp h2{font-size:clamp(34px,4vw,56px);max-width:24ch}
+.afb-resp-rows{margin-top:52px;border-top:1px solid var(--rules)}
+.afb-resp-rows article{padding:34px 0 36px;border-bottom:1px solid var(--rules)}
+.afb-resp-rows h3{font:600 25px "Oswald",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.2;margin:0 0 22px}
+.afb-resp-cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:34px}
+.afb-resp-cols>div>span{display:block;font:500 10px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#8a8985}
+.afb-resp-cols p{margin:10px 0 0;font-size:17px;line-height:1.6;color:var(--muted)}
+/* The human-responsibility column stays visible — never behind an accordion —
+   and carries the restrained amber mark. */
+.afb-resp-person{border-left:2px solid var(--amber);padding-left:16px}
+.afb-resp-person>span{color:var(--amber)!important}
+.afb-resp-person p{color:var(--text)!important}
+.afb-qualify{margin:30px 0 0;font-size:17px;line-height:1.6;color:#8a8985;max-width:60ch}
+.afb-quiet-links{margin-top:34px;display:flex;flex-direction:column;gap:12px}
+.afb-quiet-links p{margin:0;font-size:16px;line-height:1.6;color:var(--muted)}
+.afb-quiet-links .inline-link{display:inline-flex;margin-left:12px;font-size:12px;letter-spacing:.06em;color:var(--text)}
+.afb-quiet-links .inline-link svg{width:14px;height:14px}
+
+/* ---- 04 where agents do not belong (paper, 5/7 split) ---- */
+.afb-notfit{background:var(--paper);color:var(--ink)}
+.afb-notfit .section-index{color:#6d6e71}
+.afb-notfit-grid{display:grid;grid-template-columns:5fr 7fr;gap:6vw;align-items:start}
+.afb-notfit h2{font-size:clamp(34px,4vw,56px);max-width:15ch}
+.afb-notfit-copy>p:not(.section-index){font-size:19px;line-height:1.65;color:#3f3f3d;max-width:620px;margin:26px 0 0}
+.afb-notfit-statement{display:block;margin-top:44px;font:600 34px/1.1 "Oswald",system-ui,sans-serif;
+  text-transform:uppercase;letter-spacing:.02em;color:var(--ink)}
+.afb-flags-intro{font-size:19px;line-height:1.6;font-weight:600;color:var(--ink);margin:0 0 18px}
+/* Five clear conditions, one restrained amber boundary line — no per-row
+   warning icons, no alarmist styling. */
+.afb-notfit-flags ul{list-style:none;margin:0;padding:0;border-left:3px solid var(--amber)}
+.afb-notfit-flags li{display:grid;grid-template-columns:56px 1fr;align-items:baseline;
+  padding:16px 0 16px 22px;border-bottom:1px solid #cfccc4;font-size:17px;line-height:1.6;color:#3f3f3d}
+.afb-notfit-flags li:first-child{padding-top:4px}
+.afb-notfit-flags li span{font:500 11px "IBM Plex Mono",monospace;color:#8a877f}
+.afb-notfit-flags .afb-closing{color:var(--ink)}
+
+/* ---- 05 decision guide + human control (dark) ---- */
+.afb-decide{background:var(--ground);color:var(--text)}
+.afb-decide h2{font-size:clamp(34px,4vw,56px);max-width:18ch}
+.afb-decide-grid{margin-top:52px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--rules);border:1px solid var(--rules)}
+/* Four equal options. Deliberately no highlight on the agent card. */
+.afb-decide-grid article{background:var(--surface);padding:26px 24px 28px}
+.afb-decide-grid article>span{font:500 11px "IBM Plex Mono",monospace;color:#8a8985}
+.afb-decide-grid h3{font:600 21px "Oswald",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.2;margin:16px 0 12px}
+.afb-decide-grid p{margin:0;font-size:17px;line-height:1.6;color:var(--muted)}
+.afb-decide-closing{margin:30px 0 0;font-size:18px;line-height:1.6;font-weight:600;color:var(--text);max-width:650px}
+
+/* human control: four decisions, then one wide operating card */
+.afb-control{margin-top:96px;padding-top:64px;border-top:1px solid var(--rules)}
+.afb-control-h2{font-size:clamp(34px,4vw,56px);max-width:20ch}
+.afb-control-list{list-style:none;margin:44px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:34px}
+.afb-control-list li{display:flex;gap:16px;align-items:flex-start}
+.afb-control-list li>span{flex:0 0 auto;width:34px;height:34px;display:grid;place-items:center;
+  border:1px solid #54555a;font:600 13px "IBM Plex Mono",monospace;color:#b9b7b1}
+.afb-control-list strong{display:block;font:600 19px "Oswald",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.02em;color:var(--text)}
+.afb-control-list p{margin:8px 0 0;font-size:17px;line-height:1.55;color:var(--muted)}
+/* One wide operating card — an explanation, not an interactive configurator. */
+.afb-opcard{margin-top:44px;background:var(--surface);border:1px solid var(--rules);padding:24px 28px 16px}
+.afb-opcard-tag{display:block;font:500 10px "IBM Plex Mono",monospace;letter-spacing:.14em;line-height:1.7;color:#8a8985}
+.afb-opcard ul{list-style:none;margin:14px 0 0;padding:0;display:grid;grid-template-columns:1.1fr 1.6fr 1.3fr 1.1fr .8fr;gap:26px}
+.afb-opcard li{padding:14px 0;border-top:1px dashed #3a3c40}
+.afb-opcard li span{display:block;font:500 10px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#8a8985}
+.afb-opcard li p{margin:8px 0 0;font-size:16px;line-height:1.55;color:var(--text)}
+.afb-opcard li.is-stop{border-left:2px solid var(--amber);padding-left:14px}
+.afb-opcard li.is-stop span{color:var(--amber)}
+.afb-control-note{margin:34px 0 0;font-size:18px;line-height:1.65;color:var(--muted);max-width:720px}
+
+/* ---- 06 free workflow review — high-contrast centerpiece ---- */
+.afb-review{background:var(--surface);color:var(--text)}
+.afb-review-panel{border:1px solid var(--amber);background:var(--ground);padding:60px 5vw 56px;position:relative}
+.afb-review h2{font-size:clamp(34px,4vw,56px);max-width:20ch}
+.afb-review-grid{margin-top:44px;display:grid;grid-template-columns:1.2fr 1fr;gap:6vw;align-items:start}
+.afb-review-lede{font-size:19px;line-height:1.65;color:var(--muted);max-width:56ch;margin:0}
+.afb-review-label{font:500 12px "IBM Plex Mono",monospace;letter-spacing:.12em;color:#8a8985;margin:32px 0 14px;text-transform:uppercase}
+.afb-review-list{list-style:none;margin:0;padding:0;display:grid;gap:11px;max-width:620px}
+.afb-review-list li{display:flex;gap:12px;font-size:17px;line-height:1.55;color:var(--text)}
+.afb-review-list svg{flex:0 0 auto;width:16px;height:16px;color:var(--amber);margin-top:4px}
+.afb-honest{margin:26px 0 0;font-size:18px;font-weight:600;color:var(--text)}
+.afb-reassure{margin:20px 0 0;font:500 12px "IBM Plex Mono",monospace;letter-spacing:.12em;color:#8a8985}
+.afb-reassure i{font-style:normal;color:#54555a;margin:0 4px}
+
+/* one workflow in, four honest recommendations out */
+.afb-outcomes{display:flex;flex-direction:column}
+.afb-outcomes-in{border:1px solid var(--rules);background:var(--surface);padding:20px 22px}
+.afb-outcomes-in span{display:block;font:500 10px "IBM Plex Mono",monospace;letter-spacing:.15em;color:#8a8985}
+.afb-outcomes-in p{margin:8px 0 0;font-size:17px;line-height:1.5;color:var(--text)}
+.afb-outcomes-feed{width:1px;height:26px;background:#68696b;margin:0 auto}
+.afb-outcomes ol{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.afb-outcomes ol li{display:flex;align-items:center;gap:16px;border:1px solid var(--rules);background:var(--surface);padding:16px 20px;font-size:17px;line-height:1.4;color:var(--text)}
+.afb-outcomes ol li span{font:500 11px "IBM Plex Mono",monospace;letter-spacing:.1em;color:#8a8985}
+
+/* ---- 07 faq (paper; base styles from the design system) ---- */
+.afb-faq h2{font-size:clamp(30px,3.4vw,46px);max-width:16ch}
+
+/* ---- final cta and form (dark) ---- */
+.afb-final{background:var(--ground);color:var(--text);position:relative;overflow:hidden;padding:110px 7vw 120px}
+.afb-final-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:6vw;align-items:start;position:relative;z-index:2}
+.afb-final h2{font-size:clamp(36px,4.4vw,60px);max-width:15ch}
+.afb-final-copy>p:not(.eyebrow){font-size:19px;line-height:1.65;color:var(--muted);max-width:46ch;margin:24px 0 34px}
+.afb-form-step{font:500 11px "IBM Plex Mono",monospace;letter-spacing:.14em;color:var(--amber);margin:0}
+
+/* The .v1-form base styles live in the contact page's stylesheet, not the
+   design system, so the pieces this page needs are scoped here under
+   .afb-form-wrap and adapted to the dark ground. */
+.afb-form-wrap .v1-form{display:flex;flex-direction:column;gap:18px;padding:30px 32px;
+  background:var(--surface);border:1px solid var(--rules);position:relative}
+.afb-form-wrap .v1-form>div[data-step]{display:flex;flex-direction:column;gap:18px}
+.afb-form-wrap .v1-form label{display:flex;flex-direction:column;gap:8px;color:#b9b7b1;
+  font:500 12px "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase}
+.afb-form-wrap .v1-form label em{font-style:normal;color:var(--amber)}
+.afb-form-wrap .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.afb-form-wrap .v1-form input,.afb-form-wrap .v1-form textarea{
+  font:400 16px/1.5 "Barlow",system-ui,sans-serif;color:var(--text);background:#1f2124;
+  border:1px solid var(--rules);padding:13px 14px;width:100%;text-transform:none;letter-spacing:0}
+.afb-form-wrap .v1-form input:focus-visible,.afb-form-wrap .v1-form textarea:focus-visible{
+  outline:2px solid var(--amber);outline-offset:1px}
+.afb-form-wrap .v1-form textarea{resize:vertical;min-height:76px}
+.afb-form-wrap .v1-form ::placeholder{color:#6f7073}
+.afb-form-wrap .v1-form .button{align-self:flex-start;margin-top:4px}
+.afb-form-wrap .v1-form .button[disabled]{opacity:.6;cursor:progress}
+.afb-form-wrap .form-error{margin:0;padding:13px 15px;background:rgba(168,73,42,.16);
+  border:1px solid rgba(168,73,42,.5);font-size:14.5px;line-height:1.5;color:#e8b5a0}
+.afb-form-wrap .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.afb-form-wrap .form-sent{padding:52px 34px;text-align:center;border:1px solid var(--amber);
+  background:var(--surface)}
+.afb-form-wrap .form-sent-mark{display:inline-flex;width:46px;height:46px;align-items:center;
+  justify-content:center;background:var(--amber);color:var(--ground)}
+.afb-form-wrap .form-sent-mark svg{width:22px;height:22px}
+.afb-form-wrap .form-sent h3{font:600 27px "Oswald",system-ui,sans-serif;text-transform:uppercase;
+  letter-spacing:.02em;margin:20px 0 0}
+.afb-form-wrap .form-sent p{margin:12px auto 0;max-width:44ch;font-size:16px;line-height:1.62;
+  color:var(--muted)}
+.afb-form-wrap .form-sent a{color:var(--amber);border-bottom:1px solid rgba(240,160,32,.4)}
+.afb-form-wrap .form-note{font-size:14px;line-height:1.55;color:#8a8985}
+.afb-form-wrap .form-note a{color:var(--amber);border-bottom:1px solid rgba(240,160,32,.4)}
+
+/* ---- responsive ---- */
+@media(max-width:1100px){
+  .afb-def-grid,.afb-decide-grid{grid-template-columns:1fr 1fr}
+  .afb-control-list{grid-template-columns:1fr 1fr;gap:26px}
+  .afb-opcard ul{grid-template-columns:1fr 1fr;gap:0 26px}
+}
+@media(max-width:900px){
+  .afb-hero{padding:126px 22px 62px}
+  .afb-hero h1{font-size:clamp(40px,9vw,48px);max-width:none}
+  .afb-plain h2,.afb-resp h2,.afb-notfit h2,.afb-decide h2,.afb-control-h2,.afb-review h2{font-size:clamp(32px,7.4vw,40px);max-width:none}
+  .afb-plain.section-pad,.afb-resp.section-pad,.afb-notfit.section-pad,.afb-decide.section-pad,.afb-review.section-pad,.afb-faq.section-pad{padding:80px 22px}
+  .afb-final{padding:80px 22px 90px}
+  /* Copy stacks before explanatory visuals; labels keep the same order. */
+  .afb-hero-grid,.afb-notfit-grid,.afb-review-grid,.afb-final-grid{grid-template-columns:1fr;gap:52px}
+  .afb-def-grid,.afb-decide-grid,.afb-resp-cols,.afb-control-list,.afb-opcard ul{grid-template-columns:1fr}
+  .afb-resp-cols{gap:22px}
+  .afb-lede,.afb-plain-lede,.afb-review-lede,.afb-notfit-copy>p:not(.section-index),.afb-final-copy>p:not(.eyebrow){font-size:18px}
+  .afb-hero-visual{max-width:520px}
+  .afb-notfit-statement{font-size:28px}
+  .afb-control{margin-top:72px;padding-top:52px}
+  .afb-opcard{padding:20px 20px 12px}
+  .afb-opcard li.is-stop{margin-left:0}
+  .afb-review-panel{padding:44px 22px}
+  .afb-form-wrap .v1-form{padding:24px 22px}
+  .afb-form-wrap .form-row{grid-template-columns:1fr}
+  .afb-form-wrap .v1-form .button{width:100%;justify-content:space-between}
+}
+@media(prefers-reduced-motion:reduce){
+  .afb-hero-visual *{transition:none!important}
+}

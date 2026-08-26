@@ -1,0 +1,126 @@
+/* Kortex — electrical contractor software trade page. Design system supplies
+   tokens, type, buttons, .section-pad, .eyebrow, .section-index,
+   .split-heading, .grid-overlay, .faq/.faq-grid, .contact and
+   .contact-actions. Everything here is el-. */
+
+/* Bracketed placeholders — visibly unfinished, amber-tinted */
+.ph{font:500 10px/1.7 "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--amber);background:rgba(240,160,32,.08);border:1px dashed rgba(240,160,32,.45);padding:2px 8px}
+
+/* ---- hero (dark) ---- */
+.el-hero{background:var(--ground);position:relative;overflow:hidden;padding:170px 7vw 75px}
+.el-hero>*:not(.grid-overlay){position:relative;z-index:2}
+.el-hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:6vw;align-items:center}
+.el-hero h1{font-size:clamp(50px,5.4vw,84px)}
+.el-lede{font-size:20px;line-height:1.55;color:var(--muted);max-width:600px;margin:32px 0 0}
+.el-cta-note{font:400 13px "IBM Plex Mono",monospace;color:#7c7b78;margin:18px 0 0}
+
+/* one week, two kinds of work — drawn, not photographed */
+.el-week{background:var(--surface);border:1px solid var(--rules);max-width:100%}
+.el-week-top{display:flex;justify-content:space-between;gap:12px;padding:14px 18px;border-bottom:1px solid var(--rules);
+  font:500 9px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#88898b}
+.el-week-top span:last-child{color:var(--amber)}
+.el-week-cols{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rules);border-bottom:1px solid var(--rules)}
+.el-week-cols>div{background:var(--surface);padding:14px 12px 20px;display:flex;flex-direction:column;gap:8px;min-height:190px}
+.el-week-cols b{font:500 8px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#6f7073;margin-bottom:4px}
+.el-week-cols i{font:500 8px/1.5 "IBM Plex Mono",monospace;letter-spacing:.06em;font-style:normal;color:#b6b4af;
+  border:1px solid #3a3c40;background:linear-gradient(145deg,#26282b,#202225);padding:8px 9px}
+.el-week-cols i.hot{color:var(--ground);background:var(--amber);border-color:var(--amber);font-weight:600}
+.el-week-foot{padding:12px 18px;font:400 8px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#6f7073}
+
+/* ---- problem (paper) ---- */
+.el-problem{background:var(--paper);color:var(--ink)}
+.el-problem .section-index{color:#6d6e71}
+.el-problem-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:6vw;margin-top:12px}
+.el-problem-copy h2{max-width:600px}
+.el-problem-copy p{font-size:17px;line-height:1.65;color:#5c5c5b;margin:26px 0 0;max-width:560px}
+.el-breakdown{list-style:none;margin:0;padding:0;border-top:1px solid #c3c1bb}
+.el-breakdown li{display:grid;grid-template-columns:34px 1fr;gap:14px;padding:16px 0;
+  border-bottom:1px solid #c3c1bb;font-size:15px;line-height:1.55;color:#585957}
+.el-breakdown li span{font:500 10px "IBM Plex Mono",monospace;color:#9a5b00;padding-top:3px}
+.el-verdict{margin:34px 0 0;background:#d3d0c8;border-left:3px solid var(--amber);
+  padding:20px 24px;font-weight:600;font-size:17px;line-height:1.5;color:var(--ink)}
+
+/* ---- one record (dark surface) ---- */
+.el-flow{background:var(--surface)}
+.el-flow .split-heading>p{color:var(--muted)}
+.el-chain{list-style:none;margin:65px 0 0;padding:0;border-top:1px solid var(--rules)}
+.el-chain li{display:grid;grid-template-columns:70px 1fr;gap:2vw;padding:26px 0;border-bottom:1px solid var(--rules)}
+.el-chain li>span{font:500 10px "IBM Plex Mono",monospace;color:var(--amber);padding-top:6px}
+.el-chain li>div{display:grid;grid-template-columns:.75fr 1.25fr;gap:4vw;align-items:start}
+.el-chain h3{font-size:23px;margin:0}
+.el-chain p{font-size:15px;line-height:1.62;color:var(--muted);margin:0}
+.el-closer{margin:44px 0 0;border-left:3px solid var(--amber);padding-left:22px;
+  font:600 18px/1.55 "Barlow",system-ui,sans-serif;max-width:760px}
+
+/* ---- modules (paper) ---- */
+.el-modules{background:var(--paper);color:var(--ink)}
+.el-module-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:65px}
+.el-module-grid article{background:#d5d3cd;border:1px solid #c3c1bb;padding:28px;
+  display:flex;flex-direction:column;min-height:300px}
+.el-module-grid article:nth-child(even){background:#cbc8c1}
+.el-module-grid article>span{font:500 9px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#9a5b00}
+.el-module-grid h3{font-size:26px;line-height:1.12;margin:20px 0 12px;max-width:22ch}
+.el-module-grid article>p{font-size:15px;line-height:1.6;color:#585957;margin:0 0 24px}
+.el-effect{margin-top:auto;padding-top:16px;border-top:1px solid #aaa8a2}
+.el-effect strong{display:block;font:500 8px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#9a5b00;margin-bottom:8px}
+.el-effect p{font-size:15px;line-height:1.55;font-weight:600;color:var(--ink);margin:0}
+.el-modules .actions{margin-top:45px}
+
+/* ---- proof (dark ground, cross-trade honesty) ---- */
+.el-proof{background:var(--ground)}
+.el-proof-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:6vw;align-items:start}
+.el-proof-grid h2{font-size:clamp(32px,3.4vw,46px);max-width:17ch}
+.el-proof-grid>div:last-child>p{font-size:16px;line-height:1.65;color:var(--muted);margin:0 0 22px;max-width:560px}
+.el-honest{background:var(--surface);border:1px solid var(--rules);border-left:3px solid var(--amber);padding:22px 26px;margin:8px 0 0}
+.el-honest span{font:500 9px "IBM Plex Mono",monospace;letter-spacing:.16em;color:var(--amber)}
+.el-honest p{font-size:15px;line-height:1.6;font-weight:600;color:var(--text);margin:12px 0 0}
+.el-case-link{display:inline-flex;align-items:center;gap:10px;margin-top:30px;
+  font:600 14px "Oswald",system-ui,sans-serif;letter-spacing:.035em;text-transform:uppercase;
+  border-bottom:1px solid var(--amber);padding-bottom:9px}
+.el-case-link svg{transition:transform .2s ease}
+.el-case-link:hover svg{transform:translateX(5px)}
+
+/* ---- fit (paper) ---- */
+.el-fit{background:var(--paper);color:var(--ink)}
+.el-fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:5vw;margin-top:60px}
+.el-fit-head{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.16em;color:#9a5b00;margin:0 0 8px}
+.el-fit-head.not{color:#77776f}
+.el-fit-list{list-style:none;margin:0;padding:0;border-top:1px solid #c3c1bb}
+.el-fit-list li{display:grid;grid-template-columns:26px 1fr;gap:14px;padding:22px 0;border-bottom:1px solid #c3c1bb}
+.el-fit-list svg{color:#9a5b00;margin-top:3px}
+.el-fit-list b{font:600 15px "IBM Plex Mono",monospace;color:#8a877f}
+.el-fit-list h3{font-size:20px;line-height:1.2;margin:0 0 8px}
+.el-fit-list p{font-size:15px;line-height:1.6;color:#585957;margin:0}
+.el-fit .inline-link{margin-top:26px;border-bottom-color:var(--amber)}
+
+/* ---- other trades (dark surface strip) ---- */
+.el-trades{background:var(--surface);padding-top:75px;padding-bottom:75px}
+.el-trades-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:10px}
+.el-trades-grid a{border:1px solid var(--rules);padding:24px 26px;display:flex;flex-direction:column;gap:12px;transition:border-color .2s ease}
+.el-trades-grid a:hover{border-color:var(--amber)}
+.el-trades-grid span{font:500 8px "IBM Plex Mono",monospace;letter-spacing:.16em;color:#88898b}
+.el-trades-grid strong{font:600 19px "Oswald",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.02em}
+.el-trades-grid svg{margin-top:auto;color:var(--amber)}
+
+/* ---- FAQ (paper; .faq/.faq-grid from the design system) ---- */
+.el-faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:5vw}
+.el-faq-grid h2{max-width:12ch}
+
+/* ---- final CTA ---- */
+.el-contact{background:var(--ground)}
+
+/* ---- responsive ---- */
+@media(max-width:900px){
+  .el-hero{padding:135px 7vw 55px}
+  .el-hero-grid,.el-problem-grid,.el-proof-grid,.el-fit-grid,.el-faq-grid{grid-template-columns:1fr;gap:45px}
+  .el-chain li{grid-template-columns:44px 1fr}
+  .el-chain li>div{grid-template-columns:1fr;gap:8px}
+  .el-module-grid,.el-trades-grid{grid-template-columns:1fr}
+  .el-week{max-width:560px}
+}
+@media(max-width:600px){
+  .el-hero{padding:120px 22px 45px}
+  .el-hero h1{font-size:46px}
+  .el-lede{font-size:18px}
+}

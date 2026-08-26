@@ -3,6 +3,7 @@
 import "./design-system.css";
 import { SiteHeader } from "@/components/v1/site-header";
 import { SiteFooter } from "@/components/v1/site-footer";
+import { WhatsAppButton } from "@/components/v1/whatsapp-button";
 
 export default function V1Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -10,6 +11,7 @@ export default function V1Layout({ children }: { children: React.ReactNode }) {
       <SiteHeader />
       <main>{children}</main>
       <SiteFooter />
+      <WhatsAppButton />
     </div>
   );
 }

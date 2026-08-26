@@ -3,16 +3,15 @@
 // /v1 path; anything not yet written points at a stub that says so.
 export const BUILT = new Set(["/", "/contact", "/blog", "/case-studies/hot-and-cold",
   "/ai-receptionist", "/answer-engine-optimization", "/mep-contractors", "/construction-contractors",
-  "/servicetitan-alternative", "/tools", "/tools/rent-vs-own", "/best-answering-service", "/builders-and-general-contractors", "/procore-alternative"]);
+  "/servicetitan-alternative", "/tools", "/tools/rent-vs-own", "/best-answering-service", "/builders-and-general-contractors", "/procore-alternative",
+  "/ai-consultant-washington-dc", "/ai-agent-development", "/ai-agents-for-business",
+  "/certified-payroll", "/hvac-operations-software", "/electrical-contractor-software",
+  "/plumbing-software"]);
 
 export const PLANNED: Record<string, string> = {
   "/operations-system": "The flagship offer page",
   "/operations-system/what-it-costs": "Cost, process, ownership and timeline",
   "/field-service-software-quickbooks": "How the QuickBooks sync actually works",
-  "/certified-payroll": "Certified payroll guides",
-  "/hvac-operations-software": "HVAC",
-  "/electrical-contractor-software": "Electrical",
-  "/plumbing-software": "Plumbing",
   "/about": "About Kortex",
 };
 

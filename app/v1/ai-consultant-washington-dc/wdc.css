@@ -1,0 +1,245 @@
+/* Kortex — Washington DC AI consultant local page. Design system supplies
+   tokens, type, buttons, .section-pad, .section-index, .eyebrow, .grid-overlay,
+   .faq / .faq-grid, .inline-link, .direct-call. Everything page-specific is
+   prefixed wdc-. */
+
+/* Placeholder / softened-claim marker — visible in review on both bands. */
+.ph{background:rgba(240,160,32,.13);box-shadow:inset 0 0 0 1px rgba(240,160,32,.4);padding:1px 5px;font-style:normal}
+
+/* Section headlines sized per the copy doc: 44-58px desktop, 32-40 mobile. */
+.wdc-local h2,.wdc-start h2,.wdc-review h2,.wdc-examples h2,.wdc-area h2,.wdc-faq h2,.wdc-final h2{
+  font-size:clamp(34px,4.2vw,58px)}
+
+/* ---- 1 hero (dark, 7/5 split) ---- */
+.wdc-hero{background:var(--ground);color:var(--text);position:relative;overflow:hidden;padding:170px 7vw 0}
+.wdc-hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:7fr 5fr;gap:6vw;align-items:center}
+.wdc-hero h1{font-size:clamp(48px,5.3vw,74px);max-width:16ch}
+.wdc-lede{font-size:21px;line-height:1.55;max-width:640px;margin:34px 0 0;color:var(--text)}
+.wdc-cta-note{font:400 12px/1.7 "IBM Plex Mono",monospace;letter-spacing:.04em;color:#7c7b78;margin:20px 0 0;max-width:560px}
+.wdc-trust{position:relative;z-index:2;border-top:1px solid var(--rules);margin-top:64px;padding:22px 0 42px;
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap;font:400 10px "IBM Plex Mono",monospace;letter-spacing:.13em;color:#7e7f82}
+.wdc-trust i{font-style:normal;color:#54555a}
+
+/* Bethesda base connected to the three regions, plus one small workflow
+   observation card. Explanatory concept — not landmark photography. */
+.wdc-hero-visual{display:flex;flex-direction:column;align-items:stretch;gap:26px}
+.wdc-region-map{display:flex;flex-direction:column;align-items:center}
+.wdc-region-base{border:1px solid var(--amber);background:var(--surface);padding:15px 22px;
+  font:500 11px "IBM Plex Mono",monospace;letter-spacing:.16em;color:var(--amber)}
+.wdc-region-stem{width:1px;height:22px;background:var(--rules)}
+.wdc-region-map ul{list-style:none;margin:0;padding:16px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;
+  width:100%;border-top:1px solid var(--rules)}
+.wdc-region-map li{border:1px solid var(--rules);background:var(--surface);padding:12px 10px;text-align:center;
+  font:400 10px "IBM Plex Mono",monospace;letter-spacing:.08em;color:#b9b7b1}
+.wdc-observe-card{border:1px solid #4a4c50;background:#191a1c;padding:16px 18px;align-self:center;min-width:70%}
+.wdc-observe-card>span{font:500 9px "IBM Plex Mono",monospace;letter-spacing:.15em;color:var(--amber)}
+.wdc-observe-card p{margin:0;display:flex;align-items:baseline;gap:10px;padding:8px 0 0;
+  font-size:13.5px;line-height:1.45;color:#c6c4bf}
+.wdc-observe-card p i{flex:0 0 auto;width:7px;height:7px;border-radius:50%;background:var(--amber);transform:translateY(-1px)}
+
+/* ---- 2 why local can matter (light, copy + typography fallback) ---- */
+.wdc-local{background:var(--paper);color:var(--ink)}
+.wdc-local .section-index{color:#6d6e71}
+.wdc-local-grid{display:grid;grid-template-columns:7fr 5fr;gap:6vw;align-items:start}
+.wdc-local-copy h2{max-width:22ch;margin-bottom:30px}
+.wdc-local-copy>p{font-size:18px;line-height:1.65;color:#5c5c5b;margin:0;max-width:650px}
+.wdc-local-copy>p+p{margin-top:22px}
+.wdc-local-visual{border:1px solid #b3b0a9;background:var(--paper);position:sticky;top:110px}
+.wdc-visual-tag{display:block;font:500 8px "IBM Plex Mono",monospace;letter-spacing:.15em;color:#8a877f;
+  padding:11px 16px;border-bottom:1px solid #cfccc4}
+.wdc-local-visual ul{list-style:none;margin:0;padding:4px 16px 10px}
+.wdc-local-visual li{display:flex;align-items:baseline;justify-content:space-between;gap:14px;
+  padding:13px 0;border-bottom:1px dashed #cfccc4}
+.wdc-local-visual li:last-child{border-bottom:0}
+.wdc-local-visual li p{margin:0;font-size:14.5px;line-height:1.45;color:#44453f}
+.wdc-local-visual li span{flex:0 0 auto;font:500 8.5px "IBM Plex Mono",monospace;letter-spacing:.12em;color:#7d4a00}
+
+/* ---- 3 start with one workflow (dark, 6/6 split) ---- */
+.wdc-start{background:var(--surface);color:var(--text)}
+.wdc-start-grid{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:start}
+.wdc-start-copy h2{max-width:20ch;margin-bottom:30px}
+.wdc-start-copy>p{font-size:18px;line-height:1.65;color:var(--muted);margin:0;max-width:650px}
+.wdc-start-copy>p+p{margin-top:22px}
+.wdc-bring-label{display:block;margin-top:40px;font:500 10px "IBM Plex Mono",monospace;letter-spacing:.16em;color:var(--amber)}
+.wdc-bring{list-style:none;margin:14px 0 0;padding:0;border-top:1px solid var(--rules)}
+.wdc-bring li{display:grid;grid-template-columns:44px 1fr;align-items:baseline;
+  padding:14px 0;border-bottom:1px solid var(--rules);font-size:16px;line-height:1.55;color:#c6c4bf}
+.wdc-bring li span{font:500 10px "IBM Plex Mono",monospace;color:#8e8f91}
+.wdc-closing-line{margin-top:26px;font:500 21px/1.45 "Barlow",system-ui,sans-serif;color:var(--text);max-width:34ch}
+
+/* Work completed → field record → office review → approval → billing, with
+   the two manual breaks in amber. */
+.wdc-start-visual{display:flex;flex-direction:column;gap:26px;position:sticky;top:110px}
+.wdc-sequence{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.wdc-sequence li{border:1px solid #4a4c50;background:#191a1c;padding:14px 18px;position:relative}
+.wdc-sequence li+li{margin-top:22px}
+.wdc-sequence li+li:before{content:"";position:absolute;left:28px;top:-22px;width:1px;height:22px;background:#54555a}
+.wdc-sequence li p{margin:0;font:600 14px "Oswald",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.05em;color:#c6c4bf}
+.wdc-sequence li.has-break{border-color:rgba(240,160,32,.55)}
+.wdc-sequence li span{display:flex;align-items:baseline;gap:9px;margin-top:9px;
+  font:500 10px "IBM Plex Mono",monospace;letter-spacing:.13em;color:var(--amber)}
+.wdc-sequence li span i{flex:0 0 auto;width:7px;height:7px;border-radius:50%;background:var(--amber);transform:translateY(-1px)}
+.wdc-answers{border-top:1px solid var(--rules);padding-top:18px}
+.wdc-answers>span{font:500 9px "IBM Plex Mono",monospace;letter-spacing:.15em;color:#8e8f91}
+.wdc-answers ul{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.wdc-answers li{border:1px solid var(--rules);background:var(--surface);padding:12px 12px;
+  font-size:13px;line-height:1.45;color:#c6c4bf;text-align:center;display:flex;align-items:center;justify-content:center}
+
+/* ---- 4 free workflow review: cream centerpiece on a dark band ---- */
+.wdc-review{background:var(--ground);color:var(--text)}
+.wdc-review-panel{border-top:3px solid var(--amber);background:var(--paper);color:var(--ink);
+  padding:52px 6vw 46px;text-align:center;max-width:940px;margin:0 auto}
+.wdc-review-panel .section-index{color:#6d6e71;justify-content:center}
+.wdc-review-panel h2{max-width:18ch;margin:0 auto}
+.wdc-review-lede{font-size:18px;line-height:1.62;color:#5c5c5b;max-width:52ch;margin:24px auto 0}
+.wdc-review-cols{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:38px;text-align:left}
+.wdc-review-cols>div{border:1px solid #b3b0a9;background:#dedbd4;padding:24px}
+.wdc-review-cols h3{font-size:20px;letter-spacing:.015em;margin:0 0 14px}
+.wdc-review-cols ul{list-style:none;margin:0;padding:0}
+.wdc-review-cols li{display:flex;align-items:baseline;gap:12px;padding:12px 0;border-top:1px solid #cfccc4;
+  font-size:15px;line-height:1.55;color:#44453f}
+.wdc-review-cols svg{flex:0 0 auto;width:15px;transform:translateY(2px);color:#9b5d00}
+.wdc-honest{margin:34px auto 0;font:500 21px/1.45 "Barlow",system-ui,sans-serif;color:var(--ink);max-width:38ch}
+.wdc-review-panel .actions{justify-content:center;margin-top:34px}
+.wdc-reassure{margin:26px 0 0;font:500 10px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#8a877f}
+.wdc-reassure i{font-style:normal;color:#b3b0a9;margin:0 6px}
+.wdc-verify{margin:22px 0 0;font:400 11px/1.7 "IBM Plex Mono",monospace;letter-spacing:.04em;color:#9a9a96}
+
+/* ---- 5 three contractor examples (light) ---- */
+.wdc-examples{background:var(--paper);color:var(--ink)}
+.wdc-examples .section-index{color:#6d6e71}
+.wdc-examples h2{max-width:24ch}
+.wdc-example-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:60px}
+.wdc-example-grid article{border:1px solid #c3c1bb;background:#dedbd4;padding:26px;display:flex;flex-direction:column}
+.wdc-example-index{font:500 10px "IBM Plex Mono",monospace;color:#8a5200}
+.wdc-example-grid h3{font-size:23px;line-height:1.14;letter-spacing:.015em;margin:26px 0 18px}
+.wdc-example-grid article>div{border-top:1px solid #cfccc4;padding:14px 0}
+.wdc-example-grid article>div strong{display:block;font:500 9px "IBM Plex Mono",monospace;letter-spacing:.15em;color:#8a877f;margin-bottom:7px}
+.wdc-example-grid article>div p{margin:0;font-size:15px;line-height:1.6;color:#5c5c5b}
+.wdc-example-result{margin-top:auto}
+.wdc-example-result strong{color:#8a5200!important}
+.wdc-example-result p{color:#44453f!important;font-weight:600}
+.wdc-qualify{font-size:17px;line-height:1.65;color:#5c5c5b;max-width:650px;margin:45px 0 0}
+
+/* ---- 6 service area and local credibility (dark, 7/5 split) ---- */
+.wdc-area{background:var(--ground);color:var(--text)}
+.wdc-area-grid{display:grid;grid-template-columns:7fr 5fr;gap:6vw;align-items:start;margin-top:14px}
+.wdc-area-copy h2{max-width:20ch;margin-bottom:30px}
+.wdc-area-copy>p{font-size:18px;line-height:1.65;color:var(--muted);margin:0;max-width:650px}
+.wdc-regions{list-style:none;margin:22px 0;padding:0;border-top:1px solid var(--rules);max-width:650px}
+.wdc-regions li{display:flex;align-items:baseline;gap:12px;padding:13px 0;border-bottom:1px solid var(--rules);
+  font-size:16px;line-height:1.5;color:#c6c4bf}
+.wdc-regions svg{flex:0 0 auto;width:15px;transform:translateY(2px);color:var(--amber)}
+.wdc-nap{display:flex;flex-wrap:wrap;gap:28px;border:1px solid var(--rules);background:var(--surface);
+  padding:20px 22px;margin:34px 0}
+.wdc-nap>div{display:flex;flex-direction:column;gap:7px}
+.wdc-nap span{font:500 9px "IBM Plex Mono",monospace;letter-spacing:.15em;color:#8e8f91}
+.wdc-nap a,.wdc-nap address{font:400 16px/1.5 "Barlow",system-ui,sans-serif;font-style:normal;color:var(--text)}
+.wdc-nap a:hover{color:var(--amber)}
+
+/* Restrained regional diagram centered on Bethesda. Informational only. */
+.wdc-area-visual{position:sticky;top:110px}
+.wdc-area-map{border:1px solid var(--rules);background:var(--surface);aspect-ratio:1/1;position:relative;
+  display:flex;align-items:center;justify-content:center;overflow:hidden}
+.wdc-area-map:before{content:"";position:absolute;inset:0;
+  background-image:linear-gradient(rgba(232,230,225,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(232,230,225,.05) 1px,transparent 1px);
+  background-size:44px 44px}
+.wdc-area-base{position:relative;z-index:2;border:1px solid var(--amber);background:#191a1c;padding:13px 18px;
+  font:500 10px "IBM Plex Mono",monospace;letter-spacing:.15em;color:var(--amber);
+  display:flex;align-items:center;gap:10px}
+.wdc-area-base i{width:7px;height:7px;border-radius:50%;background:var(--amber)}
+.wdc-area-label{position:absolute;z-index:2;font:400 10px "IBM Plex Mono",monospace;letter-spacing:.08em;color:#b9b7b1;
+  border:1px solid var(--rules);background:#191a1c;padding:9px 12px}
+.wdc-nw{top:9%;left:8%}
+.wdc-ne{top:9%;right:8%}
+.wdc-sw{bottom:9%;left:8%}
+.wdc-se{bottom:9%;right:8%}
+.wdc-area-note{margin:14px 0 0;font:400 10px "IBM Plex Mono",monospace;letter-spacing:.13em;color:#7e7f82;text-align:center}
+
+/* ---- 7 FAQ (light; base styles from the design system) ---- */
+.wdc-faq h2{max-width:20ch}
+
+/* ---- 7b final CTA + form (dark) ---- */
+.wdc-final{background:var(--ground);color:var(--text);position:relative;overflow:hidden}
+.wdc-final-head{position:relative;z-index:2}
+.wdc-final-head h2{max-width:18ch}
+.wdc-final-grid{position:relative;z-index:2;display:grid;grid-template-columns:.9fr 1.1fr;gap:6vw;align-items:start;margin-top:56px}
+.wdc-final-promise p{font-size:18px;line-height:1.65;color:var(--muted);margin:0 0 22px;max-width:46ch}
+.wdc-final-promise .direct-call{margin-top:6px;display:inline-block}
+
+/* Form styling — same treatment as the other v1 workflow forms, scoped to
+   this page's wrapper and adapted to the dark ground. */
+.wdc-form-wrap .v1-form{display:flex;flex-direction:column;gap:18px;padding:30px 32px;
+  border:1px solid var(--rules);background:var(--surface)}
+.wdc-form-wrap .v1-form>div[data-step]{display:flex;flex-direction:column;gap:18px}
+.wdc-form-wrap .form-index{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.16em;color:#8a8985;margin:0}
+.wdc-form-wrap .v1-form label{display:flex;flex-direction:column;gap:8px;color:#b9b7b1;
+  font:500 11px "IBM Plex Mono",monospace;letter-spacing:.1em;text-transform:uppercase}
+.wdc-form-wrap .v1-form label em{font-style:normal;color:var(--amber)}
+.wdc-form-wrap .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.wdc-form-wrap .v1-form input:not([type="radio"]),.wdc-form-wrap .v1-form textarea{
+  background:var(--ground);border:1px solid #3a3c40;color:var(--text);
+  font:400 16px/1.5 "Barlow",system-ui,sans-serif;padding:13px 14px;width:100%;
+  text-transform:none;letter-spacing:0}
+.wdc-form-wrap .v1-form input:focus-visible,.wdc-form-wrap .v1-form textarea:focus-visible{
+  outline:2px solid var(--amber);outline-offset:1px}
+.wdc-form-wrap .v1-form textarea{resize:vertical;min-height:76px}
+.wdc-form-wrap .v1-form ::placeholder{color:#6f7073}
+.wdc-form-wrap .v1-form .button{align-self:flex-start;margin-top:4px}
+.wdc-form-wrap .v1-form .button[disabled]{opacity:.6;cursor:progress}
+.wdc-meeting{border:1px solid #3a3c40;padding:14px 16px 16px;margin:0;display:flex;flex-direction:column;gap:2px}
+.wdc-meeting legend{font:500 11px "IBM Plex Mono",monospace;letter-spacing:.1em;text-transform:uppercase;
+  color:#b9b7b1;padding:0 6px}
+.wdc-form-wrap .wdc-meeting label{flex-direction:row;align-items:center;gap:12px;
+  font:400 15px/1.4 "Barlow",system-ui,sans-serif;text-transform:none;letter-spacing:0;color:var(--text);
+  padding:8px 0;cursor:pointer;min-height:44px}
+.wdc-meeting input[type="radio"]{appearance:none;width:16px;height:16px;margin:0;flex:0 0 auto;
+  border:1px solid #6f7073;border-radius:50%;background:var(--ground);cursor:pointer}
+.wdc-meeting input[type="radio"]:checked{border-color:var(--amber);box-shadow:inset 0 0 0 4px var(--ground);background:var(--amber)}
+.wdc-meeting input[type="radio"]:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+.wdc-form-wrap .form-error{margin:0;padding:13px 15px;background:rgba(168,73,42,.16);
+  border-left:3px solid #a8492a;font-size:14.5px;line-height:1.55;color:#e2a189}
+.wdc-form-wrap .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.wdc-form-wrap .form-sent{padding:52px 34px;text-align:center;border:1px solid var(--amber);
+  background:var(--surface)}
+.wdc-form-wrap .form-sent-mark{display:inline-flex;width:46px;height:46px;align-items:center;
+  justify-content:center;border:1px solid var(--amber);color:var(--amber);margin-bottom:20px}
+.wdc-form-wrap .form-sent-mark svg{width:22px;height:22px}
+.wdc-form-wrap .form-sent h3{font:600 27px "Oswald",system-ui,sans-serif;text-transform:uppercase;
+  letter-spacing:.02em;margin:0;color:var(--text)}
+.wdc-form-wrap .form-sent p{margin:12px auto 0;max-width:44ch;font-size:16px;line-height:1.62;
+  color:var(--muted)}
+.wdc-form-wrap .form-sent a{color:var(--amber);border-bottom:1px solid rgba(240,160,32,.4)}
+.wdc-form-wrap .form-note{font-size:13.5px;line-height:1.55;color:#8a8985}
+.wdc-form-wrap .form-note a{color:var(--amber);border-bottom:1px solid rgba(240,160,32,.4)}
+.wdc-step{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.16em;color:var(--amber);margin:0}
+
+/* ---- responsive ---- */
+@media(max-width:1100px){
+  .wdc-example-grid{grid-template-columns:1fr}
+  .wdc-review-cols{grid-template-columns:1fr}
+}
+@media(max-width:900px){
+  .wdc-hero{padding:140px 22px 0}
+  .wdc-hero-grid,.wdc-local-grid,.wdc-start-grid,.wdc-area-grid,.wdc-final-grid{grid-template-columns:1fr;gap:38px}
+  .wdc-hero h1{max-width:none;font-size:clamp(40px,9.5vw,48px)}
+  .wdc-hero-visual,.wdc-start-visual,.wdc-area-visual{max-width:520px}
+  .wdc-local-visual,.wdc-start-visual,.wdc-area-visual{position:static}
+  .wdc-local-copy h2,.wdc-start-copy h2,.wdc-area-copy h2,.wdc-final-head h2{max-width:none}
+  .wdc-region-map ul{grid-template-columns:1fr}
+  .wdc-observe-card{align-self:stretch;min-width:0}
+  .wdc-answers ul{grid-template-columns:1fr}
+  .wdc-review-panel{padding:38px 24px;text-align:left}
+  .wdc-review-panel .section-index,.wdc-review-panel .actions{justify-content:flex-start}
+  .wdc-review-panel h2,.wdc-review-lede,.wdc-honest{margin-left:0}
+  .wdc-nap{flex-direction:column;gap:18px}
+  .wdc-area-label{padding:7px 9px;font-size:9px}
+  .wdc-nw,.wdc-sw{left:5%}
+  .wdc-ne,.wdc-se{right:5%}
+  .wdc-form-wrap .form-row{grid-template-columns:1fr}
+  .wdc-form-wrap .v1-form{padding:24px 22px}
+  .wdc-form-wrap .v1-form .button{width:100%;justify-content:space-between}
+}
+@media(prefers-reduced-motion:reduce){
+  .wdc-hero-visual *,.wdc-start-visual *,.wdc-area-visual *{transition:none!important}
+}
