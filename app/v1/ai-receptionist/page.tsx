@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Arrow, Check } from "@/components/v1/icons";
+import { v1 } from "@/components/v1/paths";
 import "./receptionist.css";
 
 const SITE = "https://kortexconsulting.com";
@@ -264,6 +265,10 @@ export default function V1AiReceptionistPage() {
           sit in voicemail waiting for tomorrow.
         </p>
         <p className="rcp-note">{ph("[CONFIRM EXACT BOOKING, TRANSFER, SMS AND MULTI-CALL CAPABILITIES BEFORE PUBLISHING.]")}</p>
+        {/* Quiet cross-link — the customer-service page owns its own argument. */}
+        <p className="rcp-outcome">
+          Requests keep coming after the call? <a className="inline-link" href={v1("/ai-customer-service")}>SEE AI CUSTOMER SERVICE <Arrow /></a>
+        </p>
       </section>
 
       {/* 05 — start small */}

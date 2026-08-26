@@ -6,13 +6,16 @@ export const BUILT = new Set(["/", "/contact", "/blog", "/case-studies/hot-and-c
   "/servicetitan-alternative", "/tools", "/tools/rent-vs-own", "/best-answering-service", "/builders-and-general-contractors", "/procore-alternative",
   "/ai-consultant-washington-dc", "/ai-agent-development", "/ai-agents-for-business",
   "/certified-payroll", "/hvac-operations-software", "/electrical-contractor-software",
-  "/plumbing-software"]);
+  "/plumbing-software",
+  "/ai-customer-service",
+  "/ai-employee",
+  "/ai-sdr",
+  "/about"]);
 
 export const PLANNED: Record<string, string> = {
   "/operations-system": "The flagship offer page",
   "/operations-system/what-it-costs": "Cost, process, ownership and timeline",
   "/field-service-software-quickbooks": "How the QuickBooks sync actually works",
-  "/about": "About Kortex",
 };
 
 /** Canonical site path -> the path to use inside the /v1 preview. */

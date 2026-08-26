@@ -1,0 +1,226 @@
+/* Kortex — AI employee page. Design system supplies tokens, type, buttons,
+   .eyebrow / .section-index / .grid-overlay / .faq-grid. Everything here is
+   aie- scoped. Bands alternate dark and paper; amber stays scarce and is
+   reserved for human decisions, stop conditions and the one CTA per
+   screenful. Type follows the doc: hero clamp(48px,5.3vw,74px), section
+   heads 44-58 desktop / 32-40 mobile, body 19-21px desktop / 18px minimum
+   mobile, card copy 17px minimum, eyebrows 12px minimum, notes 14px minimum,
+   ~650px measure. No robots, avatars, generated people or fake dashboards —
+   the visuals are typographic responsibility maps. */
+
+/* Placeholder marker — bracketed copy that still needs confirmation. */
+.ph{background:rgba(240,160,32,.13);border:1px dashed rgba(240,160,32,.55);padding:1px 6px;font:500 .82em "IBM Plex Mono",monospace;letter-spacing:.02em;color:#a86e0a}
+.aie-dark .ph{color:#f2b45c}
+.aie-note{margin:26px 0 0;font-size:14px;line-height:1.7;max-width:720px}
+
+/* Doc minimum for eyebrows and section indexes is 12px. */
+.aie-hero .eyebrow,.aie-plain .eyebrow,.aie-outcomes .eyebrow,.aie-review .eyebrow,.aie-final .eyebrow,
+.aie-dep .section-index,.aie-resp .section-index,.aie-bounds .section-index{font-size:12px}
+
+/* hero */
+.aie-hero{background:var(--ground);color:var(--text);position:relative;overflow:hidden;padding:150px 7vw 84px}
+.aie-hero-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:6vw;align-items:center;position:relative}
+.aie-hero h1{font-size:clamp(48px,5.3vw,74px);line-height:1;letter-spacing:-.015em;margin:0;max-width:18ch}
+.aie-lede{font-size:20px;line-height:1.6;color:var(--muted);max-width:56ch;margin:26px 0 0}
+.aie-support{font-size:16px;line-height:1.6;color:#8a8985;max-width:54ch;margin:24px 0 0}
+.aie-trust{list-style:none;display:flex;flex-wrap:wrap;gap:14px 26px;margin:34px 0 0;padding:24px 0 0;border-top:1px solid var(--rules)}
+.aie-trust li{display:flex;align-items:center;gap:9px;font:500 12px "IBM Plex Mono",monospace;letter-spacing:.1em;color:#b9b7b1}
+.aie-trust svg{width:14px;height:14px;color:var(--amber)}
+
+/* hero before/after responsibility map — typographic, not a dashboard */
+.aie-map{display:flex;flex-direction:column;gap:14px}
+.aie-map-panel{background:var(--surface);border:1px solid var(--rules);padding:20px 22px}
+.aie-map-tag{display:block;font:500 10px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#8a8985;margin-bottom:16px}
+.aie-map-before{display:grid;grid-template-columns:1fr auto;gap:0 16px;align-items:stretch}
+.aie-map-before ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.aie-map-before li{display:flex;align-items:center;gap:12px;font-size:15px;line-height:1.4;color:var(--muted)}
+.aie-map-before li i{flex:1;height:1px;background:#4a4c50;min-width:16px}
+.aie-map-owner{display:grid;place-items:center;border:1px solid var(--amber);padding:10px 8px;min-width:64px}
+.aie-map-owner span{font:600 11px "IBM Plex Mono",monospace;letter-spacing:.14em;color:var(--amber);writing-mode:vertical-rl}
+.aie-map-after{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.aie-map-after li{display:flex;align-items:center;gap:10px;font-size:15px;line-height:1.4;color:var(--muted)}
+.aie-map-after li i{display:flex;color:#68696b}
+.aie-map-after li i svg{width:14px;height:14px}
+.aie-map-after li strong{font-weight:500;color:var(--text)}
+.aie-map-decision{border-left:2px solid var(--amber);padding-left:12px}
+.aie-map-decision i{color:var(--amber)!important}
+.aie-map-decision strong{font:600 12px "IBM Plex Mono",monospace!important;letter-spacing:.1em;color:var(--amber)!important}
+
+/* owner-dependency recognition — large type, an emotional moment */
+.aie-dep{background:var(--paper);color:var(--ink)}
+.aie-dep .section-index{color:#6d6e71}
+.aie-dep h2{font-size:clamp(36px,4.2vw,56px);max-width:20ch}
+.aie-dep-lede{font-size:20px;line-height:1.6;color:#3f3f3d;max-width:600px;margin:28px 0 0}
+.aie-dep-grid{display:grid;grid-template-columns:1fr 190px;gap:0 44px;align-items:stretch;margin-top:52px;max-width:1150px}
+.aie-questions{list-style:none;margin:0;padding:0;counter-reset:none}
+.aie-questions li{display:flex;align-items:center;gap:22px;padding:20px 0;border-top:1px solid #c2c0ba;
+  font:600 clamp(22px,2.6vw,34px)/1.15 "Oswald",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.01em;color:var(--ink)}
+.aie-questions li:last-child{border-bottom:1px solid #c2c0ba}
+.aie-questions li i{flex:1;height:1px;background:#b9b5aa;min-width:20px}
+.aie-dep-owner{display:grid;place-items:center;border:2px solid var(--amber);background:#dedbd2}
+.aie-dep-owner span{font:600 12px "IBM Plex Mono",monospace;letter-spacing:.16em;color:#7d4a00;text-align:center;padding:10px}
+.aie-dep-closing{margin:40px 0 0;padding-left:20px;border-left:3px solid var(--amber);font-size:19px;line-height:1.65;color:#3f3f3d;max-width:650px}
+.aie-dep-closing strong{color:var(--ink)}
+
+/* plain english — five-step responsibility strip, human stop prominent */
+.aie-plain{background:var(--surface);color:var(--text)}
+.aie-plain h2{font-size:clamp(36px,4.2vw,56px);max-width:19ch}
+.aie-plain-lede{font-size:19px;line-height:1.65;color:var(--muted);max-width:620px;margin:26px 0 0}
+.aie-plain-label{font-size:19px;line-height:1.6;font-weight:600;color:var(--text);margin:34px 0 18px;max-width:620px}
+.aie-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--rules);border:1px solid var(--rules)}
+.aie-steps li{background:var(--ground);padding:22px 20px 24px}
+.aie-steps li>span{display:grid;place-items:center;width:34px;height:34px;border:1px solid #4a4c50;font:600 13px "IBM Plex Mono",monospace;color:#b9b7b1}
+.aie-steps li>p{margin:14px 0 0;font-size:17px;line-height:1.5;color:var(--muted)}
+.aie-steps .aie-step-stop{border-left:3px solid var(--amber)}
+.aie-steps .aie-step-stop>span{border-color:var(--amber);color:var(--amber)}
+.aie-steps .aie-step-stop>p{color:var(--text)}
+.aie-plain-closing{margin:32px 0 0;padding:18px 22px;background:var(--ground);border:1px solid var(--rules);font-size:18px;line-height:1.6;color:var(--text);max-width:650px}
+
+/* three contractor responsibility rows — examples, not products */
+.aie-resp{background:var(--paper);color:var(--ink)}
+.aie-resp .section-index{color:#6d6e71}
+.aie-resp h2{font-size:clamp(36px,4.2vw,56px);max-width:20ch}
+.aie-resp-rows{margin-top:52px;border-top:1px solid #c2c0ba}
+.aie-resp-rows article{padding:34px 0 38px;border-bottom:1px solid #c2c0ba}
+.aie-resp-rows h3{font:600 24px "Oswald",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.2;margin:0 0 22px}
+.aie-resp-cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px}
+.aie-resp-cols>div>span{display:block;font:500 10px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#8a877f}
+.aie-resp-cols>div>p{margin:10px 0 0;font-size:17px;line-height:1.6;color:#3f3f3d}
+.aie-resp-person{border-left:3px solid var(--amber);padding-left:16px}
+.aie-resp-person>span{color:#9b5d00!important}
+.aie-resp-person>p{color:var(--ink)!important}
+.aie-resp-note{margin:30px 0 0;font-size:17px;line-height:1.6;color:#5c5c5b;max-width:60ch}
+
+/* owner-outcome centerpiece — the emotional and commercial high point */
+.aie-outcomes{background:var(--ground);color:var(--text)}
+.aie-outcomes-h2{font-size:clamp(40px,4.8vw,62px);max-width:19ch}
+.aie-outcomes-lede{font-size:20px;line-height:1.65;color:var(--muted);max-width:600px;margin:28px 0 0}
+.aie-outcome-grid{margin-top:52px;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rules);border:1px solid var(--rules)}
+.aie-outcome-grid article{background:var(--surface);padding:28px 26px 30px}
+.aie-outcome-grid article>span{font:500 11px "IBM Plex Mono",monospace;letter-spacing:.12em;color:#8a8985}
+.aie-outcome-grid h3{font:600 23px "Oswald",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.2;margin:14px 0 12px}
+.aie-outcome-grid p{margin:0;font-size:17px;line-height:1.6;color:var(--muted)}
+.aie-outcomes-closing{margin:34px 0 0;padding-left:20px;border-left:3px solid var(--amber);font-size:19px;line-height:1.6;color:var(--text);max-width:650px}
+
+/* boundaries — one operating card beside five stay-human conditions */
+.aie-bounds{background:var(--paper);color:var(--ink)}
+.aie-bounds .section-index{color:#6d6e71}
+.aie-bounds h2{font-size:clamp(36px,4.2vw,56px);max-width:17ch}
+.aie-bounds-grid{margin-top:52px;display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:start}
+.aie-opcard{background:var(--ground);color:var(--text);padding:26px 28px 20px}
+.aie-opcard-tag{display:block;font:500 10px "IBM Plex Mono",monospace;letter-spacing:.14em;line-height:1.7;color:#8a8985}
+.aie-opcard ol{list-style:none;margin:18px 0 0;padding:0}
+.aie-opcard li{display:flex;gap:16px;align-items:baseline;padding:15px 0;border-bottom:1px dashed #3a3c40}
+.aie-opcard li:last-child{border-bottom:0}
+.aie-opcard li span{font:500 11px "IBM Plex Mono",monospace;letter-spacing:.1em;color:#8a8985}
+.aie-opcard li p{margin:0;font-size:17px;line-height:1.55;color:var(--text)}
+.aie-opcard li.is-stop{border-left:2px solid var(--amber);padding-left:14px}
+.aie-opcard li.is-stop span{color:var(--amber)}
+.aie-nogo strong{display:block;font:600 21px "Oswald",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.3;margin:0 0 18px}
+.aie-nogo ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.aie-nogo li{display:flex;gap:12px;font-size:17px;line-height:1.55;color:#3f3f3d}
+.aie-nogo li svg{flex:0 0 auto;width:16px;height:16px;color:#9b5d00;margin-top:4px}
+.aie-nogo-closing{margin:26px 0 0;padding-left:20px;border-left:3px solid var(--amber);font-size:18px;line-height:1.6;color:var(--ink);max-width:560px}
+
+/* free operations bottleneck review — question-led, beside the form */
+.aie-review{background:var(--ground);color:var(--text)}
+.aie-review-panel{border:1px solid var(--amber);padding:60px 5vw 56px;position:relative}
+.aie-review h2{font-size:clamp(34px,4vw,54px);max-width:24ch}
+.aie-review-grid{margin-top:44px;display:grid;grid-template-columns:1fr 1.1fr;gap:6vw;align-items:start}
+.aie-review-lede{font-size:19px;line-height:1.65;color:var(--muted);max-width:52ch;margin:0}
+.aie-review-label{font:500 11px "IBM Plex Mono",monospace;letter-spacing:.15em;color:#8a8985;margin:32px 0 14px}
+.aie-separates{list-style:none;margin:0;padding:0;display:grid;gap:10px;max-width:620px}
+.aie-separates li{display:flex;align-items:center;gap:16px;border:1px solid var(--rules);background:var(--surface);padding:15px 20px;font-size:17px;line-height:1.45;color:var(--text)}
+.aie-separates li span{font:500 11px "IBM Plex Mono",monospace;letter-spacing:.1em;color:#8a8985}
+.aie-review-deliverable{margin:26px 0 0;font-size:18px;line-height:1.6;font-weight:600;color:var(--text);max-width:52ch}
+.aie-review .actions{margin-top:28px}
+.aie-reassure{margin:22px 0 0;font-size:16px;line-height:1.6;color:#8a8985;max-width:48ch}
+
+/* faq — two-column heading and accordion; .faq / .faq-grid come from the system */
+.aie-faq h2{font-size:clamp(30px,3.4vw,46px);max-width:12ch}
+.aie-faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:6vw;align-items:start}
+.aie-faq .faq-grid{margin-top:0}
+
+/* final cta */
+.aie-final{background:var(--ground);color:var(--text);position:relative;overflow:hidden;padding:120px 7vw 130px}
+.aie-final-inner{position:relative;max-width:880px;margin:0 auto;text-align:center}
+.aie-final .eyebrow{justify-content:center}
+.aie-final h2{font-size:clamp(38px,4.6vw,62px)}
+.aie-final-inner>p:not(.eyebrow){font-size:19px;line-height:1.65;color:var(--muted);max-width:56ch;margin:26px auto 0}
+.aie-final-actions{justify-content:center}
+
+/* form step marker */
+.aie-form-step{font:500 11px "IBM Plex Mono",monospace;letter-spacing:.14em;color:var(--amber);margin:0}
+
+/* The .v1-form base styles live in the contact page's stylesheet, not the
+   design system, so the pieces this page needs are scoped here under
+   .aie-form-wrap and adapted to the dark ground. */
+.aie-form-wrap .v1-form{display:flex;flex-direction:column;gap:18px;padding:30px 32px;
+  background:var(--surface);border:1px solid var(--rules);position:relative}
+.aie-form-wrap .v1-form>div[data-step]{display:flex;flex-direction:column;gap:18px}
+.aie-form-wrap .form-index{font:600 21px "Oswald",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.02em;color:var(--text);margin:0}
+.aie-form-wrap .v1-form label{display:flex;flex-direction:column;gap:8px;color:#b9b7b1;
+  font:500 12px "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase}
+.aie-form-wrap .v1-form label em{font-style:normal;color:var(--amber)}
+.aie-form-wrap .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.aie-form-wrap .v1-form input,.aie-form-wrap .v1-form textarea{
+  font:400 16px/1.5 "Barlow",system-ui,sans-serif;color:var(--text);background:#1f2124;
+  border:1px solid var(--rules);padding:13px 14px;width:100%;text-transform:none;letter-spacing:0}
+.aie-form-wrap .v1-form input:focus-visible,.aie-form-wrap .v1-form textarea:focus-visible{
+  outline:2px solid var(--amber);outline-offset:1px}
+.aie-form-wrap .v1-form textarea{resize:vertical;min-height:76px}
+.aie-form-wrap .v1-form ::placeholder{color:#6f7073}
+.aie-form-wrap .v1-form .button{align-self:flex-start;margin-top:4px}
+.aie-form-wrap .v1-form .button[disabled]{opacity:.6;cursor:progress}
+.aie-form-wrap .form-error{margin:0;padding:13px 15px;background:rgba(168,73,42,.16);
+  border:1px solid rgba(168,73,42,.5);font-size:14.5px;line-height:1.5;color:#e8b5a0}
+.aie-form-wrap .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.aie-form-wrap .form-sent{padding:52px 34px;text-align:center;border:1px solid var(--amber);
+  background:var(--surface)}
+.aie-form-wrap .form-sent-mark{display:inline-flex;width:46px;height:46px;align-items:center;
+  justify-content:center;background:var(--amber);color:var(--ground)}
+.aie-form-wrap .form-sent-mark svg{width:22px;height:22px}
+.aie-form-wrap .form-sent h3{font:600 27px "Oswald",system-ui,sans-serif;text-transform:uppercase;
+  letter-spacing:.02em;margin:20px 0 0}
+.aie-form-wrap .form-sent p{margin:12px auto 0;max-width:44ch;font-size:16px;line-height:1.62;
+  color:var(--muted)}
+.aie-form-wrap .form-sent a{color:var(--amber);border-bottom:1px solid rgba(240,160,32,.4)}
+.aie-form-wrap .form-note{font-size:14px;line-height:1.55;color:#8a8985}
+.aie-form-wrap .form-note a{color:var(--amber);border-bottom:1px solid rgba(240,160,32,.4)}
+
+@media(max-width:1180px){
+  .aie-steps{grid-template-columns:repeat(5,1fr)}
+  .aie-outcome-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:900px){
+  .aie-hero{padding:126px 22px 62px}
+  .aie-hero h1{font-size:clamp(40px,9vw,48px)}
+  .aie-dep h2,.aie-plain h2,.aie-resp h2,.aie-bounds h2,.aie-review h2{font-size:clamp(32px,7.4vw,40px)}
+  .aie-outcomes-h2,.aie-final h2{font-size:clamp(34px,8vw,44px)}
+  .aie-dep.section-pad,.aie-plain.section-pad,.aie-resp.section-pad,.aie-outcomes.section-pad,
+  .aie-bounds.section-pad,.aie-review.section-pad,.aie-faq.section-pad{padding:80px 22px}
+  .aie-final{padding:90px 22px 100px}
+  /* Copy stacks before visuals; split layouts become vertical sequences. */
+  .aie-hero-grid,.aie-bounds-grid,.aie-review-grid,.aie-faq-grid{grid-template-columns:1fr;gap:52px}
+  .aie-lede,.aie-dep-lede,.aie-plain-lede,.aie-outcomes-lede,.aie-review-lede,
+  .aie-final-inner>p:not(.eyebrow){font-size:18px}
+  /* Dependency stack: questions first, the owner label kept beneath and
+     visually connected. */
+  .aie-dep-grid{grid-template-columns:1fr;gap:0}
+  .aie-dep-owner{margin-top:22px;padding:16px;justify-self:start;min-width:190px}
+  .aie-questions li{font-size:clamp(20px,5.8vw,26px);gap:14px}
+  /* Responsibility strip and rows become vertical sequences; the human stop
+     stays connected and prominent. */
+  .aie-steps{grid-template-columns:1fr}
+  .aie-steps li>p{font-size:18px}
+  .aie-resp-cols{grid-template-columns:1fr;gap:20px}
+  .aie-resp-cols>div>p{font-size:18px}
+  .aie-outcome-grid{grid-template-columns:1fr}
+  .aie-outcome-grid p{font-size:18px}
+  .aie-review-panel{padding:44px 22px}
+  .aie-final-actions{flex-direction:column;align-items:center}
+  .aie-form-wrap .v1-form{padding:24px 22px}
+  .aie-form-wrap .form-row{grid-template-columns:1fr}
+  .aie-form-wrap .v1-form .button{width:100%;justify-content:space-between}
+}

@@ -289,6 +289,8 @@ export default function V1AiAgentsForBusinessPage() {
         <div className="afb-quiet-links">
           <p>Need help with inbound calls? <a className="inline-link" href={v1("/ai-receptionist")}>SEE THE AI RECEPTIONIST <Arrow /></a></p>
           <p>Already know you need a custom agent? <a className="inline-link" href={v1("/ai-agent-development")}>SEE AI AGENT DEVELOPMENT <Arrow /></a></p>
+          <p>Does every decision still run through you? <a className="inline-link" href={v1("/ai-employee")}>SEE THE AI EMPLOYEE PAGE <Arrow /></a></p>
+          <p>Estimates going quiet after you send them? <a className="inline-link" href={v1("/ai-sdr")}>SEE AI SDR FOLLOW-UP <Arrow /></a></p>
         </div>
       </section>
 

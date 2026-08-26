@@ -1,0 +1,224 @@
+/* Kortex — AI SDR (sales follow-up) page. Design system supplies tokens,
+   type, buttons, .eyebrow / .section-index / .grid-overlay / .faq-grid /
+   .inline-link. Everything here is sdr- scoped. Bands alternate dark and
+   paper; amber stays scarce — the human-handoff branch, stop conditions and
+   the one CTA per screenful. Type follows the doc: body 19-21px desktop /
+   18px minimum mobile, card copy 17px minimum, eyebrows 12px minimum, notes
+   14px minimum, ~650px measure, 44px minimum touch targets. */
+
+/* Placeholder marker — bracketed copy that still needs confirmation. */
+.ph{background:rgba(240,160,32,.13);border:1px dashed rgba(240,160,32,.55);padding:1px 6px;font:500 .82em "IBM Plex Mono",monospace;letter-spacing:.02em;color:#a86e0a}
+.sdr-dark .ph,.sdr-form-wrap .ph{color:#f2b45c}
+.sdr-note{margin:22px 0 0;font-size:14px;line-height:1.7;max-width:720px}
+
+/* Doc minimum for eyebrows and section indexes is 12px. */
+.sdr-hero .eyebrow,.sdr-flow .eyebrow,.sdr-versus .eyebrow,.sdr-proof .eyebrow,.sdr-audit .eyebrow,.sdr-final .eyebrow,
+.sdr-leak .section-index,.sdr-bounds .section-index{font-size:12px}
+
+/* hero — 7/5 split */
+.sdr-hero{background:var(--ground);color:var(--text);position:relative;overflow:hidden;padding:150px 7vw 84px}
+.sdr-hero-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:6vw;align-items:center;position:relative}
+.sdr-hero h1{font-size:clamp(48px,5.3vw,74px);line-height:1;letter-spacing:-.015em;margin:0;max-width:16ch}
+.sdr-lede{font-size:20px;line-height:1.6;color:var(--muted);max-width:56ch;margin:26px 0 0}
+.sdr-support{font-size:16px;line-height:1.6;color:#8a8985;max-width:52ch;margin:24px 0 0}
+.sdr-trust{list-style:none;display:flex;flex-wrap:wrap;gap:14px 26px;margin:34px 0 0;padding:24px 0 0;border-top:1px solid var(--rules)}
+.sdr-trust li{display:flex;align-items:center;gap:9px;font:500 12px "IBM Plex Mono",monospace;letter-spacing:.1em;color:#b9b7b1}
+.sdr-trust svg{width:14px;height:14px;color:var(--amber)}
+
+/* hero timeline card — one estimate, then the routine/buying-signal split.
+   An operating record, not a dashboard. Amber only on the human branch. */
+.sdr-timeline{background:var(--surface);border:1px solid var(--rules)}
+.sdr-timeline-top{display:flex;align-items:center;gap:6px;padding:13px 16px;border-bottom:1px solid var(--rules)}
+.sdr-timeline-top span{margin-right:auto;font:500 10px "IBM Plex Mono",monospace;letter-spacing:.15em;color:#8a8985}
+.sdr-timeline-top i{width:5px;height:5px;border:1px solid #626367;border-radius:50%}
+.sdr-stages{list-style:none;margin:0;padding:10px 20px 18px}
+.sdr-stages li{position:relative;display:flex;align-items:center;gap:14px;padding:13px 0 13px 4px;
+  font:600 15px "Oswald",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.05em;color:var(--text)}
+.sdr-stages li+li{border-top:1px dashed #3a3c40}
+.sdr-stages li span{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.12em;color:#8a8985}
+.sdr-stages li:last-child{color:var(--amber)}
+.sdr-stages li:last-child span{color:var(--amber)}
+.sdr-branches{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rules);border-top:1px solid var(--rules)}
+.sdr-branches>div{background:#1f2124;padding:16px 18px 18px}
+.sdr-branches span{display:block;font:500 10px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#8a8985}
+.sdr-branches p{margin:9px 0 0;font-size:14.5px;line-height:1.55;color:var(--muted)}
+.sdr-branch-human{border-left:2px solid var(--amber)}
+.sdr-branch-human span{color:var(--amber)}
+.sdr-branch-human p{color:var(--text)}
+
+/* revenue leak — six steps, the final three fading */
+.sdr-leak{background:var(--paper);color:var(--ink)}
+.sdr-leak .section-index{color:#6d6e71}
+.sdr-leak h2{font-size:clamp(34px,4vw,56px);max-width:19ch}
+.sdr-leak-lede{font-size:19px;line-height:1.6;font-weight:600;color:var(--ink);margin:30px 0 0}
+.sdr-pattern{list-style:none;margin:26px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1100px}
+.sdr-pattern li{border:1px solid #cfccc4;background:#efede7;padding:20px 22px}
+.sdr-pattern li span{display:block;font:500 11px "IBM Plex Mono",monospace;letter-spacing:.12em;color:#8a877f}
+.sdr-pattern li p{margin:10px 0 0;font-size:17px;line-height:1.55;color:#3f3f3d}
+.sdr-fade-1{opacity:.78}
+.sdr-fade-2{opacity:.58}
+.sdr-fade-3{opacity:.4;border-style:dashed}
+.sdr-leak-copy{font-size:19px;line-height:1.65;color:#3f3f3d;max-width:650px;margin:30px 0 0}
+.sdr-invested{margin:34px 0 0;display:flex;align-items:center;gap:22px;flex-wrap:wrap;border-top:1px solid #c2c0ba;padding-top:22px;max-width:1100px}
+.sdr-invested-tag{font:500 11px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#8a877f}
+.sdr-invested ul{list-style:none;display:flex;gap:12px;flex-wrap:wrap;margin:0;padding:0}
+.sdr-invested li{border:1px solid #b9b5aa;background:#dedbd2;padding:10px 16px;
+  font:600 14px "Oswald",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.05em;color:#3f3f3d}
+.sdr-leak .actions{margin-top:38px}
+
+/* follow-up workflow — five wide rows; amber rail on handoff and stop */
+.sdr-flow{background:var(--ground);color:var(--text)}
+.sdr-flow h2{font-size:clamp(34px,4vw,56px);max-width:20ch}
+.sdr-flow-lede{font-size:19px;line-height:1.65;color:var(--muted);max-width:620px;margin:26px 0 0}
+.sdr-flow-rows{list-style:none;margin:44px 0 0;padding:0}
+.sdr-flow-rows li{display:grid;grid-template-columns:64px .8fr 1.2fr;gap:4vw;align-items:start;
+  padding:26px 22px;border:1px solid var(--rules);background:var(--surface)}
+.sdr-flow-rows li+li{margin-top:12px}
+.sdr-flow-rows li span{font:500 11px "IBM Plex Mono",monospace;letter-spacing:.12em;color:#8a8985;padding-top:6px}
+.sdr-flow-rows h3{font:600 22px "Oswald",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.25;margin:0}
+.sdr-flow-rows p{margin:0;font-size:17px;line-height:1.6;color:var(--muted)}
+.sdr-flow-human{border-left:3px solid var(--amber)!important}
+.sdr-flow-human span{color:var(--amber)!important}
+.sdr-flow-closing{margin:32px 0 0;font-size:18px;line-height:1.6;color:var(--text);max-width:60ch;border-left:3px solid var(--amber);padding-left:20px}
+
+/* system versus salesperson — equal panels, amber only on the human side */
+.sdr-bounds{background:var(--paper);color:var(--ink)}
+.sdr-bounds .section-index{color:#6d6e71}
+.sdr-bounds h2{font-size:clamp(34px,4vw,56px);max-width:19ch}
+.sdr-bounds-grid{margin-top:52px;display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:1100px}
+.sdr-bounds-grid article{border:1px solid #cfccc4;background:#efede7;padding:26px 28px}
+.sdr-bounds-grid h3{font:600 21px "Oswald",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.3;margin:0 0 18px}
+.sdr-bounds-grid ul{list-style:none;margin:0;padding:0;display:grid;gap:11px}
+.sdr-bounds-grid li{display:flex;gap:12px;font-size:17px;line-height:1.55;color:#3f3f3d}
+.sdr-bounds-grid li svg{flex:0 0 auto;width:16px;height:16px;color:#8a877f;margin-top:4px}
+.sdr-bounds-human{border-left:3px solid var(--amber)!important}
+.sdr-bounds-human li svg{color:#9b5d00}
+.sdr-bounds-closing{margin:30px 0 0;font-size:18px;line-height:1.6;color:#3f3f3d;max-width:650px}
+
+/* buy versus build — two equal cards, neither more desirable */
+.sdr-versus{background:var(--surface);color:var(--text)}
+.sdr-versus h2{font-size:clamp(34px,4vw,56px);max-width:20ch}
+.sdr-versus-grid{margin-top:52px;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rules);border:1px solid var(--rules)}
+.sdr-versus-grid article{background:var(--ground);padding:30px 28px 26px;display:flex;flex-direction:column}
+.sdr-versus-grid h3{font:600 22px "Oswald",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.25;margin:0 0 18px}
+.sdr-versus-grid ul{list-style:none;margin:0;padding:0;display:grid;gap:11px}
+.sdr-versus-grid li{position:relative;padding-left:24px;font-size:17px;line-height:1.55;color:var(--muted)}
+.sdr-versus-grid li:before{content:"";position:absolute;left:0;top:11px;width:11px;height:2px;background:#68696b}
+.sdr-traits{margin:auto 0 0;padding-top:16px;border-top:1px dashed #3a3c40;font:500 11px "IBM Plex Mono",monospace;letter-spacing:.09em;line-height:2;color:#8a8985}
+.sdr-versus-note{margin:30px 0 24px;font-size:18px;line-height:1.6;color:var(--muted);max-width:60ch}
+.sdr-versus .inline-link{color:var(--text)}
+.sdr-versus .inline-link:hover{color:var(--amber)}
+
+/* firm-level proof — compact high-contrast strip on paper. Qualifier sits
+   immediately beneath the number; nothing animates. */
+.sdr-proof{background:var(--paper);color:var(--ink)}
+.sdr-proof-strip{background:var(--ground);color:var(--text);padding:56px 5vw 50px;max-width:1100px}
+.sdr-proof-headline{font:600 clamp(30px,3.6vw,48px)/1.15 "Oswald",system-ui,sans-serif;text-transform:uppercase;letter-spacing:-.01em;margin:0;max-width:22ch}
+.sdr-proof-headline strong{color:var(--amber);font-weight:600}
+.sdr-proof-qualifier{margin:20px 0 0;font-size:17px;line-height:1.6;color:var(--muted);max-width:650px}
+
+/* free follow-up audit — question-led centerpiece with the form */
+.sdr-audit{background:var(--ground);color:var(--text)}
+.sdr-audit-panel{border:1px solid var(--amber);padding:60px 5vw 56px;position:relative}
+.sdr-audit h2{font-size:clamp(34px,4vw,56px);max-width:22ch}
+.sdr-audit-grid{margin-top:44px;display:grid;grid-template-columns:1fr 1.1fr;gap:6vw;align-items:start}
+.sdr-audit-lede{font-size:19px;line-height:1.65;color:var(--muted);max-width:56ch;margin:0}
+.sdr-audit-label{font:500 11px "IBM Plex Mono",monospace;letter-spacing:.15em;color:#8a8985;margin:32px 0 14px;text-transform:uppercase}
+.sdr-audit-list{list-style:none;margin:0;padding:0;display:grid;gap:11px;max-width:620px}
+.sdr-audit-list li{display:flex;gap:12px;font-size:17px;line-height:1.55;color:var(--text)}
+.sdr-audit-list svg{flex:0 0 auto;width:16px;height:16px;color:var(--amber);margin-top:4px}
+.sdr-audit-value{margin:26px 0 0;font-size:17px;line-height:1.65;color:var(--muted);max-width:56ch}
+.sdr-reassure{margin:26px 0 28px;font-size:17px;line-height:1.6;color:var(--text);max-width:52ch;border-left:3px solid var(--amber);padding-left:18px}
+
+/* faq — two-column heading and accordion; .faq / .faq-grid come from the system */
+.sdr-faq h2{font-size:clamp(30px,3.4vw,46px);max-width:12ch}
+.sdr-faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:6vw;align-items:start}
+.sdr-faq .faq-grid{margin-top:0}
+
+/* final cta — short; the offer is explained above */
+.sdr-final{background:var(--ground);color:var(--text);position:relative;overflow:hidden;padding:110px 7vw 120px;text-align:center}
+.sdr-final-inner{position:relative;max-width:820px;margin:0 auto}
+.sdr-final .eyebrow{justify-content:center}
+.sdr-final h2{font-size:clamp(36px,4.4vw,60px)}
+.sdr-final-inner>p:not(.eyebrow){font-size:19px;line-height:1.65;color:var(--muted);max-width:60ch;margin:24px auto 34px}
+.sdr-final .contact-actions{margin-top:0}
+
+/* The .v1-form base styles live in the contact page's stylesheet, not the
+   design system, so the pieces this page needs are scoped here under
+   .sdr-form-wrap and adapted to the dark ground. */
+.sdr-form-step{font:500 11px "IBM Plex Mono",monospace;letter-spacing:.14em;color:var(--amber);margin:0}
+.sdr-form-wrap .v1-form{display:flex;flex-direction:column;gap:18px;padding:30px 32px;
+  background:var(--surface);border:1px solid var(--rules);position:relative}
+.sdr-form-wrap .v1-form>div[data-step]{display:flex;flex-direction:column;gap:18px}
+.sdr-form-wrap .form-index{font:600 21px "Oswald",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.02em;color:var(--text);margin:0}
+.sdr-form-wrap .v1-form label{display:flex;flex-direction:column;gap:8px;color:#b9b7b1;
+  font:500 12px "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase}
+.sdr-form-wrap .v1-form label em{font-style:normal;color:var(--amber)}
+.sdr-form-wrap .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.sdr-form-wrap .v1-form input,.sdr-form-wrap .v1-form textarea{
+  font:400 16px/1.5 "Barlow",system-ui,sans-serif;color:var(--text);background:#1f2124;
+  border:1px solid var(--rules);padding:13px 14px;width:100%;text-transform:none;letter-spacing:0}
+.sdr-form-wrap .v1-form input:focus-visible,.sdr-form-wrap .v1-form textarea:focus-visible{
+  outline:2px solid var(--amber);outline-offset:1px}
+.sdr-form-wrap .v1-form textarea{resize:vertical;min-height:76px}
+.sdr-form-wrap .v1-form ::placeholder{color:#6f7073}
+.sdr-form-wrap .v1-form .button{align-self:flex-start;margin-top:4px}
+.sdr-form-wrap .v1-form .button[disabled]{opacity:.6;cursor:progress}
+.sdr-form-wrap .form-error{margin:0;padding:13px 15px;background:rgba(168,73,42,.16);
+  border:1px solid rgba(168,73,42,.5);font-size:14.5px;line-height:1.5;color:#e8b5a0}
+.sdr-form-wrap .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.sdr-form-wrap .form-sent{padding:52px 34px;text-align:center;border:1px solid var(--amber);
+  background:var(--surface)}
+.sdr-form-wrap .form-sent-mark{display:inline-flex;width:46px;height:46px;align-items:center;
+  justify-content:center;background:var(--amber);color:var(--ground)}
+.sdr-form-wrap .form-sent-mark svg{width:22px;height:22px}
+.sdr-form-wrap .form-sent h3{font:600 27px "Oswald",system-ui,sans-serif;text-transform:uppercase;
+  letter-spacing:.02em;margin:20px 0 0}
+.sdr-form-wrap .form-sent p{margin:12px auto 0;max-width:44ch;font-size:16px;line-height:1.62;
+  color:var(--muted)}
+.sdr-form-wrap .form-sent a{color:var(--amber);border-bottom:1px solid rgba(240,160,32,.4)}
+.sdr-form-wrap .form-note{font-size:14px;line-height:1.55;color:#8a8985}
+.sdr-form-wrap .form-note a{color:var(--amber);border-bottom:1px solid rgba(240,160,32,.4)}
+
+/* opportunity-type checkboxes — 44px touch targets */
+.sdr-opps{border:0;margin:0;padding:0}
+.sdr-opps legend{padding:0;margin-bottom:10px;color:#b9b7b1;
+  font:500 12px "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase}
+.sdr-opps legend em{font-style:normal;color:var(--amber)}
+.sdr-opps>div{display:flex;flex-wrap:wrap;gap:8px}
+.sdr-form-wrap .v1-form .sdr-opp{flex-direction:row;align-items:center;gap:9px;cursor:pointer;
+  border:1px solid var(--rules);background:#1f2124;padding:11px 14px;min-height:44px;
+  font:400 15px "Barlow",system-ui,sans-serif;text-transform:none;letter-spacing:0;color:var(--text)}
+.sdr-form-wrap .v1-form .sdr-opp input{width:16px;height:16px;accent-color:var(--amber);margin:0;padding:0}
+.sdr-form-wrap .v1-form .sdr-opp:has(input:checked){border-color:var(--amber)}
+.sdr-form-wrap .v1-form .sdr-opp input:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+.sdr-opps .form-error{margin-top:10px}
+
+/* optional upload — instruction only, privacy line beside it */
+.sdr-upload{border:1px dashed var(--rules);padding:14px 16px}
+.sdr-upload .field-label{display:block;color:#b9b7b1;
+  font:500 12px "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase}
+.sdr-upload p{margin:8px 0 0;font-size:14px;line-height:1.6;color:#8a8985}
+
+@media(max-width:900px){
+  .sdr-hero{padding:126px 22px 62px}
+  .sdr-hero h1{font-size:clamp(40px,9vw,48px)}
+  .sdr-leak h2,.sdr-flow h2,.sdr-bounds h2,.sdr-versus h2,.sdr-audit h2{font-size:clamp(32px,7.4vw,40px)}
+  .sdr-final{padding:80px 22px 90px}
+  .sdr-leak.section-pad,.sdr-flow.section-pad,.sdr-bounds.section-pad,.sdr-versus.section-pad,.sdr-proof.section-pad,.sdr-audit.section-pad,.sdr-faq.section-pad{padding:80px 22px}
+  /* Copy stacks before visuals; the pattern and workflow become vertical
+     flows; Buy stacks before Build. */
+  .sdr-hero-grid,.sdr-audit-grid,.sdr-faq-grid{grid-template-columns:1fr;gap:52px}
+  .sdr-pattern{grid-template-columns:1fr}
+  .sdr-bounds-grid,.sdr-versus-grid{grid-template-columns:1fr}
+  .sdr-flow-rows li{grid-template-columns:1fr;gap:10px;padding:22px 20px}
+  .sdr-flow-rows li span{padding-top:0}
+  /* The human-handoff branch stays visually connected to the reply. */
+  .sdr-branches{grid-template-columns:1fr}
+  .sdr-lede,.sdr-leak-copy,.sdr-flow-lede,.sdr-audit-lede,.sdr-final-inner>p:not(.eyebrow){font-size:18px}
+  .sdr-audit-panel{padding:44px 22px}
+  .sdr-proof-strip{padding:44px 26px}
+  .sdr-form-wrap .v1-form{padding:24px 22px}
+  .sdr-form-wrap .form-row{grid-template-columns:1fr}
+  .sdr-form-wrap .v1-form .button{width:100%;justify-content:space-between}
+}

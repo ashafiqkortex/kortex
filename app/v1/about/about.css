@@ -1,0 +1,224 @@
+/* Kortex — About page. Design system supplies tokens, type, buttons,
+   .section-pad, .eyebrow, .grid-overlay, .inline-link, .direct-call, .faq.
+   Everything page-specific is prefixed abt-. More human, less diagrammatic
+   than the service pages: no robots, code, abstract AI art, generated
+   portraits or stock-office photography. No "01 /" section numbering —
+   typography and spacing carry the hierarchy. */
+
+/* Placeholder / softened-claim marker — visible in review on both bands. */
+.ph{background:rgba(240,160,32,.13);box-shadow:inset 0 0 0 1px rgba(240,160,32,.4);padding:1px 5px;font-style:normal}
+
+/* Older-reader accessibility: eyebrows on this page sit at 12px minimum. */
+.abt-hero .eyebrow,.abt-what .eyebrow,.abt-people .eyebrow,.abt-exp .eyebrow,
+.abt-principles .eyebrow,.abt-involve .eyebrow,.abt-place .eyebrow,.abt-final .eyebrow{font-size:12px}
+
+/* ---- hero (dark, 7/5 split: copy beside the temporary firm-facts panel) ---- */
+.abt-hero{background:var(--ground);color:var(--text);position:relative;overflow:hidden;padding:170px 7vw 0}
+.abt-hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:7fr 5fr;gap:6vw;align-items:center}
+.abt-hero h1{font-size:clamp(48px,5.3vw,74px);max-width:16ch}
+.abt-lede{font-size:20px;line-height:1.6;max-width:650px;margin:32px 0 0;color:var(--text)}
+.abt-quiet{display:inline-flex;align-items:center;min-height:44px;margin-top:26px;
+  font:500 12px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#8a8985;border-bottom:1px solid #3a3c40}
+.abt-quiet:hover,.abt-quiet:focus-visible{color:var(--amber);border-color:var(--amber)}
+.abt-quiet:focus-visible{outline:2px solid var(--amber);outline-offset:4px}
+.abt-trust{position:relative;z-index:2;border-top:1px solid var(--rules);margin-top:64px;padding:22px 0 42px;
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap;font:400 11px "IBM Plex Mono",monospace;letter-spacing:.13em;color:#7e7f82}
+.abt-trust i{font-style:normal;color:#54555a}
+
+/* Clean firm-facts panel — the doc's acceptable temporary stand-in for a
+   real working-session photograph. Phone and email stay interactive with
+   44px-minimum tap targets. */
+.abt-facts{border:1px solid #4a4c50;background:#191a1c;padding:20px 22px}
+.abt-facts-tag{display:block;font:500 10px "IBM Plex Mono",monospace;letter-spacing:.16em;color:var(--amber)}
+.abt-facts ul{list-style:none;margin:8px 0 0;padding:0}
+.abt-facts li{display:grid;grid-template-columns:118px 1fr;gap:14px;align-items:center;
+  min-height:48px;padding:6px 0;border-top:1px solid #2c2d31}
+.abt-facts li:first-child{border-top:0}
+.abt-facts li span{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#8e8f91}
+.abt-facts li p{margin:0;font-size:15px;line-height:1.45;color:var(--text)}
+.abt-facts li a{display:inline-flex;align-items:center;min-height:44px;color:var(--text);
+  border-bottom:1px solid rgba(240,160,32,.4)}
+.abt-facts li a:hover,.abt-facts li a:focus-visible{color:var(--amber)}
+.abt-facts li a:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+
+/* ---- what Kortex does (light, four wide steps) ---- */
+.abt-what{background:var(--paper);color:var(--ink)}
+.abt-what h2{font-size:clamp(38px,4.2vw,56px);max-width:19ch}
+.abt-what-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:6vw;align-items:end}
+.abt-what-intro p{font-size:19px;line-height:1.65;color:#5c5c5b;margin:0;max-width:650px}
+.abt-what-intro p+p{margin-top:20px}
+.abt-steps{display:grid;grid-template-columns:repeat(4,1fr);margin-top:64px;
+  border-top:1px solid #cfccc4;border-bottom:1px solid #cfccc4}
+.abt-steps article{padding:28px 26px 32px 0;border-right:1px solid #cfccc4;margin-left:26px}
+.abt-steps article:first-child{margin-left:0}
+.abt-steps article:last-child{border-right:0;padding-right:0}
+.abt-steps h3{font-size:21px;line-height:1.2;letter-spacing:.015em;margin:0 0 12px}
+.abt-steps p{font-size:17px;line-height:1.6;color:#5c5c5b;margin:0}
+
+/* ---- the people responsible (dark centerpiece) ---- */
+.abt-people{background:var(--surface);color:var(--text)}
+.abt-people-head{display:grid;grid-template-columns:1.15fr .85fr;gap:6vw;align-items:end}
+.abt-people-head h2{font-size:clamp(38px,4.2vw,56px);max-width:20ch}
+.abt-people-head p{font-size:19px;line-height:1.65;color:var(--muted);margin:0;max-width:650px}
+
+/* Large founder profile: copy 7 / portrait 5. Copy first in the DOM so the
+   name, role and responsibility read before the portrait on mobile. */
+.abt-founder{display:grid;grid-template-columns:7fr 5fr;gap:6vw;align-items:start;
+  margin-top:70px;border:1px solid #4a4c50;background:#191a1c;padding:44px}
+.abt-founder h3,.abt-supporting h3{font-family:"Oswald",Arial,sans-serif;text-transform:uppercase;
+  font-size:30px;line-height:1.1;letter-spacing:-.01em;margin:0}
+.abt-role{font:500 12px "IBM Plex Mono",monospace;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--amber);margin:14px 0 0}
+.abt-bio{font-size:18px;line-height:1.65;color:#c6c4bf;margin:22px 0 0;max-width:650px}
+.abt-detail{margin:30px 0 0;display:grid;gap:0}
+.abt-detail>div{padding:16px 0;border-top:1px solid #2c2d31;display:grid;grid-template-columns:190px 1fr;gap:16px}
+.abt-detail dt{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.15em;color:#8e8f91;margin:0}
+.abt-detail dd{font-size:16px;line-height:1.55;color:#b9b7b1;margin:0}
+
+/* Portrait slot — labeled placeholder until a real, current photograph is
+   supplied. Never a generated face, stock person or silhouette. */
+.abt-portrait{border:1px dashed #4a4c50;background:var(--ground);min-height:340px;
+  display:flex;align-items:center;justify-content:center;padding:24px;text-align:center}
+.abt-portrait .ph{font:500 11px "IBM Plex Mono",monospace;letter-spacing:.12em}
+.abt-portrait-sm{min-height:200px;margin-bottom:24px}
+
+.abt-supporting{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:22px}
+.abt-supporting article{border:1px solid var(--rules);background:#191a1c;padding:32px}
+.abt-supporting .abt-bio{font-size:17px}
+.abt-supporting .abt-detail>div{grid-template-columns:1fr;gap:8px}
+.abt-note{margin:34px 0 0;max-width:720px;
+  font:400 12px/1.7 "IBM Plex Mono",monospace;letter-spacing:.04em;color:#9a9a96}
+
+/* ---- relevant experience (light, four evidence blocks) ---- */
+.abt-exp{background:var(--paper);color:var(--ink)}
+.abt-exp h2{font-size:clamp(38px,4.2vw,56px);max-width:20ch}
+.abt-exp-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:60px}
+.abt-exp-grid article{border:1px solid #c3c1bb;background:#dedbd4;padding:28px}
+.abt-exp-grid h3{font-size:21px;line-height:1.2;letter-spacing:.015em;margin:0 0 14px}
+.abt-exp-grid p{font-size:17px;line-height:1.6;color:#5c5c5b;margin:0}
+.abt-evidence{margin:34px 0 26px;max-width:720px;
+  font:400 12px/1.7 "IBM Plex Mono",monospace;letter-spacing:.04em;color:#79766e}
+.abt-exp .inline-link{font-size:14px}
+
+/* ---- four operating principles (dark, statements only, no numbering) ---- */
+.abt-principles{background:var(--ground);color:var(--text)}
+.abt-principles h2{font-size:clamp(38px,4.2vw,56px);max-width:18ch}
+.abt-principles-grid{display:grid;grid-template-columns:1fr 1fr;margin-top:60px;
+  border-top:1px solid var(--rules);border-left:1px solid var(--rules)}
+.abt-principles-grid article{padding:38px 36px 42px;border-right:1px solid var(--rules);border-bottom:1px solid var(--rules)}
+.abt-principles-grid h3{font-size:26px;line-height:1.15;letter-spacing:.01em;margin:0 0 16px;max-width:18ch}
+.abt-principles-grid p{font-size:18px;line-height:1.6;color:var(--muted);margin:0;max-width:650px}
+
+/* ---- client involvement (light: paragraph + link; table withheld) ---- */
+.abt-involve{background:var(--paper);color:var(--ink)}
+.abt-involve-grid{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:start}
+.abt-involve h2{font-size:clamp(38px,4.2vw,56px);max-width:17ch}
+.abt-involve-grid>div>p{font-size:19px;line-height:1.65;color:#5c5c5b;margin:0;max-width:650px}
+.abt-closing{margin-top:22px!important;font-weight:600;color:#3f3f3d!important}
+.abt-quiet-link{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-top:26px;
+  font:500 12px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#8a5200;border-bottom:1px solid #b3b0a9}
+.abt-quiet-link:hover,.abt-quiet-link:focus-visible{color:var(--ink);border-color:var(--ink)}
+.abt-quiet-link:focus-visible{outline:2px solid var(--amber);outline-offset:4px}
+.abt-quiet-link svg{width:15px}
+
+/* ---- Bethesda and service area (dark, restrained address card) ---- */
+.abt-place{background:var(--surface);color:var(--text)}
+.abt-place-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:6vw;align-items:start}
+.abt-place h2{font-size:clamp(38px,4.2vw,56px);max-width:16ch;margin-bottom:28px}
+.abt-place-grid p{font-size:19px;line-height:1.65;color:var(--muted);margin:0;max-width:650px}
+.abt-place-grid p+p{margin-top:20px}
+.abt-card{border:1px solid #4a4c50;background:#191a1c;padding:10px 26px}
+.abt-card>div{display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:center;
+  min-height:56px;padding:10px 0;border-top:1px solid #2c2d31}
+.abt-card>div:first-child{border-top:0}
+.abt-card span{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.15em;color:#8e8f91}
+.abt-card address{font-style:normal;font-size:16px;line-height:1.5;color:var(--text)}
+.abt-card a{display:inline-flex;align-items:center;min-height:44px;font-size:16px;color:var(--text);
+  border-bottom:1px solid rgba(240,160,32,.4)}
+.abt-card a:hover,.abt-card a:focus-visible{color:var(--amber)}
+.abt-card a:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+
+/* ---- final CTA + form (dark) ---- */
+.abt-final{background:var(--ground);color:var(--text);position:relative;overflow:hidden}
+.abt-final-grid{position:relative;z-index:2;display:grid;grid-template-columns:.9fr 1.1fr;gap:6vw;align-items:start}
+.abt-final h2{font-size:clamp(38px,4.4vw,58px);max-width:15ch}
+.abt-final-copy>p:not(.eyebrow):not(.abt-reassure){font-size:19px;line-height:1.65;color:var(--muted);margin:26px 0 30px;max-width:50ch}
+.abt-final-copy .direct-call{display:inline-flex;align-items:center;min-height:44px}
+.abt-reassure{margin:28px 0 0;font:500 11px "IBM Plex Mono",monospace;letter-spacing:.14em;color:#8a8985}
+.abt-reassure i{font-style:normal;color:#54555a;margin:0 6px}
+.abt-form-step{font:500 11px "IBM Plex Mono",monospace;letter-spacing:.14em;color:var(--amber);margin:0}
+
+/* The .v1-form base styles live in the contact page's stylesheet, not the
+   design system, so the pieces this form needs are declared here — scoped to
+   .abt-form-wrap and adapted to the dark ground. */
+.abt-form-wrap .v1-form{display:flex;flex-direction:column;gap:18px;padding:30px 32px;
+  border:1px solid var(--rules);background:var(--surface)}
+.abt-form-wrap .v1-form>div[data-step]{display:flex;flex-direction:column;gap:18px}
+.abt-form-wrap .form-index{font:600 21px "Oswald",system-ui,sans-serif;text-transform:uppercase;
+  letter-spacing:.02em;color:var(--text);margin:0}
+.abt-form-wrap .v1-form label{display:flex;flex-direction:column;gap:8px;color:#b9b7b1;
+  font:500 12px "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase}
+.abt-form-wrap .v1-form label em{font-style:normal;color:var(--amber)}
+.abt-form-wrap .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.abt-form-wrap .v1-form input,.abt-form-wrap .v1-form textarea{
+  background:var(--ground);border:1px solid #3a3c40;color:var(--text);
+  font:400 16px/1.5 "Barlow",system-ui,sans-serif;padding:13px 14px;width:100%;
+  text-transform:none;letter-spacing:0}
+.abt-form-wrap .v1-form input:focus-visible,.abt-form-wrap .v1-form textarea:focus-visible{
+  outline:2px solid var(--amber);outline-offset:1px}
+.abt-form-wrap .v1-form textarea{resize:vertical;min-height:76px}
+.abt-form-wrap .v1-form ::placeholder{color:#6f7073}
+.abt-form-wrap .v1-form .button{align-self:flex-start;margin-top:4px}
+.abt-form-wrap .v1-form .button[disabled]{opacity:.6;cursor:progress}
+.abt-form-wrap .form-error{margin:0;padding:13px 15px;background:rgba(168,73,42,.16);
+  border-left:3px solid #a8492a;font-size:14.5px;line-height:1.55;color:#e2a189}
+.abt-form-wrap .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.abt-form-wrap .form-sent{padding:52px 34px;text-align:center;border:1px solid var(--amber);
+  background:var(--surface)}
+.abt-form-wrap .form-sent-mark{display:inline-flex;width:46px;height:46px;align-items:center;
+  justify-content:center;border:1px solid var(--amber);color:var(--amber);margin-bottom:20px}
+.abt-form-wrap .form-sent-mark svg{width:22px;height:22px}
+.abt-form-wrap .form-sent h3{font:600 27px "Oswald",system-ui,sans-serif;text-transform:uppercase;
+  letter-spacing:.02em;margin:0;color:var(--text)}
+.abt-form-wrap .form-sent p{margin:12px auto 0;max-width:44ch;font-size:16px;line-height:1.62;
+  color:var(--muted)}
+.abt-form-wrap .form-sent a{color:var(--amber);border-bottom:1px solid rgba(240,160,32,.4)}
+.abt-form-wrap .form-note{font-size:14px;line-height:1.55;color:#8a8985}
+.abt-form-wrap .form-note a{color:var(--amber);border-bottom:1px solid rgba(240,160,32,.4)}
+
+/* ---- responsive ---- */
+@media(max-width:1100px){
+  .abt-steps{grid-template-columns:1fr 1fr}
+  .abt-steps article{border-bottom:1px solid #cfccc4}
+  .abt-steps article:nth-child(even){border-right:0}
+  .abt-facts li{grid-template-columns:104px 1fr}
+}
+@media(max-width:900px){
+  .abt-hero{padding:140px 22px 0}
+  .abt-hero h1{font-size:clamp(40px,9vw,48px);max-width:none}
+  .abt-hero-grid,.abt-what-grid,.abt-people-head,.abt-founder,.abt-supporting,
+  .abt-exp-grid,.abt-principles-grid,.abt-involve-grid,.abt-place-grid,.abt-final-grid{grid-template-columns:1fr;gap:34px}
+  .abt-what h2,.abt-people-head h2,.abt-exp h2,.abt-principles h2,.abt-involve h2,
+  .abt-place h2,.abt-final h2{font-size:clamp(32px,7.4vw,40px);max-width:none}
+  .abt-lede,.abt-what-intro p,.abt-people-head p,.abt-involve-grid>div>p,.abt-place-grid p,
+  .abt-final-copy>p:not(.eyebrow):not(.abt-reassure){font-size:18px}
+  .abt-steps{grid-template-columns:1fr}
+  .abt-steps article{margin-left:0;border-right:0;padding:22px 0 26px}
+  .abt-steps article:last-child{border-bottom:0}
+  .abt-founder{padding:28px 24px}
+  /* Names, roles and responsibilities read before the portrait on mobile. */
+  .abt-portrait{min-height:240px;margin-top:6px}
+  .abt-portrait-sm{margin:0 0 22px;order:-1}
+  .abt-supporting article{display:flex;flex-direction:column;padding:26px 22px}
+  .abt-detail>div{grid-template-columns:1fr;gap:8px}
+  .abt-principles-grid{border-left:0}
+  .abt-principles-grid article{border-right:0;padding:28px 0 32px}
+  .abt-card{padding:6px 20px}
+  .abt-card>div{grid-template-columns:82px 1fr}
+  .abt-form-wrap .form-row{grid-template-columns:1fr}
+  .abt-form-wrap .v1-form{padding:24px 22px}
+  .abt-form-wrap .v1-form .button{width:100%;justify-content:space-between}
+}
+@media(prefers-reduced-motion:reduce){
+  .abt-quiet,.abt-quiet-link,.abt-card a,.abt-facts li a{transition:none}
+}

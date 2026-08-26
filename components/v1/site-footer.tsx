@@ -32,6 +32,12 @@ const COLUMNS = [
     ["/ai-agent-development", "AI agent development"],
     // Plain-language companion to the above — footer only, never primary nav.
     ["/ai-agents-for-business", "AI agents for business"],
+    // Legacy search doorway — footer only, never a primary nav service.
+    ["/ai-customer-service", "AI customer service"],
+    // Legacy search doorway — footer only, never a primary nav service.
+    ["/ai-employee", "AI employee"],
+    // Legacy search doorway — footer only, never a primary nav service.
+    ["/ai-sdr", "AI SDR"],
     ["/about", "About"],
     ["/contact", "Contact"],
     ["/blog", "Blog"],
