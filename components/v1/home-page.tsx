@@ -1,5 +1,6 @@
 import { v1 } from "./paths";
 import { Arrow, Check } from "./icons";
+import { ZoomImage } from "./zoom-image";
 
 // Kortex home — v11. Full rebuild against the approved copy-and-design doc
 // "kortex-homepage-copy-and-design-v2 (1).md" (updated revision applied
@@ -201,7 +202,8 @@ export default function KortexHomeV11() {
             <div><h3>Already have software that works?</h3><p>We move the job information between your tools without someone entering it again.</p></div>
             <div><h3>Outgrown the current setup?</h3><p>We build the missing system around the way your field and office already work.</p></div>
           </div>
-          <a className="support-link on-dark" href={v1("/servicetitan-alternative")}>Using ServiceTitan? See when to keep, extend or replace it <Arrow/></a>
+          {/* ServiceTitan link removed here (27 Aug) — it duplicated the one
+              in the difference section, where the comparison context sells it. */}
         </div>
         {/* Layer diagram: existing tools as the base, the Kortex automation
             layer above them, only decisions reaching the owner at the top. */}
@@ -235,11 +237,11 @@ export default function KortexHomeV11() {
       <div className="module-lead">
         <article className="module-featured">
           <div className="module-copy"><span>{builtModules[0][0]}</span><h3>{builtModules[0][1]}</h3><p>{builtModules[0][2]}</p></div>
-          <div className="module-preview" aria-label={`${builtModules[0][1]} concept interface`}><img src={builtModules[0][3]} alt={`${builtModules[0][1]} interface concept`}/></div>
+          <div className="module-preview" aria-label={`${builtModules[0][1]} concept interface`}><ZoomImage src={builtModules[0][3]} alt={`${builtModules[0][1]} interface concept`}/></div>
         </article>
         <div className="module-rail">
           {builtModules.slice(1).map(([n, t, c, image]) => <article className="module-row" key={n}>
-            <div className="module-thumb"><img src={image} alt={`${t} interface concept`}/></div>
+            <div className="module-thumb"><ZoomImage src={image} alt={`${t} interface concept`}/></div>
             <div className="module-row-copy"><span>{n}</span><h3>{t}</h3><p>{c}</p></div>
           </article>)}
         </div>
@@ -249,13 +251,15 @@ export default function KortexHomeV11() {
         (Bharathi, 27 Aug): both said "start with one process" — the band
         keeps the message and the button that converts. */}
 
-    {/* In-page CTA 1 */}
-    <section className="cta-band">
-      <div>
-        <h2>What does your office have to chase every day?</h2>
-        <p>Show us one repeated process. We&rsquo;ll estimate how much time it takes and whether fixing it is likely to pay for itself.</p>
+    {/* In-page CTA (27 Aug): restyled from a dark band to a paper-continuous
+        centered block — it reads as the modules section's closing ask
+        instead of an interruption between two paper sections. */}
+    <section className="cta-inline">
+      <div className="cta-card">
+        <h2>What does your office have to chase on every job?</h2>
+        <p>Show us what keeps slowing down the office or billing&mdash;we&rsquo;ll show you what to automate first.</p>
+        <a className="button" href={v1("/contact")}>Book my free workflow audit <Arrow/></a>
       </div>
-      <a className="button" href={v1("/contact")}>Book my free workflow audit <Arrow/></a>
     </section>
 
     {/* Section 5 — Who Kortex builds for. Mock 2B (27 Aug): text-led two-up
@@ -294,7 +298,7 @@ export default function KortexHomeV11() {
       <div className="split-heading">
         <div>
           <p className="section-index amber">WHAT THIS GIVES YOU</p>
-          <h2>Finally, you have time to work on <em>the business again.</em></h2>
+          <h2>Finally, you have time to work on the business again.</h2>
         </div>
         <p>The payoff is more room to grow&mdash;and more time to decide where the business goes next.</p>
       </div>
@@ -303,14 +307,8 @@ export default function KortexHomeV11() {
       </article>)}</div>
     </section>
 
-    {/* In-page CTA 2 */}
-    <section className="cta-band">
-      <div>
-        <h2>What would you work on if the daily follow-up stopped reaching you?</h2>
-        <p>Start by finding the process costing you the most time and money.</p>
-      </div>
-      <a className="button" href={v1("/contact")}>Book my free workflow audit <Arrow/></a>
-    </section>
+    {/* In-page CTA 2 removed (Bharathi, 27 Aug) — with the band after the
+        modules section plus the close, a third mid-page ask was one too many. */}
 
     {/* Section 7 — Proof. The doc: "It should contain one genuine contractor
         story or remain hidden" and "Never publish placeholders." The required
