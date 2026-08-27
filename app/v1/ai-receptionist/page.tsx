@@ -153,7 +153,7 @@ export default function V1AiReceptionistPage() {
         <div className="rcp-hero-grid">
           <div>
             <p className="eyebrow"><span /> 24/7 CALL ANSWERING FOR CONTRACTORS</p>
-            <h1>When your team cannot pick up, your next customer still needs an answer.</h1>
+            <h1>When your team cannot pick up, <em>your next customer still needs an answer.</em></h1>
             <p className="rcp-lede">
               The Kortex AI receptionist answers the call, finds out what the customer needs and
               books the right job into your calendar&mdash;even after hours or while your team is
@@ -191,7 +191,7 @@ export default function V1AiReceptionistPage() {
         <div className="rcp-problem-grid">
           <div>
             <p className="section-index">A MISSED CALL IS RARELY A CUSTOMER WHO WAITS</p>
-            <h2>If you do not answer, the next contractor may.</h2>
+            <h2>If you do not answer, <em>the next contractor may.</em></h2>
             <div className="rcp-problem-copy">
               <p>The office is helping another customer. Your technician is on a job. The call comes after hours. Or three people call at once.</p>
               <p>The caller does not know why nobody answered. They only know they need help now.</p>
@@ -222,8 +222,8 @@ export default function V1AiReceptionistPage() {
 
       {/* 03 — hear a call */}
       <section id="hear-a-call" className="rcp-hear rcp-dark section-pad">
-        <p className="eyebrow"><span /> NOT VOICEMAIL. NOT A MESSAGE FOR TOMORROW.</p>
-        <h2>The caller gets an answer before they hang up.</h2>
+        <p className="section-index amber">NOT VOICEMAIL. NOT A MESSAGE FOR TOMORROW.</p>
+        <h2>The caller gets an answer <em>before they hang up.</em></h2>
         <div className="rcp-audio" role="group" aria-label="Sample call audio player slot">
           <span className="rcp-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
           <div className="rcp-audio-meta">
@@ -250,7 +250,7 @@ export default function V1AiReceptionistPage() {
       {/* 04 — what it handles */}
       <section className="rcp-caps section-pad">
         <p className="section-index">ONE CALL. THE NEXT STEP COMPLETED.</p>
-        <h2>It does more than take a message.</h2>
+        <h2>It does more than <em>take a message.</em></h2>
         <div className="rcp-cap-grid">
           {CAPS.map((c) => (
             <article key={c.t}>
@@ -273,8 +273,8 @@ export default function V1AiReceptionistPage() {
 
       {/* 05 — start small */}
       <section className="rcp-start rcp-dark section-pad">
-        <p className="eyebrow"><span /> YOU DO NOT HAVE TO HAND OVER EVERY CALL ON DAY ONE</p>
-        <h2>Start with the calls your team cannot answer today.</h2>
+        <p className="section-index amber">YOU DO NOT HAVE TO HAND OVER EVERY CALL ON DAY ONE</p>
+        <h2>Start with the calls your team <em>cannot answer today.</em></h2>
         <div className="rcp-cover-grid">
           {COVERAGE.map(([t, p], i) => (
             <article className={i === 0 ? "rcp-cover featured" : "rcp-cover"} key={t}>
@@ -296,7 +296,7 @@ export default function V1AiReceptionistPage() {
         <div className="rcp-review-grid">
           <div>
             <p className="section-index">START WITH THE NUMBERS YOU ALREADY HAVE</p>
-            <h2>See what unanswered calls may be costing your business.</h2>
+            <h2>See what unanswered calls may be <em>costing your business.</em></h2>
             <p className="rcp-calc-link"><Link href="/v1/tools/missed-calls">Or run your own numbers first — the missed-call calculator <Arrow /></Link></p>
             <p className="rcp-review-lede">
               In a short review, Kortex looks at your current call volume, missed calls,
@@ -331,7 +331,7 @@ export default function V1AiReceptionistPage() {
       {/* 07 — proof (hidden until real evidence exists) */}
       <section className="rcp-proof rcp-dark section-pad">
         <p className="rcp-hidden-note">{ph("[HIDE THIS SECTION UNTIL REAL EVIDENCE IS AVAILABLE. DO NOT USE GENERATED PEOPLE OR INVENTED RESULTS.]")}</p>
-        <p className="eyebrow"><span /> CLIENT RESULT</p>
+        <p className="section-index amber">CLIENT RESULT</p>
         <h2>From unanswered calls to booked work.</h2>
         <div className="rcp-proof-grid">
           <div className="rcp-proof-facts">
@@ -349,24 +349,21 @@ export default function V1AiReceptionistPage() {
 
       {/* 08 — faq */}
       <section className="rcp-faq faq section-pad" id="faq">
-        <div className="rcp-faq-grid">
-          <div>
-            <h2>Frequently asked questions</h2>
-          </div>
-          <div className="faq-grid">
-            {FAQS.map((f, i) => (
-              <details key={f.q} {...(i === 0 ? { open: true } : {})}>
-                <summary><span>0{i + 1}</span>{f.q}<i /></summary>
-                <p>{ph(f.a)}</p>
-              </details>
-            ))}
-          </div>
+        <div className="faq-heading"><h2>Frequently asked questions</h2><i /></div>
+        <div className="faq-grid">
+          {FAQS.map((f, i) => (
+            <details key={f.q} name="rcp-faq">
+              <summary><span>0{i + 1}</span>{f.q}<i /></summary>
+              <p>{ph(f.a)}</p>
+            </details>
+          ))}
         </div>
       </section>
 
-      {/* 09 — final cta and form */}
-      <section id="review-form" className="rcp-final rcp-dark">
-        <div className="grid-overlay" />
+      {/* 09 — final cta and form. Full-bleed amber slab (home contact-slab
+          convention): the page's only full-accent surface — ink type on amber,
+          the form riding as a dark card. */}
+      <section id="review-form" className="rcp-final">
         <div className="rcp-final-grid">
           <div className="rcp-final-copy">
             <p className="eyebrow"><span /> START WITH THE CALLS YOU ARE LOSING TODAY</p>

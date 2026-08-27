@@ -95,7 +95,7 @@ export default function V1AeoPage() {
         <div className="grid-overlay" />
         <div className="aeo-hero-copy">
           <p className="eyebrow"><span /> GET FOUND IN AI SEARCH</p>
-          <h1>When customers ask AI who to hire, does your company show up?</h1>
+          <h1>When customers ask AI who to hire, <em>does your company show up?</em></h1>
           <p className="aeo-lede">
             More customers are using ChatGPT and Google&rsquo;s AI results to compare contractors
             before they call. See whether your company appears, which competitors are being
@@ -132,13 +132,13 @@ export default function V1AeoPage() {
       {/* Search is changing — light band, three typed-question cards */}
       <section className="aeo-search section-pad">
         <div className="aeo-search-head">
-          <p className="eyebrow"><span /> CUSTOMERS ARE NOT ONLY SEARCHING GOOGLE ANYMORE</p>
-          <h2>They are asking AI for the answer.</h2>
+          <p className="section-index">CUSTOMERS ARE NOT ONLY SEARCHING GOOGLE ANYMORE</p>
+          <h2>They are asking <em>AI for the answer.</em></h2>
           <p className="aeo-body">A customer can now ask:</p>
         </div>
         <div className="aeo-questions">
           {QUESTIONS.map((q) => (
-            <blockquote key={q}><p>{q}<i aria-hidden="true" /></p></blockquote>
+            <blockquote key={q}><p>{q}</p></blockquote>
           ))}
         </div>
         <div className="aeo-search-after">
@@ -157,8 +157,8 @@ export default function V1AeoPage() {
       {/* The problem — dark, copy + comparison card */}
       <section className="aeo-problem section-pad">
         <div className="aeo-problem-copy">
-          <p className="eyebrow"><span /> YOUR REPUTATION MAY BE STRONG. AI MAY NOT KNOW IT YET.</p>
-          <h2>A less experienced competitor can appear simply because it is easier for AI to understand.</h2>
+          <p className="section-index amber">YOUR REPUTATION MAY BE STRONG. AI MAY NOT KNOW IT YET.</p>
+          <h2>A less experienced competitor can appear simply because it is <em>easier for AI to understand.</em></h2>
           <p className="aeo-body">AI learns about your company from the information it can find and verify online.</p>
           <p className="aeo-body">
             If your services, locations, project experience and company details are unclear or
@@ -203,8 +203,8 @@ export default function V1AeoPage() {
       <section className="aeo-check section-pad">
         <div className="aeo-check-panel">
           <div className="aeo-check-head">
-            <p className="eyebrow"><span /> SEE WHAT AI SAYS ABOUT YOUR COMPANY TODAY</p>
-            <h2>We will check whether your business is part of the answer.</h2>
+            <p className="section-index">SEE WHAT AI SAYS ABOUT YOUR COMPANY TODAY</p>
+            <h2>We will check whether your business is <em>part of the answer.</em></h2>
             <p className="aeo-body">
               Kortex tests a small set of important questions a real customer may ask before hiring
               a contractor like you.
@@ -249,7 +249,7 @@ export default function V1AeoPage() {
       <section className="aeo-example section-pad">
         <div className="split-heading">
           <div>
-            <p className="eyebrow"><span /> WHAT YOUR CHECK MAY REVEAL</p>
+            <p className="section-index amber">WHAT YOUR CHECK MAY REVEAL</p>
             <h2>The opportunity becomes clearer when you see the actual answers.</h2>
           </div>
         </div>
@@ -288,8 +288,8 @@ export default function V1AeoPage() {
       {/* Optional next step — compact band */}
       <section className="aeo-next section-pad">
         <div className="aeo-next-copy">
-          <p className="eyebrow"><span /> THE NEXT STEP IS YOUR DECISION</p>
-          <h2>If there is no meaningful gap, we will tell you.</h2>
+          <p className="section-index amber">THE NEXT STEP IS YOUR DECISION</p>
+          <h2>If there is no meaningful gap, <em>we will tell you.</em></h2>
           <p className="aeo-body">
             If the check reveals a genuine opportunity, Kortex can complete a paid AI Search
             Visibility Audit.
@@ -318,57 +318,54 @@ export default function V1AeoPage() {
 
       {/* Proof section intentionally omitted until real client evidence exists. */}
 
-      {/* FAQ — paper band, first row open */}
+      {/* FAQ — paper band. Home conventions (27 Aug): centered heading with
+          amber divider, numbered rows, closed by default, one open at a time
+          via the native exclusive accordion. */}
       <section className="faq aeo-faq section-pad" id="aeo-faq">
-        <div className="split-heading">
-          <div>
-            <p className="eyebrow"><span /> FREQUENTLY ASKED QUESTIONS</p>
-            <h2>Asked before the check.</h2>
-          </div>
-        </div>
+        <div className="faq-heading"><h2>Asked before the check.</h2><i /></div>
         <div className="faq-grid aeo-faq-grid">
-          <details open>
-            <summary>Can you guarantee that ChatGPT will recommend my company?<i /></summary>
+          <details name="aeo-faq">
+            <summary><span>01</span>Can you guarantee that ChatGPT will recommend my company?<i /></summary>
             <p>
               No. ChatGPT, Google and other AI tools control their own answers, and those answers
               can change. The visibility check shows what they say today and identifies the clearest
               gaps in the information they can find.
             </p>
           </details>
-          <details>
-            <summary>Is the visibility check really free?<i /></summary>
+          <details name="aeo-faq">
+            <summary><span>02</span>Is the visibility check really free?<i /></summary>
             <p>
               Yes. The initial check covers 3-5 agreed customer questions and gives you a short
               summary. If a deeper opportunity exists, you can decide whether to purchase the full
               audit. There is no obligation.
             </p>
           </details>
-          <details>
-            <summary>Do I need to understand AI?<i /></summary>
+          <details name="aeo-faq">
+            <summary><span>03</span>Do I need to understand AI?<i /></summary>
             <p>
               No. You only need to tell us what your company does, where it works and which
               customers matter. We handle the technical part and explain the result in plain
               English.
             </p>
           </details>
-          <details>
-            <summary>Do we need to rebuild our website?<i /></summary>
+          <details name="aeo-faq">
+            <summary><span>04</span>Do we need to rebuild our website?<i /></summary>
             <p>
               Not necessarily. The check may reveal a small information gap, or it may show that a
               deeper review is justified. We do not recommend a rebuild before understanding the
               problem.
             </p>
           </details>
-          <details>
-            <summary>How long does it take?<i /></summary>
+          <details name="aeo-faq">
+            <summary><span>05</span>How long does it take?<i /></summary>
             <p>You will receive the check within <Ph>[3-5]</Ph> business days.</p>
           </details>
         </div>
       </section>
 
-      {/* Final CTA — dark closing panel with form */}
+      {/* Final CTA — amber slab close (27 Aug convention): the page's only
+          full-accent surface, ink type, form as a dark card on the slab. */}
       <section className="aeo-close section-pad" id="aeo-form">
-        <div className="grid-overlay" />
         <div className="aeo-close-copy">
           <p className="eyebrow"><span /> START WITH ONE SIMPLE QUESTION</p>
           <h2>When customers ask AI who to hire, are you part of the answer?</h2>

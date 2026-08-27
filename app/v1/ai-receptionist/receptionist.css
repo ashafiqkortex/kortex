@@ -1,12 +1,24 @@
 /* Kortex — AI receptionist page. Design system supplies tokens, type, buttons,
    .eyebrow / .section-index / .grid-overlay / .faq-grid. Everything here is
-   rcp- scoped. Bands alternate dark and paper; amber stays scarce — one filled
-   amber element per screenful. */
+   rcp- scoped. 27 Aug conventions applied: emphasis = amber marker underline,
+   amber fields only on the closing slab + buttons, brown accents swept to
+   #b36200, blueprint grid on the hero only. Rules borrowed from home.css
+   (marker em, faq-heading, contact-slab) are duplicated here because home.css
+   is route-scoped to the home page. */
 
 /* Placeholder marker — bracketed copy that still needs confirmation. */
-.ph{background:rgba(240,160,32,.13);border:1px dashed rgba(240,160,32,.55);padding:1px 6px;font:500 .82em "IBM Plex Mono",monospace;letter-spacing:.02em;color:#a86e0a}
-.rcp-dark .ph{color:#f2b45c}
+.ph{background:rgba(240,160,32,.13);border:1px dashed rgba(240,160,32,.55);padding:1px 6px;font:500 .82em "IBM Plex Mono",monospace;letter-spacing:.02em;color:#b36200}
+.rcp-dark .ph,.rcp-form .ph{color:#f2b45c}
 .rcp-note{margin:26px 0 0;font-size:13px;line-height:1.7;max-width:720px}
+
+/* Headline emphasis — the hand-drawn amber marker underline (27 Aug convention;
+   rule duplicated from home.css, which is route-scoped to the home page).
+   Ink text on paper, standard text on dark; the stroke carries the amber.
+   line-height >=1.16 so a wrapped em's stroke lands between lines. */
+.rcp-problem h2 em,.rcp-caps h2 em,.rcp-review h2 em,.rcp-hear h2 em,.rcp-start h2 em{font-style:normal;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 18' preserveAspectRatio='none'%3E%3Cpath d='M5 12 C 60 6 130 14 180 10 C 220 7 265 9 295 11' stroke='%23f0a020' stroke-width='8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat left bottom/100% .24em;padding:0 3px .13em;margin:0;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.rcp-problem h2 em,.rcp-caps h2 em,.rcp-review h2 em{color:var(--ink)}
+.rcp-hear h2 em,.rcp-start h2 em{color:var(--text)}
+.rcp-problem h2,.rcp-caps h2,.rcp-review h2,.rcp-hear h2,.rcp-start h2{line-height:1.16}
 
 /* hero */
 .rcp-hero{background:var(--ground);color:var(--text);position:relative;overflow:hidden;padding:150px 7vw 84px}
@@ -45,9 +57,9 @@
 .rcp-moments{list-style:none;margin:0;padding:0;display:grid;gap:10px;max-width:620px}
 .rcp-moments li{position:relative;padding-left:24px;font-size:16.5px;line-height:1.55;color:#3f3f3d}
 .rcp-moments li:before{content:"";position:absolute;left:0;top:11px;width:11px;height:2px;background:var(--amber)}
-.rcp-closing{margin:32px 0 0;padding:18px 22px;background:#dedbd2;font-size:16.5px;line-height:1.6;color:#3f3f3d;max-width:620px}
+.rcp-closing{margin:32px 0 0;padding:18px 22px;background:#d5d3cd;border:1px solid #c3c1bb;font-size:16.5px;line-height:1.6;color:#3f3f3d;max-width:620px}
 .rcp-scene{margin:0;position:relative;padding-bottom:46px}
-.rcp-photo-slot{border:1px dashed #b9b5aa;background:#dedbd2;min-height:430px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:30px}
+.rcp-photo-slot{border:1px dashed #b9b5aa;background:#d2d0ca;min-height:430px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:30px}
 .rcp-photo-slot span{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.16em;color:#8a877f}
 .rcp-photo-slot p{margin:0;font-size:14px;line-height:1.7;max-width:36ch;color:#5c5c5b}
 .rcp-missed-card{position:absolute;left:-26px;bottom:0;background:var(--ground);color:var(--text);padding:18px 22px;min-width:250px;box-shadow:0 22px 45px rgba(0,0,0,.28)}
@@ -77,7 +89,7 @@
 .rcp-caps h2{font-size:clamp(34px,4vw,56px)}
 .rcp-cap-grid{margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:#cfccc4;border:1px solid #cfccc4}
 .rcp-cap-grid article{background:var(--paper);padding:26px 22px 30px}
-.rcp-cap-grid svg{width:26px;height:26px;color:#9b5d00}
+.rcp-cap-grid svg{width:26px;height:26px;color:#b36200}
 .rcp-cap-grid h3{font:600 19px "Oswald",system-ui,sans-serif;letter-spacing:.02em;text-transform:uppercase;line-height:1.2;margin:20px 0 10px}
 .rcp-cap-grid p{margin:0;font-size:15px;line-height:1.6;color:#5c5c5b}
 .rcp-outcome{margin:42px 0 0;font-size:18px;line-height:1.6;color:#3f3f3d;max-width:620px;border-left:3px solid var(--amber);padding-left:20px}
@@ -106,7 +118,7 @@
 .rcp-leave-label{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.15em;color:#8a877f;margin:34px 0 14px}
 .rcp-leave{list-style:none;margin:0;padding:0;display:grid;gap:11px;max-width:620px}
 .rcp-leave li{display:flex;gap:12px;font-size:16.5px;line-height:1.55;color:#3f3f3d}
-.rcp-leave svg{flex:0 0 auto;width:16px;height:16px;color:#9b5d00;margin-top:4px}
+.rcp-leave svg{flex:0 0 auto;width:16px;height:16px;color:#b36200;margin-top:4px}
 .rcp-honest{margin:26px 0 0;font-size:17px;font-weight:600;color:var(--ink)}
 .rcp-reassure{margin:20px 0 0;font:500 11px "IBM Plex Mono",monospace;letter-spacing:.12em;color:#8a877f}
 .rcp-calc{background:var(--ground);color:var(--text);padding:26px 28px 24px;position:sticky;top:110px}
@@ -134,17 +146,27 @@
 .rcp-proof-person blockquote{margin:24px 0 0;padding:0 0 0 22px;border-left:3px solid var(--amber);font-size:16.5px;line-height:1.65}
 .rcp-proof-person figcaption{margin-top:16px;font:400 12px/1.7 "IBM Plex Mono",monospace;color:#8a8985}
 
-/* faq — two-column heading and accordion; .faq / .faq-grid come from the system */
-.rcp-faq h2{font-size:clamp(30px,3.4vw,46px);max-width:12ch}
-.rcp-faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:6vw;align-items:start}
-.rcp-faq .faq-grid{margin-top:0}
+/* faq — centered one-line heading + amber divider (27 Aug convention;
+   .faq-heading rules duplicated from home.css, which only loads on the home
+   route). Rows numbered, closed by default, one open at a time via name=. */
+.rcp-faq h2{font-size:clamp(26px,2.4vw,34px)}
+.rcp-faq .faq-heading{text-align:center}
+.rcp-faq .faq-heading h2{max-width:none;margin:0 auto}
+.rcp-faq .faq-heading i{display:block;width:56px;height:2px;background:var(--amber);margin:22px auto 0}
+.rcp-faq .faq-grid{margin-top:44px;max-width:860px;margin-left:auto;margin-right:auto}
 
-/* final cta and form */
-.rcp-final{background:var(--ground);color:var(--text);position:relative;overflow:hidden;padding:110px 7vw 120px}
+/* final cta and form — full-bleed amber slab, the page's only full-accent
+   surface (home contact-slab convention, duplicated here because home.css is
+   route-scoped). Ink type on amber; the form rides the slab as a dark card. */
+.rcp-final{background:var(--amber);color:var(--ink);position:relative;overflow:hidden;padding:96px 7vw 104px}
+.rcp-final .eyebrow{color:var(--ink)}
+.rcp-final .eyebrow span{background:var(--ink)}
 .rcp-final-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:6vw;align-items:start;position:relative}
-.rcp-final h2{font-size:clamp(36px,4.4vw,60px)}
-.rcp-final-copy>p:not(.eyebrow){font-size:18px;line-height:1.65;color:var(--muted);max-width:52ch;margin:24px 0 34px}
-.rcp-form{background:var(--surface);border:1px solid var(--rules);padding:30px 32px;display:flex;flex-direction:column;gap:28px}
+.rcp-final h2{font-size:clamp(36px,4.4vw,58px);color:var(--ink)}
+.rcp-final-copy>p:not(.eyebrow){font-size:18px;line-height:1.65;color:rgba(28,29,31,.85);max-width:52ch;margin:24px 0 34px}
+.rcp-final .direct-call{font:600 12px "IBM Plex Mono",monospace;letter-spacing:.06em;color:var(--ink);border:1px solid rgba(28,29,31,.55);padding:17px 22px;display:inline-block}
+.rcp-final .direct-call:hover{border-color:var(--ink);background:rgba(28,29,31,.08)}
+.rcp-form{background:var(--surface);color:var(--text);border:1px solid var(--rules);padding:30px 32px;display:flex;flex-direction:column;gap:28px;box-shadow:0 24px 50px rgba(28,29,31,.25)}
 .rcp-form-heading{font:600 24px "Oswald",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.02em;margin:0}
 .rcp-form fieldset{border:0;padding:0;margin:0;display:flex;flex-direction:column;gap:16px}
 .rcp-form legend{display:block;width:100%;font:500 10px "IBM Plex Mono",monospace;letter-spacing:.15em;color:var(--amber);padding:0 0 10px;margin-bottom:14px;border-bottom:1px solid var(--rules)}
@@ -159,9 +181,9 @@
 
 @media(max-width:900px){
   .rcp-hero{padding:126px 22px 62px}
-  .rcp-final{padding:80px 22px 90px}
+  .rcp-final{padding:70px 22px 80px}
   .rcp-problem.section-pad,.rcp-hear.section-pad,.rcp-caps.section-pad,.rcp-start.section-pad,.rcp-review.section-pad,.rcp-proof.section-pad,.rcp-faq.section-pad{padding:80px 22px}
-  .rcp-hero-grid,.rcp-problem-grid,.rcp-review-grid,.rcp-proof-grid,.rcp-faq-grid,.rcp-final-grid{grid-template-columns:1fr;gap:52px}
+  .rcp-hero-grid,.rcp-problem-grid,.rcp-review-grid,.rcp-proof-grid,.rcp-final-grid{grid-template-columns:1fr;gap:52px}
   .rcp-cap-grid,.rcp-cover-grid{grid-template-columns:1fr}
   .rcp-cover.featured h3{font-size:26px}
   .rcp-photo-slot{min-height:300px}
@@ -172,7 +194,11 @@
   .rcp-form-row{grid-template-columns:1fr}
 }
 @media(prefers-reduced-motion:reduce){.rcp-flow li{animation:none}}
+/* Ink link on paper — amber display text was swept 27 Aug; the hover arrow
+   carries the accent (home industry-fork link pattern). */
 .rcp-calc-link{margin:14px 0 0}
 .rcp-calc-link a{display:inline-flex;align-items:center;gap:10px;font:600 13px "Oswald",system-ui,sans-serif;
-  letter-spacing:.05em;text-transform:uppercase;color:var(--amber)}
-.rcp-calc-link svg{width:16px;height:16px}
+  letter-spacing:.05em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid #c2c0ba;padding-bottom:6px}
+.rcp-calc-link svg{width:16px;height:16px;transition:transform .2s ease,color .2s ease}
+.rcp-calc-link a:hover{border-bottom-color:var(--amber)}
+.rcp-calc-link a:hover svg{transform:translateX(5px);color:#d98f10}
