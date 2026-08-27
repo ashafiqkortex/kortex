@@ -110,7 +110,10 @@ export default function KortexHomeV11() {
       <div className="hero-main">
         <div className="hero-copy">
           <p className="eyebrow"><span/> OPERATIONS SYSTEMS BUILT FOR CONTRACTORS</p>
-          <h1>Build a business<br/>that can<br/>grow <em>without<br/>depending on you.</em></h1>
+          {/* Spaces before each <br/> are load-bearing: mobile hides the brs
+              (display:none), and without them the words join into unbreakable
+              "businessthat"/"withoutdepending" that overflow the viewport. */}
+          <h1>Build a business <br/>that can <br/>grow <em>without <br/>depending on you.</em></h1>
           <div className="hero-lede">
             <p>Kortex turns the paperwork, double entry and follow-up between your field and office into one system your team can run. Keep what works. Replace what doesn&rsquo;t. Take on more jobs without adding the same office overhead.</p>
           </div>
@@ -153,74 +156,98 @@ export default function KortexHomeV11() {
       <p className="bridge-line">Whether you want to take on more work or take your time back, the business cannot keep depending on you to hold it together.</p>
       <div className="scenario-cards">
         <article>
-          <div className="scenario-photo"><img src="/assets/scenario-growth.png" alt="Contractor working late over paperwork in a jobsite office"/><span>SCENARIO 01</span><h4>We have the work. But we can&rsquo;t keep growing like this.</h4></div>
-          <div className="scenario-body"><p>Every new job means more paperwork, more follow-up and another reason to add office staff. The work is getting done, but too much time and margin are lost getting it ready to bill.</p></div>
+          <div className="scenario-photo"><img src="/assets/scenario-growth.png" alt="Contractor working late over paperwork in a jobsite office"/><span>SCENARIO 01</span></div>
+          <div className="scenario-body"><h4>We have the work. But we can&rsquo;t keep growing like this.</h4><p>Every new job means more paperwork, more follow-up and another reason to add office staff. The work is getting done, but too much time and margin are lost getting it ready to bill.</p></div>
           <a href={v1("/contact")}>That&rsquo;s us <Arrow/></a>
         </article>
         <article>
-          <div className="scenario-photo"><img src="/assets/scenario-stepaway.png" alt="Owner taking a call at dusk on an active jobsite"/><span>SCENARIO 02</span><h4>If I step away, things start backing up.</h4></div>
-          <div className="scenario-body"><p>Your team can handle the work, but missing details, questions and approvals still wait for you. Even a day away leaves a pile of calls and decisions to come back to.</p></div>
+          <div className="scenario-photo"><img src="/assets/scenario-stepaway.png" alt="Owner taking a call at dusk on an active jobsite"/><span>SCENARIO 02</span></div>
+          <div className="scenario-body"><h4>If I step away, things start backing up.</h4><p>Your team can handle the work, but missing details, questions and approvals still wait for you. Even a day away leaves a pile of calls and decisions to come back to.</p></div>
           <a href={v1("/contact")}>That&rsquo;s us <Arrow/></a>
         </article>
       </div>
     </section>
 
-    {/* Section 3 — The connecting layer */}
+    {/* Sections 3a + 3b — the old connect section split in two per the
+        27 Aug mock ("split into two sections, each with one job"):
+        3a = what changes (compare + amber outcome band),
+        3b = two ways in (entry paths + layer diagram + ServiceTitan link). */}
     <section className="connect section-pad" id="connect">
-      <div className="grid-overlay soft"/>
-      <div className="connect-lead">
+      <div className="split-heading">
         <div>
           <p className="section-index amber">FROM THE FIELD TO THE OFFICE</p>
-          <h2>Get every job to billing without all the chasing.</h2>
-          <p className="connect-support">We start with how your team works today. If a tool is doing its job, it stays. If work keeps falling into spreadsheets, texts or someone&rsquo;s memory, we fix that gap. Then we automate the handoffs your people are doing by hand.</p>
-          <div className="entry-paths">
-            <p><strong>Already have software that works?</strong> We move the job information between your tools without someone entering it again.</p>
-            <p><strong>Outgrown the current setup?</strong> We build the missing system around the way your field and office already work.</p>
-          </div>
-        </div>
-        {/* Layer diagram: existing tools as the base, the Kortex automation
-            layer above them, only decisions reaching the owner at the top. */}
-        <div className="layer-diagram" aria-label="The Kortex automation layer sits above your existing tools; only approvals, decisions and exceptions reach the owner">
-          <div className="layer top"><span>APPROVALS, DECISIONS + EXCEPTIONS</span><small>REACH YOU OR YOUR MANAGERS</small></div>
-          <i className="layer-flow"/>
-          <div className="layer kortex"><span>KORTEX AUTOMATION LAYER</span><small>SYNCING &middot; ROUTING &middot; FOLLOW-UP</small></div>
-          <i className="layer-flow up"/>
-          <div className="layer base"><span>YOUR EXISTING TOOLS + PROCESSES</span><small>FIELD &middot; DISPATCH &middot; PAYROLL &middot; BILLING</small></div>
-          <div className="path-labels"><span>CONNECT WHAT ALREADY WORKS</span><span>BUILD WHAT IS MISSING</span></div>
+          <h2>Get every job to billing <em>without all the chasing.</em></h2>
         </div>
       </div>
       <div className="connect-compare">
         <div className="compare-col today">
-          <h3>How the work happens today</h3>
+          <h3>How the work happens today <b>TODAY</b></h3>
           <ul>{workToday.map((t) => <li key={t}>{t}</li>)}</ul>
         </div>
         <div className="compare-col with-kortex">
-          <h3>How the work happens with Kortex</h3>
+          <h3>How the work happens with Kortex <b>WITH KORTEX</b></h3>
           <ul>{workWithKortex.map((t) => <li key={t}><Check/>{t}</li>)}</ul>
         </div>
       </div>
       <p className="connect-outcome">Fewer office hours are spent chasing paperwork. Jobs are ready to bill sooner. Your team can handle more work without adding the same overhead.</p>
     </section>
 
-    {/* Section 4 — What Kortex builds */}
+    <section className="ways-in section-pad">
+      <div className="ways-lead">
+        <div>
+          <p className="section-index amber">TWO WAYS IN</p>
+          <h2>Keep what works. <em>Build what is missing.</em></h2>
+          <div className="entry-paths">
+            <div><h3>Already have software that works?</h3><p>We move the job information between your tools without someone entering it again.</p></div>
+            <div><h3>Outgrown the current setup?</h3><p>We build the missing system around the way your field and office already work.</p></div>
+          </div>
+          <a className="support-link on-dark" href={v1("/servicetitan-alternative")}>Using ServiceTitan? See when to keep, extend or replace it <Arrow/></a>
+        </div>
+        {/* Layer diagram: existing tools as the base, the Kortex automation
+            layer above them, only decisions reaching the owner at the top. */}
+        <div className="layer-diagram" aria-label="The Kortex automation layer sits above your existing tools; only approvals, decisions and exceptions reach the owner">
+          <div className="layer top"><span>APPROVALS, DECISIONS + EXCEPTIONS</span><small>REACH YOU OR YOUR MANAGERS</small></div>
+          <div className="layer-flow-label"><i/><span>ONLY WHAT NEEDS YOU</span></div>
+          <div className="layer kortex"><span>KORTEX AUTOMATION LAYER</span><small>SYNCING &middot; ROUTING &middot; FOLLOW-UP</small>
+            <div className="layer-tags"><b>CONNECT WHAT ALREADY WORKS</b><b>BUILD WHAT IS MISSING</b></div>
+          </div>
+          <div className="layer-flow-label"><i/><span>WORK MOVES UP ON ITS OWN</span></div>
+          <div className="layer base"><span>YOUR EXISTING TOOLS + PROCESSES</span><small>FIELD &middot; DISPATCH &middot; PAYROLL &middot; BILLING</small></div>
+        </div>
+      </div>
+    </section>
+
+    {/* Section 4 — What Kortex builds. Mockup 2B hierarchy (approved 27 Aug):
+        module 01 leads with the big screenshot, 02–05 are named rows with
+        thumbnails in a rail. On mobile the rail becomes a manual swipe
+        filmstrip (peeking edges, snap) — never auto-advancing. The mock's
+        amber closing strip stays plain text: amber fields are reserved for
+        the slab close. Section stays on paper to keep the band rhythm
+        (connect and the CTA band around it are both dark). */}
     <section className="modules section-pad" id="modules">
       <div className="split-heading">
         <div>
           <p className="section-index">START WHERE THE MONEY GETS HELD UP</p>
-          <h2>Fix the part of the job your team is still doing by hand.</h2>
+          <h2>Fix the part of the job your team is <em>still doing by hand.</em></h2>
         </div>
         <p>Kortex builds only the part your operation needs first. It can work with the software you already have or replace something that costs more than it helps.</p>
       </div>
-      <div className="module-grid">{builtModules.map(([n, t, c, image], i) => <article className={i === 0 ? "module-card featured" : "module-card"} key={n}>
-        <div className="module-preview" aria-label={`${t} concept interface`}><img src={image} alt={`${t} interface concept`}/></div>
-        <div className="module-copy"><span>{n}</span><h3>{t}</h3><p>{c}</p></div>
-      </article>)}</div>
-      <p className="module-close">Start with the process causing the most delay or cost. Add more only when it pays.</p>
-      <aside className="adoption-note">
-        <strong>BUILT FOR THE PEOPLE WHO ACTUALLY USE IT</strong>
-        <p>If the field and office will not use it, it will not save anything. We test it on real jobs and fix what slows people down before rolling it out further.</p>
-      </aside>
+      <div className="module-lead">
+        <article className="module-featured">
+          <div className="module-copy"><span>{builtModules[0][0]}</span><h3>{builtModules[0][1]}</h3><p>{builtModules[0][2]}</p></div>
+          <div className="module-preview" aria-label={`${builtModules[0][1]} concept interface`}><img src={builtModules[0][3]} alt={`${builtModules[0][1]} interface concept`}/></div>
+        </article>
+        <div className="module-rail">
+          {builtModules.slice(1).map(([n, t, c, image]) => <article className="module-row" key={n}>
+            <div className="module-thumb"><img src={image} alt={`${t} interface concept`}/></div>
+            <div className="module-row-copy"><span>{n}</span><h3>{t}</h3><p>{c}</p></div>
+          </article>)}
+        </div>
+      </div>
     </section>
+    {/* The mock's amber closing strip was merged into the CTA band below
+        (Bharathi, 27 Aug): both said "start with one process" — the band
+        keeps the message and the button that converts. */}
 
     {/* In-page CTA 1 */}
     <section className="cta-band">
@@ -231,24 +258,28 @@ export default function KortexHomeV11() {
       <a className="button" href={v1("/contact")}>Book my free workflow audit <Arrow/></a>
     </section>
 
-    {/* Section 5 — Who Kortex builds for */}
+    {/* Section 5 — Who Kortex builds for. Mock 2B (27 Aug): text-led two-up
+        fork, photo reduced to a banner strip — half the old card height.
+        Kept on paper per Bharathi ("we can go on paper"). Emphasis uses the
+        highlighter band, since plain amber text fails contrast on paper. */}
     <section className="industries section-pad" id="industries">
       <div className="split-heading">
         <div>
-          <p className="section-index">BUILT FOR CONTRACTOR-LED BUSINESSES</p>
-          <h2>Your company has grown. The way the work gets done has not.</h2>
+          <h2>Built for <em>contractor-led</em> businesses.</h2>
         </div>
-        <p>Kortex is for established contractors with good people and steady work who are losing time and margin in the handoffs between the field and office.</p>
+        <p>Good people, steady work&mdash;and growth stuck in the handoffs. Pick the lane that sounds like your business.</p>
       </div>
-      <div className="industry-grid">
-        <article className="industry-card">
-          <div className="industry-photo"><img src="/assets/mep-field.png" alt="Mechanical technician inspecting equipment in a commercial mechanical room"/></div>
+      <div className="industry-fork">
+        <article>
+          <div className="industry-strip"><img src="/assets/mep-field.png" alt="Mechanical technician inspecting equipment in a commercial mechanical room"/></div>
+          <span>01</span>
           <h3>Mechanical, electrical and plumbing contractors</h3>
           <p>Get service calls from dispatch to completed paperwork, payroll and billing without the office chasing technicians.</p>
           <a href={v1("/mep-contractors")}>Explore MEP systems <Arrow/></a>
         </article>
-        <article className="industry-card">
-          <div className="industry-photo"><img src="/assets/gc-field.png" alt="General contractor superintendent reviewing blueprints on an active commercial construction site"/></div>
+        <article>
+          <div className="industry-strip"><img src="/assets/gc-field.png" alt="General contractor superintendent reviewing blueprints on an active commercial construction site"/></div>
+          <span>02</span>
           <h3>Builders and general contractors</h3>
           <p>Keep change work, approvals, job costs and pay applications from getting lost between the field and office.</p>
           <a href={v1("/builders-and-general-contractors")}>Explore builder &amp; GC systems <Arrow/></a>
@@ -256,14 +287,16 @@ export default function KortexHomeV11() {
       </div>
     </section>
 
-    {/* Section 6 — Founder outcome */}
+    {/* Section 6 — Founder outcome. Mock 1A (27 Aug): four benefits in one
+        row, aligned bodies; support copy trimmed to the payoff line (the
+        dropped sentences restated section 3a's outcome band). */}
     <section className="founder section-pad">
       <div className="split-heading">
         <div>
           <p className="section-index amber">WHAT THIS GIVES YOU</p>
-          <h2>Finally, you have time to work on the business again.</h2>
+          <h2>Finally, you have time to work on <em>the business again.</em></h2>
         </div>
-        <p>The work gets billed sooner. The office spends less time chasing. You need fewer hours to push the same amount of work through. The payoff is more room to grow&mdash;and more time to decide where the business goes next.</p>
+        <p>The payoff is more room to grow&mdash;and more time to decide where the business goes next.</p>
       </div>
       <div className="founder-grid">{founderOutcomes.map(([t, c], i) => <article key={t}>
         <span>0{i + 1}</span><h3>{t}</h3><p>{c}</p>
@@ -302,50 +335,48 @@ export default function KortexHomeV11() {
       </div>
     </section>}
 
-    {/* Section 8 — The Kortex difference */}
+    {/* Section 8 — The Kortex difference. Mock 1C (27 Aug): stripped — the
+        number leads, no diagram, ~45 words. The paragraphs, diagram and
+        closing line were removed with it. Emphasis uses the highlighter band
+        (the mock's brown "billing" text was ruled out with the other browns). */}
     <section className="difference section-pad">
-      <div className="difference-lead">
-        <div>
-          <p className="section-index">THE KORTEX DIFFERENCE</p>
-          <h2>We&rsquo;ve helped companies save more than <em>$500K</em> by cutting manual work and unnecessary software costs.</h2>
-        </div>
-        <div className="difference-copy">
-          <p className="big-number" aria-hidden="true"><strong>$500K+</strong><span>SAVED</span></p>
-          <p>Those savings came from hours people no longer spent entering the same information twice, chasing missing details and working around software that did not fit.</p>
-          <p>Kortex fixes the way work moves from the jobsite to the office to billing. We keep the tools that earn their place, automate the follow-up people are doing by hand and replace what adds cost without helping the team.</p>
-        </div>
-      </div>
-      <div className="difference-diagram" aria-hidden="true">
-        <span>MIX OF TOOLS + MANUAL WORK</span><i/><span className="diagram-core">ONE CONNECTED KORTEX SYSTEM</span><i/><span>LOWER-COST OPERATION</span>
+      <p className="section-index">THE KORTEX DIFFERENCE</p>
+      <div className="difference-hero">
+        <p className="big-number"><span>SAVED</span><strong>$500K<b>+</b></strong></p>
+        <h2>Kortex fixes the way work moves from the jobsite to the office to <em>billing.</em></h2>
       </div>
       <div className="value-blocks">
-        <article><h3>Built around the way your jobs run</h3><p>Your team gets a system that follows the job instead of forcing every job through a process that does not fit.</p></article>
-        <article><h3>Fewer office hours on every job</h3><p>Job details reach the next person without repeated entry, reminder calls or owner follow-up.</p></article>
-        <article><h3>Lower software and admin cost</h3><p>Keep only the tools that earn their place and remove the manual work they leave between them.</p></article>
+        <article><span>01</span><h3>Built around the way your jobs run</h3><p>Your team gets a system that follows the job instead of forcing every job through a process that does not fit.</p></article>
+        <article><span>02</span><h3>Fewer office hours on every job</h3><p>Job details reach the next person without repeated entry, reminder calls or owner follow-up.</p></article>
+        <article><span>03</span><h3>Lower software and admin cost</h3><p>Keep only the tools that earn their place and remove the manual work they leave between them.</p></article>
       </div>
-      <p className="difference-close">The result is simple: more work gets through with fewer office hours and less owner involvement.</p>
       <a className="support-link" href={v1("/servicetitan-alternative")}>Using ServiceTitan? See when to keep, extend or replace it <Arrow/></a>
     </section>
 
     {/* Section 9 — FAQ. Compact rows, closed by default, one open at a time
         (native exclusive accordion via the shared name attribute). */}
     <section className="faq faq-dark section-pad" id="faq">
-      <div className="split-heading"><div><p className="section-index">STRAIGHT ANSWERS</p><h2>Questions owners ask before they call us.</h2></div></div>
+      <div className="split-heading"><div><h2>Questions owners ask before they call us.</h2></div></div>
       <div className="faq-grid">{faqs.map(([q, a], i) => <details key={q} name="faq"><summary><span>0{i + 1}</span>{q}<i/></summary><p>{a}</p></details>)}</div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
     </section>
 
-    {/* Section 10 — Final CTA */}
-    <section className="contact" id="contact">
-      <div className="grid-overlay soft"/>
+    {/* Section 10 — Final CTA. Amber slab close (mockup option 1A): the
+        page's only full-accent surface — if amber becomes a background
+        anywhere else on the page, this stops working. Offer decision,
+        Bharathi 27 Aug: the free workflow audit IS the site's lead-gen CTA
+        (settles the 18 Aug-memo conflict) — hero, CTA bands, FAQ and this
+        close all say audit. Headline is the evening-desk scene (his draft);
+        body carries both personas — automation first, then capacity. */}
+    <section className="contact contact-slab" id="contact">
       <p className="eyebrow"><span/> FREE WORKFLOW AUDIT</p>
-      <h2>Not sure what all the daily chasing is costing you?</h2>
-      <p>Walk us through one process that keeps getting held up or coming back to you. We&rsquo;ll estimate what it is costing and show you the first practical way to fix it.</p>
+      <h2>Need to take on more work&mdash;or get your time back?</h2>
+      <p className="contact-body">We&rsquo;ll find where the work gets held up and what to automate first, so the business can handle more jobs without more office staff or more of your time.</p>
       <div className="contact-actions">
-        <a className="button" href={v1("/contact")}>Book my free workflow audit <Arrow/></a>
-        <a className="direct-call plain" href="tel:+13018898546">Prefer to talk? Call (301) 889-8546</a>
+        <a className="button dark" href={v1("/contact")}>Book my free workflow audit <Arrow/></a>
+        <a className="direct-call outline" href="tel:+13018898546">Prefer to talk? Call (301) 889-8546</a>
       </div>
-      <p className="reassurance">No preparation. Just tell us how the work gets done today.</p>
+      <p className="reassurance">No preparation needed. Tell us where the work keeps getting held up.</p>
     </section>
   </>;
 }
