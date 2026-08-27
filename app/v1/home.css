@@ -168,7 +168,7 @@ dialog.img-zoom img{position:static;width:100%;height:auto;max-height:92vh;objec
 .industries{background:var(--paper);color:var(--ink)}
 .industries.section-pad{padding-top:60px;padding-bottom:60px}
 .industries .split-heading{gap:5vw}
-.industries h2{font-size:clamp(34px,3vw,44px);max-width:620px}
+.industries h2{font-size:clamp(34px,3vw,44px);max-width:620px;line-height:1.22}
 .industries h2 em{font-style:normal;color:var(--ink);background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 18' preserveAspectRatio='none'%3E%3Cpath d='M5 12 C 60 6 130 14 180 10 C 220 7 265 9 295 11' stroke='%23f0a020' stroke-width='8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat left bottom/100% .24em;padding:0 3px .13em;margin:0;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 .industry-fork{display:grid;grid-template-columns:1fr 1fr;margin-top:30px;border-top:1px solid #c2c0ba;border-bottom:1px solid #c2c0ba}
 .industry-fork article{padding:0 0 22px;display:flex;flex-direction:column}
@@ -240,7 +240,10 @@ dialog.img-zoom img{position:static;width:100%;height:auto;max-height:92vh;objec
    the open row, one column, one open at a time (native `name` accordion). ---- */
 .faq-dark{background:var(--surface);color:var(--text)}
 .faq-dark.section-pad{padding-top:64px;padding-bottom:64px}
-.faq-dark h2{font-size:clamp(30px,2.6vw,38px)}
+.faq-dark h2{font-size:clamp(24px,2.1vw,30px)}
+.faq-heading{text-align:center}
+.faq-heading h2{max-width:none;margin:0 auto;white-space:nowrap}
+.faq-heading i{display:block;width:56px;height:2px;background:var(--amber);margin:22px auto 0}
 .faq-dark .split-heading>p{color:#bcbbb6}
 .faq-dark .faq-grid{margin-top:30px;border-top:1px solid var(--rules)}
 .faq-dark .faq-grid details{border-bottom:1px solid var(--rules)}
@@ -335,6 +338,7 @@ dialog.img-zoom img{position:static;width:100%;height:auto;max-height:92vh;objec
   .founder-grid{border-left:0}
   .contact{padding:64px 22px}
   .contact h2{font-size:34px}
+  .faq-heading h2{white-space:normal}
   .contact-actions{flex-direction:column;gap:14px}
   .big-number strong{font-size:64px}
 }

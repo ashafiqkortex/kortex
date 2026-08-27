@@ -341,7 +341,7 @@ export default function KortexHomeV11() {
       <p className="section-index">THE KORTEX DIFFERENCE</p>
       <div className="difference-hero">
         <p className="big-number"><span>SAVED</span><strong>$500K<b>+</b></strong></p>
-        <h2>Kortex fixes the way work moves from the jobsite to the office to <em>billing.</em></h2>
+        <h2>Kortex fixes the way work moves from the <em>jobsite to the office</em> to billing.</h2>
       </div>
       <div className="value-blocks">
         <article><span>01</span><h3>Built around the way your jobs run</h3><p>Your team gets a system that follows the job instead of forcing every job through a process that does not fit.</p></article>
@@ -354,7 +354,7 @@ export default function KortexHomeV11() {
     {/* Section 9 — FAQ. Compact rows, closed by default, one open at a time
         (native exclusive accordion via the shared name attribute). */}
     <section className="faq faq-dark section-pad" id="faq">
-      <div className="split-heading"><div><h2>Questions owners ask before they call us.</h2></div></div>
+      <div className="faq-heading"><h2>Questions owners ask before they call us.</h2><i/></div>
       <div className="faq-grid">{faqs.map(([q, a], i) => <details key={q} name="faq"><summary><span>0{i + 1}</span>{q}<i/></summary><p>{a}</p></details>)}</div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
     </section>
