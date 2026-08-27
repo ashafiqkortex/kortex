@@ -293,3 +293,8 @@ body:has(.kx10) > main{flex:none;margin:0;padding:0;max-width:none}
 @media(max-width:900px){.wa-label{display:none}.wa-float{right:16px;bottom:16px}}
 @media(prefers-reduced-motion:reduce){.wa-circle,.wa-label{transition:none}
   .wa-float:hover .wa-circle{transform:none}}
+
+/* Text selection — the old site's globals.css paints ::selection terracotta
+   (--accent #C15F3C) and loads on every route, so the v1 world scopes its own
+   amber selection here. */
+.kx10 ::selection{background:var(--amber);color:var(--ground)}

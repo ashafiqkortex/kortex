@@ -121,7 +121,7 @@ export function SiteHeader() {
           <span className="phone-full">{PHONE}</span>
           <span className="phone-mobile" aria-label="Call Kortex">☎</span>
         </a>
-        <Link className="nav-cta" href={v1("/contact")}>Book a working session <Arrow /></Link>
+        <Link className="nav-cta" href={v1("/contact")}>Book a free workflow audit <Arrow /></Link>
       </div>
 
       <div className={`mobile-navigation${mobileOpen ? " is-open" : ""}`}>
