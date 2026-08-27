@@ -158,7 +158,8 @@ export default function KortexHomeV11() {
       <div className="scenario-cards">
         <article>
           <div className="scenario-photo"><img src="/assets/scenario-growth.png" alt="Contractor working late over paperwork in a jobsite office"/><span>SCENARIO 01</span></div>
-          <div className="scenario-body"><h4>We have the work. But we can&rsquo;t keep growing like this.</h4><p>Every new job means more paperwork, more follow-up and another reason to add office staff. The work is getting done, but too much time and margin are lost getting it ready to bill.</p></div>
+          <div className="scenario-body"><h4>We have the work. But we can&rsquo;t keep growing like this.</h4><p>Every new job means more paperwork, more follow-up and another reason to add office staff. The work is getting done, but too much time and margin are lost getting it ready to bill.</p>
+          <p className="evidence-line">41% of contractors now hold over a year of secured work. The constraint isn&rsquo;t demand&mdash;it&rsquo;s the office.</p></div>
           <a href={v1("/contact")}>That&rsquo;s us <Arrow/></a>
         </article>
         <article>
@@ -190,6 +191,10 @@ export default function KortexHomeV11() {
           <ul>{workWithKortex.map((t) => <li key={t}><Check/>{t}</li>)}</ul>
         </div>
       </div>
+      {/* Source (internal): consulting/kortex/servicetitan-industry-report-2026.pdf
+          — 1,014 commercial building firms surveyed Jan 2026. Bharathi's call
+          27 Aug: never name the report on-page. */}
+      <p className="evidence-line">In a 2026 survey of 1,000+ commercial contractors, 57% named timely billing their top profitability lever&mdash;and documentation (55%) and approval workflows (52%) the main causes of payment delays.</p>
       <p className="connect-outcome">Fewer office hours are spent chasing paperwork. Jobs are ready to bill sooner. Your team can handle more work without adding the same overhead.</p>
     </section>
 
@@ -204,6 +209,7 @@ export default function KortexHomeV11() {
           </div>
           {/* ServiceTitan link removed here (27 Aug) — it duplicated the one
               in the difference section, where the comparison context sells it. */}
+          <p className="evidence-line">Only 20% of contractors run on a single platform&mdash;most juggle two to six systems with manual work in between.</p>
         </div>
         {/* Layer diagram: existing tools as the base, the Kortex automation
             layer above them, only decisions reaching the owner at the top. */}
@@ -348,6 +354,7 @@ export default function KortexHomeV11() {
         <article><span>02</span><h3>Fewer office hours on every job</h3><p>Job details reach the next person without repeated entry, reminder calls or owner follow-up.</p></article>
         <article><span>03</span><h3>Lower software and admin cost</h3><p>Keep only the tools that earn their place and remove the manual work they leave between them.</p></article>
       </div>
+      <p className="evidence-line">35% of contractors name rising overhead a top 2026 risk&mdash;and just as many can&rsquo;t find the skilled labor to hire. Adding office staff isn&rsquo;t the answer available.</p>
       <a className="support-link" href={v1("/servicetitan-alternative")}>Using ServiceTitan? See when to keep, extend or replace it <Arrow/></a>
     </section>
 

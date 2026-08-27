@@ -97,7 +97,11 @@
 .compare-col.with-kortex h3 b{color:var(--amber)}
 .compare-col.with-kortex li{display:flex;gap:12px;color:#d5d3ce}
 .compare-col.with-kortex li svg{min-width:16px;width:16px;margin-top:4px;color:var(--amber)}
-.connect-outcome{font-size:18px;line-height:1.55;font-weight:600;margin:28px 0 0;padding:20px 26px;background:var(--surface);border:1px solid var(--rules);border-left:3px solid var(--amber);color:var(--text)}
+.evidence-line{font:400 12px/1.75 "IBM Plex Mono";letter-spacing:.02em;color:#8f908c;margin:22px 0 0;max-width:760px}
+.evidence-line:before{content:"";display:inline-block;width:14px;height:1px;background:var(--amber);vertical-align:middle;margin-right:10px}
+.scenario-body .evidence-line{color:#77776f;margin:16px 0 0;border-top:1px solid #dedcd4;padding-top:14px}
+.difference .evidence-line{color:#77776f;margin:26px auto 0;text-align:center;max-width:680px}
+.connect-outcome{font-size:18px;line-height:1.55;font-weight:600;margin:20px 0 0;padding:20px 26px;background:var(--surface);border:1px solid var(--rules);border-left:3px solid var(--amber);color:var(--text)}
 /* 3b — two ways in */
 .ways-in{background:var(--ground);border-top:1px solid var(--rules)}
 .ways-lead{display:grid;grid-template-columns:1.05fr .95fr;gap:7vw;align-items:center}
